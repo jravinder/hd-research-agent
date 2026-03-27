@@ -2,29 +2,11 @@
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>HD Research Hub | Personal Research Dashboard</title>
+<title>HD Research Hub</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      fontFamily: { sans: ['Inter', 'sans-serif'] },
-      colors: {
-        teal: { 50:'#f0fdfa', 100:'#ccfbf1', 400:'#2dd4bf', 500:'#14b8a6', 600:'#0d9488' },
-        orange: { 50:'#fff7ed', 100:'#ffedd5', 400:'#fb923c', 500:'#f97316', 600:'#ea580c' },
-        green: { 50:'#f0fdf4', 100:'#dcfce7', 400:'#4ade80', 500:'#22c55e', 600:'#16a34a' },
-      }
-    }
-  }
-}
-</script>
-<style>
-  body { font-family: 'Inter', sans-serif; }
-  .stat-card { transition: transform 0.2s; }
-  .stat-card:hover { transform: translateY(-2px); }
-</style>
+<style>body { font-family: 'Inter', sans-serif; } .stat-card { transition: transform 0.2s; } .stat-card:hover { transform: translateY(-2px); }</style>
 </head>
 <body class="bg-white text-gray-900 antialiased">
 
@@ -33,181 +15,214 @@ tailwind.config = {
   <div class="flex items-center gap-8">
     <span class="text-xl font-bold text-gray-900">HD Research Hub</span>
     <div class="hidden md:flex items-center gap-6 text-sm font-medium">
-      <a href="#tools" class="text-teal-600 hover:text-teal-700">Our Tools</a>
-      <a href="#pipeline" class="text-gray-500 hover:text-gray-900">Pipeline</a>
-      <a href="#findings" class="text-gray-500 hover:text-gray-900">Findings</a>
-      <a href="#repurposing" class="text-gray-500 hover:text-gray-900">Drug Repurposing</a>
+      <a href="#papers" class="text-teal-600 hover:text-teal-700">Papers</a>
+      <a href="#trials" class="text-gray-500 hover:text-gray-900">Trials</a>
+      <a href="#news" class="text-gray-500 hover:text-gray-900">HDBuzz</a>
+      <a href="#targets" class="text-gray-500 hover:text-gray-900">Targets</a>
     </div>
   </div>
-  <div class="flex items-center gap-3">
-    <a href="https://github.com/jravinder/hd-research-agent" target="_blank" class="px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium hover:bg-gray-50 flex items-center gap-2">
-      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-      GitHub
-    </a>
+  <div class="flex items-center gap-3 text-xs text-gray-400">
+    Updated March 27, 2026 at 05:52 PM
+    <a href="https://github.com/jravinder/hd-research-agent" target="_blank" class="ml-3 px-3 py-1.5 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50">GitHub</a>
   </div>
 </nav>
 
 <!-- Hero -->
-<section class="pt-16 pb-20 px-8">
+<section class="pt-16 pb-16 px-8">
   <div class="max-w-5xl mx-auto text-center">
     <div class="inline-block px-3 py-1 bg-teal-50 text-teal-600 rounded-full text-sm font-medium mb-6">The Art of the Possible</div>
-    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900 mb-6">
-      HD Research Hub
-    </h1>
-    <p class="text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
-      Exploring how AI can accelerate Huntington's Disease research.
-      We believe the tools exist today to move faster — open-source agents, public datasets, and a growing community of researchers and families working together.
-    </p>
-
-    <!-- Stats — reframed as opportunity -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
-      <div class="stat-card bg-teal-50 border border-teal-100 rounded-xl p-5">
-        <div class="text-3xl font-bold text-teal-600">75%</div>
-        <div class="text-sm text-teal-500 font-medium mt-1">Disease Slowing in Latest Trial</div>
+    <h1 class="text-5xl font-extrabold tracking-tight text-gray-900 mb-4">HD Research Hub</h1>
+    <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-10">A personal research dashboard pulling live data from PubMed, ClinicalTrials.gov, HDBuzz, and Open Targets. Exploring how AI can help accelerate Huntington's Disease research.</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-10">
+      <div class="stat-card bg-teal-50 border border-teal-100 rounded-xl p-4">
+        <div class="text-2xl font-bold text-teal-600">20</div>
+        <div class="text-xs text-teal-500 font-medium mt-1">Recent Papers</div>
       </div>
-      <div class="stat-card bg-green-50 border border-green-100 rounded-xl p-5">
-        <div class="text-3xl font-bold text-green-600">7+</div>
-        <div class="text-sm text-green-500 font-medium mt-1">Therapies in Active Pipeline</div>
+      <div class="stat-card bg-green-50 border border-green-100 rounded-xl p-4">
+        <div class="text-2xl font-bold text-green-600">30</div>
+        <div class="text-xs text-green-500 font-medium mt-1">Active Trials</div>
       </div>
-      <div class="stat-card bg-orange-50 border border-orange-100 rounded-xl p-5">
-        <div class="text-3xl font-bold text-orange-600">15M</div>
-        <div class="text-sm text-orange-500 font-medium mt-1">AI-Designed Compounds (Novartis)</div>
+      <div class="stat-card bg-orange-50 border border-orange-100 rounded-xl p-4">
+        <div class="text-2xl font-bold text-orange-600">21</div>
+        <div class="text-xs text-orange-500 font-medium mt-1">Recruiting Now</div>
       </div>
-    </div>
-
-    <div class="flex justify-center gap-4">
-      <a href="https://hdsa.org/hd-research/therapies-in-pipeline/" target="_blank" class="px-6 py-3 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 transition-colors flex items-center gap-2">
-        HDSA Pipeline
-        <span class="material-symbols-outlined text-sm">open_in_new</span>
-      </a>
-      <a href="https://en.hdbuzz.net/" target="_blank" class="px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2">
-        HDBuzz News
-        <span class="material-symbols-outlined text-sm">open_in_new</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Our Tools -->
-<section id="tools" class="py-20 px-8 bg-gray-50">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-12">
-      <div class="text-sm font-bold text-teal-600 uppercase tracking-wider mb-2">What We're Exploring</div>
-      <h2 class="text-3xl font-bold text-gray-900">Open-Source Research Tools</h2>
-      <p class="text-gray-500 mt-2">All code at <a href="https://github.com/jravinder/hd-research-agent" class="text-teal-600 underline">github.com/jravinder/hd-research-agent</a></p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Tool 1 -->
-      <div class="bg-white border border-teal-100 rounded-xl p-6 hover:shadow-lg transition-shadow">
-        <div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-          <span class="material-symbols-outlined text-teal-600">description</span>
-        </div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2">Literature Agent</h3>
-        <p class="text-gray-500 text-sm mb-4">Pulls recent HD papers from PubMed, uses LLM to extract targets, compounds, and key findings. Identifies drug repurposing opportunities.</p>
-        <div class="flex items-baseline justify-between">
-          <span class="text-2xl font-bold text-teal-600">127</span>
-          <span class="text-xs text-gray-400 font-medium">papers analyzed</span>
-        </div>
-        <div class="mt-3 text-xs text-gray-400">Source: <a href="https://pubmed.ncbi.nlm.nih.gov/?term=huntington+disease" class="text-teal-500 underline">PubMed</a></div>
-      </div>
-      <!-- Tool 2 -->
-      <div class="bg-white border border-orange-100 rounded-xl p-6 hover:shadow-lg transition-shadow">
-        <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-          <span class="material-symbols-outlined text-orange-600">biotech</span>
-        </div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2">Drug Repurposing Scanner</h3>
-        <p class="text-gray-500 text-sm mb-4">Cross-references 16 known HD targets against FDA-approved drugs. AI generates and scores novel repurposing hypotheses.</p>
-        <div class="flex items-baseline justify-between">
-          <span class="text-2xl font-bold text-orange-600">12</span>
-          <span class="text-xs text-gray-400 font-medium">candidates identified</span>
-        </div>
-        <div class="mt-3 text-xs text-gray-400">Source: <a href="https://platform.opentargets.org/" class="text-orange-500 underline">Open Targets</a> + LLM analysis</div>
-      </div>
-      <!-- Tool 3 -->
-      <div class="bg-white border border-green-100 rounded-xl p-6 hover:shadow-lg transition-shadow">
-        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-          <span class="material-symbols-outlined text-green-600">auto_awesome</span>
-        </div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2">Autoresearch Loop</h3>
-        <p class="text-gray-500 text-sm mb-4">Karpathy-style overnight agent: generates hypotheses, searches literature, scores candidates, refines. Runs autonomously for hours.</p>
-        <div class="flex items-baseline justify-between">
-          <span class="text-2xl font-bold text-green-600">847</span>
-          <span class="text-xs text-gray-400 font-medium">experiments run</span>
-        </div>
-        <div class="mt-3 text-xs text-gray-400">Inspired by <a href="https://github.com/karpathy/autoresearch" class="text-green-500 underline">karpathy/autoresearch</a></div>
+      <div class="stat-card bg-purple-50 border border-purple-100 rounded-xl p-4">
+        <div class="text-2xl font-bold text-purple-600">0</div>
+        <div class="text-xs text-purple-500 font-medium mt-1">Known Targets</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Pipeline Tracker -->
-<section id="pipeline" class="py-20 px-8">
+<!-- Latest Papers -->
+<section id="papers" class="py-16 px-8 bg-gray-50">
   <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-12">
-      <div class="text-sm font-bold text-orange-600 uppercase tracking-wider mb-2">Reasons for Optimism</div>
-      <h2 class="text-3xl font-bold text-gray-900">HD Treatment Pipeline</h2>
-      <p class="text-gray-500 mt-2">Data from <a href="https://clinicaltrials.gov" class="text-teal-600 underline">ClinicalTrials.gov</a> and <a href="https://hdsa.org/hd-research/therapies-in-pipeline/" class="text-teal-600 underline">HDSA</a></p>
+    <div class="flex items-end justify-between mb-8">
+      <div>
+        <div class="text-sm font-bold text-teal-600 uppercase tracking-wider mb-1">From PubMed</div>
+        <h2 class="text-2xl font-bold text-gray-900">Latest Research Papers</h2>
+      </div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=huntington+disease+treatment" target="_blank" class="text-teal-600 text-sm font-medium flex items-center gap-1">View all on PubMed <span class="material-symbols-outlined text-sm">open_in_new</span></a>
     </div>
-    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+      <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="text-xs text-teal-600 font-bold uppercase mb-2">2026 Mar — Neural regeneration research</div>
+        <h3 class="text-base font-bold text-gray-900 mb-2">Potential common pathogenesis of several neurodegenerative diseases.</h3>
+        <p class="text-gray-400 text-sm line-clamp-3">With the gradual advancement of research methods and technologies, various biological processes have been identified as playing roles in the pathogenesis of neurodegenerative diseases. However, curren</p>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/40522761/" target="_blank" class="text-teal-600 text-sm font-medium mt-2 inline-flex items-center gap-1">PubMed <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="text-xs text-teal-600 font-bold uppercase mb-2">2026 Mar — Brain : a journal of neurology</div>
+        <h3 class="text-base font-bold text-gray-900 mb-2">Brain atrophy patterns in anti-IgLON5 disease.</h3>
+        <p class="text-gray-400 text-sm line-clamp-3">Anti-IgLON5 disease is an autoimmune encephalitis that presents with a heterogenous clinical phenotype, including sleep disorders, movement abnormalities and bulbar involvement. It is characterized by</p>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/40650880/" target="_blank" class="text-teal-600 text-sm font-medium mt-2 inline-flex items-center gap-1">PubMed <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="text-xs text-teal-600 font-bold uppercase mb-2">2026 Mar — The Journal of neuroscience : the offici</div>
+        <h3 class="text-base font-bold text-gray-900 mb-2">ALS and Huntington Disease: Unraveling the Connections between TDP-43 and Huntingtin.</h3>
+        <p class="text-gray-400 text-sm line-clamp-3">Amyotrophic lateral sclerosis (ALS) and Huntington disease (HD) are lethal neurodegenerative diseases affecting motor function. Though their etiology and pathology are distinct, recent evidence sugges</p>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/41813136/" target="_blank" class="text-teal-600 text-sm font-medium mt-2 inline-flex items-center gap-1">PubMed <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="text-xs text-teal-600 font-bold uppercase mb-2">2026 Mar — Probiotics and antimicrobial proteins</div>
+        <h3 class="text-base font-bold text-gray-900 mb-2">Innovative Interventions: Postbiotics and Psychobiotics in Neurodegenerative Disease Treatment.</h3>
+        <p class="text-gray-400 text-sm line-clamp-3">Neurodegenerative disorders, including Huntington's disease, Amyotrophic lateral sclerosis, Alzheimer's disease, and Parkinson's disease, create more challenges as the population gets older and there </p>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/40576748/" target="_blank" class="text-teal-600 text-sm font-medium mt-2 inline-flex items-center gap-1">PubMed <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="text-xs text-teal-600 font-bold uppercase mb-2">2026 Mar — Journal of medicinal chemistry</div>
+        <h3 class="text-base font-bold text-gray-900 mb-2">Discovery and Optimization of Thienopyrazine RNA-Splicing Modulators for the Treatment of Huntington</h3>
+        <p class="text-gray-400 text-sm line-clamp-3">Huntington's disease (HD) is a progressive neurodegenerative disorder caused by a CAG-repeat expansion in the Huntington gene (HTT). Herein, we describe the discovery of a series of HTT pre-mRNA-splic</p>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/41841355/" target="_blank" class="text-teal-600 text-sm font-medium mt-2 inline-flex items-center gap-1">PubMed <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="text-xs text-teal-600 font-bold uppercase mb-2">2026 Feb — Journal of clinical medicine</div>
+        <h3 class="text-base font-bold text-gray-900 mb-2">The New Wave of Gene and Cell Therapies Across Diseases.</h3>
+        <p class="text-gray-400 text-sm line-clamp-3">Recent years have seen rapid progress in biological treatments for genetic diseases, as well as conditions like type 1 diabetes that lack an obvious genetic component. The authors sought to explain wh</p>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/41827217/" target="_blank" class="text-teal-600 text-sm font-medium mt-2 inline-flex items-center gap-1">PubMed <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Active Trials -->
+<section id="trials" class="py-16 px-8">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-end justify-between mb-8">
+      <div>
+        <div class="text-sm font-bold text-green-600 uppercase tracking-wider mb-1">Reasons for Optimism</div>
+        <h2 class="text-2xl font-bold text-gray-900">Active Clinical Trials (30 total, 110780 patients)</h2>
+      </div>
+      <a href="https://clinicaltrials.gov/search?cond=Huntington+Disease&aggFilters=status:rec act" target="_blank" class="text-teal-600 text-sm font-medium flex items-center gap-1">ClinicalTrials.gov <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl overflow-x-auto">
       <table class="w-full text-left">
         <thead>
           <tr class="bg-gray-50 border-b border-gray-200">
-            <th class="py-4 px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Therapy</th>
-            <th class="py-4 px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Company</th>
-            <th class="py-4 px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Type</th>
-            <th class="py-4 px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Phase</th>
-            <th class="py-4 px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Key Detail</th>
+            <th class="py-3 px-6 text-xs font-bold uppercase tracking-wider text-gray-500">NCT ID</th>
+            <th class="py-3 px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Title</th>
+            <th class="py-3 px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Sponsor</th>
+            <th class="py-3 px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Phase</th>
+            <th class="py-3 px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Status</th>
+            <th class="py-3 px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Intervention</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-gray-100">
+
           <tr class="hover:bg-teal-50/50 transition-colors">
-            <td class="py-4 px-6 font-bold text-gray-900">AMT-130</td>
-            <td class="py-4 px-6 text-gray-600">uniQure</td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded-md text-xs font-medium">Gene Therapy</span></td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">Phase I/II</span></td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-green-100 text-green-700 rounded-md text-xs font-medium">75% disease slowing</span> <span class="px-2 py-1 bg-orange-100 text-orange-700 rounded-md text-xs font-medium">FDA wants Phase III</span></td>
+            <td class="py-3 px-6 font-bold text-gray-900"><a href="https://clinicaltrials.gov/study/NCT04713982" target="_blank" class="hover:text-teal-600">NCT04713982</a></td>
+            <td class="py-3 px-6 text-gray-600 text-sm">Impact of Deutetrabenazine on Functional Speech an</td>
+            <td class="py-3 px-6 text-gray-600 text-sm">Vanderbilt University Med</td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">PHASE2, PHASE3</span></td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">Active Not Recruiting</span></td>
+            <td class="py-3 px-6 text-gray-500 text-sm">Deutetrabenazine</td>
           </tr>
+
           <tr class="hover:bg-teal-50/50 transition-colors">
-            <td class="py-4 px-6 font-bold text-gray-900">PTC518</td>
-            <td class="py-4 px-6 text-gray-600">Novartis / PTC</td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-md text-xs font-medium">Small Molecule</span></td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">Phase II</span></td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">AI-designed</span> HTT lowering</td>
+            <td class="py-3 px-6 font-bold text-gray-900"><a href="https://clinicaltrials.gov/study/NCT06826612" target="_blank" class="hover:text-teal-600">NCT06826612</a></td>
+            <td class="py-3 px-6 text-gray-600 text-sm">A Randomized Study of SPK-10001 Gene Therapy in Pa</td>
+            <td class="py-3 px-6 text-gray-600 text-sm">Hoffmann-La Roche</td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">PHASE1, PHASE2</span></td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-green-100 text-green-700 rounded-md text-xs font-medium">Recruiting</span></td>
+            <td class="py-3 px-6 text-gray-500 text-sm">SPK-10001; Placebo Surgery Control</td>
           </tr>
+
           <tr class="hover:bg-teal-50/50 transition-colors">
-            <td class="py-4 px-6 font-bold text-gray-900">SOM3355</td>
-            <td class="py-4 px-6 text-gray-600">SOM Biotech</td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-orange-100 text-orange-700 rounded-md text-xs font-medium">Repurposed</span></td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">Phase II</span></td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">AI-discovered</span> Chorea treatment</td>
+            <td class="py-3 px-6 font-bold text-gray-900"><a href="https://clinicaltrials.gov/study/NCT05943054" target="_blank" class="hover:text-teal-600">NCT05943054</a></td>
+            <td class="py-3 px-6 text-gray-600 text-sm">Striatum and Hippocampus on Different Time Scales</td>
+            <td class="py-3 px-6 text-gray-600 text-sm">Assistance Publique - Hôp</td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">NA</span></td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-green-100 text-green-700 rounded-md text-xs font-medium">Recruiting</span></td>
+            <td class="py-3 px-6 text-gray-500 text-sm">Temporal perception tasks</td>
           </tr>
+
           <tr class="hover:bg-teal-50/50 transition-colors">
-            <td class="py-4 px-6 font-bold text-gray-900">Pridopidine</td>
-            <td class="py-4 px-6 text-gray-600">Prilenia</td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-md text-xs font-medium">Small Molecule</span></td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-green-100 text-green-700 rounded-md text-xs font-medium">Phase III</span></td>
-            <td class="py-4 px-6">Sigma-1 receptor agonist</td>
+            <td class="py-3 px-6 font-bold text-gray-900"><a href="https://clinicaltrials.gov/study/NCT05360082" target="_blank" class="hover:text-teal-600">NCT05360082</a></td>
+            <td class="py-3 px-6 text-gray-600 text-sm">Comparison Between [11C]UCB-J and [18F]SynVest-1 P</td>
+            <td class="py-3 px-6 text-gray-600 text-sm">Universitaire Ziekenhuize</td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">NA</span></td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-green-100 text-green-700 rounded-md text-xs font-medium">Recruiting</span></td>
+            <td class="py-3 px-6 text-gray-500 text-sm">[11C]UCB-J PET; [18F]SynVest-1 PET</td>
           </tr>
+
           <tr class="hover:bg-teal-50/50 transition-colors">
-            <td class="py-4 px-6 font-bold text-gray-900">PROTAC</td>
-            <td class="py-4 px-6 text-gray-600">Arvinas</td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-green-100 text-green-700 rounded-md text-xs font-medium">Oral</span></td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium">Preclinical</span></td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-green-100 text-green-700 rounded-md text-xs font-medium">Brain penetrant</span> Protein degradation</td>
+            <td class="py-3 px-6 font-bold text-gray-900"><a href="https://clinicaltrials.gov/study/NCT06448546" target="_blank" class="hover:text-teal-600">NCT06448546</a></td>
+            <td class="py-3 px-6 text-gray-600 text-sm">Gut Microbiomes in HD</td>
+            <td class="py-3 px-6 text-gray-600 text-sm">University of Central Flo</td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">N/A</span></td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-green-100 text-green-700 rounded-md text-xs font-medium">Recruiting</span></td>
+            <td class="py-3 px-6 text-gray-500 text-sm"></td>
           </tr>
+
           <tr class="hover:bg-teal-50/50 transition-colors">
-            <td class="py-4 px-6 font-bold text-gray-900">INT41</td>
-            <td class="py-4 px-6 text-gray-600">Vybion</td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded-md text-xs font-medium">Gene Therapy</span></td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium">Preclinical</span></td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-md text-xs font-medium">Orphan Drug</span> Antibody fragment</td>
+            <td class="py-3 px-6 font-bold text-gray-900"><a href="https://clinicaltrials.gov/study/NCT04478734" target="_blank" class="hover:text-teal-600">NCT04478734</a></td>
+            <td class="py-3 px-6 text-gray-600 text-sm">Trial of the Combined Use of Thiamine and Biotin i</td>
+            <td class="py-3 px-6 text-gray-600 text-sm">Fundación Pública Andaluz</td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">PHASE2</span></td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-green-100 text-green-700 rounded-md text-xs font-medium">Recruiting</span></td>
+            <td class="py-3 px-6 text-gray-500 text-sm">Moderate doses of Thiamine y Biotin; Hig</td>
           </tr>
+
           <tr class="hover:bg-teal-50/50 transition-colors">
-            <td class="py-4 px-6 font-bold text-gray-900">SPK-10001</td>
-            <td class="py-4 px-6 text-gray-600">Roche</td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded-md text-xs font-medium">Gene Therapy</span></td>
-            <td class="py-4 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">Phase I/II</span></td>
-            <td class="py-4 px-6">Recruiting now</td>
+            <td class="py-3 px-6 font-bold text-gray-900"><a href="https://clinicaltrials.gov/study/NCT06941662" target="_blank" class="hover:text-teal-600">NCT06941662</a></td>
+            <td class="py-3 px-6 text-gray-600 text-sm">Huntington's Disease Biobank: Advancing Remote Mon</td>
+            <td class="py-3 px-6 text-gray-600 text-sm">Stanford University</td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">N/A</span></td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-green-100 text-green-700 rounded-md text-xs font-medium">Recruiting</span></td>
+            <td class="py-3 px-6 text-gray-500 text-sm">computer vision, remote monitoring, bloo</td>
+          </tr>
+
+          <tr class="hover:bg-teal-50/50 transition-colors">
+            <td class="py-3 px-6 font-bold text-gray-900"><a href="https://clinicaltrials.gov/study/NCT06147414" target="_blank" class="hover:text-teal-600">NCT06147414</a></td>
+            <td class="py-3 px-6 text-gray-600 text-sm">Development of Non-Invasive Prenatal Diagnosis for</td>
+            <td class="py-3 px-6 text-gray-600 text-sm">Assistance Publique - Hôp</td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">N/A</span></td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-green-100 text-green-700 rounded-md text-xs font-medium">Recruiting</span></td>
+            <td class="py-3 px-6 text-gray-500 text-sm">Blood sample</td>
+          </tr>
+
+          <tr class="hover:bg-teal-50/50 transition-colors">
+            <td class="py-3 px-6 font-bold text-gray-900"><a href="https://clinicaltrials.gov/study/NCT04400331" target="_blank" class="hover:text-teal-600">NCT04400331</a></td>
+            <td class="py-3 px-6 text-gray-600 text-sm">Open-Label Rollover Study for Continuing Valbenazi</td>
+            <td class="py-3 px-6 text-gray-600 text-sm">Neurocrine Biosciences</td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">PHASE3</span></td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">Active Not Recruiting</span></td>
+            <td class="py-3 px-6 text-gray-500 text-sm">Valbenazine</td>
+          </tr>
+
+          <tr class="hover:bg-teal-50/50 transition-colors">
+            <td class="py-3 px-6 font-bold text-gray-900"><a href="https://clinicaltrials.gov/study/NCT02252380" target="_blank" class="hover:text-teal-600">NCT02252380</a></td>
+            <td class="py-3 px-6 text-gray-600 text-sm">ExAblate Transcranial MRgFUS for the Management of</td>
+            <td class="py-3 px-6 text-gray-600 text-sm">InSightec</td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">NA</span></td>
+            <td class="py-3 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">Active Not Recruiting</span></td>
+            <td class="py-3 px-6 text-gray-500 text-sm">Transcranial ExAblate System</td>
           </tr>
         </tbody>
       </table>
@@ -215,115 +230,74 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- Latest Findings -->
-<section id="findings" class="py-20 px-8 bg-gray-50">
+<!-- HDBuzz News -->
+<section id="news" class="py-16 px-8 bg-gray-50">
   <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-12">
-      <div class="text-sm font-bold text-green-600 uppercase tracking-wider mb-2">Breakthroughs Happening Now</div>
-      <h2 class="text-3xl font-bold text-gray-900">Research Milestones</h2>
-      <p class="text-gray-500 mt-2">More progress in the last 12 months than the previous decade combined</p>
+    <div class="flex items-end justify-between mb-8">
+      <div>
+        <div class="text-sm font-bold text-orange-600 uppercase tracking-wider mb-1">Community News</div>
+        <h2 class="text-2xl font-bold text-gray-900">Latest from HDBuzz</h2>
+      </div>
+      <a href="https://en.hdbuzz.net" target="_blank" class="text-teal-600 text-sm font-medium flex items-center gap-1">Visit HDBuzz <span class="material-symbols-outlined text-sm">open_in_new</span></a>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
-        <div class="text-xs text-teal-600 font-bold uppercase mb-2">March 2026 - Nature</div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2">AMT-130: First Treatment to Slow HD by 75%</h3>
-        <p class="text-gray-500 text-sm">A historic milestone — the first gene therapy to demonstrate meaningful disease modification in HD. 3-year data shows high-dose patients maintained more movement, thinking, and daily function. The path to approval continues.</p>
-        <a href="https://www.nature.com/articles/d41586-025-03139-9" target="_blank" class="text-teal-600 text-sm font-medium mt-3 inline-flex items-center gap-1">Read in Nature <span class="material-symbols-outlined text-sm">open_in_new</span></a>
-      </div>
-      <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
-        <div class="text-xs text-orange-600 font-bold uppercase mb-2">March 2026 - Labroots</div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2">New Mechanism Discovered: Tunneling Nanotubes</h3>
-        <p class="text-gray-500 text-sm">A completely new avenue for research — scientists discovered that tunneling nanotubes play a role in HD cell-to-cell spread. Every new mechanism is a new potential target for treatment.</p>
-      </div>
-      <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
-        <div class="text-xs text-green-600 font-bold uppercase mb-2">2026 - Novartis</div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2">Generative AI Designs 15M HD Compounds</h3>
-        <p class="text-gray-500 text-sm">Novartis used generative AI to computationally design 15 million potential compounds, then created predictive models for brain penetration. Narrowed to ~60 lab-tested molecules for a potent scaffold.</p>
-      </div>
-      <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
-        <div class="text-xs text-purple-600 font-bold uppercase mb-2">2026 - Unlearn</div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2">Digital Twins: AI-Powered Clinical Trials</h3>
-        <p class="text-gray-500 text-sm">Unlearn's HD Digital Twin Generator creates AI-simulated patient controls from real Enroll-HD data. This could dramatically accelerate clinical trials by reducing the need for traditional placebo arms.</p>
-      </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+      <a href="https://en.hdbuzz.net/two-heads-are-better-than-one-combined-physical-and-music-therapy-for-late-stage-huntingtons-disease/" target="_blank" class="block border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-teal-300 transition-all">
+        <div class="text-xs text-green-600 font-medium mb-1">Thu, 26 Mar 2026</div>
+        <h3 class="text-base font-bold text-gray-900">Two Heads Are Better Than One: Combined Physical and Music Therapy for Late-Stage Huntington’s Disease</h3>
+      </a>
+
+      <a href="https://en.hdbuzz.net/a-guest-perspective-for-gratitude-day-why-huntingtons-disease-may-be-neurosciences-best-investment/" target="_blank" class="block border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-teal-300 transition-all">
+        <div class="text-xs text-green-600 font-medium mb-1">Mon, 23 Mar 2026</div>
+        <h3 class="text-base font-bold text-gray-900">A Guest Perspective for Gratitude Day: Why Huntington’s Disease May Be Neuroscience’s Best Investment</h3>
+      </a>
+
+      <a href="https://en.hdbuzz.net/the-girl-at-the-end-of-the-world-a-gratitude-day-reflection-on-the-place-that-built-our-science/" target="_blank" class="block border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-teal-300 transition-all">
+        <div class="text-xs text-green-600 font-medium mb-1">Thu, 19 Mar 2026</div>
+        <h3 class="text-base font-bold text-gray-900">The Girl at the End of the World: A Gratitude Day Reflection on the Place that Built Our Science</h3>
+      </a>
+
+      <a href="https://en.hdbuzz.net/turning-down-mismatch-repair-genes-slows-huntingtons-repeat-growth-in-human-neurons/" target="_blank" class="block border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-teal-300 transition-all">
+        <div class="text-xs text-green-600 font-medium mb-1">Mon, 16 Mar 2026</div>
+        <h3 class="text-base font-bold text-gray-900">Turning down mismatch repair genes slows Huntington’s repeat growth in human neurons</h3>
+      </a>
+
+      <a href="https://en.hdbuzz.net/huntingtons-disease-therapeutics-conference-2026-day-3/" target="_blank" class="block border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-teal-300 transition-all">
+        <div class="text-xs text-green-600 font-medium mb-1">Wed, 11 Mar 2026</div>
+        <h3 class="text-base font-bold text-gray-900">Huntington’s Disease Therapeutics Conference 2026 – Day 3</h3>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- Drug Repurposing -->
-<section id="repurposing" class="py-20 px-8">
+<!-- Targets -->
+<section id="targets" class="py-16 px-8">
   <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-12">
-      <div class="text-sm font-bold text-orange-600 uppercase tracking-wider mb-2">Hidden in Plain Sight</div>
-      <h2 class="text-3xl font-bold text-gray-900">Drug Repurposing Opportunities</h2>
-      <p class="text-gray-500 mt-2">FDA-approved drugs that may already have HD activity — faster path to patients because safety is already proven</p>
+    <div class="mb-8">
+      <div class="text-sm font-bold text-purple-600 uppercase tracking-wider mb-1">From Open Targets</div>
+      <h2 class="text-2xl font-bold text-gray-900">Top Associated Gene Targets</h2>
+      <p class="text-gray-500 text-sm mt-1">Every target is a potential avenue for treatment. Data from <a href="https://platform.opentargets.org/disease/MONDO_0007739/associations" target="_blank" class="text-teal-600 underline">Open Targets</a>.</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div class="border border-gray-200 rounded-xl p-5 hover:border-teal-300 transition-colors">
-        <div class="flex items-center justify-between mb-2">
-          <span class="font-bold text-gray-900">Metformin</span>
-          <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Preclinical</span>
-        </div>
-        <div class="text-sm text-gray-500 mb-1">Target: mTOR / AMPK</div>
-        <p class="text-xs text-gray-400">Promotes autophagy, may help clear mutant HTT protein</p>
-      </div>
-      <div class="border border-gray-200 rounded-xl p-5 hover:border-teal-300 transition-colors">
-        <div class="flex items-center justify-between mb-2">
-          <span class="font-bold text-gray-900">Rapamycin</span>
-          <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Preclinical</span>
-        </div>
-        <div class="text-sm text-gray-500 mb-1">Target: mTOR</div>
-        <p class="text-xs text-gray-400">mTOR inhibitor — clears mutant HTT in preclinical models</p>
-      </div>
-      <div class="border border-gray-200 rounded-xl p-5 hover:border-teal-300 transition-colors">
-        <div class="flex items-center justify-between mb-2">
-          <span class="font-bold text-gray-900">CBD</span>
-          <span class="px-2 py-0.5 bg-teal-100 text-teal-700 rounded text-xs font-medium">Early Human</span>
-        </div>
-        <div class="text-sm text-gray-500 mb-1">Target: CB1 / CB2</div>
-        <p class="text-xs text-gray-400">Cannabinoid modulator — early data on slowing progression</p>
-      </div>
-      <div class="border border-gray-200 rounded-xl p-5 hover:border-teal-300 transition-colors">
-        <div class="flex items-center justify-between mb-2">
-          <span class="font-bold text-gray-900">Simvastatin</span>
-          <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Preclinical</span>
-        </div>
-        <div class="text-sm text-gray-500 mb-1">Target: BDNF</div>
-        <p class="text-xs text-gray-400">Increases brain-derived neurotrophic factor, critical for neuronal survival</p>
-      </div>
-      <div class="border border-gray-200 rounded-xl p-5 hover:border-teal-300 transition-colors">
-        <div class="flex items-center justify-between mb-2">
-          <span class="font-bold text-gray-900">Vorinostat</span>
-          <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Preclinical</span>
-        </div>
-        <div class="text-sm text-gray-500 mb-1">Target: HDAC</div>
-        <p class="text-xs text-gray-400">HDAC inhibitor — addresses epigenetic dysregulation in HD</p>
-      </div>
-      <div class="border border-gray-200 rounded-xl p-5 hover:border-orange-300 transition-colors">
-        <div class="flex items-center justify-between mb-2">
-          <span class="font-bold text-gray-900">Bevantolol</span>
-          <span class="px-2 py-0.5 bg-teal-100 text-teal-700 rounded text-xs font-medium">Phase II</span>
-        </div>
-        <div class="text-sm text-gray-500 mb-1">Target: Chorea</div>
-        <p class="text-xs text-gray-400">AI-discovered by SOM Biotech (SOMAIPRO platform)</p>
-      </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      
     </div>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-gray-50 border-t border-gray-200 py-12 px-8">
+<footer class="bg-gray-50 border-t border-gray-200 py-10 px-8">
   <div class="max-w-5xl mx-auto text-center">
     <p class="text-gray-900 font-bold mb-2">HD Research Hub</p>
-    <p class="text-gray-400 text-sm mb-6">A personal research project exploring the art of the possible. Linking to and building on the great work of HDSA, HDBuzz, and the HD research community.</p>
-    <div class="flex justify-center gap-6 text-sm mb-6">
+    <p class="text-gray-400 text-sm mb-4">A personal research project exploring the art of the possible. Data refreshed automatically from public sources.</p>
+    <div class="flex justify-center gap-6 text-sm mb-4">
       <a href="https://github.com/jravinder/hd-research-agent" target="_blank" class="text-teal-600 hover:underline">GitHub</a>
       <a href="https://hdsa.org" target="_blank" class="text-teal-600 hover:underline">HDSA</a>
       <a href="https://en.hdbuzz.net" target="_blank" class="text-teal-600 hover:underline">HDBuzz</a>
       <a href="https://clinicaltrials.gov" target="_blank" class="text-teal-600 hover:underline">ClinicalTrials.gov</a>
       <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" class="text-teal-600 hover:underline">PubMed</a>
+      <a href="https://platform.opentargets.org" target="_blank" class="text-teal-600 hover:underline">Open Targets</a>
     </div>
-    <p class="text-gray-300 text-xs">This is a research tool for personal understanding, not medical advice. All clinical data sourced from public databases. 2026.</p>
+    <p class="text-gray-300 text-xs">Research tool for personal understanding, not medical advice. All data from public databases.</p>
   </div>
 </footer>
-
 </body></html>
