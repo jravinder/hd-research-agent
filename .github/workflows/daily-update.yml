@@ -1,0 +1,33 @@
+name: Daily Data Refresh
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # 8am UTC daily (3am ET)
+  workflow_dispatch:  # manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests rich
+
+      - name: Fetch fresh data
+        run: python src/data_fetcher.py
+
+      - name: Build site
+        run: python src/build_site.py --no-deploy
+
+      - name: Commit and push
+        run: |
+          git config user.name "HD Research Bot"
+          git config user.email "bot@hdresearchhub.dev"
+          git add data/data.json index.html
+          git diff --cached --quiet || git commit -m "Auto-update: $(date '+%Y-%m-%d') data refresh"
+          git push
