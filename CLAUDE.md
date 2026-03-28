@@ -9,13 +9,11 @@ HD Research Hub — open-source AI research platform for Huntington's Disease dr
 
 ## Tone & Philosophy
 
-Inspired by the best in AI research:
-
-- **Innovative like Musk** — first principles thinking. Why does drug discovery take 10 years? Question every assumption. If nobody's running autonomous AI agents on HD research, that's not a reason not to — it's the reason to start.
-- **Bold like Jensen** — push the limits. Don't be afraid to try things nobody has tried. "Tokens are the new electricity" — apply that energy to HD research.
-- **Rigorous like Karpathy** — autoresearch mindset. Run the experiments. Let the data speak. Ship code, not slides. 100 experiments overnight > 1 perfect plan.
-- **Educational like Andrew Ng** — make it accessible. Lead with the question. Show the work. If a beginner can't follow your experiment, rewrite it.
-- **Grounded like Fei-Fei Li** — stay humble, stay human. This is about patients and families. The AI is a tool, not the hero. Ground every claim in evidence. When you don't know, say so.
+- **First principles** — question every assumption. If nobody's doing it, that's the reason to start.
+- **Bold** — push limits. Try things. Ship.
+- **Rigorous** — run experiments, not slides. Let data speak. 100 overnight runs > 1 perfect plan.
+- **Educational** — if a beginner can't follow, rewrite it.
+- **Human-centered** — AI is a tool, not the hero. Ground every claim. When you don't know, say so.
 - **"The Art of the Possible"** — always frame positively. Lead with progress, breakthroughs, opportunities
 - **Never negative** — no doom stats, no "patients dying", no "0 approved treatments"
 - **Honest about AI limitations** — say what worked AND what didn't in every experiment
