@@ -7,17 +7,20 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<style>body { font-family: 'Inter', sans-serif; }</style>
+<link href="shared.css" rel="stylesheet"/>
 </head>
 <body class="bg-white text-gray-900 antialiased">
-<nav class="flex justify-between items-center px-4 md:px-8 h-16 border-b border-gray-100 sticky top-0 bg-white/95 backdrop-blur z-50">
+<nav class="flex justify-between items-center px-4 md:px-8 h-14 border-b border-gray-100 sticky top-0 bg-white/95 backdrop-blur z-50">
   <a href="index.html" class="text-lg font-bold text-gray-900 flex items-center gap-2">
     <span class="material-symbols-outlined text-teal-600">arrow_back</span>
     HD Research Hub
   </a>
-  <a href="https://github.com/jravinder/hd-research-agent/blob/main/data/experiment_001_report.md" target="_blank" class="text-sm text-gray-500 hover:text-gray-900 flex items-center gap-1">
-    View on GitHub <span class="material-symbols-outlined text-sm">open_in_new</span>
-  </a>
+  <div class="flex items-center gap-3">
+    <div id="google_translate_element"></div>
+    <a href="https://github.com/jravinder/hd-research-agent/blob/main/data/experiment_001_report.md" target="_blank" class="text-sm text-gray-500 hover:text-gray-900 flex items-center gap-1 desktop-only">
+      GitHub <span class="material-symbols-outlined text-sm">open_in_new</span>
+    </a>
+  </div>
 </nav>
 <main class="max-w-3xl mx-auto px-4 md:px-8 py-12">
 <h1 class="text-3xl font-bold text-gray-900 mb-2">What Can an LLM Learn from 22 HD Research Papers Overnight?</h1>
@@ -189,11 +192,5 @@ python src/run_experiment.py
   <p class="text-gray-400 text-xs mb-3">This is an open-source research experiment, not medical advice. AI-generated hypotheses are unvalidated.</p>
   <a href="index.html" class="text-teal-600 text-sm font-medium">Back to HD Research Hub</a>
 </footer>
-<div id="google_translate_element" class="fixed bottom-4 right-4 scale-90"></div>
-<script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'en,es,fr,de,ja,zh-CN,hi,pt,ar',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false}, 'google_translate_element');
-}
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="shared.js"></script>
 </body></html>
