@@ -1,41 +1,43 @@
-# HD Research Agent
+# HD Research Hub
 
-An AI-powered research agent for Huntington's Disease drug discovery. Uses LLMs to analyze published research, identify drug repurposing candidates, and run autonomous experiment loops on publicly available HD datasets.
+An open-source AI research platform exploring how data science, machine learning, and autonomous agents can help accelerate Huntington's Disease drug discovery.
 
-## Why This Exists
+**Live site:** [hd-research-agent.vercel.app](https://hd-research-agent.vercel.app)
 
-- **41,000 people** are currently dying from HD in the US alone, 200,000+ at risk
-- **AMT-130** (the first treatment to slow HD by 75%) is blocked by the FDA demanding more data
-- **AI can help**: drug repurposing, synthetic control arms, and autonomous research loops are all underexplored in HD
-- Nobody is running autoresearch-style agent loops on HD yet — this repo changes that
+## The Art of the Possible
+
+There's never been a more exciting time in HD research:
+
+- **75% disease slowing** demonstrated in AMT-130 gene therapy trial — the first treatment to meaningfully modify HD progression
+- **7+ therapies** in active clinical trials, with 21 studies recruiting right now
+- **AI is opening new doors** — Novartis used generative AI to design 15 million candidate compounds; SOM Biotech's AI platform discovered a drug repurposing candidate now in Phase II
+- **Digital twins** (Unlearn) could transform how clinical trials are run, making them faster and more accessible
+
+This project asks: what else can AI contribute?
 
 ## What It Does
 
-1. **Literature Agent** — Pulls recent HD papers from PubMed/arXiv, extracts key findings, builds a knowledge graph of targets, compounds, and mechanisms
-2. **Repurposing Scanner** — Cross-references known drugs against HD-relevant gene targets identified in transcriptomic studies (BDASeq, CHDI data)
-3. **Trial Analyzer** — Parses ClinicalTrials.gov for HD pipeline status, tracks which compounds are advancing or failing
-4. **Autoresearch Loop** — Runs overnight: generates hypotheses, searches literature, scores candidates, refines — Karpathy-style
-
-## Stack
-
-- Python 3.10+
-- Ollama (local LLM inference — works on Jetson AGX Orin or Mac)
-- LiteLLM for model routing
-- PubMed E-utilities API (free, no key needed)
-- ClinicalTrials.gov API (free)
+1. **Literature Agent** — Pulls recent HD papers from PubMed, uses LLMs to extract targets, compounds, key findings, and drug repurposing opportunities
+2. **Drug Repurposing Scanner** — Cross-references 16 known HD targets against FDA-approved drugs. Generates and scores novel hypotheses
+3. **Trial Tracker** — Live data from ClinicalTrials.gov — which trials are recruiting, who's sponsoring, what's advancing
+4. **Autoresearch Loop** — Karpathy-style overnight agent: generates hypotheses, searches literature, scores candidates, refines autonomously
+5. **Live Dashboard** — Auto-updated daily from PubMed, ClinicalTrials.gov, HDBuzz, and Open Targets
 
 ## Quick Start
 
 ```bash
 pip install -r requirements.txt
 
-# Run the literature agent (pulls recent HD papers)
+# Pull fresh data from all sources and rebuild the site
+python src/build_site.py --no-deploy
+
+# Run the literature agent (pulls and analyzes PubMed papers)
 python src/literature_agent.py
 
-# Run the repurposing scanner
+# Run the repurposing scanner (AI-generated drug hypotheses)
 python src/repurposing_scanner.py
 
-# Run the full autoresearch loop (runs overnight)
+# Run the full autoresearch loop overnight
 python src/autoresearch.py --hours=8
 ```
 
@@ -43,20 +45,49 @@ python src/autoresearch.py --hours=8
 
 ```
 src/
-├── literature_agent.py    # PubMed/arXiv paper fetcher + LLM summarizer
-├── repurposing_scanner.py # Drug-target cross-reference engine
-├── trial_tracker.py       # ClinicalTrials.gov HD pipeline monitor
-├── autoresearch.py        # Autonomous research loop orchestrator
-├── knowledge_graph.py     # In-memory graph of targets, compounds, mechanisms
-└── llm.py                 # LLM interface (Ollama/LiteLLM)
+├── data_fetcher.py       # Pulls from PubMed, ClinicalTrials.gov, HDBuzz, Open Targets
+├── build_site.py         # Generates index.html from live data, auto-deploys
+├── literature_agent.py   # PubMed paper fetcher + LLM analyzer
+├── repurposing_scanner.py# Drug-target cross-reference + AI hypothesis generator
+├── trial_tracker.py      # ClinicalTrials.gov HD pipeline monitor
+├── autoresearch.py       # Autonomous overnight research loop
+└── llm.py                # Ollama API interface (no third-party AI dependencies)
 ```
+
+## Stack
+
+- Python 3.10+
+- Ollama (local LLM inference — works on Jetson AGX Orin or Mac)
+- PubMed E-utilities API (free)
+- ClinicalTrials.gov API (free)
+- HDBuzz RSS (free)
+- Open Targets GraphQL (free)
+- Vercel (auto-deploy on push)
+- GitHub Actions (daily data refresh)
 
 ## Data Sources
 
-- [PubMed](https://pubmed.ncbi.nlm.nih.gov/) — HD research literature (E-utilities API)
+All data is from publicly available, authoritative sources:
+
+- [PubMed](https://pubmed.ncbi.nlm.nih.gov/) — Research literature
 - [ClinicalTrials.gov](https://clinicaltrials.gov/) — Active HD trials
-- [HDSA Pipeline](https://hdsa.org/hd-research/therapies-in-pipeline/) — Therapy tracker
-- [Enroll-HD](https://www.enroll-hd.org/) — Longitudinal patient data (requires access request)
+- [HDBuzz](https://en.hdbuzz.net/) — HD news in plain language
+- [Open Targets](https://platform.opentargets.org/) — Drug-target associations
+- [HDSA](https://hdsa.org/hd-research/therapies-in-pipeline/) — Therapy pipeline
+
+## Resources
+
+If you or someone you know is affected by HD:
+
+- [HDSA](https://hdsa.org) — Support groups, Centers of Excellence, advocacy
+- [HDBuzz](https://en.hdbuzz.net) — Research news explained in plain language
+- [HDYO](https://www.hdyo.org) — Resources for young people
+- [Enroll-HD](https://www.enroll-hd.org) — Join the world's largest HD study
+- [HD Reach](https://hdreach.org) — Rehab and exercise resources
+
+## Contributing
+
+All welcome — data scientists, ML engineers, bioinformaticians, HD researchers, families, and anyone who wants to help. Open an issue or submit a PR.
 
 ## License
 
