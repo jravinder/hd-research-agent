@@ -42,10 +42,40 @@ def text(value):
     return escape(str(value or ""))
 
 
+def _extract_topics(paper):
+    """Extract relevant topic tags from a paper title and abstract."""
+    title_abs = f"{paper.get('title', '')} {paper.get('abstract', '')}".lower()
+    topic_map = {
+        "gene therapy": ["gene therapy", "aav", "amt-130", "viral vector", "crispr"],
+        "biomarker": ["biomarker", "neurofilament", "nfl", "uch-l1", "gfap"],
+        "drug repurposing": ["repurpos", "repositioning", "fda-approved"],
+        "somatic expansion": ["somatic expansion", "cag repeat", "msh3", "fan1", "pms1", "mismatch repair"],
+        "neuroinflammation": ["neuroinflam", "microglia", "astrocyte", "il-6", "cytokine"],
+        "autophagy": ["autophagy", "mtor", "clearance", "aggregate"],
+        "AI / ML": ["machine learning", "deep learning", "artificial intelligence", "neural network", "computational"],
+        "clinical trial": ["clinical trial", "phase i", "phase ii", "phase iii", "randomized"],
+        "protein structure": ["protein structure", "huntingtin", "polyglutamine", "cryo-em", "alphafold"],
+        "TDP-43": ["tdp-43", "tdp43"],
+    }
+    tags = []
+    for tag, keywords in topic_map.items():
+        if any(kw in title_abs for kw in keywords):
+            tags.append(tag)
+    return tags[:3]  # max 3 tags per paper
+
+
 def build_papers_html(papers):
-    """Build HTML for latest papers section."""
+    """Build HTML for latest papers section with topic tags."""
     if not papers:
         return ""
+
+    tag_colors = {
+        "gene therapy": "purple", "biomarker": "blue", "drug repurposing": "orange",
+        "somatic expansion": "red", "neuroinflammation": "pink", "autophagy": "green",
+        "AI / ML": "teal", "clinical trial": "emerald", "protein structure": "indigo",
+        "TDP-43": "amber",
+    }
+
     cards = []
     for p in papers[:6]:
         journal = text(p.get("journal", "")[:40])
@@ -53,9 +83,20 @@ def build_papers_html(papers):
         title = text(p.get("title", "")[:100])
         url = sanitize_url(p.get("url", "#"))
         abstract = text(p.get("abstract", "")[:200])
+        topics = _extract_topics(p)
+
+        tags_html = ""
+        if topics:
+            tag_spans = []
+            for t in topics:
+                color = tag_colors.get(t, "gray")
+                tag_spans.append(f'<span class="px-2 py-0.5 bg-{color}-100 text-{color}-700 rounded text-xs font-medium">{t}</span>')
+            tags_html = f'<div class="flex flex-wrap gap-1 mb-2">{"".join(tag_spans)}</div>'
+
         cards.append(f'''
       <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow">
         <div class="text-xs text-teal-600 font-bold uppercase mb-2">{date} — {journal}</div>
+        {tags_html}
         <h3 class="text-base font-bold text-gray-900 mb-2">{title}</h3>
         <p class="text-gray-400 text-sm line-clamp-3">{abstract}</p>
         <a href="{url}" target="_blank" rel="noopener noreferrer" class="text-teal-600 text-sm font-medium mt-2 inline-flex items-center gap-1">PubMed <span class="material-symbols-outlined text-sm">open_in_new</span></a>
@@ -165,6 +206,7 @@ def build_page(data):
       <a href="#resources" class="text-gray-500 hover:text-gray-900 py-2">Resources</a>
       <a href="#involved" class="text-gray-500 hover:text-gray-900 py-2">Get Involved</a>
       <a href="chat.html" class="text-teal-600 font-semibold hover:text-teal-700 py-2 flex items-center gap-1"><span class="material-symbols-outlined text-sm">chat</span> Ask AI</a>
+      <a href="guide.html" class="text-gray-500 hover:text-gray-900 py-2 flex items-center gap-1"><span class="material-symbols-outlined text-sm">help</span> Guide</a>
     </div>
   </div>
   <div class="flex items-center gap-2">
@@ -511,7 +553,7 @@ def build_page(data):
 function googleTranslateElementInit() {{
   new google.translate.TranslateElement({{
     pageLanguage: 'en',
-    includedLanguages: 'en,es,fr,de,ja,zh-CN,hi,pt,ar,ko,it,ru,nl',
+    includedLanguages: 'en,hi,ta,te,bn,mr,kn,ml,gu,pa,ur,es,fr,de,ja,zh-CN,pt,ar,ko,it,ru',
     layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
     autoDisplay: false
   }}, 'google_translate_element');
