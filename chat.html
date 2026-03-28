@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ask HD Research Hub</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  .chat-bubble { animation: fadeIn 0.3s ease-in; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .typing-dots span { animation: blink 1.4s infinite both; }
+  .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+  .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes blink { 0%, 80%, 100% { opacity: 0.3; } 40% { opacity: 1; } }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased min-h-screen flex flex-col">
+
+<!-- Nav -->
+<nav class="flex justify-between items-center px-4 md:px-8 h-14 border-b border-gray-200 bg-white">
+  <a href="index.html" class="flex items-center gap-2 text-gray-900 font-bold">
+    <span class="material-symbols-outlined text-teal-600 text-xl">arrow_back</span>
+    HD Research Hub
+  </a>
+  <div class="flex items-center gap-2">
+    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+    <span class="text-xs text-gray-400" id="status">Ready</span>
+  </div>
+</nav>
+
+<!-- Chat Container -->
+<div class="flex-1 flex flex-col max-w-3xl mx-auto w-full">
+
+  <!-- Messages -->
+  <div id="messages" class="flex-1 overflow-y-auto px-4 py-6 space-y-4">
+
+    <!-- Welcome -->
+    <div class="chat-bubble flex gap-3">
+      <div class="w-8 h-8 bg-teal-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+        <span class="material-symbols-outlined text-white text-lg">science</span>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-2xl rounded-tl-md px-4 py-3 max-w-[85%]">
+        <p class="text-sm text-gray-700 leading-relaxed">Hi! I'm the HD Research Hub assistant. I can help you explore Huntington's Disease research using our corpus of analyzed papers, clinical trial data, and AI-generated drug repurposing hypotheses.</p>
+        <p class="text-sm text-gray-700 leading-relaxed mt-2">Try asking me things like:</p>
+        <div class="mt-2 space-y-1">
+          <button onclick="askSuggestion(this)" class="block text-left text-sm text-teal-600 hover:text-teal-700 hover:bg-teal-50 px-2 py-1 rounded transition-colors">"What's the latest on AMT-130?"</button>
+          <button onclick="askSuggestion(this)" class="block text-left text-sm text-teal-600 hover:text-teal-700 hover:bg-teal-50 px-2 py-1 rounded transition-colors">"Which drug repurposing candidates scored highest?"</button>
+          <button onclick="askSuggestion(this)" class="block text-left text-sm text-teal-600 hover:text-teal-700 hover:bg-teal-50 px-2 py-1 rounded transition-colors">"What are the somatic expansion targets?"</button>
+          <button onclick="askSuggestion(this)" class="block text-left text-sm text-teal-600 hover:text-teal-700 hover:bg-teal-50 px-2 py-1 rounded transition-colors">"How many clinical trials are recruiting right now?"</button>
+        </div>
+        <p class="text-xs text-gray-400 mt-3 italic">I'm an AI research assistant, not a doctor. For medical advice, please contact <a href="https://hdsa.org" class="text-teal-500 underline" target="_blank">HDSA</a> or your healthcare provider.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Input -->
+  <div class="border-t border-gray-200 bg-white px-4 py-3">
+    <form id="chat-form" class="flex gap-2">
+      <input
+        id="chat-input"
+        type="text"
+        placeholder="Ask about HD research, trials, or drug candidates..."
+        class="flex-1 px-4 py-3 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+        autocomplete="off"
+      />
+      <button
+        type="submit"
+        id="send-btn"
+        class="px-4 py-3 bg-teal-500 text-white rounded-xl hover:bg-teal-600 transition-colors flex items-center gap-1 disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        <span class="material-symbols-outlined text-lg">send</span>
+      </button>
+    </form>
+    <p class="text-xs text-gray-300 text-center mt-2">Powered by NVIDIA NIM + our research corpus of <span id="corpus-count">46</span> analyzed papers</p>
+  </div>
+</div>
+
+<script>
+const messagesEl = document.getElementById('messages');
+const chatForm = document.getElementById('chat-form');
+const chatInput = document.getElementById('chat-input');
+const sendBtn = document.getElementById('send-btn');
+const statusEl = document.getElementById('status');
+const corpusCountEl = document.getElementById('corpus-count');
+
+let history = [];
+
+function addMessage(role, content) {
+  const div = document.createElement('div');
+  div.className = 'chat-bubble flex gap-3' + (role === 'user' ? ' justify-end' : '');
+
+  if (role === 'user') {
+    div.innerHTML = `
+      <div class="bg-teal-500 text-white rounded-2xl rounded-tr-md px-4 py-3 max-w-[85%]">
+        <p class="text-sm leading-relaxed">${escapeHtml(content)}</p>
+      </div>
+    `;
+  } else {
+    div.innerHTML = `
+      <div class="w-8 h-8 bg-teal-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+        <span class="material-symbols-outlined text-white text-lg">science</span>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-2xl rounded-tl-md px-4 py-3 max-w-[85%]">
+        <div class="text-sm text-gray-700 leading-relaxed prose-sm">${formatResponse(content)}</div>
+      </div>
+    `;
+  }
+
+  messagesEl.appendChild(div);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+function addTyping() {
+  const div = document.createElement('div');
+  div.id = 'typing';
+  div.className = 'chat-bubble flex gap-3';
+  div.innerHTML = `
+    <div class="w-8 h-8 bg-teal-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+      <span class="material-symbols-outlined text-white text-lg">science</span>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-2xl rounded-tl-md px-4 py-3">
+      <div class="typing-dots flex gap-1">
+        <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+        <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+        <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+      </div>
+    </div>
+  `;
+  messagesEl.appendChild(div);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+function removeTyping() {
+  const el = document.getElementById('typing');
+  if (el) el.remove();
+}
+
+function formatResponse(text) {
+  // Bold
+  text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  // Italic
+  text = text.replace(/\*(.+?)\*/g, '<em>$1</em>');
+  // PubMed links
+  text = text.replace(/\[(\d{8})\]/g, '<a href="https://pubmed.ncbi.nlm.nih.gov/$1/" target="_blank" class="text-teal-600 underline">[$1]</a>');
+  // Line breaks
+  text = text.replace(/\n\n/g, '</p><p class="mt-2">');
+  text = text.replace(/\n/g, '<br>');
+  return '<p>' + text + '</p>';
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+async function sendMessage(message) {
+  if (!message.trim()) return;
+
+  addMessage('user', message);
+  chatInput.value = '';
+  sendBtn.disabled = true;
+  statusEl.textContent = 'Thinking...';
+  addTyping();
+
+  try {
+    const resp = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message, history: history.slice(-6) }),
+    });
+
+    removeTyping();
+
+    if (!resp.ok) {
+      const err = await resp.json();
+      addMessage('assistant', 'Sorry, something went wrong: ' + (err.error || 'Unknown error') + '\n\nYou can still explore our research at the main dashboard.');
+      return;
+    }
+
+    const data = await resp.json();
+    addMessage('assistant', data.response);
+
+    // Update corpus count
+    if (data.corpus_size) {
+      corpusCountEl.textContent = data.corpus_size;
+    }
+
+    // Track history for context
+    history.push({ role: 'user', content: message });
+    history.push({ role: 'assistant', content: data.response });
+
+  } catch (e) {
+    removeTyping();
+    addMessage('assistant', 'I couldn\'t connect to the research API. The chatbot needs the server to be running. In the meantime, you can explore our findings on the main dashboard.');
+  } finally {
+    sendBtn.disabled = false;
+    statusEl.textContent = 'Ready';
+    chatInput.focus();
+  }
+}
+
+function askSuggestion(btn) {
+  const text = btn.textContent.replace(/^"|"$/g, '');
+  sendMessage(text);
+}
+
+chatForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  sendMessage(chatInput.value);
+});
+
+chatInput.focus();
+</script>
+
+</body></html>

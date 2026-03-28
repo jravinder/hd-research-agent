@@ -6,10 +6,13 @@ Vercel auto-deploy.
 """
 
 import json
+import os
 import subprocess
 import sys
+from html import escape
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).parent.parent
 DATA_FILE = ROOT / "data" / "data.json"
@@ -25,23 +28,37 @@ def load_data():
         return json.load(f)
 
 
+def sanitize_url(url):
+    """Allow only http(s) URLs and escape for safe HTML attribute insertion."""
+    candidate = (url or "").strip()
+    parsed = urlparse(candidate)
+    if parsed.scheme not in {"http", "https"}:
+        return "#"
+    return escape(candidate, quote=True)
+
+
+def text(value):
+    """Escape arbitrary text for safe HTML rendering."""
+    return escape(str(value or ""))
+
+
 def build_papers_html(papers):
     """Build HTML for latest papers section."""
     if not papers:
         return ""
     cards = []
     for p in papers[:6]:
-        journal = p.get("journal", "")[:40]
-        date = p.get("pub_date", "")
-        title = p.get("title", "")[:100]
-        url = p.get("url", "#")
-        abstract = p.get("abstract", "")[:200]
+        journal = text(p.get("journal", "")[:40])
+        date = text(p.get("pub_date", ""))
+        title = text(p.get("title", "")[:100])
+        url = sanitize_url(p.get("url", "#"))
+        abstract = text(p.get("abstract", "")[:200])
         cards.append(f'''
       <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow">
         <div class="text-xs text-teal-600 font-bold uppercase mb-2">{date} — {journal}</div>
         <h3 class="text-base font-bold text-gray-900 mb-2">{title}</h3>
         <p class="text-gray-400 text-sm line-clamp-3">{abstract}</p>
-        <a href="{url}" target="_blank" class="text-teal-600 text-sm font-medium mt-2 inline-flex items-center gap-1">PubMed <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+        <a href="{url}" target="_blank" rel="noopener noreferrer" class="text-teal-600 text-sm font-medium mt-2 inline-flex items-center gap-1">PubMed <span class="material-symbols-outlined text-sm">open_in_new</span></a>
       </div>''')
     return "\n".join(cards)
 
@@ -52,16 +69,20 @@ def build_trials_html(trials):
         return ""
     rows = []
     for t in trials[:10]:
-        phase = t.get("phase", "N/A")
+        phase = text(t.get("phase", "N/A"))
         status = t.get("status", "")
         status_color = "green" if status == "RECRUITING" else "teal" if "ACTIVE" in status else "gray"
-        status_label = status.replace("_", " ").title()
-        intervention = t.get("intervention", "")[:40]
+        status_label = text(status.replace("_", " ").title())
+        intervention = text(t.get("intervention", "")[:40])
+        title = text(t.get("title", "")[:50])
+        sponsor = text(t.get("sponsor", "")[:25])
+        nct_id = text(t.get("nct_id", ""))
+        url = sanitize_url(t.get("url", "#"))
         rows.append(f'''
           <tr class="hover:bg-teal-50/50 transition-colors">
-            <td class="py-3 px-6 font-bold text-gray-900"><a href="{t.get('url','#')}" target="_blank" class="hover:text-teal-600">{t.get('nct_id','')}</a></td>
-            <td class="py-3 px-6 text-gray-600 text-sm">{t.get('title','')[:50]}</td>
-            <td class="py-3 px-6 text-gray-600 text-sm">{t.get('sponsor','')[:25]}</td>
+            <td class="py-3 px-6 font-bold text-gray-900"><a href="{url}" target="_blank" rel="noopener noreferrer" class="hover:text-teal-600">{nct_id}</a></td>
+            <td class="py-3 px-6 text-gray-600 text-sm">{title}</td>
+            <td class="py-3 px-6 text-gray-600 text-sm">{sponsor}</td>
             <td class="py-3 px-6"><span class="px-2 py-1 bg-teal-100 text-teal-700 rounded-md text-xs font-medium">{phase}</span></td>
             <td class="py-3 px-6"><span class="px-2 py-1 bg-{status_color}-100 text-{status_color}-700 rounded-md text-xs font-medium">{status_label}</span></td>
             <td class="py-3 px-6 text-gray-500 text-sm">{intervention}</td>
@@ -75,10 +96,13 @@ def build_hdbuzz_html(articles):
         return ""
     items = []
     for a in articles[:5]:
+        link = sanitize_url(a.get("link", "#"))
+        pub_date = text(a.get("pub_date", "")[:16])
+        title = text(a.get("title", ""))
         items.append(f'''
-      <a href="{a.get('link','#')}" target="_blank" class="block border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-teal-300 transition-all">
-        <div class="text-xs text-green-600 font-medium mb-1">{a.get('pub_date','')[:16]}</div>
-        <h3 class="text-base font-bold text-gray-900">{a.get('title','')}</h3>
+      <a href="{link}" target="_blank" rel="noopener noreferrer" class="block border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-teal-300 transition-all">
+        <div class="text-xs text-green-600 font-medium mb-1">{pub_date}</div>
+        <h3 class="text-base font-bold text-gray-900">{title}</h3>
       </a>''')
     return "\n".join(items)
 
@@ -99,7 +123,10 @@ def build_page(data):
 
     targets_html = ""
     if targets:
-        targets_html = "".join(f'<div class="border border-gray-200 rounded-lg p-3 hover:border-purple-300 transition-colors"><span class="font-bold text-gray-900">{t.get("symbol","")}</span><div class="text-xs text-gray-400 mt-1">{t.get("name","")[:35]}</div><div class="text-xs text-purple-500 font-medium mt-1">Score: {t.get("score",0)}</div></div>' for t in targets[:16])
+        targets_html = "".join(
+            f'<div class="border border-gray-200 rounded-lg p-3 hover:border-purple-300 transition-colors"><span class="font-bold text-gray-900">{text(t.get("symbol", ""))}</span><div class="text-xs text-gray-400 mt-1">{text(t.get("name", "")[:35])}</div><div class="text-xs text-purple-500 font-medium mt-1">Score: {text(t.get("score", 0))}</div></div>'
+            for t in targets[:16]
+        )
 
     html = f'''<!DOCTYPE html>
 <html lang="en"><head>
@@ -137,6 +164,7 @@ def build_page(data):
       <a href="#ideas" class="text-gray-500 hover:text-gray-900 py-2">Research Ideas</a>
       <a href="#resources" class="text-gray-500 hover:text-gray-900 py-2">Resources</a>
       <a href="#involved" class="text-gray-500 hover:text-gray-900 py-2">Get Involved</a>
+      <a href="chat.html" class="text-teal-600 font-semibold hover:text-teal-700 py-2 flex items-center gap-1"><span class="material-symbols-outlined text-sm">chat</span> Ask AI</a>
     </div>
   </div>
   <div class="flex items-center gap-2">
@@ -519,10 +547,14 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description="Build HD Research Hub site from live data")
     parser.add_argument("--no-deploy", action="store_true", help="Skip git push")
+    parser.add_argument("--refresh-data", action="store_true", help="Fetch fresh data before building the site")
     args = parser.parse_args()
 
-    from data_fetcher import run as fetch_data
-    data = fetch_data()
+    if args.refresh_data:
+        from data_fetcher import run as fetch_data
+        data = fetch_data()
+    else:
+        data = load_data()
     build_page(data)
 
     if not args.no_deploy:
