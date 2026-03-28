@@ -82,7 +82,7 @@ We then asked the model: based on everything you just analyzed, suggest 5 FDA-ap
 **What worked:**
 - The LLM correctly categorized 20/22 papers by research type
 - It extracted meaningful targets and identified cross-paper patterns (TDP-43 connection, post-translational modifications)
-- The Tocilizumab and Lithium hypotheses are genuinely worth further investigation
+- The Tocilizumab and Lithium hypotheses are interesting starting points that warrant expert review and literature validation
 - Running on Jetson means this can repeat nightly at zero cost
 
 **What didn't:**
@@ -91,7 +91,18 @@ We then asked the model: based on everything you just analyzed, suggest 5 FDA-ap
 - One hypothesis confused a biomarker with a causal target (Bisoprolol/NfL)
 - Repurposing signals from individual papers were zero — the model found signals only when synthesizing across papers
 
-**Lesson:** LLMs are good at pattern-matching across papers but bad at knowing what's already been tried. The best use is generating ideas for a human researcher to evaluate, not making clinical decisions.
+**Lesson:** LLMs are good at pattern-matching across papers but bad at knowing what's already been tried. The best use is generating starting-point ideas for human researchers to evaluate — not making clinical decisions.
+
+## Important Limitations
+
+- **No expert review.** These hypotheses have not been reviewed by HD researchers, pharmacologists, or clinicians. They are LLM outputs, not peer-reviewed findings.
+- **No experimental validation.** None of these ideas have been tested in a lab, animal model, or clinical setting by us.
+- **Abstracts only.** The AI read paper abstracts, not full texts. Important details, caveats, and negative results in full papers were invisible to the model.
+- **Model knowledge gaps.** The LLM doesn't know the full history of HD clinical trials. It suggested Riluzole without knowing it was already tested.
+- **Scoring is relative, not absolute.** A "score" of 80/100 means the model rated its own rationale highly — it does not mean the hypothesis has an 80% chance of working.
+- **Single model, single run.** Results from one LLM in one session. Different models or different prompts could produce different hypotheses.
+
+If you are a researcher and see something interesting here, please evaluate it independently using primary literature and your domain expertise. We welcome feedback — open an issue on [GitHub](https://github.com/jravinder/hd-research-agent/issues).
 
 ## How to Reproduce This
 

@@ -29,19 +29,21 @@
 
       <p>I'm not a doctor. I'm not a biologist. I'm a data scientist and engineer who builds things with AI.</p>
 
-      <p>I started this project with a simple question: <strong>what if the tools we use every day — LLMs, autonomous agents, data pipelines — could help accelerate research for diseases like Huntington's?</strong></p>
+      <p>I started this project with a simple question: <strong>what if the tools we use every day — LLMs, autonomous agents, data pipelines — could be useful to the HD research community?</strong></p>
 
-      <p>Here's what I found: there are brilliant scientists working on HD. Companies like uniQure built a gene therapy that slows the disease by 75%. Novartis is using generative AI to design millions of compounds. Unlearn is building digital twins from patient data. The science is moving.</p>
+      <p>There are brilliant scientists working on Huntington's Disease. uniQure's AMT-130 gene therapy demonstrated 75% disease slowing in a Phase I/II trial (<a href="https://www.nature.com/articles/d41586-025-03139-9" class="text-teal-600 underline" target="_blank">Nature, 2025</a>). Novartis has used generative AI to design candidate compounds (<a href="https://www.drugtargetreview.com/news/154613/novartis-licenses-innovative-treatment-for-huntingtons-disease/" class="text-teal-600 underline" target="_blank">Drug Target Review</a>). Unlearn is building digital twins from Enroll-HD patient data (<a href="https://www.newswire.com/news/unlearn-advances-huntingtons-disease-ai-modeling-through-access-to-22732325" class="text-teal-600 underline" target="_blank">Newswire, Feb 2026</a>). The science is moving.</p>
 
-      <p>But I also found gaps. Nobody was running autonomous AI research agents on HD. Nobody had an open-source drug repurposing scanner for it. Nobody was pulling PubMed, ClinicalTrials.gov, and social media into a single, auto-refreshing research dashboard. These aren't hard problems for a data scientist — they're just problems nobody had pointed AI at yet.</p>
+      <p>I wanted to explore whether open-source AI tools could contribute something useful alongside this work — even in a small way. Not to replace researchers, but to help surface patterns across papers, generate starting-point hypotheses, and make the research landscape easier to navigate.</p>
 
-      <p>So I built this. In one night.</p>
+      <p>So I built this research dashboard and a set of AI agents.</p>
 
-      <p>Our AI analyzed 46 papers and generated drug repurposing hypotheses. Some were good (Tocilizumab for neuroinflammation scored 80/100). Some were wrong (it suggested Riluzole, already tested with modest results). We published both — because honesty about what AI can and can't do matters more than looking smart.</p>
+      <p>In our <a href="experiment-1.html" class="text-teal-600 underline">first experiment</a>, we fed 22 recent PubMed abstracts to Llama 3.1 8B (an open-source LLM running on an NVIDIA Jetson). The AI extracted molecular targets and suggested drug repurposing ideas. Some suggestions were interesting starting points — for example, it flagged the IL-6 pathway for neuroinflammation. Others were clearly limited — it suggested Riluzole without knowing it had already been tested in HD trials. We published both outcomes because <strong>transparency about what AI can and can't do matters more than looking impressive.</strong></p>
 
-      <p><strong>This is not a medical product.</strong> I can't cure anything. What I can do is build tools that surface patterns, generate ideas, and make research more accessible. If one hypothesis from our AI agent catches the eye of one researcher and leads to one experiment — that's worth it.</p>
+      <p>To be clear: <strong>none of our AI-generated hypotheses have been reviewed by domain experts or validated experimentally.</strong> They are computational starting points, not findings. They need wet-lab testing, expert review, and clinical validation before they mean anything. We publish them openly so the community can evaluate, critique, and build on them if they see potential.</p>
 
-      <p>Everything here is open source. Use it, build on it, improve it. The code is MIT-licensed. The data comes from public sources. The AI runs on a $1,000 edge device in my home office.</p>
+      <p><strong>This is not a medical product.</strong> I can't cure anything. What I can do is build tools, share data, and ask questions. If any of this is useful to someone who knows more than I do — that's the whole point.</p>
+
+      <p>Everything is open source. The code is MIT-licensed. The data comes from public sources (<a href="https://pubmed.ncbi.nlm.nih.gov" class="text-teal-600 underline" target="_blank">PubMed</a>, <a href="https://clinicaltrials.gov" class="text-teal-600 underline" target="_blank">ClinicalTrials.gov</a>, <a href="https://en.hdbuzz.net" class="text-teal-600 underline" target="_blank">HDBuzz</a>). The AI runs locally on consumer hardware.</p>
 
       <p class="text-lg font-medium text-gray-900">The art of the possible starts with someone deciding to try.</p>
     </div>
@@ -108,7 +110,7 @@
         </div>
         <div>
           <div class="font-bold text-gray-900">Grounded like Fei-Fei Li</div>
-          <p class="text-sm text-gray-500">Stay humble, stay human. This is about patients and families. The AI is a tool, not the hero. Ground every claim in evidence. When you don't know, say so.</p>
+          <p class="text-sm text-gray-500">AI is not inherently good or bad — it's up to us to decide how we use it. Keep it human-centered. This is about patients and families, not technology for its own sake. The AI is a tool in service of people. Ground every claim in evidence. When you don't know, say so. When the AI gets it wrong, publish that too.</p>
         </div>
       </div>
     </div>
