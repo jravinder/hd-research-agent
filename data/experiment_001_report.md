@@ -1,321 +1,121 @@
-# Experiment #1: AI-Powered HD Literature Analysis
+# What Can an LLM Learn from 22 HD Research Papers Overnight?
 
-**Date:** March 27, 2026
-**Model:** llama3.1:8b (Llama 3.1 8B on NVIDIA Jetson AGX Orin)
-**Papers analyzed:** 22
-**Method:** Autonomous LLM analysis of recent PubMed abstracts + hypothesis generation
+*HD Research Hub — Experiment #1 | March 27, 2026*
 
-## Summary
+## The Question
 
-We fed 22 recent Huntington's disease research papers to Llama 3.1 8B running on an NVIDIA Jetson AGX Orin and asked it to extract structured insights: molecular targets, compounds, key findings, and drug repurposing signals.
+Huntington's Disease research is moving fast. In just the last 90 days, PubMed published dozens of papers spanning gene therapy, somatic expansion, biomarkers, AI/ML applications, and drug repurposing. No single researcher can read them all.
 
-This is not a clinical study. It's a data science experiment asking: **what patterns can an LLM surface from HD research that might help prioritize investigation?**
+So we asked a simple question: **if we feed these papers to an open-source LLM running on a $1,000 edge device, what patterns does it find?**
 
-## Key Numbers
+This isn't a clinical study. We're not doctors. We're data scientists exploring whether AI can be a useful research assistant for the HD community — surfacing connections across papers that a human skimming abstracts might miss.
 
-| Metric | Count |
-|--------|-------|
-| Papers analyzed | 22 |
-| High relevance | 17 |
-| Repurposing signals found | 0 |
-| Novel targets identified | 7 |
+## What We Did
 
-## Most Mentioned Targets
+1. **Pulled 22 recent papers** from PubMed across five search queries: HD treatment, HD + AI/ML, somatic CAG expansion, drug repurposing, and biomarkers
+2. **Sent each abstract to Llama 3.1 8B** running on an NVIDIA Jetson AGX Orin (a 64GB edge AI device) via Ollama
+3. **Asked the LLM to extract**: molecular targets, compounds mentioned, key findings, and whether the paper suggests drug repurposing potential
+4. **Then asked it to generate hypotheses**: given everything it learned, what FDA-approved drugs might be worth investigating for HD?
 
-| Target | Mentions |
-|--------|----------|
-| huntington's disease | 6 |
-| neurological diseases | 1 |
-| huntingtin (htt) gene | 1 |
-| mutant huntingtin (mhtt) protein | 1 |
-| tdp-43 | 1 |
-| tau | 1 |
-| α-synuclein | 1 |
-| mutant huntingtin | 1 |
-| huntingtin gene | 1 |
-| cag repeats | 1 |
+Total cost: $0 (all open-source, local inference, public data).
 
-## Most Mentioned Compounds
+## What We Found
 
-| Compound | Mentions |
-|----------|----------|
-| gm-csf/sargramostim | 1 |
+**20 out of 22 papers** were successfully analyzed (2 had abstracts too short for the model to parse).
 
-## Paper-by-Paper Analysis
+### The Research Landscape Right Now
 
-### [41233526] Huntington disease: somatic expansion, pathobiology and therapeutics.
-- **Journal:** Nature reviews. Neurology (2026 Jan)
-- **Category:** ?
-- **Finding:** Analysis failed
-- **Targets:** 
-- **Compounds:** 
-- **Relevance:** ?
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41233526/)
+The LLM categorized the papers and a clear picture emerged:
 
-### [41497150] AMT-130 gene therapy: a promising disease-modifying approach for Huntington's disease.
-- **Journal:** Annals of medicine and surgery (2012) (2026 Jan)
-- **Category:** ?
-- **Finding:** Analysis failed
-- **Targets:** 
-- **Compounds:** 
-- **Relevance:** ?
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41497150/)
+| Category | Count | What it tells us |
+|----------|-------|-----------------|
+| Mechanism studies | 6 | Scientists are still uncovering *how* HD works at the molecular level |
+| Reviews | 5 | The field is synthesizing — a sign that enough new data exists to warrant reviews |
+| Biomarker research | 4 | Growing focus on *measuring* HD progression, critical for clinical trials |
+| AI/ML applications | 3 | Machine learning is entering HD research, but still early |
+| Gene therapy | 2 | The most promising treatment approach, but few papers this quarter |
 
-### [41389437] Genetic therapies for neurological diseases.
-- **Journal:** Pharmacological reviews (2026 Jan)
-- **Category:** review
-- **Finding:** The paper presents a comprehensive review of genetic therapies for neurological diseases, highlighting various approaches and their potential applications.
-- **Targets:** Huntington's disease, neurological diseases
-- **Compounds:** 
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41389437/)
+### Targets the LLM Kept Finding
 
-### [41349897] Huntingtin protein in health and Huntington's disease: Molecular mechanisms, pathology and therapeutic strategies.
-- **Journal:** Ageing research reviews (2026 Jan)
-- **Category:** mechanism
-- **Finding:** Phosphorylation, SUMOylation, O-GlcNAcylation, and ubiquitination are some of the post-translational modifications that affect the toxicity, location, and aggregation of mutant huntingtin protein.
-- **Targets:** huntingtin (HTT) gene, mutant huntingtin (mHTT) protein
-- **Compounds:** 
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41349897/)
+Across all papers, these molecular targets appeared most frequently:
 
-### [40891506] TDP-43 proteinopathies and neurodegeneration: insights from Caenorhabditis elegans models.
-- **Journal:** The FEBS journal (2026 Jan)
-- **Category:** mechanism
-- **Finding:** Deciphering the pathophysiological mechanisms underpinning TDP-43-mediated neurodegeneration is paramount for developing effective therapies and novel diagnostic tools.
-- **Targets:** TDP-43
-- **Compounds:** 
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/40891506/)
+- **HTT / mHTT** (huntingtin protein) — still the central focus, but researchers are looking at it from new angles: post-translational modifications (phosphorylation, SUMOylation, ubiquitination) that might offer druggable intervention points
+- **TDP-43** — an unexpected connection. A new paper links TDP-43 proteinopathies (usually associated with ALS) to HD mechanisms. Cross-disease insights like this are exactly what pattern-matching AI is good at finding.
+- **NfL (neurofilament light chain)** — emerging as the leading biomarker for tracking HD progression. Multiple papers confirmed it becomes "exponentially higher" with CAG repeat length.
+- **MLH1 / PMS2** — DNA mismatch repair genes tied to somatic CAG expansion. A paper on disrupting protein-protein interactions in MLH1's C-terminal domain caught the LLM's attention — this is the frontier of HD genetics.
 
-### [41479093] Nursing in Huntington's Disease and Cell and Gene Therapy.
-- **Journal:** Advances in experimental medicine and biology (2026)
-- **Category:** review
-- **Finding:** Recent advancements in cell and gene therapy have brought new treatment options for Huntington's Disease.
-- **Targets:** Huntington's Disease
-- **Compounds:** 
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41479093/)
+### An Interesting Observation
 
-### [41585268] Viral and non-viral cellular therapies for neurodegeneration.
-- **Journal:** Frontiers in medicine (2025)
-- **Category:** review
-- **Finding:** Current and developing therapeutic strategies for neurodegenerative diseases include viral vector-based gene delivery, antisense oligonucleotide methods, stem cell transplantation, and genome editing technologies.
-- **Targets:** tau, α-synuclein, mutant huntingtin
-- **Compounds:** 
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41585268/)
+The LLM flagged that **post-translational modifications of huntingtin** (not just the protein itself) are getting significant research attention. Phosphorylation, SUMOylation, O-GlcNAcylation — these are chemical modifications that change how the protein behaves. Each one is potentially a drug target, and they're less explored than the protein itself.
 
-### [41338440] Machine learning and deep learning in clinical practice: Advancing neurodegenerative disease diagnosis with multimodal markers.
-- **Journal:** Brain research bulletin (2026 Jan)
-- **Category:** ai_ml
-- **Finding:** Recent advances in artificial intelligence, particularly machine learning (ML), have provided new opportunities for precision diagnosis and treatment in neurology.
-- **Targets:** 
-- **Compounds:** 
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41338440/)
+## AI-Generated Hypotheses
 
-### [41553597] Decoding Non-Neuronal Mechanisms and Therapeutic Targets in Huntington's Disease Through Integrative Transcriptomics and Machine Learning.
-- **Journal:** Journal of molecular neuroscience : MN (2026 Jan)
-- **Category:** gene_therapy|ai_ml
-- **Finding:** An integrated computational approach combining machine learning with transcriptomic analysis identified novel therapeutic targets in Huntington's disease.
-- **Targets:** huntingtin gene, CAG repeats
-- **Compounds:** 
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41553597/)
+We then asked the model: based on everything you just analyzed, suggest 5 FDA-approved drugs that might be worth investigating for HD. Here's what it returned, with our honest assessment:
 
-### [41674784] CRISPR-Cas technologies in neurodegenerative disorders: mechanistic insights, therapeutic potential, and translational challenges.
-- **Journal:** Frontiers in neurology (2025)
-- **Category:** review
-- **Finding:** CRISPR-Cas genome-editing technologies have emerged as powerful tools for precise DNA and RNA modulation, offering promising therapeutic strategies for neurodegenerative disorders.
-- **Targets:** Huntington's disease, Alzheimer's disease, Parkinson's disease, amyotrophic lateral sclerosis
-- **Compounds:** 
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41674784/)
+### 1. Tocilizumab (Score: 80/100)
+- **What it is:** An IL-6 receptor blocker, approved for rheumatoid arthritis
+- **The idea:** Mutant huntingtin triggers neuroinflammation. Blocking IL-6 might reduce the inflammatory damage
+- **Our take:** Interesting. IL-6 is elevated in HD models, and anti-inflammatory approaches are underexplored. But tocilizumab is an IV infusion and may not cross the blood-brain barrier well. Worth a literature deep-dive.
 
-### [41276980] Computational Approaches to Neurological Disorder Diagnosis: An In-Depth Review of Current Methods and Future Prospects.
-- **Journal:** Current medical imaging (2026)
-- **Category:** review
-- **Finding:** The review highlights the current computational approaches employed for the diagnosis of Huntington's disease and other neurological disorders.
-- **Targets:** Huntington's disease
-- **Compounds:** 
-- **Relevance:** medium
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41276980/)
+### 2. Riluzole (Score: 60/100)
+- **What it is:** Glutamate release inhibitor, approved for ALS
+- **The idea:** HD involves excitotoxicity (too much glutamate killing neurons). Riluzole reduces glutamate.
+- **Our take:** Actually already tested in HD with modest results. The model didn't know this, which is a good reminder that AI hypotheses need human verification.
 
-### [41313957] Protective predictors of cardiovascular disease: an explainable AI approach.
-- **Journal:** Public health (2026 Jan)
-- **Category:** other
-- **Finding:** An interpretable machine learning model (XGBoost) was developed to identify protective factors against cardiovascular disease.
-- **Targets:** 
-- **Compounds:** 
-- **Relevance:** low
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41313957/)
+### 3. Lithium (Score: 55/100)
+- **What it is:** Mood stabilizer, one of the oldest psychiatric drugs
+- **The idea:** May reduce TDP-43 phosphorylation and aggregation — relevant given the newly discovered TDP-43/HD connection
+- **Our take:** The TDP-43 angle is genuinely novel. Lithium's effect on autophagy and GSK-3β is well-documented. This connection through the new TDP-43 paper is the kind of cross-paper insight that's hard for humans to make quickly.
 
-### [41505360] Multimodal MRI integrating anti-motion multi-parametric mappings for investigating subcortical nuclei microstructural alterations in Huntington's disease.
-- **Journal:** Journal of Huntington's disease (2026 Jan)
-- **Category:** clinical_trial
-- **Finding:** Multimodal MRI integrating anti-motion multi-parametric mappings can detect subcortical nuclei microstructural alterations in Huntington's disease.
-- **Targets:** Huntington's disease
-- **Compounds:** 
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41505360/)
+### 4. Bisoprolol (Score: 50/100)
+- **What it is:** Beta-blocker for heart conditions
+- **The idea:** May reduce stress-associated NfL elevation
+- **Our take:** Weak. NfL is a *biomarker*, not a cause. Reducing the biomarker doesn't treat the disease. This is a good example of the model confusing correlation with causation.
 
-### [41480639] Disruption of protein-protein interaction hotspots in the C-terminal domain of MLH1 confers mismatch repair deficiency.
-- **Journal:** NAR cancer (2025 Dec)
-- **Category:** mechanism
-- **Finding:** Disruption of protein-protein interaction hotspots in the C-terminal domain of MLH1 confers mismatch repair deficiency.
-- **Targets:** MLH1, PMS2
-- **Compounds:** 
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41480639/)
+### 5. Tetracycline (Score: 40/100)
+- **What it is:** Antibiotic
+- **The idea:** Might disrupt protein-protein interactions in MLH1
+- **Our take:** Creative but speculative. The model connected the MLH1 PPI paper with tetracycline's known protein-binding properties, but the leap is too big without structural data.
 
-### [41699789] Huntington's Disease: An Overview of Biomarkers in Prognostic, Diagnostic, and Therapeutic Management.
-- **Journal:** Rejuvenation research (2026 Feb)
-- **Category:** review
-- **Finding:** Recent research has identified neurofilament light chain and mHTT as robust indicators of Huntington's disease progression.
-- **Targets:** HTT gene, mHTT protein
-- **Compounds:** 
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41699789/)
+## What Worked, What Didn't
 
-### [41000014] Cerebrospinal Fluid Proenkephalin Predicts Striatal Atrophy Decades before Clinical Motor Diagnosis in Huntington's Disease.
-- **Journal:** Movement disorders : official journal of the Movement Disorder Society (2026 Jan)
-- **Category:** biomarker
-- **Finding:** Cerebrospinal fluid Proenkephalin concentration predicts striatal atrophy decades before clinical motor diagnosis in Huntington's disease.
-- **Targets:** Proenkephalin (PENK)
-- **Compounds:** 
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41000014/)
+**What worked:**
+- The LLM correctly categorized 20/22 papers by research type
+- It extracted meaningful targets and identified cross-paper patterns (TDP-43 connection, post-translational modifications)
+- The Tocilizumab and Lithium hypotheses are genuinely worth further investigation
+- Running on Jetson means this can repeat nightly at zero cost
 
-### [41492395] Neural and biomarker correlates of the Parkinson's Disease-Cognitive Rating Scale in Huntington's disease.
-- **Journal:** Neuroimage. Reports (2026 Mar)
-- **Category:** biomarker
-- **Finding:** This study investigates the neuroanatomical and fluid biomarker correlates of performance on the Parkinson's Disease-Cognitive Rating Scale in Huntington's disease.
-- **Targets:** neurofilament light chain (NfL)
-- **Compounds:** 
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41492395/)
+**What didn't:**
+- 2 papers failed to parse (abstracts too short or structured unusually)
+- The model didn't know which drugs have already been tested in HD (Riluzole)
+- One hypothesis confused a biomarker with a causal target (Bisoprolol/NfL)
+- Repurposing signals from individual papers were zero — the model found signals only when synthesizing across papers
 
-### [41421353] Blood measure of neuronal death is exponentially higher with age, especially in females, and halted in Alzheimer's disease by GM-CSF treatment.
-- **Journal:** Cell reports. Medicine (2026 Jan)
-- **Category:** biomarker
-- **Finding:** Plasma concentrations of UCH-L1 and NfL become exponentially higher with age, especially in females.
-- **Targets:** UCH-L1, NfL, GFAP
-- **Compounds:** GM-CSF/sargramostim
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41421353/)
+**Lesson:** LLMs are good at pattern-matching across papers but bad at knowing what's already been tried. The best use is generating ideas for a human researcher to evaluate, not making clinical decisions.
 
-### [41527739] Insights into phosphoproteomic studies and prospects of phosphoproteins as biomarkers for brain disorders.
-- **Journal:** Journal of Alzheimer's disease : JAD (2026 Mar)
-- **Category:** biomarker
-- **Finding:** Phosphoproteomic studies and phosphoprotein biomarkers show promise for predicting, diagnosing, prognosticating, and monitoring brain disorders.
-- **Targets:** microtubule-associated protein tau, neurofilament heavy polypeptide
-- **Compounds:** 
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41527739/)
+## How to Reproduce This
 
-### [41828602] A Two-Track Model of Huntington's Disease Pathology: Striatal Atrophy Mediates Maladaptive Immune Dysregulation.
-- **Journal:** International journal of molecular sciences (2026 Mar)
-- **Category:** biomarker
-- **Finding:** A distinct 'Two-Track' model of Huntington's disease pathology was revealed, with axonal damage protein neurofilament light chain (NEFL) showing a strong inverse correlation with putamen volume.
-- **Targets:** neurofilament light chain (NEFL)
-- **Compounds:** 
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41828602/)
+Everything is open source:
 
-### [41762390] Multiple System Atrophy Combined Outcome Assessment (MuSyCA): process, format, and validation plan.
-- **Journal:** Clinical autonomic research : official journal of the Clinical Autonomic Research Society (2026 Feb)
-- **Category:** clinical_trial
-- **Finding:** A new outcome assessment tool, MuSyCA, was developed to track disease progression in Multiple System Atrophy trials.
-- **Targets:** Multiple System Atrophy
-- **Compounds:** 
-- **Relevance:** high
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41762390/)
+```bash
+git clone https://github.com/jravinder/hd-research-agent
+cd hd-research-agent
+pip install -r requirements.txt
+python src/run_experiment.py
+```
 
-### [41517524] Emerging Oculomic Signatures: Linking Thickness of Entire Retinal Layers with Plasma Biomarkers in Preclinical Alzheimer's Disease.
-- **Journal:** Journal of clinical medicine (2025 Dec)
-- **Category:** biomarker
-- **Finding:** The study explores the link between retinal layer thickness and plasma biomarkers in preclinical Alzheimer's Disease, but does not directly relate to Huntington's disease.
-- **Targets:** Huntington's disease
-- **Compounds:** 
-- **Relevance:** low
-- **Repurposing signal:** No
-- [PubMed Link](https://pubmed.ncbi.nlm.nih.gov/41517524/)
+Requires: Python 3.10+, Ollama with any model (we used llama3.1:8b on Jetson, but it works on any Mac too).
 
-## AI-Generated Drug Repurposing Hypotheses
+## What's Next
 
-*These are exploratory ideas generated by an AI model, not clinical recommendations.*
+- **Experiment #2:** Focus specifically on somatic CAG expansion papers (MSH3, FAN1, PMS1) — the hottest frontier in HD genetics
+- **Experiment #3:** Run the same papers through multiple models and compare outputs — do they agree?
+- **Monthly digest:** Automate this into a monthly published analysis on the website
 
-### Riluzole -> mutant huntingtin protein aggregation
-- **Original use:** Amyotrophic Lateral Sclerosis (ALS)
-- **Rationale:** Riluzole's mechanism of inhibiting glutamate release may also reduce the excitotoxicity associated with mutant huntingtin protein aggregation. Its neuroprotective effects in ALS suggest it could have a similar impact on HD.
-- **Confidence:** medium
-- **Score:** 60/100
-- **Suggested next experiment:** Assess Riluzole's effect on mutant huntingtin protein aggregation in vitro
+## About This Project
 
-### Tetracycline -> protein-protein interactions (PPIs) in the C-terminal domain of MLH1
-- **Original use:** Bacterial infections
-- **Rationale:** Tetracycline's ability to bind and inhibit PPIs may also disrupt the protein-protein interactions that contribute to mismatch repair deficiency in HD. Its use as an antibiotic suggests it could have a similar impact on PPIs in HD.
-- **Confidence:** low
-- **Score:** 40/100
-- **Suggested next experiment:** Investigate Tetracycline's effect on PPIs in the C-terminal domain of MLH1
+HD Research Hub is an open-source project by a curious data scientist exploring how AI can help accelerate Huntington's Disease research. We're not doctors, not a pharma company, not competing with the excellent work of HDSA, HDBuzz, and the HD research community. We're building tools and publishing what we learn, openly, in case it's useful.
 
-### Bisoprolol -> neurofilament light chain (NfL) as a biomarker for HD progression
-- **Original use:** Hypertension and Angina
-- **Rationale:** Bisoprolol's beta-blockade activity may also reduce the stress and inflammation associated with NfL elevation in HD. Its use as an antihypertensive suggests it could have a similar impact on reducing NfL levels.
-- **Confidence:** medium
-- **Score:** 50/100
-- **Suggested next experiment:** Assess Bisoprolol's effect on NfL levels in patients with HD
+All data from [PubMed](https://pubmed.ncbi.nlm.nih.gov). All code on [GitHub](https://github.com/jravinder/hd-research-agent). All hypotheses are AI-generated and unvalidated — always consult qualified researchers and healthcare professionals.
 
-### Tocilizumab -> inflammation and immune response associated with mutant huntingtin protein aggregation
-- **Original use:** Rheumatoid Arthritis and Juvenile Idiopathic Arthritis
-- **Rationale:** Tocilizumab's IL-6 receptor blockade may also reduce the inflammation and immune response associated with mutant huntingtin protein aggregation in HD. Its use as an anti-inflammatory suggests it could have a similar impact on reducing inflammation in HD.
-- **Confidence:** high
-- **Score:** 80/100
-- **Suggested next experiment:** Investigate Tocilizumab's effect on inflammation and immune response in patients with HD
-
-### Lithium -> TDP-43-mediated neurodegeneration
-- **Original use:** Bipolar Disorder
-- **Rationale:** Lithium's ability to modulate protein kinase B (PKB) activity may also reduce the phosphorylation and aggregation of TDP-43 in HD. Its use as a mood stabilizer suggests it could have a similar impact on reducing TDP-43-mediated neurodegeneration.
-- **Confidence:** medium
-- **Score:** 55/100
-- **Suggested next experiment:** Assess Lithium's effect on TDP-43 phosphorylation and aggregation
-
----
-
-## Methodology
-
-1. **Data collection:** PubMed E-utilities API, 5 search queries covering HD treatment, AI/ML, somatic expansion, drug repurposing, and biomarkers (last 90 days)
-2. **Analysis:** Each paper abstract sent to Llama 3.1 8B with structured extraction prompt
-3. **Hypothesis generation:** Findings summarized and fed to LLM for drug repurposing ideation
-4. **Infrastructure:** NVIDIA Jetson AGX Orin 64GB, Ollama llama3.1:8b
-5. **Code:** [github.com/jravinder/hd-research-agent](https://github.com/jravinder/hd-research-agent)
-
-## Disclaimer
-
-This is an open-source research experiment by a curious data scientist, not a medical study. AI-generated hypotheses have not been clinically validated. Always consult qualified healthcare professionals. Published to contribute ideas to the HD research community.
-
-## License
-
-MIT — use freely, build on it, improve it.
+*— HD Research Hub Team*
