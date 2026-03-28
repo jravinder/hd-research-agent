@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-27T17:52:45.861040",
+  "last_updated": "2026-03-27T22:36:43.059671",
   "papers": [
     {
       "pmid": "40522761",
@@ -63,6 +63,15 @@
       "pub_date": "2026 Mar",
       "authors": "Lepinay E, Saint-Pierre M, Teixeira M",
       "url": "https://pubmed.ncbi.nlm.nih.gov/41318997/"
+    },
+    {
+      "pmid": "41818703",
+      "title": "Energy Compensation Strategy: The Frontier of Neurodegenerative Disease Treatment.",
+      "abstract": "Neurodegenerative diseases are a major threat to global public health. Recent studies have revealed that mitochondrial DNA damage and the imbalance of protein homeostasis during aging constitute the core pathological basis of neurodegeneration. The resulting energy metabolism disorders are the common pathogenic hubs of multiple neurodegenerative diseases. In this review, we focus on representative neurodegenerative diseases, including Parkinson's disease, Alzheimer's disease, and Huntington's di",
+      "journal": "ACS chemical neuroscience",
+      "pub_date": "2026 Mar",
+      "authors": "Tang J, Sun Y, Lin X",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41818703/"
     },
     {
       "pmid": "41846052",
@@ -155,6 +164,15 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41837536/"
     },
     {
+      "pmid": "41883719",
+      "title": "3D-AI mouse behavior analysis system has the capability to detect abnormalities in R6/1 model mice with Huntington's disease during the pre-symptomatic phase.",
+      "abstract": "Huntington's disease (HD), a dominantly inherited neurodegenerative disorder caused by CAG repeat expansions in the HTT gene, manifests with progressive motor dysfunction, cognitive decline, and psychiatric disturbances. While current transgenic mouse models recapitulate key pathological features, they exhibit rapid disease progression, and early behavioural phenotypes are not analyzed comprehensively to understand their progression. We employed a high-resolution 3-dimensional motion capture and",
+      "journal": "Frontiers in psychiatry",
+      "pub_date": "2026",
+      "authors": "Zhou S, Wang X, Wang YT",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41883719/"
+    },
+    {
       "pmid": "41376158",
       "title": "Administration of a barcoded AAV capsid library to the putamen of non-human primates identifies variants with efficient retrograde transport.",
       "abstract": "Adeno-associated viral vectors have become a leading choice for gene therapy in the central nervous system due to their safety profile, efficient neuronal transduction, and capacity for sustained transgene expression. We previously reported that AAV2-derived capsids developed using the BRAVE (Barcoded Rational AAV Vector Evolution) approach have enhanced retrograde transport properties in the rodent brain, compared with parental AAV2. Retrograde transport enables broader coverage of connected br",
@@ -162,24 +180,6 @@
       "pub_date": "2026 Mar",
       "authors": "Dzhashiashvili Y, McBride JL, Fabyanic E",
       "url": "https://pubmed.ncbi.nlm.nih.gov/41376158/"
-    },
-    {
-      "pmid": "41779298",
-      "title": "Digital Technologies for Symptom Monitoring in Parkinson Disease.",
-      "abstract": "Digital health technologies (DHT) are promising tools for symptom monitoring in Parkinson disease (PD), offering objective and continuous data in real-life settings. This article reviews recent literature on DHT for symptom monitoring in PD, with a focus on remote monitoring devices. Research studies have demonstrated that DHT can accurately and reliably monitor both motor and non-motor symptoms of PD, surpassing the limitations of subjective and episodic traditional clinical assessments. Digita",
-      "journal": "Current neurology and neuroscience reports",
-      "pub_date": "2026 Mar",
-      "authors": "Chunga N, Reddy V, Barbosa W",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41779298/"
-    },
-    {
-      "pmid": "41770933",
-      "title": "Huntington's disease LIG1 modifier variant increases ligase fidelity and suppresses somatic CAG repeat expansion.",
-      "abstract": "Huntington's disease (HD) is a fatal neurodegenerative disorder caused by inheriting an expanded CAG repeat tract in the huntingtin gene (",
-      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
-      "pub_date": "2026 Mar",
-      "authors": "Lee E, Kim W, Beier DH",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41770933/"
     }
   ],
   "trials": [

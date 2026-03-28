@@ -6,3 +6,4 @@ runs/
 dist/
 build/
 .venv/
+.vercel
