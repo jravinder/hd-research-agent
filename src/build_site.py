@@ -205,6 +205,7 @@ def build_page(data):
       <a href="#ideas" class="text-gray-500 hover:text-gray-900 py-2">Research Ideas</a>
       <a href="#resources" class="text-gray-500 hover:text-gray-900 py-2">Resources</a>
       <a href="#involved" class="text-gray-500 hover:text-gray-900 py-2">Get Involved</a>
+      <a href="about.html" class="text-gray-500 hover:text-gray-900 py-2">About</a>
       <a href="journey.html" class="text-gray-500 hover:text-gray-900 py-2">Journey</a>
       <a href="chat.html" class="text-teal-600 font-semibold hover:text-teal-700 py-2 flex items-center gap-1"><span class="material-symbols-outlined text-sm">chat</span> Ask HD Research</a>
       <a href="guide.html" class="text-gray-500 hover:text-gray-900 py-2 flex items-center gap-1"><span class="material-symbols-outlined text-sm">help</span> Guide</a>
