@@ -11,6 +11,7 @@ HD Research Hub — open-source AI research platform for Huntington's Disease dr
 
 Inspired by the best in AI research:
 
+- **Innovative like Musk** — first principles thinking. Why does drug discovery take 10 years? Question every assumption. If nobody's running autonomous AI agents on HD research, that's not a reason not to — it's the reason to start.
 - **Bold like Jensen** — push the limits. Don't be afraid to try things nobody has tried. "Tokens are the new electricity" — apply that energy to HD research.
 - **Rigorous like Karpathy** — autoresearch mindset. Run the experiments. Let the data speak. Ship code, not slides. 100 experiments overnight > 1 perfect plan.
 - **Educational like Andrew Ng** — make it accessible. Lead with the question. Show the work. If a beginner can't follow your experiment, rewrite it.
