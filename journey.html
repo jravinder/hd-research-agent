@@ -121,20 +121,37 @@
       </div>
     </div>
 
-    <!-- Milestone: Security -->
+    <!-- Milestone: Agents -->
     <div class="relative flex gap-4 md:gap-6 mb-10">
       <div class="w-12 md:w-16 flex-shrink-0 flex justify-center">
-        <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center z-10">
-          <span class="material-symbols-outlined text-white">shield</span>
+        <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center z-10">
+          <span class="material-symbols-outlined text-white">smart_toy</span>
         </div>
       </div>
       <div class="flex-1 pb-2">
-        <div class="text-xs text-red-600 font-bold uppercase tracking-wider mb-1">Day 1 — Security Audit</div>
-        <h3 class="text-xl font-bold text-gray-900 mb-2">Dodged TeamPCP Supply Chain Attack</h3>
-        <p class="text-gray-500 text-sm leading-relaxed">While building, discovered LiteLLM (a Python AI library) had been compromised by TeamPCP — 50 supply chain attacks in 8 days. Removed it from all machines, replaced with direct Ollama API calls. Audited Mac, Jetson, and cloud server. Patched 32 CVEs.</p>
-        <div class="mt-3 bg-red-50 rounded-lg p-3 text-xs text-gray-600">
-          <strong>Lesson:</strong> Zero third-party AI library dependencies. Direct API calls only. Run pip-audit regularly.
+        <div class="text-xs text-orange-600 font-bold uppercase tracking-wider mb-1">Day 1 — Autonomous Agents</div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Built 4 Research Agents</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">Paper Scout (discovers new papers every 6h), Hypothesis Refiner (re-scores drug candidates against new evidence), Social Watcher (monitors X, Reddit, YouTube, HN for HD chatter), and Digest Writer (compiles weekly research summaries). All running on Jetson + Mac via Ollama.</p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs">Paper Scout</span>
+          <span class="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs">Hypothesis Refiner</span>
+          <span class="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs">Social Watcher</span>
+          <span class="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs">Digest Writer</span>
         </div>
+      </div>
+    </div>
+
+    <!-- Milestone: Chatbot -->
+    <div class="relative flex gap-4 md:gap-6 mb-10">
+      <div class="w-12 md:w-16 flex-shrink-0 flex justify-center">
+        <div class="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center z-10">
+          <span class="material-symbols-outlined text-white">chat</span>
+        </div>
+      </div>
+      <div class="flex-1 pb-2">
+        <div class="text-xs text-teal-600 font-bold uppercase tracking-wider mb-1">Day 1 — Ask HD Research</div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">RAG Chatbot with Guardrails</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">Built a chatbot grounded in our corpus — answers questions by citing real papers, not hallucinating. Runs on NVIDIA NIM via Vercel serverless. Added medical advice guardrails: input filtering catches 30+ patterns before the LLM even runs, system prompt enforces hard rules, every response disclaims.</p>
       </div>
     </div>
 
