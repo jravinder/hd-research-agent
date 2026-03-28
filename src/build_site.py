@@ -288,6 +288,7 @@ def build_page(data):
       <div class="text-sm font-bold text-orange-600 uppercase tracking-wider mb-2">Open Research</div>
       <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Published Research Ideas</h2>
       <p class="text-gray-500 mt-2 max-w-xl mx-auto">AI-generated drug repurposing hypotheses from our autonomous research agent. These are ideas worth exploring — not medical claims. All open for the community to build on.</p>
+      <a href="experiment-1.html" class="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-teal-500 text-white rounded-lg text-sm font-medium hover:bg-teal-600 transition-colors">Read Experiment #1: Full Analysis <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       <div class="border border-teal-200 bg-teal-50/30 rounded-xl p-5 hover:shadow-md transition-shadow">
