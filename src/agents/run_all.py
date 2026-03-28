@@ -54,17 +54,21 @@ def main():
     parser = argparse.ArgumentParser(description="HD Research Agent Runner")
     parser.add_argument("--scout", action="store_true", help="Run paper scout only")
     parser.add_argument("--refine", action="store_true", help="Run hypothesis refiner only")
+    parser.add_argument("--social", action="store_true", help="Run social watcher only")
     parser.add_argument("--digest", action="store_true", help="Run digest writer only")
     parser.add_argument("--publish", action="store_true", help="Git commit + push after running")
     args = parser.parse_args()
 
     agents_dir = Path(__file__).parent
-    run_all = not (args.scout or args.refine or args.digest)
+    run_all = not (args.scout or args.refine or args.digest or args.social)
 
     results = {}
 
     if run_all or args.scout:
         results["Paper Scout"] = run_agent("Paper Scout", agents_dir / "paper_scout.py")
+
+    if run_all or args.social:
+        results["Social Watcher"] = run_agent("Social Watcher", agents_dir / "social_watcher.py")
 
     if run_all or args.refine:
         results["Hypothesis Refiner"] = run_agent("Hypothesis Refiner", agents_dir / "hypothesis_refiner.py")
@@ -75,7 +79,21 @@ def main():
     # Also rebuild the site with fresh data
     if run_all:
         print("\nRebuilding site...")
-        subprocess.run([sys.executable, str(ROOT / "src" / "build_site.py"), "--no-deploy"], check=False)
+        rebuild = subprocess.run(
+            [sys.executable, str(ROOT / "src" / "data_fetcher.py")],
+            check=False,
+        )
+        if rebuild.returncode != 0:
+            print("\nSite data refresh failed. Skipping publish.")
+            return
+
+        rebuild = subprocess.run(
+            [sys.executable, str(ROOT / "src" / "build_site.py"), "--no-deploy"],
+            check=False,
+        )
+        if rebuild.returncode != 0:
+            print("\nSite build failed. Skipping publish.")
+            return
 
     # Summary
     print(f"\n{'='*50}")
