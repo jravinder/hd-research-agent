@@ -548,18 +548,31 @@ def build_page(data):
   </div>
 </footer>
 
-<!-- Google Translate -->
+<!-- Translate: clean dropdown, no popups -->
 <script>
 function googleTranslateElementInit() {{
   new google.translate.TranslateElement({{
     pageLanguage: 'en',
     includedLanguages: 'en,hi,ta,te,bn,mr,kn,ml,gu,pa,ur,es,fr,de,ja,zh-CN,pt,ar,ko,it,ru',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
+    layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+    autoDisplay: false,
+    multilanguagePage: false
   }}, 'google_translate_element');
 }}
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<style>
+  /* Hide Google Translate banner/popup cruft */
+  .goog-te-banner-frame {{ display: none !important; }}
+  body {{ top: 0 !important; }}
+  .goog-te-gadget {{ font-size: 0 !important; }}
+  .goog-te-gadget .goog-te-combo {{ font-size: 13px !important; padding: 4px 8px; border: 1px solid #e5e7eb; border-radius: 8px; background: white; color: #374151; outline: none; cursor: pointer; }}
+  .goog-te-gadget > span {{ display: none !important; }}
+  .goog-te-gadget img {{ display: none !important; }}
+  #google_translate_element {{ line-height: 0; }}
+  .skiptranslate {{ display: none !important; }}
+  body {{ top: 0 !important; }}
+</style>
 </body></html>'''
 
     with open(INDEX_FILE, "w") as f:
