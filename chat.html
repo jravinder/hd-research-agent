@@ -189,7 +189,7 @@ async function sendMessage(message) {
 
   } catch (e) {
     removeTyping();
-    addMessage('assistant', 'I couldn\'t connect to the research API. The chatbot needs the server to be running. In the meantime, you can explore our findings on the main dashboard.');
+    addMessage('assistant', 'The research API is temporarily unavailable. In the meantime, you can:\n\n- Browse our **experiment report**: [Experiment #1](experiment-1.html)\n- Explore the **dashboard** for live data: [Dashboard](index.html)\n- Read papers directly on [PubMed](https://pubmed.ncbi.nlm.nih.gov/?term=huntington+disease)\n\nWe\'re working on making this more reliable. Sorry about that!');
   } finally {
     sendBtn.disabled = false;
     statusEl.textContent = 'Ready';
