@@ -1,8 +1,12 @@
 # HD Research Hub
 
-An open-source AI research platform exploring how data science, machine learning, and autonomous agents can help accelerate Huntington's Disease drug discovery.
+An open experiment in applying AI to real-world drug discovery — built for data scientists, AI/ML engineers, researchers, and curious builders.
+
+We're exploring how autonomous agents, LLMs, and public datasets can contribute to Huntington's Disease research. This is an experimentation playground, not a medical product.
 
 **Live site:** [hd-research-agent.vercel.app](https://hd-research-agent.vercel.app)
+
+> **Note:** This project is for research and educational purposes. For medical information about HD, please visit [HDSA](https://hdsa.org), [HDBuzz](https://en.hdbuzz.net), or consult your healthcare provider. Our AI-generated hypotheses are unvalidated starting points, not clinical findings.
 
 ## The Art of the Possible
 
@@ -29,7 +33,7 @@ This project asks: what else can AI contribute?
 pip install -r requirements.txt
 
 # Pull fresh data from all sources and rebuild the site
-python src/build_site.py --no-deploy
+python src/build_site.py --no-deploy --refresh-data
 
 # Run the literature agent (pulls and analyzes PubMed papers)
 python src/literature_agent.py
