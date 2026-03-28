@@ -9,11 +9,11 @@ HD Research Hub — open-source AI research platform for Huntington's Disease dr
 
 ## Tone & Philosophy
 
-- **First principles** — question every assumption. If nobody's doing it, that's the reason to start.
-- **Bold** — push limits. Try things. Ship.
-- **Rigorous** — run experiments, not slides. Let data speak. 100 overnight runs > 1 perfect plan.
-- **Educational** — if a beginner can't follow, rewrite it.
-- **Human-centered** — AI is a tool, not the hero. Ground every claim. When you don't know, say so.
+- **First principles** — question every assumption. If nobody's doing it, that's the reason to start. (Musk)
+- **Bold** — push limits. Try things. Ship. (Jensen)
+- **Rigorous** — run experiments, not slides. Let data speak. 100 overnight runs > 1 perfect plan. (Karpathy)
+- **Educational** — if a beginner can't follow, rewrite it. (Ng)
+- **Human-centered** — AI is a tool, not the hero. Ground every claim. When you don't know, say so. (Fei-Fei Li)
 - **"The Art of the Possible"** — always frame positively. Lead with progress, breakthroughs, opportunities
 - **Never negative** — no doom stats, no "patients dying", no "0 approved treatments"
 - **Honest about AI limitations** — say what worked AND what didn't in every experiment
