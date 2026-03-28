@@ -123,20 +123,54 @@ def call_nim(messages):
         return data["choices"][0]["message"]["content"]
 
 
-SYSTEM_PROMPT = """You are the HD Research Hub assistant — an AI research companion for Huntington's Disease.
+# Medical advice patterns to intercept before hitting the LLM
+MEDICAL_ADVICE_PATTERNS = [
+    "should i take", "should i stop taking", "should i start",
+    "can i take", "is it safe to take", "what dose", "what dosage",
+    "my doctor", "my neurologist", "my symptoms",
+    "i have huntington", "i was diagnosed", "i tested positive",
+    "should i get tested", "should i get genetic",
+    "am i at risk", "will i get", "will my child",
+    "what treatment should", "what drug should", "what medicine",
+    "how long do i have", "life expectancy",
+    "cure for huntington", "is there a cure",
+    "prescribe", "prescription", "medication for me",
+    "side effects for me", "my side effects",
+]
 
-ROLE: Help visitors understand HD research using data from our corpus of analyzed PubMed papers, clinical trials, and AI-generated drug repurposing hypotheses.
+MEDICAL_REDIRECT = (
+    "I understand this is deeply personal, and I want to make sure you get the right support. "
+    "I'm an AI research tool — I can explain what's happening in HD research, but I'm not qualified to give medical advice about your personal situation.\n\n"
+    "**Please reach out to these experts who can help:**\n\n"
+    "- **HDSA Helpline:** hdsa.org or 1-800-345-HDSA — they have social workers and can connect you with HD specialists\n"
+    "- **HDBuzz:** en.hdbuzz.net — scientists explain HD research in plain language\n"
+    "- **HDYO:** hdyo.org — if you're a young person or young family\n"
+    "- **Your neurologist or genetic counselor** — for anything about your personal health, testing, or treatment\n\n"
+    "I'm here if you want to explore the research landscape — like what trials are recruiting or what scientists are working on. "
+    "But for anything about *your* health, please talk to a professional.\n\n"
+    "*This is AI-generated research analysis, not medical advice.*"
+)
 
-RULES:
-1. ALWAYS ground your answers in the provided context (papers, trials, hypotheses). Cite PubMed IDs when referencing papers.
-2. NEVER give medical advice. If someone asks about their personal health, direct them to HDSA (hdsa.org) or their healthcare provider.
-3. Be educational and hopeful — focus on progress and opportunities, not doom.
-4. When you don't know something or it's not in the context, say so honestly.
-5. Keep answers concise — 2-3 paragraphs max unless the user asks for detail.
-6. For drug questions, clarify that our hypotheses are AI-generated and unvalidated.
-7. End EVERY response with: "This is AI-generated research analysis, not medical advice."
+SYSTEM_PROMPT = """You are the HD Research Hub assistant — an AI that helps people explore Huntington's Disease RESEARCH. You are NOT a doctor, NOT a medical advisor, NOT a therapist.
 
-TONE: Curious data scientist explaining findings to a smart friend. Accessible. No jargon without explanation."""
+HARD RULES (never break these):
+1. NEVER give personal medical advice. Never say "you should take X" or "X might help you." If someone asks about their personal health, symptoms, diagnosis, testing, or treatment decisions, ALWAYS redirect them to HDSA (hdsa.org, 1-800-345-HDSA), their neurologist, or a genetic counselor.
+2. NEVER recommend that someone start, stop, or change any medication or treatment.
+3. NEVER predict someone's prognosis or life expectancy.
+4. NEVER suggest someone should or should not get genetic testing — that is a deeply personal decision for a genetic counselor.
+5. NEVER frame AI-generated hypotheses as validated treatments. Always say they are "unvalidated computational ideas that need expert review and experimental testing."
+6. ALWAYS ground answers in the provided research context. Cite PubMed IDs.
+7. ALWAYS end responses with: "*This is AI-generated research analysis, not medical advice.*"
+
+WHAT YOU CAN DO:
+- Explain what a research paper found (citing the PubMed ID)
+- Describe what clinical trials are recruiting and where to find them on ClinicalTrials.gov
+- Explain what our AI drug repurposing hypotheses mean — as unvalidated ideas
+- Describe how a drug mechanism works in general scientific terms
+- Point people to HDSA, HDBuzz, HDYO, Enroll-HD for real support
+- Explain the HD treatment pipeline at a high level
+
+TONE: Warm, careful, honest. You are a librarian helping someone navigate research, not a doctor giving advice. When in doubt, redirect to professionals."""
 
 
 class handler(BaseHTTPRequestHandler):
@@ -152,6 +186,17 @@ class handler(BaseHTTPRequestHandler):
 
             if not NIM_API_KEY:
                 self._respond(500, {"error": "NIM API key not configured"})
+                return
+
+            # Guardrail: intercept medical advice requests BEFORE hitting the LLM
+            msg_lower = user_message.lower()
+            if any(pattern in msg_lower for pattern in MEDICAL_ADVICE_PATTERNS):
+                self._respond(200, {
+                    "response": MEDICAL_REDIRECT,
+                    "papers_cited": 0,
+                    "corpus_size": len(CORPUS.get("papers", {})),
+                    "guardrail": "medical_advice_redirect",
+                })
                 return
 
             # Build RAG context
