@@ -2,12 +2,19 @@
 
 RAG chatbot grounded in our research corpus. Uses NVIDIA NIM
 (Nemotron) for inference. Every answer cites papers from PubMed.
+Supports Indian languages via Sarvam AI translation.
 """
 
 import json
 import os
 import re
+import sys
 from http.server import BaseHTTPRequestHandler
+from pathlib import Path
+
+# Import Sarvam translate
+sys.path.insert(0, str(Path(__file__).parent))
+from translate import detect_language, translate as sarvam_translate, SUPPORTED_LANGS
 from pathlib import Path
 
 import urllib.request
@@ -188,23 +195,33 @@ class handler(BaseHTTPRequestHandler):
                 self._respond(500, {"error": "NIM API key not configured"})
                 return
 
-            # Guardrail: intercept medical advice requests BEFORE hitting the LLM
-            msg_lower = user_message.lower()
+            # Detect language — translate to English if needed
+            user_lang = detect_language(user_message)
+            query_for_rag = user_message
+            if user_lang != "en-IN":
+                query_for_rag = sarvam_translate(user_message, user_lang, "en-IN")
+
+            # Guardrail: intercept medical advice requests (check English version)
+            msg_lower = query_for_rag.lower()
             if any(pattern in msg_lower for pattern in MEDICAL_ADVICE_PATTERNS):
+                redirect = MEDICAL_REDIRECT
+                if user_lang != "en-IN":
+                    redirect = sarvam_translate(MEDICAL_REDIRECT, "en-IN", user_lang)
                 self._respond(200, {
-                    "response": MEDICAL_REDIRECT,
+                    "response": redirect,
                     "papers_cited": 0,
                     "corpus_size": len(CORPUS.get("papers", {})),
                     "guardrail": "medical_advice_redirect",
+                    "language": user_lang,
                 })
                 return
 
             # Build RAG context
-            context = build_context(user_message)
+            context = build_context(query_for_rag)
 
             messages = [
                 {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": f"Research context:\n{context}\n\nUser question: {user_message}"},
+                {"role": "user", "content": f"Research context:\n{context}\n\nUser question: {query_for_rag}"},
             ]
 
             # Handle conversation history
@@ -219,10 +236,18 @@ class handler(BaseHTTPRequestHandler):
 
             response = call_nim(messages)
 
+            # Translate response back to user's language if needed
+            response_lang = "en-IN"
+            if user_lang != "en-IN":
+                response = sarvam_translate(response, "en-IN", user_lang)
+                response_lang = user_lang
+
             self._respond(200, {
                 "response": response,
-                "papers_cited": len(find_relevant_papers(user_message)),
+                "papers_cited": len(find_relevant_papers(query_for_rag)),
                 "corpus_size": len(CORPUS.get("papers", {})),
+                "language": response_lang,
+                "language_name": SUPPORTED_LANGS.get(response_lang, "English"),
             })
 
         except Exception as e:
