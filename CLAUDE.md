@@ -99,6 +99,20 @@ From cosmos_sports_agent.py: input → LLM (with domain prompt) → parse struct
 ### Chain-of-thought for transparency
 Like Cosmos Reason 2's <think> tags, experiment reports show the LLM's reasoning — what it found, what it scored high/low, and why. Transparency builds trust.
 
+## What Sets This Apart
+
+Our core differentiator: **chat with the actual research, not summaries.**
+
+Most HD resources show titles, abstracts, or journalist summaries. We pull full-text papers from PubMed Central, chunk them by section, and let people ask questions against the actual Methods, Results, and Discussion sections. The chatbot cites specific paper sections, not just titles.
+
+This compounds over time:
+- Every paper scout run adds full-text chunks to the knowledge base
+- Every experiment we run adds hypotheses and findings
+- The chatbot gets smarter as the corpus grows
+- Nobody else is doing this for HD
+
+Protect this feature. Every new agent, experiment, or data source should feed into the knowledge base. The KB is the moat.
+
 ## Data Sources (all free, public APIs)
 
 | Source | API | Auth | What we pull |
@@ -108,15 +122,16 @@ Like Cosmos Reason 2's <think> tags, experiment reports show the LLM's reasoning
 | HDBuzz | RSS feed | None | Community news |
 | Open Targets | GraphQL | None | Gene-target associations |
 
-## UI Rules
+## UI Rules (Sunrise Hope Design System)
 
-- Bright, hopeful colors: teal (#14b8a6), orange (#f97316), green (#22c55e)
-- White background, large readable fonts (16px+ body)
+- Warm gold/amber palette (#F59E0B, #92400E), coral accent (#FB7185)
+- Warm parchment background (#fdf9e9), stone text tones for readability
+- 18px body text, Inter font, tight tracking on headlines
 - Mobile-first: hamburger nav, responsive grids, horizontal scroll for tables
-- Google Translate for accessibility (13 languages)
+- Google Translate + Sarvam AI for 22 Indian languages
 - Every external link opens in new tab with icon
 - Every data point links back to its source
-- No anxiety-driven dashboards
+- No em dashes. No anxiety-driven dashboards. No teal.
 
 ## Experiment Publishing Guidelines
 
