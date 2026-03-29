@@ -2,195 +2,118 @@
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Experiment #1: What Can an LLM Learn from HD Research Papers?. HD Research Hub</title>
-<meta name="description" content="AI analysis of 22 Huntington's Disease research papers using Llama 3.1 on NVIDIA Jetson. Open-source experiment with drug repurposing hypotheses."/>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<title>Experiment #1 | HD Research Hub</title>
+<meta name="description" content="AI analysis of 22 Huntington's Disease research papers using Llama 3.1 on NVIDIA Jetson."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link href="shared.css" rel="stylesheet"/>
+<style>.editorial-shadow { box-shadow: 0 20px 40px rgba(30, 41, 59, 0.06); }</style>
 </head>
-<body class="bg-[#fdf9e9] text-[#1c1c13] antialiased">
-<nav class="flex justify-between items-center px-4 md:px-8 h-14 border-b border-gray-100 sticky top-0 bg-[#fdf9e9]/95 backdrop-blur z-50">
-  <a href="index.html" class="text-lg font-bold text-gray-900 flex items-center gap-2">
-    <span class="material-symbols-outlined text-amber-700">arrow_back</span>
-    HD Research Hub
-  </a>
-  <div class="flex items-center gap-3">
-    <div id="google_translate_element"></div>
-    <a href="https://github.com/jravinder/hd-research-agent/blob/main/data/experiment_001_report.md" target="_blank" class="text-sm text-gray-500 hover:text-gray-900 flex items-center gap-1 desktop-only">
-      GitHub <span class="material-symbols-outlined text-sm">open_in_new</span>
+<body class="bg-[#fdf9e9] text-[#1c1c13] antialiased min-h-screen" style="font-size:18px;">
+
+<header class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
+  <div class="flex justify-between items-center max-w-5xl mx-auto px-6 h-16">
+    <a href="index.html" class="text-xl font-semibold tracking-tighter text-stone-900 flex items-center gap-2">
+      <span class="material-symbols-outlined text-amber-700">arrow_back</span> HD Research Hub
     </a>
+    <div class="flex items-center gap-3">
+      <div id="google_translate_element"></div>
+      <a href="https://github.com/jravinder/hd-research-agent/blob/main/data/experiment_001_report.md" target="_blank" class="text-stone-500 text-sm hover:text-stone-800 hidden md:flex items-center gap-1">GitHub <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+    </div>
   </div>
-</nav>
-<main class="max-w-3xl mx-auto px-4 md:px-8 py-12">
-<h1 class="text-3xl font-bold text-gray-900 mb-2">What Can an LLM Learn from 22 HD Research Papers Overnight?</h1>
+</header>
 
-<p class="text-gray-400 text-sm mb-6"><em>HD Research Hub. Experiment #1 | March 27, 2026</em></p>
+<main class="max-w-5xl mx-auto px-6 pb-20">
 
-<h2 class="text-xl font-bold text-gray-900 mt-10 mb-4">The Question</h2>
+  <section class="py-12 md:py-20">
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter text-stone-900 leading-[1.1] mb-4">What Can an LLM Learn from 22 HD Research Papers?</h1>
+    <p class="text-lg text-stone-500">March 27, 2026</p>
+  </section>
 
-<p class="text-gray-600 leading-relaxed mb-4">Huntington's Disease research is moving fast. In just the last 90 days, PubMed published dozens of papers spanning gene therapy, somatic expansion, biomarkers, AI/ML applications, and drug repurposing. No single researcher can read them all.</p>
+  <section class="bg-[#f8f4e4] py-12 px-8 rounded-2xl mb-16 text-center">
+    <span class="inline-block px-4 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold tracking-widest uppercase mb-6">The Question</span>
+    <p class="text-xl md:text-2xl font-medium text-stone-800 leading-relaxed max-w-3xl mx-auto">If we feed recent HD research papers to an open-source LLM running on a $1,000 edge device, what patterns does it find?</p>
+  </section>
 
-<p class="text-gray-600 leading-relaxed mb-4">So we asked a simple question: <strong class="text-gray-900">if we feed these papers to an open-source LLM running on a $1,000 edge device, what patterns does it find?</strong></p>
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-8">What We Did</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div class="bg-white p-6 rounded-xl editorial-shadow"><div class="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-700 mb-4"><span class="material-symbols-outlined">library_books</span></div><h3 class="font-bold text-lg mb-2">1. Pull Papers</h3><p class="text-stone-600 text-sm">22 papers from PubMed across 5 queries: treatment, AI/ML, somatic expansion, repurposing, biomarkers.</p></div>
+      <div class="bg-white p-6 rounded-xl editorial-shadow"><div class="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center text-orange-700 mb-4"><span class="material-symbols-outlined">memory</span></div><h3 class="font-bold text-lg mb-2">2. Run LLM</h3><p class="text-stone-600 text-sm">Llama 3.1 8B on NVIDIA Jetson AGX Orin 64GB via Ollama. Local inference, zero cloud cost.</p></div>
+      <div class="bg-white p-6 rounded-xl editorial-shadow"><div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center text-green-700 mb-4"><span class="material-symbols-outlined">biotech</span></div><h3 class="font-bold text-lg mb-2">3. Extract</h3><p class="text-stone-600 text-sm">Targets, compounds, key findings, and repurposing signals from each abstract.</p></div>
+      <div class="bg-white p-6 rounded-xl editorial-shadow"><div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center text-purple-700 mb-4"><span class="material-symbols-outlined">lightbulb</span></div><h3 class="font-bold text-lg mb-2">4. Hypothesize</h3><p class="text-stone-600 text-sm">Which FDA-approved drugs might work for HD?</p></div>
+    </div>
+  </section>
 
-<p class="text-gray-600 leading-relaxed mb-4">This isn't a clinical study. We're not doctors. We're data scientists exploring whether AI can be a useful research assistant for the HD community. surfacing connections across papers that a human skimming abstracts might miss.</p>
+  <section class="bg-[#f8f4e4] py-12 px-8 rounded-2xl mb-16">
+    <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-8">Results</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-white p-8 rounded-xl text-center"><span class="text-4xl font-extrabold text-amber-600">20</span><div class="text-xs font-semibold text-stone-500 uppercase tracking-widest mt-2">Analyzed</div></div>
+      <div class="bg-white p-8 rounded-xl text-center"><span class="text-4xl font-extrabold text-amber-600">17</span><div class="text-xs font-semibold text-stone-500 uppercase tracking-widest mt-2">High Relevance</div></div>
+      <div class="bg-white p-8 rounded-xl text-center border-t-4 border-amber-500"><span class="text-4xl font-extrabold text-amber-600">7</span><div class="text-xs font-semibold text-stone-500 uppercase tracking-widest mt-2">Novel Targets</div></div>
+      <div class="bg-white p-8 rounded-xl text-center"><span class="text-4xl font-extrabold text-amber-600">5</span><div class="text-xs font-semibold text-stone-500 uppercase tracking-widest mt-2">Hypotheses</div></div>
+    </div>
+  </section>
 
-<h2 class="text-xl font-bold text-gray-900 mt-10 mb-4">What We Did</h2>
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-8">Top Hypotheses</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl p-6 editorial-shadow"><h4 class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-1">IL-6 Pathway</h4><h3 class="text-xl font-bold mb-4">Tocilizumab</h3><div class="flex justify-between text-sm font-semibold mb-1"><span class="text-stone-600">Confidence</span><span class="text-amber-700">80/100</span></div><div class="h-2 w-full bg-stone-100 rounded-full overflow-hidden mb-4"><div class="h-full bg-amber-500 rounded-full" style="width:80%"></div></div><p class="text-stone-600 text-sm">IL-6 receptor blocker (arthritis drug). May reduce neuroinflammation from mutant huntingtin.</p></div>
+      <div class="bg-white rounded-xl p-6 editorial-shadow"><h4 class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-1">Glutamate</h4><h3 class="text-xl font-bold mb-4">Riluzole</h3><div class="flex justify-between text-sm font-semibold mb-1"><span class="text-stone-600">Confidence</span><span class="text-amber-700">60/100</span></div><div class="h-2 w-full bg-stone-100 rounded-full overflow-hidden mb-4"><div class="h-full bg-amber-500 rounded-full" style="width:60%"></div></div><p class="text-stone-600 text-sm">Already tested in HD with modest results. Model didn't know this. AI needs human verification.</p></div>
+      <div class="bg-white rounded-xl p-6 editorial-shadow"><h4 class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-1">TDP-43 / GSK-3β</h4><h3 class="text-xl font-bold mb-4">Lithium</h3><div class="flex justify-between text-sm font-semibold mb-1"><span class="text-stone-600">Confidence</span><span class="text-amber-700">55/100</span></div><div class="h-2 w-full bg-stone-100 rounded-full overflow-hidden mb-4"><div class="h-full bg-amber-500 rounded-full" style="width:55%"></div></div><p class="text-stone-600 text-sm">Novel TDP-43/HD connection. Cross-paper insight that's hard for humans to spot quickly.</p></div>
+    </div>
+  </section>
 
-<p class="text-gray-600 leading-relaxed mb-4">1. <strong class="text-gray-900">Pulled 22 recent papers</strong> from PubMed across five search queries: HD treatment, HD + AI/ML, somatic CAG expansion, drug repurposing, and biomarkers</p>
-<p class="text-gray-600 leading-relaxed mb-4">2. <strong class="text-gray-900">Sent each abstract to Llama 3.1 8B</strong> running on an NVIDIA Jetson AGX Orin (a 64GB edge AI device) via Ollama</p>
-<p class="text-gray-600 leading-relaxed mb-4">3. <strong class="text-gray-900">Asked the LLM to extract</strong>: molecular targets, compounds mentioned, key findings, and whether the paper suggests drug repurposing potential</p>
-<p class="text-gray-600 leading-relaxed mb-4">4. <strong class="text-gray-900">Then asked it to generate hypotheses</strong>: given everything it learned, what FDA-approved drugs might be worth investigating for HD?</p>
+  <section class="mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div><h2 class="text-xl font-bold flex items-center gap-3 mb-6"><span class="w-2 h-8 bg-green-500 rounded-full"></span> What Worked</h2>
+        <ul class="space-y-4">
+          <li class="flex gap-3"><span class="material-symbols-outlined text-green-600 shrink-0">check_circle</span><div><h4 class="font-bold text-stone-900">Cross-paper patterns</h4><p class="text-stone-600 text-sm">Found TDP-43/HD connection and post-translational modification targets.</p></div></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-green-600 shrink-0">check_circle</span><div><h4 class="font-bold text-stone-900">Categorization</h4><p class="text-stone-600 text-sm">Correctly categorized 20/22 papers by research type.</p></div></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-green-600 shrink-0">check_circle</span><div><h4 class="font-bold text-stone-900">Zero cost</h4><p class="text-stone-600 text-sm">Ran on a Jetson in a home office. Repeatable nightly.</p></div></li>
+        </ul>
+      </div>
+      <div><h2 class="text-xl font-bold flex items-center gap-3 mb-6"><span class="w-2 h-8 bg-rose-400 rounded-full"></span> What Didn't</h2>
+        <ul class="space-y-4">
+          <li class="flex gap-3"><span class="material-symbols-outlined text-rose-400 shrink-0">cancel</span><div><h4 class="font-bold text-stone-900">No trial history</h4><p class="text-stone-600 text-sm">Suggested Riluzole without knowing it was already tested.</p></div></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-rose-400 shrink-0">cancel</span><div><h4 class="font-bold text-stone-900">Biomarker confusion</h4><p class="text-stone-600 text-sm">Confused NfL (biomarker) with a causal target.</p></div></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-rose-400 shrink-0">cancel</span><div><h4 class="font-bold text-stone-900">2 parse failures</h4><p class="text-stone-600 text-sm">Abstracts too short for the model.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<p class="text-gray-600 leading-relaxed mb-4">Total cost: $0 (all open-source, local inference, public data).</p>
+  <section class="mb-16">
+    <div class="bg-amber-50 border-l-8 border-amber-500 p-8 rounded-xl">
+      <div class="flex items-center gap-3 mb-4"><span class="material-symbols-outlined text-amber-600 text-2xl" style="font-variation-settings:'FILL' 1;">warning</span><h2 class="text-xl font-extrabold text-amber-800">Limitations</h2></div>
+      <ul class="space-y-2 text-stone-700 text-sm">
+        <li>• Not reviewed by HD domain experts or clinicians</li>
+        <li>• No experimental validation</li>
+        <li>• Abstracts only, not full texts</li>
+        <li>• Single model (Llama 3.1 8B), single run</li>
+        <li>• Scores reflect model self-assessment, not clinical probability</li>
+      </ul>
+    </div>
+  </section>
 
-<h2 class="text-xl font-bold text-gray-900 mt-10 mb-4">What We Found</h2>
+  <section class="mb-16 border-t border-stone-200 pt-12">
+    <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-8">Methodology</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="flex gap-4"><span class="text-3xl font-extrabold text-amber-200">01</span><div><h4 class="font-bold mb-1">Data</h4><p class="text-stone-600 text-sm">PubMed E-utilities API, 5 queries, 90-day window</p></div></div>
+      <div class="flex gap-4"><span class="text-3xl font-extrabold text-amber-200">02</span><div><h4 class="font-bold mb-1">Model</h4><p class="text-stone-600 text-sm">Llama 3.1 8B, Ollama, NVIDIA Jetson AGX Orin 64GB</p></div></div>
+      <div class="flex gap-4"><span class="text-3xl font-extrabold text-amber-200">03</span><div><h4 class="font-bold mb-1">Analysis</h4><p class="text-stone-600 text-sm">Structured JSON extraction per paper, cross-paper synthesis</p></div></div>
+      <div class="flex gap-4"><span class="text-3xl font-extrabold text-amber-200">04</span><div><h4 class="font-bold mb-1">Code</h4><p class="text-stone-600 text-sm"><a href="https://github.com/jravinder/hd-research-agent" target="_blank" class="text-amber-700 underline">github.com/jravinder/hd-research-agent</a></p></div></div>
+    </div>
+  </section>
 
-<p class="text-gray-600 leading-relaxed mb-4"><strong class="text-gray-900">20 out of 22 papers</strong> were successfully analyzed (2 had abstracts too short for the model to parse).</p>
-
-<h3 class="text-lg font-bold text-gray-900 mt-8 mb-3">The Research Landscape Right Now</h3>
-
-<p class="text-gray-600 leading-relaxed mb-4">The LLM categorized the papers and a clear picture emerged:</p>
-
-<div class="overflow-x-auto my-4"><table class="w-full text-left text-sm"><thead><tr class="bg-gray-50 border-b">
-<th class="py-2 px-4 font-bold text-gray-600">Category</th>
-<th class="py-2 px-4 font-bold text-gray-600">Count</th>
-<th class="py-2 px-4 font-bold text-gray-600">What it tells us</th>
-</tr></thead><tbody>
-<tr class="border-b border-gray-100">
-<td class="py-2 px-4 text-gray-600">Mechanism studies</td>
-<td class="py-2 px-4 text-gray-600">6</td>
-<td class="py-2 px-4 text-gray-600">Scientists are still uncovering <em>how</em> HD works at the molecular level</td>
-</tr>
-<tr class="border-b border-gray-100">
-<td class="py-2 px-4 text-gray-600">Reviews</td>
-<td class="py-2 px-4 text-gray-600">5</td>
-<td class="py-2 px-4 text-gray-600">The field is synthesizing. a sign that enough new data exists to warrant reviews</td>
-</tr>
-<tr class="border-b border-gray-100">
-<td class="py-2 px-4 text-gray-600">Biomarker research</td>
-<td class="py-2 px-4 text-gray-600">4</td>
-<td class="py-2 px-4 text-gray-600">Growing focus on <em>measuring</em> HD progression, critical for clinical trials</td>
-</tr>
-<tr class="border-b border-gray-100">
-<td class="py-2 px-4 text-gray-600">AI/ML applications</td>
-<td class="py-2 px-4 text-gray-600">3</td>
-<td class="py-2 px-4 text-gray-600">Machine learning is entering HD research, but still early</td>
-</tr>
-<tr class="border-b border-gray-100">
-<td class="py-2 px-4 text-gray-600">Gene therapy</td>
-<td class="py-2 px-4 text-gray-600">2</td>
-<td class="py-2 px-4 text-gray-600">The most promising treatment approach, but few papers this quarter</td>
-</tr>
-</tbody></table></div>
-
-<h3 class="text-lg font-bold text-gray-900 mt-8 mb-3">Targets the LLM Kept Finding</h3>
-
-<p class="text-gray-600 leading-relaxed mb-4">Across all papers, these molecular targets appeared most frequently:</p>
-
-<ul class="list-disc pl-6 space-y-1 my-3">
-<li class="text-gray-600"><strong class="text-gray-900">HTT / mHTT</strong> (huntingtin protein). still the central focus, but researchers are looking at it from new angles: post-translational modifications (phosphorylation, SUMOylation, ubiquitination) that might offer druggable intervention points</li>
-<li class="text-gray-600"><strong class="text-gray-900">TDP-43</strong>. an unexpected connection. A new paper links TDP-43 proteinopathies (usually associated with ALS) to HD mechanisms. Cross-disease insights like this are exactly what pattern-matching AI is good at finding.</li>
-<li class="text-gray-600"><strong class="text-gray-900">NfL (neurofilament light chain)</strong>. emerging as the leading biomarker for tracking HD progression. Multiple papers confirmed it becomes "exponentially higher" with CAG repeat length.</li>
-<li class="text-gray-600"><strong class="text-gray-900">MLH1 / PMS2</strong>. DNA mismatch repair genes tied to somatic CAG expansion. A paper on disrupting protein-protein interactions in MLH1's C-terminal domain caught the LLM's attention. this is the frontier of HD genetics.</li>
-</ul>
-
-<h3 class="text-lg font-bold text-gray-900 mt-8 mb-3">An Interesting Observation</h3>
-
-<p class="text-gray-600 leading-relaxed mb-4">The LLM flagged that <strong class="text-gray-900">post-translational modifications of huntingtin</strong> (not just the protein itself) are getting significant research attention. Phosphorylation, SUMOylation, O-GlcNAcylation. these are chemical modifications that change how the protein behaves. Each one is potentially a drug target, and they're less explored than the protein itself.</p>
-
-<h2 class="text-xl font-bold text-gray-900 mt-10 mb-4">AI-Generated Hypotheses</h2>
-
-<p class="text-gray-600 leading-relaxed mb-4">We then asked the model: based on everything you just analyzed, suggest 5 FDA-approved drugs that might be worth investigating for HD. Here's what it returned, with our honest assessment:</p>
-
-<h3 class="text-lg font-bold text-gray-900 mt-8 mb-3">1. Tocilizumab (Score: 80/100)</h3>
-<ul class="list-disc pl-6 space-y-1 my-3">
-<li class="text-gray-600"><strong class="text-gray-900">What it is:</strong> An IL-6 receptor blocker, approved for rheumatoid arthritis</li>
-<li class="text-gray-600"><strong class="text-gray-900">The idea:</strong> Mutant huntingtin triggers neuroinflammation. Blocking IL-6 might reduce the inflammatory damage</li>
-<li class="text-gray-600"><strong class="text-gray-900">Our take:</strong> Interesting. IL-6 is elevated in HD models, and anti-inflammatory approaches are underexplored. But tocilizumab is an IV infusion and may not cross the blood-brain barrier well. Worth a literature deep-dive.</li>
-</ul>
-
-<h3 class="text-lg font-bold text-gray-900 mt-8 mb-3">2. Riluzole (Score: 60/100)</h3>
-<ul class="list-disc pl-6 space-y-1 my-3">
-<li class="text-gray-600"><strong class="text-gray-900">What it is:</strong> Glutamate release inhibitor, approved for ALS</li>
-<li class="text-gray-600"><strong class="text-gray-900">The idea:</strong> HD involves excitotoxicity (too much glutamate killing neurons). Riluzole reduces glutamate.</li>
-<li class="text-gray-600"><strong class="text-gray-900">Our take:</strong> Actually already tested in HD with modest results. The model didn't know this, which is a good reminder that AI hypotheses need human verification.</li>
-</ul>
-
-<h3 class="text-lg font-bold text-gray-900 mt-8 mb-3">3. Lithium (Score: 55/100)</h3>
-<ul class="list-disc pl-6 space-y-1 my-3">
-<li class="text-gray-600"><strong class="text-gray-900">What it is:</strong> Mood stabilizer, one of the oldest psychiatric drugs</li>
-<li class="text-gray-600"><strong class="text-gray-900">The idea:</strong> May reduce TDP-43 phosphorylation and aggregation. relevant given the newly discovered TDP-43/HD connection</li>
-<li class="text-gray-600"><strong class="text-gray-900">Our take:</strong> The TDP-43 angle is genuinely novel. Lithium's effect on autophagy and GSK-3β is well-documented. This connection through the new TDP-43 paper is the kind of cross-paper insight that's hard for humans to make quickly.</li>
-</ul>
-
-<h3 class="text-lg font-bold text-gray-900 mt-8 mb-3">4. Bisoprolol (Score: 50/100)</h3>
-<ul class="list-disc pl-6 space-y-1 my-3">
-<li class="text-gray-600"><strong class="text-gray-900">What it is:</strong> Beta-blocker for heart conditions</li>
-<li class="text-gray-600"><strong class="text-gray-900">The idea:</strong> May reduce stress-associated NfL elevation</li>
-<li class="text-gray-600"><strong class="text-gray-900">Our take:</strong> Weak. NfL is a <em>biomarker</em>, not a cause. Reducing the biomarker doesn't treat the disease. This is a good example of the model confusing correlation with causation.</li>
-</ul>
-
-<h3 class="text-lg font-bold text-gray-900 mt-8 mb-3">5. Tetracycline (Score: 40/100)</h3>
-<ul class="list-disc pl-6 space-y-1 my-3">
-<li class="text-gray-600"><strong class="text-gray-900">What it is:</strong> Antibiotic</li>
-<li class="text-gray-600"><strong class="text-gray-900">The idea:</strong> Might disrupt protein-protein interactions in MLH1</li>
-<li class="text-gray-600"><strong class="text-gray-900">Our take:</strong> Creative but speculative. The model connected the MLH1 PPI paper with tetracycline's known protein-binding properties, but the leap is too big without structural data.</li>
-</ul>
-
-<h2 class="text-xl font-bold text-gray-900 mt-10 mb-4">What Worked, What Didn't</h2>
-
-<p class="text-gray-600 leading-relaxed mb-4"><strong class="text-gray-900">What worked:</strong></p>
-<ul class="list-disc pl-6 space-y-1 my-3">
-<li class="text-gray-600">The LLM correctly categorized 20/22 papers by research type</li>
-<li class="text-gray-600">It extracted meaningful targets and identified cross-paper patterns (TDP-43 connection, post-translational modifications)</li>
-<li class="text-gray-600">The Tocilizumab and Lithium hypotheses are genuinely worth further investigation</li>
-<li class="text-gray-600">Running on Jetson means this can repeat nightly at zero cost</li>
-</ul>
-
-<p class="text-gray-600 leading-relaxed mb-4"><strong class="text-gray-900">What didn't:</strong></p>
-<ul class="list-disc pl-6 space-y-1 my-3">
-<li class="text-gray-600">2 papers failed to parse (abstracts too short or structured unusually)</li>
-<li class="text-gray-600">The model didn't know which drugs have already been tested in HD (Riluzole)</li>
-<li class="text-gray-600">One hypothesis confused a biomarker with a causal target (Bisoprolol/NfL)</li>
-<li class="text-gray-600">Repurposing signals from individual papers were zero. the model found signals only when synthesizing across papers</li>
-</ul>
-
-<p class="text-gray-600 leading-relaxed mb-4"><strong class="text-gray-900">Lesson:</strong> LLMs are good at pattern-matching across papers but bad at knowing what's already been tried. The best use is generating ideas for a human researcher to evaluate, not making clinical decisions.</p>
-
-<h2 class="text-xl font-bold text-gray-900 mt-10 mb-4">How to Reproduce This</h2>
-
-<p class="text-gray-600 leading-relaxed mb-4">Everything is open source:</p>
-
-<pre class="bg-gray-50 border border-gray-200 rounded-lg p-4 overflow-x-auto text-sm"><code>
-git clone https://github.com/jravinder/hd-research-agent
-cd hd-research-agent
-pip install -r requirements.txt
-python src/run_experiment.py
-</code></pre>
-
-<p class="text-gray-600 leading-relaxed mb-4">Requires: Python 3.10+, Ollama with any model (we used llama3.1:8b on Jetson, but it works on any Mac too).</p>
-
-<h2 class="text-xl font-bold text-gray-900 mt-10 mb-4">What's Next</h2>
-
-<ul class="list-disc pl-6 space-y-1 my-3">
-<li class="text-gray-600"><strong class="text-gray-900">Experiment #2:</strong> Focus specifically on somatic CAG expansion papers (MSH3, FAN1, PMS1). the hottest frontier in HD genetics</li>
-<li class="text-gray-600"><strong class="text-gray-900">Experiment #3:</strong> Run the same papers through multiple models and compare outputs. do they agree?</li>
-<li class="text-gray-600"><strong class="text-gray-900">Monthly digest:</strong> Automate this into a monthly published analysis on the website</li>
-</ul>
-
-<h2 class="text-xl font-bold text-gray-900 mt-10 mb-4">About This Project</h2>
-
-<p class="text-gray-600 leading-relaxed mb-4">HD Research Hub is an open-source project by a curious data scientist exploring how AI can help accelerate Huntington's Disease research. We're not doctors, not a pharma company, not competing with the excellent work of HDSA, HDBuzz, and the HD research community. We're building tools and publishing what we learn, openly, in case it's useful.</p>
-
-<p class="text-gray-600 leading-relaxed mb-4">All data from <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" class="text-amber-700 underline">PubMed</a>. All code on <a href="https://github.com/jravinder/hd-research-agent" target="_blank" class="text-amber-700 underline">GitHub</a>. All hypotheses are AI-generated and unvalidated. always consult qualified researchers and healthcare professionals.</p>
-
-<p class="text-gray-400 text-sm mb-6"><em>— HD Research Hub Team</em></p>
+  <section class="border-t border-stone-200 pt-8 text-center text-sm text-stone-500">
+    <p><a href="https://github.com/jravinder/hd-research-agent/commits/main" target="_blank" class="text-amber-700 underline">View commit history on GitHub</a></p>
+    <p class="mt-4"><a href="index.html" class="text-amber-700 font-medium">Back to HD Research Hub</a></p>
+  </section>
 
 </main>
-<footer class="border-t border-gray-100 py-8 px-4 md:px-8 text-center">
-  <p class="text-gray-400 text-xs mb-3">This is an open-source research experiment, not medical advice. AI-generated hypotheses are unvalidated.</p>
-  <a href="index.html" class="text-amber-700 text-sm font-medium">Back to HD Research Hub</a>
-</footer>
+
 <script src="shared.js"></script>
+<div class="text-center py-4 px-4"><p class="text-xs text-stone-400">This is a research and educational tool, not medical advice. For HD support, visit <a href="https://hdsa.org" class="text-stone-500 underline">hdsa.org</a>.</p></div>
 </body></html>
