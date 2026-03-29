@@ -44,8 +44,9 @@ body { top: 0 !important; position: static !important; }
 .goog-te-gadget > span { display: none !important; }
 .goog-te-gadget img { display: none !important; }
 #google_translate_element { line-height: 0; }
-.skiptranslate { display: none !important; }
+body > .skiptranslate { display: none !important; }
 iframe.skiptranslate { display: none !important; }
+#google_translate_element .skiptranslate { display: block !important; }
 
 /* Mobile nav */
 @media (max-width: 768px) {
