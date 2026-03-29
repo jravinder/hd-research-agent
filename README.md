@@ -10,7 +10,7 @@ We're exploring how autonomous agents, LLMs, and public datasets can contribute 
 
 ## The Art of the Possible
 
-There's never been a more exciting time in HD research:
+Applying agentic AI to hard problems — HD is one of the hardest, and the tools are finally here:
 
 - **75% disease slowing** demonstrated in AMT-130 gene therapy trial — the first treatment to meaningfully modify HD progression
 - **7+ therapies** in active clinical trials, with 21 studies recruiting right now
