@@ -18,11 +18,8 @@ jobs:
       - name: Install dependencies
         run: pip install requests rich
 
-      - name: Fetch fresh data
-        run: python src/data_fetcher.py
-
       - name: Build site
-        run: python src/build_site.py --no-deploy
+        run: python src/build_site.py --no-deploy --refresh-data
 
       - name: Commit and push
         run: |

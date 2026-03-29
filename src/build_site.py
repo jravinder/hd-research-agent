@@ -94,11 +94,11 @@ def build_papers_html(papers):
             tags_html = f'<div class="flex flex-wrap gap-1 mb-2">{"".join(tag_spans)}</div>'
 
         cards.append(f'''
-      <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow">
+      <div class="bg-white border border-stone-200 rounded-xl p-5 hover:shadow-md transition-shadow">
         <div class="text-xs text-amber-700 font-bold uppercase mb-2">{date} — {journal}</div>
         {tags_html}
-        <h3 class="text-base font-bold text-gray-900 mb-2">{title}</h3>
-        <p class="text-gray-400 text-sm line-clamp-3">{abstract}</p>
+        <h3 class="text-base font-bold text-stone-900 mb-2">{title}</h3>
+        <p class="text-stone-600 text-sm line-clamp-3">{abstract}</p>
         <a href="{url}" target="_blank" rel="noopener noreferrer" class="text-amber-700 text-sm font-medium mt-2 inline-flex items-center gap-1">PubMed <span class="material-symbols-outlined text-sm">open_in_new</span></a>
       </div>''')
     return "\n".join(cards)
@@ -121,12 +121,12 @@ def build_trials_html(trials):
         url = sanitize_url(t.get("url", "#"))
         rows.append(f'''
           <tr class="hover:bg-amber-50/50 transition-colors">
-            <td class="py-3 px-6 font-bold text-gray-900"><a href="{url}" target="_blank" rel="noopener noreferrer" class="hover:text-amber-700">{nct_id}</a></td>
-            <td class="py-3 px-6 text-gray-600 text-sm">{title}</td>
-            <td class="py-3 px-6 text-gray-600 text-sm">{sponsor}</td>
+            <td class="py-3 px-6 font-bold text-stone-900"><a href="{url}" target="_blank" rel="noopener noreferrer" class="hover:text-amber-700">{nct_id}</a></td>
+            <td class="py-3 px-6 text-stone-800 text-sm">{title}</td>
+            <td class="py-3 px-6 text-stone-800 text-sm">{sponsor}</td>
             <td class="py-3 px-6"><span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-md text-xs font-medium">{phase}</span></td>
             <td class="py-3 px-6"><span class="px-2 py-1 bg-{status_color}-100 text-{status_color}-700 rounded-md text-xs font-medium">{status_label}</span></td>
-            <td class="py-3 px-6 text-gray-500 text-sm">{intervention}</td>
+            <td class="py-3 px-6 text-stone-700 text-sm">{intervention}</td>
           </tr>''')
     return "\n".join(rows)
 
@@ -141,9 +141,9 @@ def build_hdbuzz_html(articles):
         pub_date = text(a.get("pub_date", "")[:16])
         title = text(a.get("title", ""))
         items.append(f'''
-      <a href="{link}" target="_blank" rel="noopener noreferrer" class="block border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-amber-300 transition-all">
+      <a href="{link}" target="_blank" rel="noopener noreferrer" class="block border border-stone-200 rounded-xl p-5 hover:shadow-md hover:border-amber-300 transition-all">
         <div class="text-xs text-green-600 font-medium mb-1">{pub_date}</div>
-        <h3 class="text-base font-bold text-gray-900">{title}</h3>
+        <h3 class="text-base font-bold text-stone-900">{title}</h3>
       </a>''')
     return "\n".join(items)
 
@@ -165,7 +165,7 @@ def build_page(data):
     targets_html = ""
     if targets:
         targets_html = "".join(
-            f'<div class="border border-gray-200 rounded-lg p-3 hover:border-purple-300 transition-colors"><span class="font-bold text-gray-900">{text(t.get("symbol", ""))}</span><div class="text-xs text-gray-400 mt-1">{text(t.get("name", "")[:35])}</div><div class="text-xs text-purple-500 font-medium mt-1">Score: {text(t.get("score", 0))}</div></div>'
+            f'<div class="border border-stone-200 rounded-lg p-3 hover:border-purple-300 transition-colors"><span class="font-bold text-stone-900">{text(t.get("symbol", ""))}</span><div class="text-xs text-stone-600 mt-1">{text(t.get("name", "")[:35])}</div><div class="text-xs text-purple-500 font-medium mt-1">Score: {text(t.get("score", 0))}</div></div>'
             for t in targets[:16]
         )
 
@@ -200,11 +200,11 @@ def build_page(data):
         <span class="material-symbols-outlined">menu</span>
       </button>
       <div id="mobile-nav" class="mobile-menu hidden md:flex items-center gap-8 text-sm font-medium">
-        <a href="#papers" class="text-slate-600 hover:text-amber-700 transition-colors">Research</a>
-        <a href="#trials" class="text-slate-600 hover:text-amber-700 transition-colors">Trials</a>
-        <a href="#ideas" class="text-slate-600 hover:text-amber-700 transition-colors">Ideas</a>
-        <a href="#resources" class="text-slate-600 hover:text-amber-700 transition-colors">Resources</a>
-        <a href="about.html" class="text-slate-600 hover:text-amber-700 transition-colors">About</a>
+        <a href="#papers" class="text-stone-800 hover:text-amber-700 transition-colors">Research</a>
+        <a href="#trials" class="text-stone-800 hover:text-amber-700 transition-colors">Trials</a>
+        <a href="#ideas" class="text-stone-800 hover:text-amber-700 transition-colors">Ideas</a>
+        <a href="#resources" class="text-stone-800 hover:text-amber-700 transition-colors">Resources</a>
+        <a href="about.html" class="text-stone-800 hover:text-amber-700 transition-colors">About</a>
       </div>
     </div>
     <div class="flex items-center gap-4">
@@ -241,22 +241,22 @@ def build_page(data):
     <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
       <div class="stat-card bg-white rounded-xl p-5 shadow-sm border border-amber-100">
         <div class="text-2xl md:text-3xl font-extrabold text-amber-600">{stats.get('papers_count', 0)}</div>
-        <div class="text-xs text-slate-500 font-medium mt-1">Recent Papers</div>
+        <div class="text-xs text-stone-700 font-medium mt-1">Recent Papers</div>
       </div>
       <div class="stat-card bg-white rounded-xl p-5 shadow-sm border border-green-100">
         <div class="text-2xl md:text-3xl font-extrabold text-green-600">{stats.get('trials_count', 0)}</div>
-        <div class="text-xs text-slate-500 font-medium mt-1">Active Trials</div>
+        <div class="text-xs text-stone-700 font-medium mt-1">Active Trials</div>
       </div>
       <div class="stat-card bg-white rounded-xl p-5 shadow-sm border border-orange-100">
         <div class="text-2xl md:text-3xl font-extrabold text-orange-500">{stats.get('recruiting_count', 0)}</div>
-        <div class="text-xs text-slate-500 font-medium mt-1">Recruiting Now</div>
+        <div class="text-xs text-stone-700 font-medium mt-1">Recruiting Now</div>
       </div>
       <div class="stat-card bg-white rounded-xl p-5 shadow-sm border border-purple-100">
         <div class="text-2xl md:text-3xl font-extrabold text-purple-600">{stats.get('targets_count', 0) or '16+'}</div>
-        <div class="text-xs text-slate-500 font-medium mt-1">Known Targets</div>
+        <div class="text-xs text-stone-700 font-medium mt-1">Known Targets</div>
       </div>
     </div>
-    <p class="text-xs text-slate-400 text-center mt-4">Updated {updated_str} — auto-refreshed daily from PubMed, ClinicalTrials.gov, HDBuzz, Open Targets</p>
+    <p class="text-xs text-stone-600 text-center mt-4">Updated {updated_str} — auto-refreshed daily from PubMed, ClinicalTrials.gov, HDBuzz, Open Targets</p>
   </div>
 </section>
 
@@ -265,32 +265,32 @@ def build_page(data):
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-12">
       <div class="text-sm font-bold text-amber-700 uppercase tracking-wider mb-2">What Makes This Different</div>
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-900">An AI + Data Science Lens on HD</h2>
-      <p class="text-gray-500 mt-2 max-w-xl mx-auto">We're not duplicating what HDSA and HDBuzz do brilliantly. We're asking: what can AI uniquely contribute?</p>
+      <h2 class="text-2xl md:text-3xl font-bold text-stone-900">An AI + Data Science Lens on HD</h2>
+      <p class="text-stone-700 mt-2 max-w-xl mx-auto">We're not duplicating what HDSA and HDBuzz do brilliantly. We're asking: what can AI uniquely contribute?</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
       <div class="bg-gradient-to-br from-amber-50 to-amber-100/50 border border-amber-200 rounded-2xl p-6">
         <div class="w-11 h-11 bg-amber-500 rounded-xl flex items-center justify-center mb-4">
           <span class="material-symbols-outlined text-white">auto_awesome</span>
         </div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2">Autonomous Research Agent</h3>
-        <p class="text-gray-500 text-sm">Our AI agent runs overnight — generating hypotheses, searching PubMed, scoring drug candidates, refining. Hundreds of experiments while you sleep.</p>
+        <h3 class="text-lg font-bold text-stone-900 mb-2">Autonomous Research Agent</h3>
+        <p class="text-stone-700 text-sm">Our AI agent runs overnight — generating hypotheses, searching PubMed, scoring drug candidates, refining. Hundreds of experiments while you sleep.</p>
         <a href="https://github.com/jravinder/hd-research-agent" target="_blank" class="text-amber-700 text-sm font-medium mt-3 inline-flex items-center gap-1">See the code <span class="material-symbols-outlined text-sm">open_in_new</span></a>
       </div>
       <div class="bg-gradient-to-br from-orange-50 to-orange-100/50 border border-orange-200 rounded-2xl p-6">
         <div class="w-11 h-11 bg-orange-500 rounded-xl flex items-center justify-center mb-4">
           <span class="material-symbols-outlined text-white">biotech</span>
         </div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2">Drug Repurposing via AI</h3>
-        <p class="text-gray-500 text-sm">Cross-referencing 16 HD targets against thousands of FDA-approved drugs. If a treatment already exists for something else, maybe it can help HD too — and skip years of safety testing.</p>
+        <h3 class="text-lg font-bold text-stone-900 mb-2">Drug Repurposing via AI</h3>
+        <p class="text-stone-700 text-sm">Cross-referencing 16 HD targets against thousands of FDA-approved drugs. If a treatment already exists for something else, maybe it can help HD too — and skip years of safety testing.</p>
         <a href="#ideas" class="text-orange-600 text-sm font-medium mt-3 inline-flex items-center gap-1">See candidates below <span class="material-symbols-outlined text-sm">arrow_downward</span></a>
       </div>
       <div class="bg-gradient-to-br from-green-50 to-green-100/50 border border-green-200 rounded-2xl p-6">
         <div class="w-11 h-11 bg-green-500 rounded-xl flex items-center justify-center mb-4">
           <span class="material-symbols-outlined text-white">diversity_3</span>
         </div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2">Digital Twins for Trials</h3>
-        <p class="text-gray-500 text-sm">AI-simulated patient controls could accelerate clinical trials by reducing the need for traditional placebo arms. Companies like Unlearn are pioneering this for HD.</p>
+        <h3 class="text-lg font-bold text-stone-900 mb-2">Digital Twins for Trials</h3>
+        <p class="text-stone-700 text-sm">AI-simulated patient controls could accelerate clinical trials by reducing the need for traditional placebo arms. Companies like Unlearn are pioneering this for HD.</p>
       </div>
     </div>
   </div>
@@ -302,7 +302,7 @@ def build_page(data):
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-2">
       <div>
         <div class="text-sm font-bold text-orange-600 uppercase tracking-wider mb-1">What's Happening Now</div>
-        <h2 class="text-2xl md:text-3xl font-bold text-gray-900">HD News + Breakthroughs</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-stone-900">HD News + Breakthroughs</h2>
       </div>
       <a href="https://en.hdbuzz.net" target="_blank" class="text-amber-700 text-sm font-medium flex items-center gap-1">More on HDBuzz <span class="material-symbols-outlined text-sm">open_in_new</span></a>
     </div>
@@ -318,7 +318,7 @@ def build_page(data):
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-2">
       <div>
         <div class="text-sm font-bold text-amber-700 uppercase tracking-wider mb-1">Fresh from PubMed</div>
-        <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Latest Research Papers</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-stone-900">Latest Research Papers</h2>
       </div>
       <a href="https://pubmed.ncbi.nlm.nih.gov/?term=huntington+disease+treatment" target="_blank" class="text-amber-700 text-sm font-medium flex items-center gap-1">All HD papers <span class="material-symbols-outlined text-sm">open_in_new</span></a>
     </div>
@@ -334,21 +334,21 @@ def build_page(data):
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-2">
       <div>
         <div class="text-sm font-bold text-green-600 uppercase tracking-wider mb-1">Reasons for Optimism</div>
-        <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Active Clinical Trials</h2>
-        <p class="text-gray-500 text-sm mt-1">{stats.get('trials_count', 0)} trials, {stats.get('total_enrollment', 0):,} patients enrolled, {stats.get('recruiting_count', 0)} recruiting now</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-stone-900">Active Clinical Trials</h2>
+        <p class="text-stone-700 text-sm mt-1">{stats.get('trials_count', 0)} trials, {stats.get('total_enrollment', 0):,} patients enrolled, {stats.get('recruiting_count', 0)} recruiting now</p>
       </div>
       <a href="https://clinicaltrials.gov/search?cond=Huntington+Disease&aggFilters=status:rec act" target="_blank" class="text-amber-700 text-sm font-medium flex items-center gap-1">ClinicalTrials.gov <span class="material-symbols-outlined text-sm">open_in_new</span></a>
     </div>
-    <div class="bg-white border border-gray-200 rounded-xl overflow-x-auto">
+    <div class="bg-white border border-stone-200 rounded-xl overflow-x-auto">
       <table class="w-full text-left min-w-[700px]">
         <thead>
-          <tr class="bg-[#f8f4e4] border-b border-gray-200">
-            <th class="py-3 px-4 md:px-6 text-xs font-bold uppercase tracking-wider text-gray-500">NCT ID</th>
-            <th class="py-3 px-4 md:px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Title</th>
-            <th class="py-3 px-4 md:px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Sponsor</th>
-            <th class="py-3 px-4 md:px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Phase</th>
-            <th class="py-3 px-4 md:px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Status</th>
-            <th class="py-3 px-4 md:px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Intervention</th>
+          <tr class="bg-[#f8f4e4] border-b border-stone-200">
+            <th class="py-3 px-4 md:px-6 text-xs font-bold uppercase tracking-wider text-stone-700">NCT ID</th>
+            <th class="py-3 px-4 md:px-6 text-xs font-bold uppercase tracking-wider text-stone-700">Title</th>
+            <th class="py-3 px-4 md:px-6 text-xs font-bold uppercase tracking-wider text-stone-700">Sponsor</th>
+            <th class="py-3 px-4 md:px-6 text-xs font-bold uppercase tracking-wider text-stone-700">Phase</th>
+            <th class="py-3 px-4 md:px-6 text-xs font-bold uppercase tracking-wider text-stone-700">Status</th>
+            <th class="py-3 px-4 md:px-6 text-xs font-bold uppercase tracking-wider text-stone-700">Intervention</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-gray-100">
@@ -364,69 +364,69 @@ def build_page(data):
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-10">
       <div class="text-sm font-bold text-orange-600 uppercase tracking-wider mb-2">Open Research</div>
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Published Research Ideas</h2>
-      <p class="text-gray-500 mt-2 max-w-xl mx-auto">AI-generated drug repurposing hypotheses from our autonomous research agent. These are ideas worth exploring — not medical claims. All open for the community to build on.</p>
+      <h2 class="text-2xl md:text-3xl font-bold text-stone-900">Published Research Ideas</h2>
+      <p class="text-stone-700 mt-2 max-w-xl mx-auto">AI-generated drug repurposing hypotheses from our autonomous research agent. These are ideas worth exploring — not medical claims. All open for the community to build on.</p>
       <a href="experiment-1.html" class="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-amber-500 text-white rounded-lg text-sm font-medium hover:bg-amber-600 transition-colors">Read Experiment #1: Full Analysis <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       <div class="border border-amber-200 bg-amber-50/30 rounded-xl p-5 hover:shadow-md transition-shadow">
         <div class="flex items-center justify-between mb-3">
-          <span class="text-lg font-bold text-gray-900">Metformin</span>
+          <span class="text-lg font-bold text-stone-900">Metformin</span>
           <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Preclinical data</span>
         </div>
         <div class="text-sm text-amber-700 font-medium mb-2">Target: mTOR / AMPK</div>
-        <p class="text-sm text-gray-500">Promotes autophagy — the cell's self-cleaning mechanism. May help clear mutant HTT protein aggregates. Already FDA-approved for diabetes with well-known safety profile.</p>
-        <div class="mt-3 text-xs text-gray-400">Hypothesis score: 72/100</div>
+        <p class="text-sm text-stone-700">Promotes autophagy — the cell's self-cleaning mechanism. May help clear mutant HTT protein aggregates. Already FDA-approved for diabetes with well-known safety profile.</p>
+        <div class="mt-3 text-xs text-stone-600">Hypothesis score: 72/100</div>
       </div>
       <div class="border border-amber-200 bg-amber-50/30 rounded-xl p-5 hover:shadow-md transition-shadow">
         <div class="flex items-center justify-between mb-3">
-          <span class="text-lg font-bold text-gray-900">Rapamycin</span>
+          <span class="text-lg font-bold text-stone-900">Rapamycin</span>
           <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Preclinical data</span>
         </div>
         <div class="text-sm text-amber-700 font-medium mb-2">Target: mTOR</div>
-        <p class="text-sm text-gray-500">mTOR inhibitor — has demonstrated clearance of mutant HTT in preclinical HD models. Strong mechanistic rationale for inducing autophagy of toxic protein aggregates.</p>
-        <div class="mt-3 text-xs text-gray-400">Hypothesis score: 68/100</div>
+        <p class="text-sm text-stone-700">mTOR inhibitor — has demonstrated clearance of mutant HTT in preclinical HD models. Strong mechanistic rationale for inducing autophagy of toxic protein aggregates.</p>
+        <div class="mt-3 text-xs text-stone-600">Hypothesis score: 68/100</div>
       </div>
       <div class="border border-orange-200 bg-orange-50/30 rounded-xl p-5 hover:shadow-md transition-shadow">
         <div class="flex items-center justify-between mb-3">
-          <span class="text-lg font-bold text-gray-900">Bevantolol (SOM3355)</span>
+          <span class="text-lg font-bold text-stone-900">Bevantolol (SOM3355)</span>
           <span class="px-2 py-0.5 bg-amber-100 text-amber-800 rounded text-xs font-medium">Phase II</span>
         </div>
         <div class="text-sm text-orange-600 font-medium mb-2">Target: Chorea</div>
-        <p class="text-sm text-gray-500">AI-discovered by SOM Biotech using their SOMAIPRO platform. Beta-blocker repurposed for HD chorea. Proof that AI drug repurposing works in practice.</p>
-        <div class="mt-3 text-xs text-gray-400">Already in clinical trials</div>
+        <p class="text-sm text-stone-700">AI-discovered by SOM Biotech using their SOMAIPRO platform. Beta-blocker repurposed for HD chorea. Proof that AI drug repurposing works in practice.</p>
+        <div class="mt-3 text-xs text-stone-600">Already in clinical trials</div>
       </div>
       <div class="border border-green-200 bg-green-50/30 rounded-xl p-5 hover:shadow-md transition-shadow">
         <div class="flex items-center justify-between mb-3">
-          <span class="text-lg font-bold text-gray-900">CBD</span>
+          <span class="text-lg font-bold text-stone-900">CBD</span>
           <span class="px-2 py-0.5 bg-amber-100 text-amber-800 rounded text-xs font-medium">Early human data</span>
         </div>
         <div class="text-sm text-green-600 font-medium mb-2">Target: CB1 / CB2 receptors</div>
-        <p class="text-sm text-gray-500">Cannabinoid receptors are lost early in HD. Early human trial data suggests potential for slowing progression. CB2 modulation may also address neuroinflammation.</p>
-        <div class="mt-3 text-xs text-gray-400">Hypothesis score: 61/100</div>
+        <p class="text-sm text-stone-700">Cannabinoid receptors are lost early in HD. Early human trial data suggests potential for slowing progression. CB2 modulation may also address neuroinflammation.</p>
+        <div class="mt-3 text-xs text-stone-600">Hypothesis score: 61/100</div>
       </div>
       <div class="border border-purple-200 bg-purple-50/30 rounded-xl p-5 hover:shadow-md transition-shadow">
         <div class="flex items-center justify-between mb-3">
-          <span class="text-lg font-bold text-gray-900">Vorinostat (SAHA)</span>
+          <span class="text-lg font-bold text-stone-900">Vorinostat (SAHA)</span>
           <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Preclinical</span>
         </div>
         <div class="text-sm text-purple-600 font-medium mb-2">Target: HDAC</div>
-        <p class="text-sm text-gray-500">HDAC inhibitor addressing epigenetic dysregulation in HD. Already FDA-approved for lymphoma. May restore gene expression patterns disrupted by mutant HTT.</p>
-        <div class="mt-3 text-xs text-gray-400">Hypothesis score: 64/100</div>
+        <p class="text-sm text-stone-700">HDAC inhibitor addressing epigenetic dysregulation in HD. Already FDA-approved for lymphoma. May restore gene expression patterns disrupted by mutant HTT.</p>
+        <div class="mt-3 text-xs text-stone-600">Hypothesis score: 64/100</div>
       </div>
-      <div class="border border-gray-200 bg-[#f8f4e4]/30 rounded-xl p-5 hover:shadow-md transition-shadow">
+      <div class="border border-stone-200 bg-[#f8f4e4]/30 rounded-xl p-5 hover:shadow-md transition-shadow">
         <div class="flex items-center justify-between mb-3">
-          <span class="text-lg font-bold text-gray-900">Simvastatin</span>
+          <span class="text-lg font-bold text-stone-900">Simvastatin</span>
           <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Preclinical</span>
         </div>
-        <div class="text-sm text-gray-600 font-medium mb-2">Target: BDNF</div>
-        <p class="text-sm text-gray-500">Common statin that increases brain-derived neurotrophic factor (BDNF) — critically reduced in HD. BDNF supports the survival of neurons most vulnerable in HD.</p>
-        <div class="mt-3 text-xs text-gray-400">Hypothesis score: 58/100</div>
+        <div class="text-sm text-stone-800 font-medium mb-2">Target: BDNF</div>
+        <p class="text-sm text-stone-700">Common statin that increases brain-derived neurotrophic factor (BDNF) — critically reduced in HD. BDNF supports the survival of neurons most vulnerable in HD.</p>
+        <div class="mt-3 text-xs text-stone-600">Hypothesis score: 58/100</div>
       </div>
     </div>
     <div class="mt-8 bg-orange-50 border border-orange-200 rounded-xl p-5 text-center">
-      <p class="text-sm text-gray-600"><strong>Important:</strong> These hypotheses are AI-generated starting points — not validated findings. They have not been reviewed by HD domain experts or tested experimentally. We publish them openly for the community to evaluate.</p>
-      <p class="text-sm text-gray-500 mt-2">Are you an HD researcher? We'd love your feedback. <a href="https://github.com/jravinder/hd-research-agent/discussions" target="_blank" class="text-amber-700 underline font-medium">Review and discuss on GitHub</a></p>
+      <p class="text-sm text-stone-800"><strong>Important:</strong> These hypotheses are AI-generated starting points — not validated findings. They have not been reviewed by HD domain experts or tested experimentally. We publish them openly for the community to evaluate.</p>
+      <p class="text-sm text-stone-700 mt-2">Are you an HD researcher? We'd love your feedback. <a href="https://github.com/jravinder/hd-research-agent/discussions" target="_blank" class="text-amber-700 underline font-medium">Review and discuss on GitHub</a></p>
     </div>
   </div>
 </section>
@@ -440,24 +440,24 @@ def build_page(data):
           <span class="material-symbols-outlined text-white text-2xl">waving_hand</span>
         </div>
         <div class="flex-1">
-          <h2 class="text-xl font-bold text-gray-900 mb-2">Who This Is For</h2>
-          <p class="text-gray-600 text-sm leading-relaxed mb-4">This is an <strong>experimentation playground</strong> — a place where data scientists, AI engineers, ML researchers, bioinformaticians, and curious builders can explore how AI tools apply to a real-world problem: Huntington's Disease drug discovery.</p>
+          <h2 class="text-xl font-bold text-stone-900 mb-2">Who This Is For</h2>
+          <p class="text-stone-800 text-sm leading-relaxed mb-4">This is an <strong>experimentation playground</strong> — a place where data scientists, AI engineers, ML researchers, bioinformaticians, and curious builders can explore how AI tools apply to a real-world problem: Huntington's Disease drug discovery.</p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-            <div class="bg-white rounded-xl p-4 border border-gray-200">
-              <div class="font-bold text-gray-900 text-sm mb-1">Data Scientists + AI/ML Engineers</div>
-              <p class="text-xs text-gray-500 mb-2">Run our autonomous research agents. Fork the repo. Try different models. Add experiments. This is open-source infrastructure you can build on.</p>
+            <div class="bg-white rounded-xl p-4 border border-stone-200">
+              <div class="font-bold text-stone-900 text-sm mb-1">Data Scientists + AI/ML Engineers</div>
+              <p class="text-xs text-stone-700 mb-2">Run our autonomous research agents. Fork the repo. Try different models. Add experiments. This is open-source infrastructure you can build on.</p>
             </div>
-            <div class="bg-white rounded-xl p-4 border border-gray-200">
-              <div class="font-bold text-gray-900 text-sm mb-1">Researchers + Domain Experts</div>
-              <p class="text-xs text-gray-500 mb-2">Review our AI-generated hypotheses. Spot what's promising and what's wrong. Your expertise is what turns computational ideas into real science. <a href="https://github.com/jravinder/hd-research-agent/discussions" target="_blank" class="text-amber-700 underline">Join the discussion</a>.</p>
+            <div class="bg-white rounded-xl p-4 border border-stone-200">
+              <div class="font-bold text-stone-900 text-sm mb-1">Researchers + Domain Experts</div>
+              <p class="text-xs text-stone-700 mb-2">Review our AI-generated hypotheses. Spot what's promising and what's wrong. Your expertise is what turns computational ideas into real science. <a href="https://github.com/jravinder/hd-research-agent/discussions" target="_blank" class="text-amber-700 underline">Join the discussion</a>.</p>
             </div>
-            <div class="bg-white rounded-xl p-4 border border-gray-200">
-              <div class="font-bold text-gray-900 text-sm mb-1">Students + Curious Builders</div>
-              <p class="text-xs text-gray-500 mb-2">Want to learn how AI applies to drug discovery? Read our <a href="experiment-1.html" class="text-amber-700 underline">experiment reports</a> — we show every step, what worked, and what didn't. No PhD required to follow along.</p>
+            <div class="bg-white rounded-xl p-4 border border-stone-200">
+              <div class="font-bold text-stone-900 text-sm mb-1">Students + Curious Builders</div>
+              <p class="text-xs text-stone-700 mb-2">Want to learn how AI applies to drug discovery? Read our <a href="experiment-1.html" class="text-amber-700 underline">experiment reports</a> — we show every step, what worked, and what didn't. No PhD required to follow along.</p>
             </div>
           </div>
           <div class="bg-orange-50 border border-orange-200 rounded-lg p-3 mt-2">
-            <p class="text-xs text-gray-600"><strong>For patients and families:</strong> This is not a medical resource. For support, guidance, and verified medical information, please go to <a href="https://hdsa.org" target="_blank" class="text-amber-700 underline font-medium">HDSA</a>, <a href="https://en.hdbuzz.net" target="_blank" class="text-amber-700 underline font-medium">HDBuzz</a>, or <a href="https://www.hdyo.org" target="_blank" class="text-amber-700 underline font-medium">HDYO</a>. They have doctors and scientists reviewing every word. We don't.</p>
+            <p class="text-xs text-stone-800"><strong>For patients and families:</strong> This is not a medical resource. For support, guidance, and verified medical information, please go to <a href="https://hdsa.org" target="_blank" class="text-amber-700 underline font-medium">HDSA</a>, <a href="https://en.hdbuzz.net" target="_blank" class="text-amber-700 underline font-medium">HDBuzz</a>, or <a href="https://www.hdyo.org" target="_blank" class="text-amber-700 underline font-medium">HDYO</a>. They have doctors and scientists reviewing every word. We don't.</p>
           </div>
         </div>
       </div>
@@ -470,39 +470,39 @@ def build_page(data):
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-10">
       <div class="text-sm font-bold text-amber-700 uppercase tracking-wider mb-2">Trusted Organizations</div>
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Resources for Patients, Families + Researchers</h2>
-      <p class="text-gray-500 mt-2">These organizations are the real experts. We link to them because they do essential work.</p>
+      <h2 class="text-2xl md:text-3xl font-bold text-stone-900">Resources for Patients, Families + Researchers</h2>
+      <p class="text-stone-700 mt-2">These organizations are the real experts. We link to them because they do essential work.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <a href="https://hdsa.org" target="_blank" class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-amber-300 transition-all group">
-        <div class="text-lg font-bold text-gray-900 mb-1 group-hover:text-amber-700">HDSA</div>
+      <a href="https://hdsa.org" target="_blank" class="bg-white border border-stone-200 rounded-xl p-6 hover:shadow-md hover:border-amber-300 transition-all group">
+        <div class="text-lg font-bold text-stone-900 mb-1 group-hover:text-amber-700">HDSA</div>
         <div class="text-xs text-amber-700 font-medium mb-2">Support + Advocacy</div>
-        <p class="text-sm text-gray-500">Huntington's Disease Society of America. Find local support groups, social workers, Centers of Excellence. The primary advocacy organization in the US.</p>
+        <p class="text-sm text-stone-700">Huntington's Disease Society of America. Find local support groups, social workers, Centers of Excellence. The primary advocacy organization in the US.</p>
       </a>
-      <a href="https://en.hdbuzz.net" target="_blank" class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-amber-300 transition-all group">
-        <div class="text-lg font-bold text-gray-900 mb-1 group-hover:text-amber-700">HDBuzz</div>
+      <a href="https://en.hdbuzz.net" target="_blank" class="bg-white border border-stone-200 rounded-xl p-6 hover:shadow-md hover:border-amber-300 transition-all group">
+        <div class="text-lg font-bold text-stone-900 mb-1 group-hover:text-amber-700">HDBuzz</div>
         <div class="text-xs text-orange-600 font-medium mb-2">Research News in Plain Language</div>
-        <p class="text-sm text-gray-500">Scientists explain HD research in words everyone can understand. The best place to follow new developments without needing a PhD.</p>
+        <p class="text-sm text-stone-700">Scientists explain HD research in words everyone can understand. The best place to follow new developments without needing a PhD.</p>
       </a>
-      <a href="https://www.hdyo.org" target="_blank" class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-amber-300 transition-all group">
-        <div class="text-lg font-bold text-gray-900 mb-1 group-hover:text-amber-700">HDYO</div>
+      <a href="https://www.hdyo.org" target="_blank" class="bg-white border border-stone-200 rounded-xl p-6 hover:shadow-md hover:border-amber-300 transition-all group">
+        <div class="text-lg font-bold text-stone-900 mb-1 group-hover:text-amber-700">HDYO</div>
         <div class="text-xs text-green-600 font-medium mb-2">Young People</div>
-        <p class="text-sm text-gray-500">Huntington's Disease Youth Organization. Resources specifically for young people affected by HD — teens, young adults, and young families.</p>
+        <p class="text-sm text-stone-700">Huntington's Disease Youth Organization. Resources specifically for young people affected by HD — teens, young adults, and young families.</p>
       </a>
-      <a href="https://www.enroll-hd.org" target="_blank" class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-amber-300 transition-all group">
-        <div class="text-lg font-bold text-gray-900 mb-1 group-hover:text-amber-700">Enroll-HD</div>
+      <a href="https://www.enroll-hd.org" target="_blank" class="bg-white border border-stone-200 rounded-xl p-6 hover:shadow-md hover:border-amber-300 transition-all group">
+        <div class="text-lg font-bold text-stone-900 mb-1 group-hover:text-amber-700">Enroll-HD</div>
         <div class="text-xs text-purple-600 font-medium mb-2">Join Research</div>
-        <p class="text-sm text-gray-500">The world's largest observational study for HD families. Your data helps researchers understand HD and design better clinical trials.</p>
+        <p class="text-sm text-stone-700">The world's largest observational study for HD families. Your data helps researchers understand HD and design better clinical trials.</p>
       </a>
-      <a href="https://www.euro-hd.net" target="_blank" class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-amber-300 transition-all group">
-        <div class="text-lg font-bold text-gray-900 mb-1 group-hover:text-amber-700">European HD Network</div>
+      <a href="https://www.euro-hd.net" target="_blank" class="bg-white border border-stone-200 rounded-xl p-6 hover:shadow-md hover:border-amber-300 transition-all group">
+        <div class="text-lg font-bold text-stone-900 mb-1 group-hover:text-amber-700">European HD Network</div>
         <div class="text-xs text-blue-600 font-medium mb-2">International Research</div>
-        <p class="text-sm text-gray-500">EHDN coordinates HD research across Europe. Clinical trials, registries, and working groups advancing the science globally.</p>
+        <p class="text-sm text-stone-700">EHDN coordinates HD research across Europe. Clinical trials, registries, and working groups advancing the science globally.</p>
       </a>
-      <a href="https://hdreach.org" target="_blank" class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-amber-300 transition-all group">
-        <div class="text-lg font-bold text-gray-900 mb-1 group-hover:text-amber-700">HD Reach</div>
+      <a href="https://hdreach.org" target="_blank" class="bg-white border border-stone-200 rounded-xl p-6 hover:shadow-md hover:border-amber-300 transition-all group">
+        <div class="text-lg font-bold text-stone-900 mb-1 group-hover:text-amber-700">HD Reach</div>
         <div class="text-xs text-red-600 font-medium mb-2">Rehab + Exercise</div>
-        <p class="text-sm text-gray-500">Evidence-based rehabilitation exercises designed for people with HD. Physical therapy, speech therapy, and occupational therapy resources.</p>
+        <p class="text-sm text-stone-700">Evidence-based rehabilitation exercises designed for people with HD. Physical therapy, speech therapy, and occupational therapy resources.</p>
       </a>
     </div>
   </div>
@@ -513,8 +513,8 @@ def build_page(data):
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-10">
       <div class="text-sm font-bold text-green-600 uppercase tracking-wider mb-2">Make a Difference</div>
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Ways to Get Involved</h2>
-      <p class="text-gray-500 mt-2">Whether you're a patient, family member, researcher, developer, or just someone who cares.</p>
+      <h2 class="text-2xl md:text-3xl font-bold text-stone-900">Ways to Get Involved</h2>
+      <p class="text-stone-700 mt-2">Whether you're a patient, family member, researcher, developer, or just someone who cares.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
       <div class="border border-green-200 bg-green-50/30 rounded-2xl p-6">
@@ -522,9 +522,9 @@ def build_page(data):
           <div class="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center">
             <span class="material-symbols-outlined text-white text-xl">volunteer_activism</span>
           </div>
-          <h3 class="text-lg font-bold text-gray-900">Join a Clinical Trial</h3>
+          <h3 class="text-lg font-bold text-stone-900">Join a Clinical Trial</h3>
         </div>
-        <p class="text-sm text-gray-500 mb-3">{stats.get('recruiting_count', 0)} HD trials are actively recruiting right now. Your participation directly accelerates the path to treatment.</p>
+        <p class="text-sm text-stone-700 mb-3">{stats.get('recruiting_count', 0)} HD trials are actively recruiting right now. Your participation directly accelerates the path to treatment.</p>
         <a href="https://clinicaltrials.gov/search?cond=Huntington+Disease&aggFilters=status:rec" target="_blank" class="text-green-600 text-sm font-medium inline-flex items-center gap-1">Find recruiting trials <span class="material-symbols-outlined text-sm">open_in_new</span></a>
       </div>
       <div class="border border-amber-200 bg-amber-50/30 rounded-2xl p-6">
@@ -532,9 +532,9 @@ def build_page(data):
           <div class="w-10 h-10 bg-amber-500 rounded-xl flex items-center justify-center">
             <span class="material-symbols-outlined text-white text-xl">code</span>
           </div>
-          <h3 class="text-lg font-bold text-gray-900">Contribute to Open Source</h3>
+          <h3 class="text-lg font-bold text-stone-900">Contribute to Open Source</h3>
         </div>
-        <p class="text-sm text-gray-500 mb-3">Our research agent, literature scanner, and drug repurposing tools are all open source. Data scientists, ML engineers, and bioinformaticians welcome.</p>
+        <p class="text-sm text-stone-700 mb-3">Our research agent, literature scanner, and drug repurposing tools are all open source. Data scientists, ML engineers, and bioinformaticians welcome.</p>
         <a href="https://github.com/jravinder/hd-research-agent" target="_blank" class="text-amber-700 text-sm font-medium inline-flex items-center gap-1">View on GitHub <span class="material-symbols-outlined text-sm">open_in_new</span></a>
       </div>
       <div class="border border-orange-200 bg-orange-50/30 rounded-2xl p-6">
@@ -542,9 +542,9 @@ def build_page(data):
           <div class="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
             <span class="material-symbols-outlined text-white text-xl">record_voice_over</span>
           </div>
-          <h3 class="text-lg font-bold text-gray-900">Share Your Story</h3>
+          <h3 class="text-lg font-bold text-stone-900">Share Your Story</h3>
         </div>
-        <p class="text-sm text-gray-500 mb-3">Patient and family stories drive awareness and funding. Share your experience with HDSA or on social media to help others feel less alone.</p>
+        <p class="text-sm text-stone-700 mb-3">Patient and family stories drive awareness and funding. Share your experience with HDSA or on social media to help others feel less alone.</p>
         <a href="https://hdsa.org/get-involved/" target="_blank" class="text-orange-600 text-sm font-medium inline-flex items-center gap-1">HDSA Get Involved <span class="material-symbols-outlined text-sm">open_in_new</span></a>
       </div>
       <div class="border border-purple-200 bg-purple-50/30 rounded-2xl p-6">
@@ -552,9 +552,9 @@ def build_page(data):
           <div class="w-10 h-10 bg-purple-500 rounded-xl flex items-center justify-center">
             <span class="material-symbols-outlined text-white text-xl">favorite</span>
           </div>
-          <h3 class="text-lg font-bold text-gray-900">Donate</h3>
+          <h3 class="text-lg font-bold text-stone-900">Donate</h3>
         </div>
-        <p class="text-sm text-gray-500 mb-3">Research funding saves lives. HDSA and CHDI Foundation fund the science that makes breakthroughs like AMT-130 possible.</p>
+        <p class="text-sm text-stone-700 mb-3">Research funding saves lives. HDSA and CHDI Foundation fund the science that makes breakthroughs like AMT-130 possible.</p>
         <a href="https://hdsa.org/donate/" target="_blank" class="text-purple-600 text-sm font-medium inline-flex items-center gap-1">Donate to HDSA <span class="material-symbols-outlined text-sm">open_in_new</span></a>
       </div>
       <div class="border border-amber-200 bg-amber-50/30 rounded-2xl p-6">
@@ -562,9 +562,9 @@ def build_page(data):
           <div class="w-10 h-10 bg-amber-500 rounded-xl flex items-center justify-center">
             <span class="material-symbols-outlined text-white text-xl">forum</span>
           </div>
-          <h3 class="text-lg font-bold text-gray-900">Share Feedback or Ideas</h3>
+          <h3 class="text-lg font-bold text-stone-900">Share Feedback or Ideas</h3>
         </div>
-        <p class="text-sm text-gray-500 mb-3">Are you an HD researcher? See something interesting in our hypotheses? Spot an error? We want to hear from you — every correction makes this better.</p>
+        <p class="text-sm text-stone-700 mb-3">Are you an HD researcher? See something interesting in our hypotheses? Spot an error? We want to hear from you — every correction makes this better.</p>
         <a href="https://github.com/jravinder/hd-research-agent/discussions" target="_blank" class="text-amber-700 text-sm font-medium inline-flex items-center gap-1">Join the Discussion <span class="material-symbols-outlined text-sm">open_in_new</span></a>
       </div>
     </div>
@@ -572,11 +572,11 @@ def build_page(data):
 </section>
 
 <!-- Footer -->
-<footer class="bg-gray-900 text-white py-12 px-4 md:px-8">
+<footer class="bg-stone-900 text-white py-12 px-4 md:px-8">
   <div class="max-w-5xl mx-auto">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
       <div>
-        <p class="font-bold text-sm uppercase tracking-wider text-gray-400 mb-3">Explore</p>
+        <p class="font-bold text-sm uppercase tracking-wider text-stone-600 mb-3">Explore</p>
         <div class="flex flex-col gap-2 text-sm">
           <a href="experiment-1.html" class="text-amber-400 hover:underline">Experiment #1</a>
           <a href="chat.html" class="text-amber-400 hover:underline">Ask HD Research</a>
@@ -585,7 +585,7 @@ def build_page(data):
         </div>
       </div>
       <div>
-        <p class="font-bold text-sm uppercase tracking-wider text-gray-400 mb-3">About</p>
+        <p class="font-bold text-sm uppercase tracking-wider text-stone-600 mb-3">About</p>
         <div class="flex flex-col gap-2 text-sm">
           <a href="about.html" class="text-amber-400 hover:underline">Why We Built This</a>
           <a href="https://github.com/jravinder/hd-research-agent" target="_blank" class="text-amber-400 hover:underline">GitHub (MIT License)</a>
@@ -593,7 +593,7 @@ def build_page(data):
         </div>
       </div>
       <div>
-        <p class="font-bold text-sm uppercase tracking-wider text-gray-400 mb-3">Data Sources</p>
+        <p class="font-bold text-sm uppercase tracking-wider text-stone-600 mb-3">Data Sources</p>
         <div class="flex flex-col gap-2 text-sm">
           <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" class="text-amber-400 hover:underline">PubMed</a>
           <a href="https://clinicaltrials.gov" target="_blank" class="text-amber-400 hover:underline">ClinicalTrials.gov</a>
@@ -602,7 +602,7 @@ def build_page(data):
         </div>
       </div>
       <div>
-        <p class="font-bold text-sm uppercase tracking-wider text-gray-400 mb-3">Legal</p>
+        <p class="font-bold text-sm uppercase tracking-wider text-stone-600 mb-3">Legal</p>
         <div class="flex flex-col gap-2 text-sm">
           <a href="privacy.html" class="text-amber-400 hover:underline">Privacy Policy</a>
           <a href="terms.html" class="text-amber-400 hover:underline">Terms of Use</a>
@@ -610,7 +610,7 @@ def build_page(data):
       </div>
     </div>
     <div class="border-t border-gray-800 pt-6 text-center">
-      <p class="text-gray-500 text-xs leading-relaxed">This is a research and educational tool, not a medical product. Nothing on this site constitutes medical advice. Always consult qualified healthcare professionals. All data is sourced from publicly available databases and is refreshed daily. AI-generated hypotheses are exploratory and have not been clinically validated.</p>
+      <p class="text-stone-700 text-xs leading-relaxed">This is a research and educational tool, not a medical product. Nothing on this site constitutes medical advice. Always consult qualified healthcare professionals. All data is sourced from publicly available databases and is refreshed daily. AI-generated hypotheses are exploratory and have not been clinically validated.</p>
     </div>
   </div>
 </footer>
@@ -637,8 +637,8 @@ function googleTranslateElementInit() {{
   .goog-te-gadget > span {{ display: none !important; }}
   .goog-te-gadget img {{ display: none !important; }}
   #google_translate_element {{ line-height: 0; }}
-  .skiptranslate {{ display: none !important; }}
-  body {{ top: 0 !important; }}
+  body > .skiptranslate {{ display: none !important; }}
+  body {{ top: 0 !important; position: static !important; }}
 </style>
 </body></html>'''
 
