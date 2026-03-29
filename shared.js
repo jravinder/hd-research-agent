@@ -2,7 +2,7 @@
 
 /* Google Analytics */
 (function() {
-  var GA_ID = 'G-HD0RESEARCH'; // Replace with real measurement ID
+  var GA_ID = 'G-N8BMJ7ZG5V'; // Replace with real measurement ID
   var s = document.createElement('script');
   s.async = true;
   s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
