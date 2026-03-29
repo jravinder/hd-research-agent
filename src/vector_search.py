@@ -65,7 +65,7 @@ def connect_redis():
 def create_index(r):
     """Create RediSearch vector index."""
     from redis.commands.search.field import VectorField, TextField, TagField
-    from redis.commands.search.indexDefinition import IndexDefinition, IndexType
+    from redis.commands.search.index_definition import IndexDefinition, IndexType
 
     try:
         r.ft(INDEX_NAME).info()
