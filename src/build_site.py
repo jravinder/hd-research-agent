@@ -175,6 +175,9 @@ def build_page(data):
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>HD Research Hub — AI-Powered Huntington's Disease Research</title>
 <meta name="description" content="Open-source AI research dashboard exploring how data science and machine learning can accelerate Huntington's Disease drug discovery."/>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HD0RESEARCH"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-HD0RESEARCH');</script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>

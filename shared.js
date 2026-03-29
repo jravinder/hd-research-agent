@@ -1,5 +1,18 @@
 /* HD Research Hub — shared across all pages */
 
+/* Google Analytics */
+(function() {
+  var GA_ID = 'G-HD0RESEARCH'; // Replace with real measurement ID
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+})();
+
 /* Inject Google Translate (clean, no popups) */
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
