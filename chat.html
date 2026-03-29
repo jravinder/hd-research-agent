@@ -2,80 +2,128 @@
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Ask HD Research Hub</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<title>Ask HD Research</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link href="shared.css" rel="stylesheet"/>
+<script>
+tailwind.config = { theme: { extend: { colors: {
+  "primary": "#855300", "primary-container": "#f59e0b", "on-primary-container": "#613b00",
+  "secondary": "#9a4614", "surface": "#fdf9e9", "surface-low": "#f8f4e4",
+  "surface-high": "#ece8d9", "surface-highest": "#e6e3d3", "on-surface": "#1c1c13",
+  "on-surface-variant": "#534434", "outline-variant": "#d8c3ad",
+}}}}
+</script>
+<style>
+  .editorial-shadow { box-shadow: 0 20px 40px rgba(30, 41, 59, 0.04); }
+  .chat-bubble { animation: fadeIn 0.3s ease-in; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .typing-dots span { animation: blink 1.4s infinite both; }
+  .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+  .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes blink { 0%, 80%, 100% { opacity: 0.3; } 40% { opacity: 1; } }
+</style>
 </head>
-<body class="bg-gray-50 text-gray-900 antialiased min-h-screen flex flex-col">
+<body class="bg-surface text-on-surface min-h-screen flex flex-col" style="font-size:18px;">
 
 <!-- Nav -->
-<nav class="flex justify-between items-center px-4 md:px-8 h-14 border-b border-gray-200 bg-white">
-  <a href="index.html" class="flex items-center gap-2 text-gray-900 font-bold">
-    <span class="material-symbols-outlined text-amber-700 text-xl">arrow_back</span>
-    HD Research Hub
-  </a>
-  <div class="flex items-center gap-3">
-    <div id="google_translate_element"></div>
+<header class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
+  <div class="flex justify-between items-center max-w-4xl mx-auto px-6 h-16">
+    <a href="index.html" class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-primary">arrow_back</span>
+      <div>
+        <h1 class="font-semibold tracking-tight text-lg text-primary">Ask HD Research</h1>
+        <span class="text-[10px] font-bold uppercase tracking-widest text-secondary opacity-70">HD Research Hub</span>
+      </div>
+    </a>
     <div class="flex items-center gap-2">
-      <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-      <span class="text-xs text-gray-400" id="status">Ready</span>
+      <div id="google_translate_element"></div>
+      <div class="flex items-center gap-1">
+        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+        <span class="text-xs text-on-surface-variant opacity-60" id="status">Ready</span>
+      </div>
     </div>
   </div>
-</nav>
+</header>
 
-<!-- Chat Container -->
-<div class="flex-1 flex flex-col max-w-3xl mx-auto w-full">
+<!-- Chat Area -->
+<div class="flex-1 flex flex-col max-w-4xl mx-auto w-full">
 
   <!-- Messages -->
-  <div id="messages" class="flex-1 overflow-y-auto px-4 py-6 space-y-4">
+  <div id="messages" class="flex-1 overflow-y-auto px-6 py-8 space-y-6">
 
-    <!-- Welcome -->
-    <div class="chat-bubble flex gap-3">
-      <div class="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-        <span class="material-symbols-outlined text-white text-lg">science</span>
+    <!-- Welcome Card -->
+    <div class="chat-bubble">
+      <div class="bg-white p-8 rounded-xl editorial-shadow relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary-container to-transparent opacity-10 -mr-20 -mt-20 rounded-full blur-3xl"></div>
+        <div class="flex items-start gap-5 relative z-10">
+          <div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center shadow-lg shadow-primary-container/20 flex-shrink-0">
+            <span class="material-symbols-outlined text-on-primary-container text-2xl">science</span>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold tracking-tight text-on-surface mb-2">HD Research Hub AI</h2>
+            <p class="text-on-surface-variant font-medium leading-relaxed">I'm grounded in 1,571 full-text research chunks from 46 HD papers. Ask me about treatments, clinical trials, molecular targets, or our AI experiment findings.</p>
+          </div>
+        </div>
       </div>
-      <div class="bg-white border border-gray-200 rounded-2xl rounded-tl-md px-4 py-3 max-w-[85%]">
-        <p class="text-sm text-gray-700 leading-relaxed">Hi! I'm the HD Research Hub assistant. I can help you explore Huntington's Disease research using our corpus of analyzed papers, clinical trial data, and AI-generated drug repurposing hypotheses.</p>
-        <p class="text-sm text-gray-700 leading-relaxed mt-2">Try asking me things like:</p>
-        <div class="mt-2 space-y-1">
-          <button onclick="askSuggestion(this)" class="block text-left text-sm text-amber-700 hover:text-amber-800 hover:bg-amber-50 px-2 py-1 rounded transition-colors">"What's the latest on AMT-130?"</button>
-          <button onclick="askSuggestion(this)" class="block text-left text-sm text-amber-700 hover:text-amber-800 hover:bg-amber-50 px-2 py-1 rounded transition-colors">"Which drug repurposing candidates scored highest?"</button>
-          <button onclick="askSuggestion(this)" class="block text-left text-sm text-amber-700 hover:text-amber-800 hover:bg-amber-50 px-2 py-1 rounded transition-colors">"What are the somatic expansion targets?"</button>
-          <button onclick="askSuggestion(this)" class="block text-left text-sm text-amber-700 hover:text-amber-800 hover:bg-amber-50 px-2 py-1 rounded transition-colors">"How many clinical trials are recruiting right now?"</button>
-        </div>
-        <div class="mt-3 bg-orange-50 border border-orange-200 rounded-lg p-3">
-          <p class="text-xs text-gray-600"><strong>Important:</strong> I can help you explore HD research. what papers say, what trials exist, what our AI experiments found. I <strong>cannot</strong> give medical advice about your personal health. For that, please contact <a href="https://hdsa.org" class="text-amber-700 underline" target="_blank">HDSA</a> (1-800-345-HDSA) or your healthcare provider.</p>
-        </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="bg-secondary/5 border-l-4 border-secondary p-4 rounded-r-xl flex items-center gap-3">
+      <span class="material-symbols-outlined text-secondary">warning</span>
+      <p class="text-secondary text-sm font-medium">I cannot give medical advice. For support, contact <a href="https://hdsa.org" target="_blank" class="font-bold underline">HDSA</a> (1-800-345-HDSA).</p>
+    </div>
+
+    <!-- Suggestions -->
+    <div>
+      <h3 class="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary/50 mb-4">Suggested Questions</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <button onclick="askSuggestion(this)" class="text-left p-4 bg-surface-low hover:bg-surface-high transition-all rounded-xl group border border-transparent hover:border-outline-variant/30 flex justify-between items-center active:scale-[0.98]">
+          <span class="text-on-surface font-semibold text-sm">What's the latest on AMT-130?</span>
+          <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity text-sm">arrow_forward</span>
+        </button>
+        <button onclick="askSuggestion(this)" class="text-left p-4 bg-surface-low hover:bg-surface-high transition-all rounded-xl group border border-transparent hover:border-outline-variant/30 flex justify-between items-center active:scale-[0.98]">
+          <span class="text-on-surface font-semibold text-sm">How does somatic expansion work?</span>
+          <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity text-sm">arrow_forward</span>
+        </button>
+        <button onclick="askSuggestion(this)" class="text-left p-4 bg-surface-low hover:bg-surface-high transition-all rounded-xl group border border-transparent hover:border-outline-variant/30 flex justify-between items-center active:scale-[0.98]">
+          <span class="text-on-surface font-semibold text-sm">Which drugs might help with neuroinflammation?</span>
+          <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity text-sm">arrow_forward</span>
+        </button>
+        <button onclick="askSuggestion(this)" class="text-left p-4 bg-surface-low hover:bg-surface-high transition-all rounded-xl group border border-transparent hover:border-outline-variant/30 flex justify-between items-center active:scale-[0.98]">
+          <span class="text-on-surface font-semibold text-sm">What did Experiment #1 find?</span>
+          <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity text-sm">arrow_forward</span>
+        </button>
       </div>
     </div>
   </div>
 
-  <!-- Input -->
-  <div class="border-t border-gray-200 bg-white px-4 py-3">
-    <div class="flex items-center gap-2 mb-2">
-      <span class="material-symbols-outlined text-gray-400 text-sm">translate</span>
-      <span class="text-xs text-gray-400">Type in any language:</span>
-      <span class="text-xs text-amber-700 font-medium">Hindi, Tamil, Telugu, Bengali, Kannada, Malayalam, Gujarati, Punjabi, Odia, Urdu, English</span>
+  <!-- Bottom Input -->
+  <div class="sticky bottom-0 bg-surface/90 backdrop-blur-xl border-t border-outline-variant/20">
+    <div class="max-w-4xl mx-auto px-6 py-2 flex items-center justify-center gap-3">
+      <span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant opacity-50">Languages</span>
+      <span class="text-[11px] text-secondary font-medium">English . Hindi . Tamil . Telugu . Bengali . Kannada . Malayalam</span>
     </div>
-    <form id="chat-form" class="flex gap-2">
-      <input
-        id="chat-input"
-        type="text"
-        placeholder="Ask in English, हिंदी, தமிழ், తెలుగు, বাংলা..."
-        class="flex-1 px-4 py-3 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-        autocomplete="off"
-      />
-      <button
-        type="submit"
-        id="send-btn"
-        class="px-4 py-3 bg-amber-500 text-white rounded-xl hover:bg-amber-600 transition-colors flex items-center gap-1 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        <span class="material-symbols-outlined text-lg">send</span>
-      </button>
-    </form>
-    <p class="text-xs text-gray-300 text-center mt-2">Powered by NVIDIA NIM + our research corpus of <span id="corpus-count">46</span> analyzed papers</p>
+    <div class="max-w-4xl mx-auto px-6 pb-6 pt-1">
+      <form id="chat-form" class="relative">
+        <div class="bg-surface-highest rounded-2xl flex items-center p-2 shadow-inner">
+          <input
+            id="chat-input"
+            type="text"
+            placeholder="Ask about HD research, papers, or trials..."
+            class="flex-grow bg-transparent border-none focus:ring-0 px-4 py-3 text-on-surface font-medium placeholder:text-on-surface-variant/40 text-base"
+            autocomplete="off"
+          />
+          <button type="submit" id="send-btn" class="bg-primary-container hover:bg-primary-container/90 text-on-primary-container w-11 h-11 rounded-xl flex items-center justify-center transition-all active:scale-90 shadow-lg shadow-primary-container/20 disabled:opacity-50">
+            <span class="material-symbols-outlined">send</span>
+          </button>
+        </div>
+      </form>
+      <p class="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant opacity-30">
+        Powered by 1,571 research chunks from <span id="corpus-count">46</span> papers
+      </p>
+    </div>
   </div>
 </div>
 
@@ -86,30 +134,30 @@ const chatInput = document.getElementById('chat-input');
 const sendBtn = document.getElementById('send-btn');
 const statusEl = document.getElementById('status');
 const corpusCountEl = document.getElementById('corpus-count');
-
 let history = [];
 
 function addMessage(role, content) {
   const div = document.createElement('div');
-  div.className = 'chat-bubble flex gap-3' + (role === 'user' ? ' justify-end' : '');
+  div.className = 'chat-bubble';
 
   if (role === 'user') {
     div.innerHTML = `
-      <div class="bg-amber-500 text-white rounded-2xl rounded-tr-md px-4 py-3 max-w-[85%]">
-        <p class="text-sm leading-relaxed">${escapeHtml(content)}</p>
-      </div>
-    `;
+      <div class="flex justify-end ml-12">
+        <div class="bg-primary-container text-on-primary-container px-5 py-3 rounded-2xl rounded-tr-none shadow-lg shadow-primary-container/10">
+          <p class="font-medium">${escapeHtml(content)}</p>
+        </div>
+      </div>`;
   } else {
     div.innerHTML = `
-      <div class="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-        <span class="material-symbols-outlined text-white text-lg">science</span>
-      </div>
-      <div class="bg-white border border-gray-200 rounded-2xl rounded-tl-md px-4 py-3 max-w-[85%]">
-        <div class="text-sm text-gray-700 leading-relaxed prose-sm">${formatResponse(content)}</div>
-      </div>
-    `;
+      <div class="flex justify-start mr-12 items-start gap-3">
+        <div class="w-8 h-8 rounded-lg bg-surface-high flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-sm text-secondary">science</span>
+        </div>
+        <div class="bg-white text-on-surface px-5 py-3 rounded-2xl rounded-tl-none editorial-shadow border border-outline-variant/10">
+          <div class="leading-relaxed">${formatResponse(content)}</div>
+        </div>
+      </div>`;
   }
-
   messagesEl.appendChild(div);
   messagesEl.scrollTop = messagesEl.scrollHeight;
 }
@@ -117,50 +165,39 @@ function addMessage(role, content) {
 function addTyping() {
   const div = document.createElement('div');
   div.id = 'typing';
-  div.className = 'chat-bubble flex gap-3';
+  div.className = 'chat-bubble';
   div.innerHTML = `
-    <div class="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-      <span class="material-symbols-outlined text-white text-lg">science</span>
-    </div>
-    <div class="bg-white border border-gray-200 rounded-2xl rounded-tl-md px-4 py-3">
-      <div class="typing-dots flex gap-1">
-        <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
-        <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
-        <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+    <div class="flex justify-start items-start gap-3">
+      <div class="w-8 h-8 rounded-lg bg-surface-high flex items-center justify-center shrink-0">
+        <span class="material-symbols-outlined text-sm text-secondary">science</span>
       </div>
-    </div>
-  `;
+      <div class="bg-white px-5 py-4 rounded-2xl rounded-tl-none editorial-shadow border border-outline-variant/10">
+        <div class="typing-dots flex gap-1.5">
+          <span class="w-2 h-2 bg-on-surface-variant/40 rounded-full"></span>
+          <span class="w-2 h-2 bg-on-surface-variant/40 rounded-full"></span>
+          <span class="w-2 h-2 bg-on-surface-variant/40 rounded-full"></span>
+        </div>
+      </div>
+    </div>`;
   messagesEl.appendChild(div);
   messagesEl.scrollTop = messagesEl.scrollHeight;
 }
 
-function removeTyping() {
-  const el = document.getElementById('typing');
-  if (el) el.remove();
-}
+function removeTyping() { const el = document.getElementById('typing'); if (el) el.remove(); }
 
 function formatResponse(text) {
-  // Bold
   text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-  // Italic
   text = text.replace(/\*(.+?)\*/g, '<em>$1</em>');
-  // PubMed links
-  text = text.replace(/\[(\d{8})\]/g, '<a href="https://pubmed.ncbi.nlm.nih.gov/$1/" target="_blank" class="text-amber-700 underline">[$1]</a>');
-  // Line breaks
-  text = text.replace(/\n\n/g, '</p><p class="mt-2">');
+  text = text.replace(/\[(\d{8})\]/g, '<a href="https://pubmed.ncbi.nlm.nih.gov/$1/" target="_blank" class="text-primary underline">[$1]</a>');
+  text = text.replace(/\n\n/g, '</p><p class="mt-3">');
   text = text.replace(/\n/g, '<br>');
   return '<p>' + text + '</p>';
 }
 
-function escapeHtml(text) {
-  const div = document.createElement('div');
-  div.textContent = text;
-  return div.innerHTML;
-}
+function escapeHtml(text) { const d = document.createElement('div'); d.textContent = text; return d.innerHTML; }
 
 async function sendMessage(message) {
   if (!message.trim()) return;
-
   addMessage('user', message);
   chatInput.value = '';
   sendBtn.disabled = true;
@@ -173,30 +210,20 @@ async function sendMessage(message) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message, history: history.slice(-6) }),
     });
-
     removeTyping();
-
     if (!resp.ok) {
       const err = await resp.json();
-      addMessage('assistant', 'Sorry, something went wrong: ' + (err.error || 'Unknown error') + '\n\nYou can still explore our research at the main dashboard.');
+      addMessage('assistant', 'Something went wrong: ' + (err.error || 'Unknown error'));
       return;
     }
-
     const data = await resp.json();
     addMessage('assistant', data.response);
-
-    // Update corpus count
-    if (data.corpus_size) {
-      corpusCountEl.textContent = data.corpus_size;
-    }
-
-    // Track history for context
+    if (data.corpus_size) corpusCountEl.textContent = data.corpus_size;
     history.push({ role: 'user', content: message });
     history.push({ role: 'assistant', content: data.response });
-
   } catch (e) {
     removeTyping();
-    addMessage('assistant', 'The research API is temporarily unavailable. In the meantime, you can:\n\n- Browse our **experiment report**: [Experiment #1](experiment-1.html)\n- Explore the **dashboard** for live data: [Dashboard](index.html)\n- Read papers directly on [PubMed](https://pubmed.ncbi.nlm.nih.gov/?term=huntington+disease)\n\nWe\'re working on making this more reliable. Sorry about that!');
+    addMessage('assistant', 'The research API is temporarily unavailable. Try the dashboard or experiment report in the meantime.');
   } finally {
     sendBtn.disabled = false;
     statusEl.textContent = 'Ready';
@@ -205,16 +232,12 @@ async function sendMessage(message) {
 }
 
 function askSuggestion(btn) {
-  const text = btn.textContent.replace(/^"|"$/g, '');
-  sendMessage(text);
+  sendMessage(btn.querySelector('span').textContent);
 }
 
-chatForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  sendMessage(chatInput.value);
-});
-
+chatForm.addEventListener('submit', (e) => { e.preventDefault(); sendMessage(chatInput.value); });
 chatInput.focus();
 </script>
 <script src="shared.js"></script>
-<div class="text-center py-4 px-4"><p class="text-xs text-gray-300">This is a research and educational tool, not medical advice. For HD support, visit <a href="https://hdsa.org" class="text-gray-400 underline">hdsa.org</a>.</p></div></body></html>
+<div class="text-center py-2 px-4"><p class="text-xs text-on-surface-variant/30">This is a research tool, not medical advice. For HD support, visit <a href="https://hdsa.org" class="underline">hdsa.org</a>.</p></div>
+</body></html>
