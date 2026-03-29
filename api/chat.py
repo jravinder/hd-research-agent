@@ -24,10 +24,7 @@ NIM_API_KEY = os.environ.get("NVIDIA_NIM_API_KEY", "")
 NIM_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 NIM_MODEL = "nvidia/llama-3.1-nemotron-nano-8b-v1"
 
-# Upstash Vector (serverless semantic search)
-# Vectors are indexed. Semantic query requires matching embedding dims.
-# TODO: Wire in when we have a cloud embedding API at 768 dims.
-# For now, keyword search over full-text KB chunks works well.
+# Upstash Vector (serverless semantic search with built-in BGE embeddings)
 UPSTASH_VECTOR_URL = os.environ.get("UPSTASH_VECTOR_URL", "")
 UPSTASH_VECTOR_TOKEN = os.environ.get("UPSTASH_VECTOR_TOKEN", "")
 
@@ -60,8 +57,39 @@ if DATA_PATH.exists():
         SITE_DATA = json.load(f)
 
 
+def search_semantic(query, top_k=8):
+    """Semantic search via Upstash Vector (built-in BGE embeddings, no external API needed)."""
+    if not UPSTASH_VECTOR_URL or not UPSTASH_VECTOR_TOKEN:
+        return []
+    try:
+        payload = json.dumps({"data": query, "topK": top_k, "includeMetadata": True}).encode("utf-8")
+        req = urllib.request.Request(
+            f"{UPSTASH_VECTOR_URL}/query-data",
+            data=payload,
+            headers={
+                "Authorization": f"Bearer {UPSTASH_VECTOR_TOKEN}",
+                "Content-Type": "application/json",
+            },
+            method="POST",
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            return [
+                {
+                    "pmid": r.get("metadata", {}).get("pmid", ""),
+                    "title": r.get("metadata", {}).get("title", ""),
+                    "section": r.get("metadata", {}).get("section", ""),
+                    "text": r.get("metadata", {}).get("text", ""),
+                    "score": r.get("score", 0),
+                }
+                for r in data.get("result", [])
+            ]
+    except Exception:
+        return []
+
+
 def find_relevant_chunks(query, max_chunks=10):
-    """Search the full-text knowledge base for relevant chunks."""
+    """Keyword fallback: search the full-text knowledge base for relevant chunks."""
     query_terms = set(re.findall(r'\w+', query.lower()))
     # Remove common stop words
     stop = {'the','a','an','is','are','was','were','in','on','at','to','for','of','and','or','with','that','this','what','how','why','can','do','does'}
@@ -104,8 +132,13 @@ def build_context(query):
     """Build RAG context from knowledge base, corpus, experiments, and trial data."""
     context_parts = []
 
-    # Full-text knowledge base chunks (primary source)
-    chunks = find_relevant_chunks(query)
+    # Semantic search via Upstash Vector (primary source)
+    chunks = search_semantic(query)
+
+    # Fall back to keyword search if semantic returns nothing
+    if not chunks:
+        chunks = find_relevant_chunks(query)
+
     if chunks:
         context_parts.append("RELEVANT RESEARCH (from full-text papers):")
         for c in chunks:
