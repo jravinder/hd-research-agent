@@ -38,6 +38,13 @@ if EXPERIMENT_PATH.exists():
     with open(EXPERIMENT_PATH) as f:
         EXPERIMENT = json.load(f)
 
+# Load knowledge base (full text chunks)
+KB = {}
+KB_PATH = Path(__file__).parent.parent / "data" / "knowledge_base.json"
+if KB_PATH.exists():
+    with open(KB_PATH) as f:
+        KB = json.load(f)
+
 # Load trial data
 DATA_PATH = Path(__file__).parent.parent / "data" / "data.json"
 SITE_DATA = {}
@@ -46,8 +53,29 @@ if DATA_PATH.exists():
         SITE_DATA = json.load(f)
 
 
+def find_relevant_chunks(query, max_chunks=10):
+    """Search the full-text knowledge base for relevant chunks."""
+    query_terms = set(re.findall(r'\w+', query.lower()))
+    # Remove common stop words
+    stop = {'the','a','an','is','are','was','were','in','on','at','to','for','of','and','or','with','that','this','what','how','why','can','do','does'}
+    query_terms -= stop
+
+    scored = []
+    for chunk in KB.get("chunks", []):
+        text = chunk.get("text", "").lower()
+        title = chunk.get("title", "").lower()
+        combined = f"{title} {text}"
+
+        score = sum(1 for term in query_terms if term in combined)
+        if score > 0:
+            scored.append((score, chunk))
+
+    scored.sort(key=lambda x: x[0], reverse=True)
+    return [c for _, c in scored[:max_chunks]]
+
+
 def find_relevant_papers(query, max_papers=8):
-    """Simple keyword search over the corpus."""
+    """Search corpus for relevant papers (fallback if KB is empty)."""
     query_terms = set(re.findall(r'\w+', query.lower()))
     scored = []
 
@@ -66,26 +94,37 @@ def find_relevant_papers(query, max_papers=8):
 
 
 def build_context(query):
-    """Build RAG context from corpus, experiments, and trial data."""
-    papers = find_relevant_papers(query)
-
+    """Build RAG context from knowledge base, corpus, experiments, and trial data."""
     context_parts = []
 
-    # Relevant papers
-    if papers:
-        context_parts.append("RELEVANT RESEARCH PAPERS:")
-        for p in papers:
-            analysis = p.get("analysis", {})
-            entry = f"- [{p.get('pmid','')}] {p.get('title','')}"
-            if analysis:
-                entry += f"\n  Finding: {analysis.get('finding', '')}"
-                targets = analysis.get("targets", [])
-                compounds = analysis.get("compounds", [])
-                if targets:
-                    entry += f"\n  Targets: {', '.join(targets)}"
-                if compounds:
-                    entry += f"\n  Compounds: {', '.join(compounds)}"
-            context_parts.append(entry)
+    # Full-text knowledge base chunks (primary source)
+    chunks = find_relevant_chunks(query)
+    if chunks:
+        context_parts.append("RELEVANT RESEARCH (from full-text papers):")
+        for c in chunks:
+            pmid = c.get("pmid", "")
+            section = c.get("section", "")
+            title = c.get("title", "")[:60]
+            text = c.get("text", "")[:800]
+            context_parts.append(f"- [{pmid}] {title} | Section: {section}\n  {text}")
+
+    # Fall back to corpus abstracts if KB is empty
+    if not chunks:
+        papers = find_relevant_papers(query)
+        if papers:
+            context_parts.append("RELEVANT RESEARCH PAPERS (abstracts):")
+            for p in papers:
+                analysis = p.get("analysis", {})
+                entry = f"- [{p.get('pmid','')}] {p.get('title','')}"
+                if analysis:
+                    entry += f"\n  Finding: {analysis.get('finding', '')}"
+                    targets = analysis.get("targets", [])
+                    compounds = analysis.get("compounds", [])
+                    if targets:
+                        entry += f"\n  Targets: {', '.join(targets)}"
+                    if compounds:
+                        entry += f"\n  Compounds: {', '.join(compounds)}"
+                context_parts.append(entry)
 
     # Hypotheses from experiment
     hypotheses = EXPERIMENT.get("hypotheses", [])
