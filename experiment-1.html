@@ -28,7 +28,75 @@
 
   <section class="py-12 md:py-20">
     <h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter text-stone-900 leading-[1.1] mb-4">What Can an LLM Learn from 22 HD Research Papers?</h1>
-    <p class="text-lg text-stone-500">March 27, 2026</p>
+    <p class="text-lg text-stone-500">Experiment #1</p>
+  </section>
+
+  <!-- Experiment Card (ML Reproducibility Standard) -->
+  <section class="mb-16">
+    <div class="bg-white rounded-xl editorial-shadow overflow-hidden">
+      <div class="bg-amber-50 px-6 py-3 border-b border-amber-100">
+        <h2 class="text-sm font-bold text-amber-800 uppercase tracking-widest">Experiment Card</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-stone-100">
+        <div class="bg-white p-5">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Experiment ID</div>
+          <div class="text-stone-900 font-medium">EXP-001</div>
+        </div>
+        <div class="bg-white p-5">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Date / Time</div>
+          <div class="text-stone-900 font-medium">2026-03-27T23:25:23Z (UTC-5)</div>
+        </div>
+        <div class="bg-white p-5">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Type</div>
+          <div class="text-stone-900 font-medium">Exploratory / Hypothesis Generation</div>
+        </div>
+        <div class="bg-white p-5">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Status</div>
+          <div class="text-stone-900 font-medium"><span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-1"></span> Complete</div>
+        </div>
+        <div class="bg-white p-5">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Hypothesis</div>
+          <div class="text-stone-900 font-medium">An open-source LLM can identify cross-paper patterns and generate drug repurposing starting points from HD research abstracts</div>
+        </div>
+        <div class="bg-white p-5">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Outcome</div>
+          <div class="text-stone-900 font-medium">Partially confirmed. Cross-paper patterns found (TDP-43, PTMs). But model lacks clinical trial history knowledge.</div>
+        </div>
+        <div class="bg-white p-5 md:col-span-2 border-t border-stone-100">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Infrastructure</div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+            <div><span class="text-stone-400">Model:</span> <span class="text-stone-900 font-medium">Llama 3.1 8B</span></div>
+            <div><span class="text-stone-400">Runtime:</span> <span class="text-stone-900 font-medium">Ollama 0.16.1</span></div>
+            <div><span class="text-stone-400">Hardware:</span> <span class="text-stone-900 font-medium">NVIDIA Jetson AGX Orin 64GB</span></div>
+            <div><span class="text-stone-400">GPU:</span> <span class="text-stone-900 font-medium">Ampere, 2048 CUDA cores</span></div>
+            <div><span class="text-stone-400">OS:</span> <span class="text-stone-900 font-medium">Ubuntu 22.04 / JetPack 6.2.2</span></div>
+            <div><span class="text-stone-400">Duration:</span> <span class="text-stone-900 font-medium">~25 minutes total</span></div>
+            <div><span class="text-stone-400">Cost:</span> <span class="text-stone-900 font-medium">$0 (local inference)</span></div>
+            <div><span class="text-stone-400">Cloud:</span> <span class="text-stone-900 font-medium">None</span></div>
+          </div>
+        </div>
+        <div class="bg-white p-5 md:col-span-2 border-t border-stone-100">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Data</div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+            <div><span class="text-stone-400">Source:</span> <span class="text-stone-900 font-medium">PubMed E-utilities API</span></div>
+            <div><span class="text-stone-400">Queries:</span> <span class="text-stone-900 font-medium">5 search terms</span></div>
+            <div><span class="text-stone-400">Window:</span> <span class="text-stone-900 font-medium">90 days (2026-01 to 2026-03)</span></div>
+            <div><span class="text-stone-400">Input:</span> <span class="text-stone-900 font-medium">22 paper abstracts</span></div>
+            <div><span class="text-stone-400">Parsed:</span> <span class="text-stone-900 font-medium">20/22 (2 failed)</span></div>
+            <div><span class="text-stone-400">Output:</span> <span class="text-stone-900 font-medium">JSON + Markdown report</span></div>
+            <div><span class="text-stone-400">Data license:</span> <span class="text-stone-900 font-medium">Public domain (NIH)</span></div>
+            <div><span class="text-stone-400">Code license:</span> <span class="text-stone-900 font-medium">MIT</span></div>
+          </div>
+        </div>
+        <div class="bg-white p-5 md:col-span-2 border-t border-stone-100">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Reproducibility</div>
+          <div class="text-sm text-stone-700">
+            <code class="bg-stone-50 px-2 py-1 rounded text-xs">git clone https://github.com/jravinder/hd-research-agent && cd hd-research-agent && pip install -r requirements.txt && python src/run_experiment.py</code>
+            <div class="mt-2 text-stone-500">Commit: <a href="https://github.com/jravinder/hd-research-agent/commit/1df14fe" target="_blank" class="text-amber-700 underline">1df14fe</a> | Raw data: <a href="https://github.com/jravinder/hd-research-agent/blob/main/data/experiment_001_results.json" target="_blank" class="text-amber-700 underline">experiment_001_results.json</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="bg-[#f8f4e4] py-12 px-8 rounded-2xl mb-16 text-center">
