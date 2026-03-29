@@ -1,17 +1,43 @@
-/* HD Research Hub — shared styles */
-body { font-family: 'Inter', sans-serif; }
+/* HD Research Hub — "Sunrise Hope" Design System
+   Designed via Google Stitch. No teal. Warm, inspirational, readable.
+   Primary Gold (#F59E0B), Secondary Amber (#92400E), Accent Coral (#FB7185)
+*/
 
-/* Google Translate: hide all cruft */
+:root {
+  --primary: #F59E0B;
+  --primary-dark: #D97706;
+  --primary-light: #FEF3C7;
+  --secondary: #92400E;
+  --secondary-light: #FBBF24;
+  --accent: #FB7185;
+  --accent-light: #FFE4E6;
+  --surface: #FFFBEB;
+  --surface-white: #FFFFFF;
+  --on-surface: #1E293B;
+  --on-surface-light: #475569;
+  --outline: #94A3B8;
+  --outline-light: #E2E8F0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--on-surface);
+  background: var(--surface);
+}
+
+/* Google Translate: hide cruft */
 .goog-te-banner-frame { display: none !important; }
-body { top: 0 !important; }
+body { top: 0 !important; position: static !important; }
 .goog-te-gadget { font-size: 0 !important; }
 .goog-te-gadget .goog-te-combo {
   font-size: 13px !important;
   padding: 4px 8px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--outline-light);
   border-radius: 8px;
   background: white;
-  color: #374151;
+  color: var(--on-surface);
   outline: none;
   cursor: pointer;
 }
@@ -20,10 +46,10 @@ body { top: 0 !important; }
 #google_translate_element { line-height: 0; }
 .skiptranslate { display: none !important; }
 iframe.skiptranslate { display: none !important; }
-body { top: 0 !important; position: static !important; }
 
 /* Mobile nav */
 @media (max-width: 768px) {
+  body { font-size: 16px; }
   .mobile-menu { display: none; }
   .mobile-menu.active {
     display: flex;
@@ -34,13 +60,13 @@ body { top: 0 !important; position: static !important; }
     right: 0;
     background: white;
     padding: 12px 16px;
-    border-bottom: 1px solid #f3f4f6;
+    border-bottom: 1px solid var(--outline-light);
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     z-index: 100;
     gap: 4px;
   }
   .mobile-menu a { padding: 10px 8px !important; border-radius: 8px; }
-  .mobile-menu a:hover { background: #f0fdfa; }
+  .mobile-menu a:hover { background: var(--primary-light); }
   .desktop-only { display: none !important; }
 }
 
@@ -53,12 +79,18 @@ body { top: 0 !important; position: static !important; }
 /* Touch targets */
 @media (max-width: 768px) {
   a, button { min-height: 44px; display: inline-flex; align-items: center; }
-  input { min-height: 48px; font-size: 16px !important; /* prevents iOS zoom */ }
+  input { min-height: 48px; font-size: 16px !important; }
 }
 
 /* Stat cards */
-.stat-card { transition: transform 0.2s; }
-.stat-card:hover { transform: translateY(-2px); }
+.stat-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 12px;
+}
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
 
 /* Chat bubbles */
 .chat-bubble { animation: fadeIn 0.3s ease-in; }

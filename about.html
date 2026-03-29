@@ -11,10 +11,10 @@
 <body class="bg-white text-gray-900 antialiased">
 
 <nav class="flex items-center justify-between px-4 md:px-8 h-14 border-b border-gray-100 sticky top-0 bg-white/95 backdrop-blur z-50">
-  <a href="index.html" class="font-bold text-gray-900 flex items-center gap-2"><span class="material-symbols-outlined text-teal-600">arrow_back</span> HD Research Hub</a>
+  <a href="index.html" class="font-bold text-gray-900 flex items-center gap-2"><span class="material-symbols-outlined text-amber-700">arrow_back</span> HD Research Hub</a>
   <div class="flex items-center gap-3">
     <div id="google_translate_element"></div>
-    <a href="chat.html" class="text-teal-600 text-sm font-medium flex items-center gap-1 desktop-only"><span class="material-symbols-outlined text-sm">chat</span> Ask HD Research</a>
+    <a href="chat.html" class="text-amber-700 text-sm font-medium flex items-center gap-1 desktop-only"><span class="material-symbols-outlined text-sm">chat</span> Ask HD Research</a>
   </div>
 </nav>
 
@@ -22,34 +22,25 @@
 
   <!-- Letter -->
   <div class="mb-16">
-    <div class="text-sm text-teal-600 font-bold uppercase tracking-wider mb-4">A Letter to You</div>
-    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">Why I'm Doing This</h1>
+    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">About</h1>
 
     <div class="text-gray-600 leading-relaxed space-y-5 text-base">
 
-      <p>I'm not a doctor. I'm not a biologist. I'm a data scientist and engineer who builds things with AI.</p>
+      <p>I'm an engineer and builder at heart. I've spent 18+ years shipping software — from distributed systems to GenAI products. This project is my attempt to contribute to Huntington's Disease research using the tools I know best: data, AI, and code.</p>
 
-      <p>I started this project with a simple question: <strong>what if the tools we use every day — LLMs, autonomous agents, data pipelines — could be useful to the HD research community?</strong></p>
+      <p>The HD research landscape is exciting right now. Gene therapies showing real results (<a href="https://www.nature.com/articles/d41586-025-03139-9" class="text-amber-700 underline" target="_blank">Nature, 2025</a>). AI designing millions of candidate compounds (<a href="https://www.drugtargetreview.com/news/154613/novartis-licenses-innovative-treatment-for-huntingtons-disease/" class="text-amber-700 underline" target="_blank">Drug Target Review</a>). Digital twins accelerating trials (<a href="https://www.newswire.com/news/unlearn-advances-huntingtons-disease-ai-modeling-through-access-to-22732325" class="text-amber-700 underline" target="_blank">Newswire, 2026</a>). I wanted to explore how open-source tools could contribute alongside this work.</p>
 
-      <p>There are brilliant scientists working on Huntington's Disease. uniQure's AMT-130 gene therapy demonstrated 75% disease slowing in a Phase I/II trial (<a href="https://www.nature.com/articles/d41586-025-03139-9" class="text-teal-600 underline" target="_blank">Nature, 2025</a>). Novartis has used generative AI to design candidate compounds (<a href="https://www.drugtargetreview.com/news/154613/novartis-licenses-innovative-treatment-for-huntingtons-disease/" class="text-teal-600 underline" target="_blank">Drug Target Review</a>). Unlearn is building digital twins from Enroll-HD patient data (<a href="https://www.newswire.com/news/unlearn-advances-huntingtons-disease-ai-modeling-through-access-to-22732325" class="text-teal-600 underline" target="_blank">Newswire, Feb 2026</a>). The science is moving.</p>
+      <p>So I built autonomous research agents that scan PubMed, track clinical trials, generate drug repurposing hypotheses, and publish what they find — openly, with full methodology, and honest about limitations. Everything runs on an NVIDIA Jetson in my home office. Zero cloud cost.</p>
 
-      <p>I wanted to explore whether open-source AI tools could contribute something useful alongside this work — even in a small way. Not to replace researchers, but to help surface patterns across papers, generate starting-point hypotheses, and make the research landscape easier to navigate.</p>
+      <p>This is an experiment in applying AI to a real problem. Our hypotheses are starting points for researchers to evaluate, not conclusions. We publish what works and what doesn't, because that's how good research operates.</p>
 
-      <p>So I built this research dashboard and a set of AI agents.</p>
-
-      <p>In our <a href="experiment-1.html" class="text-teal-600 underline">first experiment</a>, we fed 22 recent PubMed abstracts to Llama 3.1 8B (an open-source LLM running on an NVIDIA Jetson). The AI extracted molecular targets and suggested drug repurposing ideas. Some suggestions were interesting starting points — for example, it flagged the IL-6 pathway for neuroinflammation. Others were clearly limited — it suggested Riluzole without knowing it had already been tested in HD trials. We published both outcomes because <strong>transparency about what AI can and can't do matters more than looking impressive.</strong></p>
-
-      <p>To be clear: <strong>none of our AI-generated hypotheses have been reviewed by domain experts or validated experimentally.</strong> They are computational starting points, not findings. They need wet-lab testing, expert review, and clinical validation before they mean anything. We publish them openly so the community can evaluate, critique, and build on them if they see potential.</p>
-
-      <p><strong>This is not a medical product.</strong> I can't cure anything. What I can do is build tools, share data, and ask questions. If any of this is useful to someone who knows more than I do — that's the whole point.</p>
-
-      <p>Everything is open source. The code is MIT-licensed. The data comes from public sources (<a href="https://pubmed.ncbi.nlm.nih.gov" class="text-teal-600 underline" target="_blank">PubMed</a>, <a href="https://clinicaltrials.gov" class="text-teal-600 underline" target="_blank">ClinicalTrials.gov</a>, <a href="https://en.hdbuzz.net" class="text-teal-600 underline" target="_blank">HDBuzz</a>). The AI runs locally on consumer hardware.</p>
+      <p>Everything is open source. MIT-licensed. Built on public data from <a href="https://pubmed.ncbi.nlm.nih.gov" class="text-amber-700 underline" target="_blank">PubMed</a>, <a href="https://clinicaltrials.gov" class="text-amber-700 underline" target="_blank">ClinicalTrials.gov</a>, and <a href="https://en.hdbuzz.net" class="text-amber-700 underline" target="_blank">HDBuzz</a>.</p>
 
       <p class="text-lg font-medium text-gray-900">The art of the possible starts with someone deciding to try.</p>
     </div>
 
     <div class="mt-8 flex items-center gap-4">
-      <img src="https://www.gravatar.com/avatar/06f8e7b2a99cd0fc228f37122696d537?s=200" alt="Ravinder Jilkapally" class="w-16 h-16 rounded-full border-2 border-teal-200"/>
+      <img src="https://www.gravatar.com/avatar/07e9975093e352d88e8a43b95bbf3295?s=200" alt="Ravinder Jilkapally" class="w-16 h-16 rounded-full border-2 border-amber-200"/>
       <div>
         <div class="font-bold text-gray-900 text-lg">Ravinder Jilkapally</div>
         <div class="text-sm text-gray-500">18+ years building software. Engineer → Architect → Engineering Leader. From distributed systems at Dynatrace to GenAI products at Xpanse. Founded AISOFT LLC. Based in Austin.</div>
@@ -92,8 +83,8 @@
       </div>
 
       <div class="flex gap-4 items-start">
-        <div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
-          <span class="material-symbols-outlined text-teal-600">science</span>
+        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+          <span class="material-symbols-outlined text-amber-700">science</span>
         </div>
         <div>
           <div class="font-bold text-gray-900">Autonomous Experimentation</div>
@@ -135,41 +126,8 @@
 
   <!-- Profile / What I've Built -->
   <div class="mb-16">
-    <h2 class="text-2xl font-bold text-gray-900 mb-6">Other Projects</h2>
-    <p class="text-gray-500 text-sm mb-6">HD Research Hub comes from the same approach I apply to everything I build:</p>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <a href="https://github.com/jravinder/undervolt" target="_blank" class="border border-gray-200 rounded-xl p-5 hover:border-teal-300 hover:shadow-md transition-all">
-        <div class="font-bold text-gray-900 mb-1">Undervolt</div>
-        <p class="text-xs text-gray-500">Energy infrastructure intelligence for Austin, TX. Won Urban Growth hackathon. NVIDIA Nemotron on Jetson.</p>
-        <div class="mt-2 flex flex-wrap gap-1">
-          <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs">1st Place</span>
-          <span class="px-2 py-0.5 bg-purple-100 text-purple-700 rounded text-xs">NVIDIA</span>
-        </div>
-      </a>
-      <a href="https://github.com/jravinder/refereai-cosmos" target="_blank" class="border border-gray-200 rounded-xl p-5 hover:border-teal-300 hover:shadow-md transition-all">
-        <div class="font-bold text-gray-900 mb-1">RefereAI</div>
-        <p class="text-xs text-gray-500">AI sports companion with physical reasoning. Cosmos Reason 2 on Jetson for ball tracking and scoring.</p>
-        <div class="mt-2 flex flex-wrap gap-1">
-          <span class="px-2 py-0.5 bg-orange-100 text-orange-700 rounded text-xs">Cosmos Cookoff</span>
-          <span class="px-2 py-0.5 bg-purple-100 text-purple-700 rounded text-xs">NVIDIA</span>
-        </div>
-      </a>
-      <a href="https://github.com/jravinder/coachclaw" target="_blank" class="border border-gray-200 rounded-xl p-5 hover:border-teal-300 hover:shadow-md transition-all">
-        <div class="font-bold text-gray-900 mb-1">CoachClaw</div>
-        <p class="text-xs text-gray-500">AI youth sports coach agent. Building on the RefereAI foundation for coaching and development.</p>
-        <div class="mt-2 flex flex-wrap gap-1">
-          <span class="px-2 py-0.5 bg-teal-100 text-teal-700 rounded text-xs">Agentic AI</span>
-        </div>
-      </a>
-      <a href="https://github.com/jravinder/hackathon-playbook" target="_blank" class="border border-gray-200 rounded-xl p-5 hover:border-teal-300 hover:shadow-md transition-all">
-        <div class="font-bold text-gray-900 mb-1">Hackathon Playbook</div>
-        <p class="text-xs text-gray-500">Lessons learned and winning strategies from AI hackathons. The playbook behind all these projects.</p>
-        <div class="mt-2 flex flex-wrap gap-1">
-          <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-xs">Open Source</span>
-        </div>
-      </a>
-    </div>
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Other Work</h2>
+    <p class="text-gray-500 text-sm mb-6">HD Research Hub comes from the same approach I apply to everything I build. See more at <a href="https://aisoft.us" target="_blank" class="text-amber-700 underline font-medium">aisoft.us</a>.</p>
   </div>
 
   <!-- Collaborate -->
@@ -177,7 +135,7 @@
     <h2 class="text-2xl font-bold text-gray-900 mb-6">Let's Work Together</h2>
     <p class="text-gray-500 text-sm mb-6">This project is open to collaboration at every level. If any of the below resonates, reach out.</p>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div class="border border-teal-200 bg-teal-50/30 rounded-xl p-5">
+      <div class="border border-amber-200 bg-amber-50/30 rounded-xl p-5">
         <div class="font-bold text-gray-900 mb-1">HD Researchers + Clinicians</div>
         <p class="text-sm text-gray-500">Review our AI-generated hypotheses. Tell us what's promising and what's wrong. Your domain expertise is what turns computation into science. We'll credit you and co-publish.</p>
       </div>
@@ -195,16 +153,16 @@
       </div>
     </div>
     <div class="mt-6 bg-gray-50 rounded-xl p-5 text-center">
-      <p class="text-sm text-gray-500"><a href="https://github.com/jravinder/hd-research-agent/discussions" target="_blank" class="text-teal-600 underline font-medium">GitHub Discussions</a> · <a href="https://www.linkedin.com/in/jravinder" target="_blank" class="text-teal-600 underline font-medium">LinkedIn</a></p>
+      <p class="text-sm text-gray-500"><a href="https://github.com/jravinder/hd-research-agent/discussions" target="_blank" class="text-amber-700 underline font-medium">GitHub Discussions</a> · <a href="https://www.linkedin.com/in/jravinder" target="_blank" class="text-amber-700 underline font-medium">LinkedIn</a></p>
     </div>
   </div>
 
   <!-- CTA -->
-  <div class="bg-gradient-to-br from-teal-50 to-green-50 border border-teal-200 rounded-2xl p-8 text-center">
+  <div class="bg-gradient-to-br from-teal-50 to-green-50 border border-amber-200 rounded-2xl p-8 text-center">
     <h2 class="text-xl font-bold text-gray-900 mb-2">Explore the Work</h2>
     <div class="flex flex-wrap justify-center gap-3">
       <a href="https://github.com/jravinder/hd-research-agent" target="_blank" class="px-5 py-2.5 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors">View Code</a>
-      <a href="chat.html" class="px-5 py-2.5 bg-teal-500 text-white rounded-lg font-medium hover:bg-teal-600 transition-colors">Ask HD Research</a>
+      <a href="chat.html" class="px-5 py-2.5 bg-amber-500 text-white rounded-lg font-medium hover:bg-amber-600 transition-colors">Ask HD Research</a>
       <a href="journey.html" class="px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors">See the Journey</a>
     </div>
   </div>
@@ -212,7 +170,8 @@
 </main>
 
 <footer class="border-t border-gray-100 py-8 px-4 text-center">
-  <a href="index.html" class="text-teal-600 text-sm font-medium">Back to HD Research Hub</a>
+  <a href="index.html" class="text-amber-700 text-sm font-medium">Back to HD Research Hub</a>
 </footer>
 <script src="shared.js"></script>
+<div class="text-center py-4 px-4"><p class="text-xs text-gray-300">This is a research and educational tool, not medical advice. For HD support, visit <a href="https://hdsa.org" class="text-gray-400 underline">hdsa.org</a>.</p></div>
 </body></html>
