@@ -7,75 +7,85 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="shared.css" rel="stylesheet"/>
 <style>
-  body { font-family: 'Inter', sans-serif; }
-  .stat-card { transition: transform 0.2s; }
-  .stat-card:hover { transform: translateY(-2px); }
-  .glass { background: rgba(255,255,255,0.7); backdrop-filter: blur(12px); }
+  .text-shadow-hero { text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+  .stat-card { transition: transform 0.2s, box-shadow 0.2s; }
+  .stat-card:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
   @media (max-width: 768px) {
     .mobile-menu { display: none; }
-    .mobile-menu.active { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: white; padding: 16px; border-bottom: 1px solid #f3f4f6; box-shadow: 0 4px 6px rgba(0,0,0,0.05); z-index: 100; }
+    .mobile-menu.active { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: #fdf9e9; padding: 16px; border-bottom: 1px solid #d8c3ad; box-shadow: 0 4px 12px rgba(0,0,0,0.08); z-index: 100; }
   }
 </style>
 </head>
-<body class="bg-white text-gray-900 antialiased">
+<body class="bg-[#fdf9e9] text-[#1c1c13] antialiased" style="font-size:18px;">
 
-<!-- Nav — mobile hamburger + language selector -->
-<nav class="flex justify-between items-center px-4 md:px-8 h-16 border-b border-gray-100 sticky top-0 glass z-50">
-  <div class="flex items-center gap-4 md:gap-8">
-    <span class="text-lg md:text-xl font-bold text-gray-900">HD Research Hub</span>
-    <button onclick="document.getElementById('mobile-nav').classList.toggle('active')" class="md:hidden p-2">
-      <span class="material-symbols-outlined">menu</span>
-    </button>
-    <div id="mobile-nav" class="mobile-menu hidden md:flex items-center gap-6 text-sm font-medium">
-      <a href="#papers" class="text-gray-500 hover:text-gray-900 py-2">Research</a>
-      <a href="#trials" class="text-gray-500 hover:text-gray-900 py-2">Trials</a>
-      <a href="#ideas" class="text-gray-500 hover:text-gray-900 py-2">Ideas</a>
-      <a href="#resources" class="text-gray-500 hover:text-gray-900 py-2">Resources</a>
-      <a href="about.html" class="text-gray-500 hover:text-gray-900 py-2">About</a>
-      <a href="chat.html" class="text-amber-700 font-semibold hover:text-amber-800 py-2 flex items-center gap-1"><span class="material-symbols-outlined text-sm">chat</span> Ask HD Research</a>
+<!-- Nav -->
+<nav class="bg-[#fdf9e9]/80 backdrop-blur-xl sticky top-0 z-50 shadow-sm">
+  <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+    <div class="flex items-center gap-4 md:gap-8">
+      <span class="text-2xl font-bold tracking-tighter text-amber-700">HD Research Hub</span>
+      <button onclick="document.getElementById('mobile-nav').classList.toggle('active')" class="md:hidden p-2">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <div id="mobile-nav" class="mobile-menu hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#papers" class="text-slate-600 hover:text-amber-700 transition-colors">Research</a>
+        <a href="#trials" class="text-slate-600 hover:text-amber-700 transition-colors">Trials</a>
+        <a href="#ideas" class="text-slate-600 hover:text-amber-700 transition-colors">Ideas</a>
+        <a href="#resources" class="text-slate-600 hover:text-amber-700 transition-colors">Resources</a>
+        <a href="about.html" class="text-slate-600 hover:text-amber-700 transition-colors">About</a>
+      </div>
     </div>
-  </div>
-  <div class="flex items-center gap-2">
-    <!-- Google Translate -->
-    <div id="google_translate_element" class="scale-90"></div>
-    <a href="https://github.com/jravinder/hd-research-agent" target="_blank" class="hidden md:flex px-3 py-1.5 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 items-center gap-1">
-      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-      GitHub
-    </a>
+    <div class="flex items-center gap-4">
+      <div id="google_translate_element"></div>
+      <a href="chat.html" class="bg-amber-500 text-white px-5 py-2 rounded-lg font-semibold text-sm hover:shadow-[0_0_15px_rgba(245,158,11,0.4)] transition-all active:scale-95">Ask HD Research</a>
+    </div>
   </div>
 </nav>
 
-<!-- Hero -->
-<section class="pt-12 md:pt-20 pb-16 px-4 md:px-8 bg-gradient-to-b from-amber-50/50 to-white">
-  <div class="max-w-5xl mx-auto text-center">
-    <div class="inline-block px-4 py-1.5 bg-amber-100 text-amber-800 rounded-full text-sm font-semibold mb-6">The Art of the Possible</div>
-    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 mb-4">HD Research Hub</h1>
-    <p class="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto mb-4 leading-relaxed">
-      An open experiment in applying AI to real-world drug discovery.
+<!-- Hero — Sunrise Hope (Stitch design) -->
+<section class="relative rounded-xl overflow-hidden min-h-[500px] flex items-center justify-center text-center p-8 md:p-12 mx-4 md:mx-6 mt-6">
+  <div class="absolute inset-0 z-0">
+    <img class="w-full h-full object-cover" alt="Mountain peaks at sunrise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEYiOi0pH5LZMmy4KRxZQNonDjeLvrSzXozMeypp9TCRTCXrUapIE0udef6db-3imY_EdeTF7JDrBTgTMbqliVA1JlD1QGTK9AdmAPgkqb6VIa9zkLXJd8NQ9FX4RuNPApn9hWcN7GYMU0tacM2S0zNnRob-j1wxkEQmhqRjj6oJv3e32mpsppjqqzgMJqjxFOnZauLMK_YQMJiJhz7kVvkAROwL-_qVnTzT5i1tPWLpdsN2Hyp9bdMfak2U5fLU1Hf1rJE2o880s"/>
+    <div class="absolute inset-0 bg-gradient-to-br from-amber-500/30 via-amber-900/20 to-rose-500/20 mix-blend-multiply"></div>
+    <div class="absolute inset-0 bg-black/15"></div>
+  </div>
+  <div class="relative z-10 space-y-6 max-w-3xl">
+    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-white text-shadow-hero leading-tight">
+      A New Horizon in Discovery
+    </h1>
+    <p class="text-lg md:text-xl text-white/90 font-medium max-w-2xl mx-auto leading-relaxed">
+      An open experiment in applying AI to Huntington's Disease research. Built for data scientists, researchers, and curious builders.
     </p>
-    <p class="text-base text-gray-400 max-w-xl mx-auto mb-10">
-      Built for data scientists, AI/ML practitioners, researchers, and curious builders who want to explore how autonomous agents, LLMs, and public datasets can contribute to Huntington's Disease research. Real data. Published experiments. Open source.
-    </p>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl mx-auto mb-10">
-      <div class="stat-card bg-amber-50 border border-amber-200 rounded-xl p-4">
-        <div class="text-2xl md:text-3xl font-bold text-amber-700">20</div>
-        <div class="text-xs text-amber-600 font-medium mt-1">Recent Papers</div>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="chat.html" class="bg-amber-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] transition-all">Ask HD Research</a>
+      <a href="about.html" class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all">Our Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="py-12 px-4 md:px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+      <div class="stat-card bg-white rounded-xl p-5 shadow-sm border border-amber-100">
+        <div class="text-2xl md:text-3xl font-extrabold text-amber-600">20</div>
+        <div class="text-xs text-slate-500 font-medium mt-1">Recent Papers</div>
       </div>
-      <div class="stat-card bg-green-50 border border-green-200 rounded-xl p-4">
-        <div class="text-2xl md:text-3xl font-bold text-green-600">30</div>
-        <div class="text-xs text-green-500 font-medium mt-1">Active Trials</div>
+      <div class="stat-card bg-white rounded-xl p-5 shadow-sm border border-green-100">
+        <div class="text-2xl md:text-3xl font-extrabold text-green-600">30</div>
+        <div class="text-xs text-slate-500 font-medium mt-1">Active Trials</div>
       </div>
-      <div class="stat-card bg-orange-50 border border-orange-200 rounded-xl p-4">
-        <div class="text-2xl md:text-3xl font-bold text-orange-500">21</div>
-        <div class="text-xs text-orange-500 font-medium mt-1">Recruiting Now</div>
+      <div class="stat-card bg-white rounded-xl p-5 shadow-sm border border-orange-100">
+        <div class="text-2xl md:text-3xl font-extrabold text-orange-500">21</div>
+        <div class="text-xs text-slate-500 font-medium mt-1">Recruiting Now</div>
       </div>
-      <div class="stat-card bg-purple-50 border border-purple-200 rounded-xl p-4">
-        <div class="text-2xl md:text-3xl font-bold text-purple-600">16+</div>
-        <div class="text-xs text-purple-500 font-medium mt-1">Known Targets</div>
+      <div class="stat-card bg-white rounded-xl p-5 shadow-sm border border-purple-100">
+        <div class="text-2xl md:text-3xl font-extrabold text-purple-600">16+</div>
+        <div class="text-xs text-slate-500 font-medium mt-1">Known Targets</div>
       </div>
     </div>
-    <p class="text-xs text-gray-300">Updated March 28, 2026 at 10:44 AM — auto-refreshed daily from PubMed, ClinicalTrials.gov, HDBuzz, Open Targets</p>
+    <p class="text-xs text-slate-400 text-center mt-4">Updated March 28, 2026 at 10:44 AM — auto-refreshed daily from PubMed, ClinicalTrials.gov, HDBuzz, Open Targets</p>
   </div>
 </section>
 
@@ -116,7 +126,7 @@
 </section>
 
 <!-- HD News — combining HDBuzz + recent breakthroughs -->
-<section id="news" class="py-16 px-4 md:px-8 bg-gray-50">
+<section id="news" class="py-16 px-4 md:px-8 bg-[#f8f4e4]">
   <div class="max-w-5xl mx-auto">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-2">
       <div>
@@ -219,7 +229,7 @@
 </section>
 
 <!-- Active Trials -->
-<section id="trials" class="py-16 px-4 md:px-8 bg-gray-50">
+<section id="trials" class="py-16 px-4 md:px-8 bg-[#f8f4e4]">
   <div class="max-w-5xl mx-auto">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-2">
       <div>
@@ -232,7 +242,7 @@
     <div class="bg-white border border-gray-200 rounded-xl overflow-x-auto">
       <table class="w-full text-left min-w-[700px]">
         <thead>
-          <tr class="bg-gray-50 border-b border-gray-200">
+          <tr class="bg-[#f8f4e4] border-b border-gray-200">
             <th class="py-3 px-4 md:px-6 text-xs font-bold uppercase tracking-wider text-gray-500">NCT ID</th>
             <th class="py-3 px-4 md:px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Title</th>
             <th class="py-3 px-4 md:px-6 text-xs font-bold uppercase tracking-wider text-gray-500">Sponsor</th>
@@ -393,7 +403,7 @@
         <p class="text-sm text-gray-500">HDAC inhibitor addressing epigenetic dysregulation in HD. Already FDA-approved for lymphoma. May restore gene expression patterns disrupted by mutant HTT.</p>
         <div class="mt-3 text-xs text-gray-400">Hypothesis score: 64/100</div>
       </div>
-      <div class="border border-gray-200 bg-gray-50/30 rounded-xl p-5 hover:shadow-md transition-shadow">
+      <div class="border border-gray-200 bg-[#f8f4e4]/30 rounded-xl p-5 hover:shadow-md transition-shadow">
         <div class="flex items-center justify-between mb-3">
           <span class="text-lg font-bold text-gray-900">Simvastatin</span>
           <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Preclinical</span>
