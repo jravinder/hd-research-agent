@@ -24,6 +24,13 @@ NIM_API_KEY = os.environ.get("NVIDIA_NIM_API_KEY", "")
 NIM_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 NIM_MODEL = "nvidia/llama-3.1-nemotron-nano-8b-v1"
 
+# Upstash Vector (serverless semantic search)
+# Vectors are indexed. Semantic query requires matching embedding dims.
+# TODO: Wire in when we have a cloud embedding API at 768 dims.
+# For now, keyword search over full-text KB chunks works well.
+UPSTASH_VECTOR_URL = os.environ.get("UPSTASH_VECTOR_URL", "")
+UPSTASH_VECTOR_TOKEN = os.environ.get("UPSTASH_VECTOR_TOKEN", "")
+
 # Load corpus at cold start
 CORPUS = {}
 CORPUS_PATH = Path(__file__).parent.parent / "data" / "corpus.json"
