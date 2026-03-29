@@ -1,0 +1,83 @@
+{
+  "hypotheses": [
+    {
+      "id": "h001",
+      "drug": "Tocilizumab",
+      "target": "IL-6 / neuroinflammation",
+      "rationale": "IL-6 receptor blockade may reduce inflammation from mutant huntingtin aggregation",
+      "scores": [
+        80
+      ],
+      "dates": [
+        "2026-03-29T00:31:43.411326"
+      ],
+      "status": "exploring",
+      "evidence_for": [],
+      "evidence_against": []
+    },
+    {
+      "id": "h002",
+      "drug": "Lithium",
+      "target": "TDP-43 / GSK-3\u03b2",
+      "rationale": "May reduce TDP-43 phosphorylation and aggregation via GSK-3\u03b2 inhibition, relevant to newly discovered HD-TDP-43 connection",
+      "scores": [
+        55
+      ],
+      "dates": [
+        "2026-03-29T00:31:43.411333"
+      ],
+      "status": "exploring",
+      "evidence_for": [],
+      "evidence_against": []
+    },
+    {
+      "id": "h003",
+      "drug": "Metformin",
+      "target": "mTOR / AMPK / autophagy",
+      "rationale": "Promotes autophagy which may help clear mutant HTT aggregates",
+      "scores": [
+        72
+      ],
+      "dates": [
+        "2026-03-29T00:31:43.411335"
+      ],
+      "status": "exploring",
+      "evidence_for": [],
+      "evidence_against": []
+    },
+    {
+      "id": "h004",
+      "drug": "Rapamycin",
+      "target": "mTOR",
+      "rationale": "mTOR inhibitor demonstrated clearance of mutant HTT in preclinical models",
+      "scores": [
+        68
+      ],
+      "dates": [
+        "2026-03-29T00:31:43.411336"
+      ],
+      "status": "exploring",
+      "evidence_for": [],
+      "evidence_against": []
+    },
+    {
+      "id": "h005",
+      "drug": "Riluzole",
+      "target": "Glutamate excitotoxicity",
+      "rationale": "Glutamate release inhibitor, may reduce excitotoxicity in HD",
+      "scores": [
+        60
+      ],
+      "dates": [
+        "2026-03-29T00:31:43.411337"
+      ],
+      "status": "known_tested",
+      "evidence_for": [],
+      "evidence_against": [
+        "Already tested in HD clinical trials with modest results"
+      ]
+    }
+  ],
+  "last_run": "2026-03-29T00:31:54.840599",
+  "total_refinements": 1
+}
