@@ -207,7 +207,7 @@ def build_page(data):
         <a href="#trials" class="text-stone-800 hover:text-amber-700 transition-colors">Trials</a>
         <a href="#ideas" class="text-stone-800 hover:text-amber-700 transition-colors">Ideas</a>
         <a href="#resources" class="text-stone-800 hover:text-amber-700 transition-colors">Resources</a>
-        <a href="how-it-works.html" class="text-stone-800 hover:text-amber-700 transition-colors">How It Works</a>
+        <a href="research.html" class="text-stone-800 hover:text-amber-700 transition-colors">Our Work</a>
         <a href="about.html" class="text-stone-800 hover:text-amber-700 transition-colors">About</a>
       </div>
     </div>
