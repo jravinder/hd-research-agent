@@ -64,7 +64,7 @@
         </div>
         <div class="bg-white p-5 md:col-span-2 border-t border-stone-100">
           <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Infrastructure</div>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-sm">
             <div><span class="text-stone-400">Model:</span> <span class="text-stone-900 font-medium">Llama 3.1 8B</span></div>
             <div><span class="text-stone-400">Runtime:</span> <span class="text-stone-900 font-medium">Ollama 0.16.1</span></div>
             <div><span class="text-stone-400">Hardware:</span> <span class="text-stone-900 font-medium">NVIDIA Jetson AGX Orin 64GB</span></div>
@@ -77,7 +77,7 @@
         </div>
         <div class="bg-white p-5 md:col-span-2 border-t border-stone-100">
           <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Data</div>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-sm">
             <div><span class="text-stone-400">Source:</span> <span class="text-stone-900 font-medium">PubMed E-utilities API</span></div>
             <div><span class="text-stone-400">Queries:</span> <span class="text-stone-900 font-medium">5 search terms</span></div>
             <div><span class="text-stone-400">Window:</span> <span class="text-stone-900 font-medium">90 days (2026-01 to 2026-03)</span></div>
@@ -106,7 +106,7 @@
 
   <section class="mb-16">
     <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-8">What We Did</h2>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       <div class="bg-white p-6 rounded-xl editorial-shadow"><div class="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-700 mb-4"><span class="material-symbols-outlined">library_books</span></div><h3 class="font-bold text-lg mb-2">1. Pull Papers</h3><p class="text-stone-600 text-sm">22 papers from PubMed across 5 queries: treatment, AI/ML, somatic expansion, repurposing, biomarkers.</p></div>
       <div class="bg-white p-6 rounded-xl editorial-shadow"><div class="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center text-orange-700 mb-4"><span class="material-symbols-outlined">memory</span></div><h3 class="font-bold text-lg mb-2">2. Run LLM</h3><p class="text-stone-600 text-sm">Llama 3.1 8B on NVIDIA Jetson AGX Orin 64GB via Ollama. Local inference, zero cloud cost.</p></div>
       <div class="bg-white p-6 rounded-xl editorial-shadow"><div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center text-green-700 mb-4"><span class="material-symbols-outlined">biotech</span></div><h3 class="font-bold text-lg mb-2">3. Extract</h3><p class="text-stone-600 text-sm">Targets, compounds, key findings, and repurposing signals from each abstract.</p></div>
@@ -116,7 +116,7 @@
 
   <section class="bg-[#f8f4e4] py-12 px-8 rounded-2xl mb-16">
     <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-8">Results</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       <div class="bg-white p-8 rounded-xl text-center"><span class="text-4xl font-extrabold text-amber-600">20</span><div class="text-xs font-semibold text-stone-500 uppercase tracking-widest mt-2">Analyzed</div></div>
       <div class="bg-white p-8 rounded-xl text-center"><span class="text-4xl font-extrabold text-amber-600">17</span><div class="text-xs font-semibold text-stone-500 uppercase tracking-widest mt-2">High Relevance</div></div>
       <div class="bg-white p-8 rounded-xl text-center border-t-4 border-amber-500"><span class="text-4xl font-extrabold text-amber-600">7</span><div class="text-xs font-semibold text-stone-500 uppercase tracking-widest mt-2">Novel Targets</div></div>
@@ -126,7 +126,7 @@
 
   <section class="mb-16">
     <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-8">Top Hypotheses</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
       <div class="bg-white rounded-xl p-6 editorial-shadow"><h4 class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-1">IL-6 Pathway</h4><h3 class="text-xl font-bold mb-4">Tocilizumab</h3><div class="flex justify-between text-sm font-semibold mb-1"><span class="text-stone-600">Confidence</span><span class="text-amber-700">80/100</span></div><div class="h-2 w-full bg-stone-100 rounded-full overflow-hidden mb-4"><div class="h-full bg-amber-500 rounded-full" style="width:80%"></div></div><p class="text-stone-600 text-sm">IL-6 receptor blocker (arthritis drug). May reduce neuroinflammation from mutant huntingtin.</p></div>
       <div class="bg-white rounded-xl p-6 editorial-shadow"><h4 class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-1">Glutamate</h4><h3 class="text-xl font-bold mb-4">Riluzole</h3><div class="flex justify-between text-sm font-semibold mb-1"><span class="text-stone-600">Confidence</span><span class="text-amber-700">60/100</span></div><div class="h-2 w-full bg-stone-100 rounded-full overflow-hidden mb-4"><div class="h-full bg-amber-500 rounded-full" style="width:60%"></div></div><p class="text-stone-600 text-sm">Already tested in HD with modest results. Model didn't know this. AI needs human verification.</p></div>
       <div class="bg-white rounded-xl p-6 editorial-shadow"><h4 class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-1">TDP-43 / GSK-3β</h4><h3 class="text-xl font-bold mb-4">Lithium</h3><div class="flex justify-between text-sm font-semibold mb-1"><span class="text-stone-600">Confidence</span><span class="text-amber-700">55/100</span></div><div class="h-2 w-full bg-stone-100 rounded-full overflow-hidden mb-4"><div class="h-full bg-amber-500 rounded-full" style="width:55%"></div></div><p class="text-stone-600 text-sm">Novel TDP-43/HD connection. Cross-paper insight that's hard for humans to spot quickly.</p></div>
@@ -134,7 +134,7 @@
   </section>
 
   <section class="mb-16">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 gap-6">
       <div><h2 class="text-xl font-bold flex items-center gap-3 mb-6"><span class="w-2 h-8 bg-green-500 rounded-full"></span> What Worked</h2>
         <ul class="space-y-4">
           <li class="flex gap-3"><span class="material-symbols-outlined text-green-600 shrink-0">check_circle</span><div><h4 class="font-bold text-stone-900">Cross-paper patterns</h4><p class="text-stone-600 text-sm">Found TDP-43/HD connection and post-translational modification targets.</p></div></li>
