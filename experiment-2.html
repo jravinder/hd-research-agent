@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Experiment #2 | HD Research Hub</title>
+<meta name="description" content="Deep full-text analysis of 16 HD research papers. 1.9M characters read by Llama 3.1 on Jetson."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="shared.css" rel="stylesheet"/>
+<style>.editorial-shadow { box-shadow: 0 20px 40px rgba(30, 41, 59, 0.04); }</style>
+</head>
+<body class="bg-[#fdf9e9] text-[#1c1c13] antialiased min-h-screen" style="font-size:18px;">
+
+<header class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
+  <div class="flex justify-between items-center max-w-5xl mx-auto px-6 h-16">
+    <a href="index.html" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2">
+      <span class="material-symbols-outlined text-amber-700">arrow_back</span> HD Research Hub
+    </a>
+    <div class="flex items-center gap-3">
+      <div id="google_translate_element"></div>
+      <a href="experiment-1.html" class="text-stone-500 text-sm hover:text-stone-800 hidden md:flex items-center gap-1">Experiment #1</a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 pb-20">
+
+  <section class="py-12 md:py-20">
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter text-stone-900 leading-[1.1] mb-4">Deep Full-Text Analysis of 16 HD Papers</h1>
+    <p class="text-lg text-stone-500">Experiment #2 | March 30, 2026</p>
+  </section>
+
+  <!-- Experiment Card -->
+  <section class="mb-12">
+    <div class="bg-white rounded-xl editorial-shadow overflow-hidden">
+      <div class="bg-amber-50 px-6 py-3 border-b border-amber-100">
+        <h2 class="text-sm font-bold text-amber-800 uppercase tracking-widest">Experiment Card</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-stone-100">
+        <div class="bg-white p-5"><div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">ID</div><div class="text-stone-900 font-medium">EXP-002</div></div>
+        <div class="bg-white p-5"><div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Date</div><div class="text-stone-900 font-medium">2026-03-30T09:00:00Z</div></div>
+        <div class="bg-white p-5"><div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Type</div><div class="text-stone-900 font-medium">Full-Text Deep Analysis (not abstracts)</div></div>
+        <div class="bg-white p-5"><div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Status</div><div class="text-stone-900 font-medium"><span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-1"></span> Complete</div></div>
+        <div class="bg-white p-5"><div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Hypothesis</div><div class="text-stone-900 font-medium">Reading full papers (Methods, Results, Discussion) produces deeper insights than abstracts alone</div></div>
+        <div class="bg-white p-5"><div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Outcome</div><div class="text-stone-900 font-medium">Confirmed. Found targets (cGAS, DNJC7, LIG1) and contradictions not visible from abstracts.</div></div>
+        <div class="bg-white p-5 md:col-span-2 border-t border-stone-100">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Scale</div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+            <div><span class="text-stone-400">Papers:</span> <span class="text-stone-900 font-medium">16 (full text)</span></div>
+            <div><span class="text-stone-400">Sections:</span> <span class="text-stone-900 font-medium">380</span></div>
+            <div><span class="text-stone-400">Characters:</span> <span class="text-stone-900 font-medium">1,935,627</span></div>
+            <div><span class="text-stone-400">vs Exp #1:</span> <span class="text-stone-900 font-medium">440x more text</span></div>
+          </div>
+        </div>
+        <div class="bg-white p-5 md:col-span-2 border-t border-stone-100">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Infrastructure</div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+            <div><span class="text-stone-400">Model:</span> <span class="text-stone-900 font-medium">Llama 3.1 8B</span></div>
+            <div><span class="text-stone-400">Context:</span> <span class="text-stone-900 font-medium">64K tokens</span></div>
+            <div><span class="text-stone-400">Hardware:</span> <span class="text-stone-900 font-medium">Jetson AGX Orin 64GB</span></div>
+            <div><span class="text-stone-400">Cost:</span> <span class="text-stone-900 font-medium">$0</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Difference from Exp 1 -->
+  <section class="bg-[#f8f4e4] py-12 px-8 rounded-2xl mb-16 text-center">
+    <span class="inline-block px-4 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold tracking-widest uppercase mb-6">What Changed</span>
+    <p class="text-xl md:text-2xl font-medium text-stone-800 leading-relaxed max-w-3xl mx-auto">Experiment #1 read abstracts (200 words each). This experiment read entire papers end-to-end: Introduction, Methods, Results, Discussion, Conclusions. 1.9 million characters vs 4,400.</p>
+  </section>
+
+  <!-- Top Findings -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-8">Top Findings</h2>
+    <div class="space-y-4">
+      <div class="bg-white p-6 rounded-xl editorial-shadow border-l-4 border-amber-500">
+        <h3 class="font-bold text-stone-900 mb-2">LIG1 K845N variant suppresses somatic CAG expansion</h3>
+        <p class="text-stone-600">The K845N variant of DNA Ligase 1 confers enhanced substrate discrimination and increased repair fidelity, suppressing somatic CAG expansion in mouse models. This was only visible in the full Methods and Results sections.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl editorial-shadow border-l-4 border-green-500">
+        <h3 class="font-bold text-stone-900 mb-2">CRISPR-Cas for precise HD genetic modification</h3>
+        <p class="text-stone-600">Multiple papers confirm CRISPR technology can address the underlying genetic cause of HD, not just symptoms. Detailed protocols and in-vivo results were in the full text, absent from abstracts.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl editorial-shadow border-l-4 border-purple-500">
+        <h3 class="font-bold text-stone-900 mb-2">Mitochondrial dysfunction drives neuroinflammation across HD, AD, PD</h3>
+        <p class="text-stone-600">Cross-disease pattern: mitochondrial DNA release triggers cGAS-STING pathway, causing neuroinflammation. This connection appeared in 3 papers and only became clear from reading the Discussion sections.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hypotheses -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-8">New Hypotheses (from full-text analysis)</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl p-6 editorial-shadow">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-1">cGAS-STING Pathway</h4>
+        <h3 class="text-xl font-bold mb-4">cGAS mtDNA Inhibition</h3>
+        <div class="flex justify-between text-sm font-semibold mb-1"><span class="text-stone-600">Confidence</span><span class="text-amber-700">90/100</span></div>
+        <div class="h-2 w-full bg-stone-100 rounded-full overflow-hidden mb-4"><div class="h-full bg-amber-500 rounded-full" style="width:90%"></div></div>
+        <p class="text-stone-600 text-sm">Inhibiting cGAS-mediated mitochondrial DNA release may reduce neuroinflammation across HD, AD, and PD. Found in 3 papers' Discussion sections.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 editorial-shadow">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-1">DNA Repair</h4>
+        <h3 class="text-xl font-bold mb-4">LIG1 K845N Target</h3>
+        <div class="flex justify-between text-sm font-semibold mb-1"><span class="text-stone-600">Confidence</span><span class="text-amber-700">80/100</span></div>
+        <div class="h-2 w-full bg-stone-100 rounded-full overflow-hidden mb-4"><div class="h-full bg-amber-500 rounded-full" style="width:80%"></div></div>
+        <p class="text-stone-600 text-sm">The LIG1 K845N variant suppresses somatic CAG expansion and improves mitochondrial function. Potential therapeutic target for HD.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 editorial-shadow">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-1">Gene Therapy</h4>
+        <h3 class="text-xl font-bold mb-4">CRISPR Mito Delivery</h3>
+        <div class="flex justify-between text-sm font-semibold mb-1"><span class="text-stone-600">Confidence</span><span class="text-amber-700">70/100</span></div>
+        <div class="h-2 w-full bg-stone-100 rounded-full overflow-hidden mb-4"><div class="h-full bg-amber-500 rounded-full" style="width:70%"></div></div>
+        <p class="text-stone-600 text-sm">CRISPR-Cas could deliver genes promoting mitochondrial biogenesis and function in neurodegenerative disease.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promising Targets -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-8">Promising Targets (from full text)</h2>
+    <div class="bg-white rounded-xl editorial-shadow overflow-hidden">
+      <table class="w-full text-left text-sm">
+        <thead><tr class="bg-amber-50 border-b border-amber-100">
+          <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Target</th>
+          <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Papers</th>
+          <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Why Promising</th>
+        </tr></thead>
+        <tbody class="divide-y divide-stone-100">
+          <tr><td class="py-3 px-5 font-medium">HTT CAG repeat</td><td class="py-3 px-5">4</td><td class="py-3 px-5 text-stone-600">Root cause. Multiple therapeutic approaches targeting it directly.</td></tr>
+          <tr><td class="py-3 px-5 font-medium">cGAS</td><td class="py-3 px-5">3</td><td class="py-3 px-5 text-stone-600">Mediates mtDNA-driven neuroinflammation. Cross-disease target (HD, AD, PD).</td></tr>
+          <tr><td class="py-3 px-5 font-medium">DNJC7</td><td class="py-3 px-5">2</td><td class="py-3 px-5 text-stone-600">Potent modifier of polyQ protein aggregation.</td></tr>
+          <tr><td class="py-3 px-5 font-medium">LIG1</td><td class="py-3 px-5">1</td><td class="py-3 px-5 text-stone-600">K845N variant suppresses somatic expansion. Novel finding from full text.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Cross-Paper Contradiction -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-8">Contradictions Found</h2>
+    <div class="bg-white p-6 rounded-xl editorial-shadow border-l-4 border-rose-400">
+      <p class="text-stone-700">No clear consensus on the role of copper homeostasis imbalance in neurodegenerative diseases. Some papers suggest it contributes to disease progression. Others don't mention it. This disagreement was only visible from reading full Discussion sections.</p>
+    </div>
+  </section>
+
+  <!-- Research Gaps -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-8">Gaps Identified</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-white p-5 rounded-xl editorial-shadow"><p class="text-stone-700">Gut microbiota dysbiosis in HD is poorly understood and barely studied.</p></div>
+      <div class="bg-white p-5 rounded-xl editorial-shadow"><p class="text-stone-700">Limited CRISPR-Cas research in human HD subjects. Most data is from animal models.</p></div>
+    </div>
+  </section>
+
+  <!-- Limitations -->
+  <section class="mb-16">
+    <div class="bg-amber-50 border-l-8 border-amber-500 p-8 rounded-xl">
+      <div class="flex items-center gap-3 mb-4"><span class="material-symbols-outlined text-amber-600 text-2xl" style="font-variation-settings:'FILL' 1;">warning</span><h2 class="text-xl font-extrabold text-amber-800">Limitations</h2></div>
+      <ul class="space-y-2 text-stone-700 text-sm">
+        <li>Only open-access papers (paywalled papers excluded)</li>
+        <li>Single model (Llama 3.1 8B), single run</li>
+        <li>Not reviewed by HD domain experts</li>
+        <li>Context window limited very long papers</li>
+        <li>AI-generated hypotheses are unvalidated starting points</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Methodology -->
+  <section class="mb-16 border-t border-stone-200 pt-12">
+    <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-8">Methodology</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="flex gap-4"><span class="text-3xl font-extrabold text-amber-200">01</span><div><h4 class="font-bold mb-1">Data</h4><p class="text-stone-600 text-sm">Full text from PubMed Central (open access only)</p></div></div>
+      <div class="flex gap-4"><span class="text-3xl font-extrabold text-amber-200">02</span><div><h4 class="font-bold mb-1">Model</h4><p class="text-stone-600 text-sm">Llama 3.1 8B, 64K context, Ollama on Jetson AGX Orin</p></div></div>
+      <div class="flex gap-4"><span class="text-3xl font-extrabold text-amber-200">03</span><div><h4 class="font-bold mb-1">Analysis</h4><p class="text-stone-600 text-sm">Each full paper sent to LLM. Deep extraction + cross-paper synthesis.</p></div></div>
+      <div class="flex gap-4"><span class="text-3xl font-extrabold text-amber-200">04</span><div><h4 class="font-bold mb-1">Code</h4><p class="text-stone-600 text-sm"><a href="https://github.com/jravinder/hd-research-agent" target="_blank" class="text-amber-700 underline">github.com/jravinder/hd-research-agent</a></p></div></div>
+    </div>
+  </section>
+
+  <section class="border-t border-stone-200 pt-8 text-center text-sm text-stone-500">
+    <p><a href="experiment-1.html" class="text-amber-700 font-medium">Read Experiment #1 (abstracts)</a> | <a href="research.html" class="text-amber-700 font-medium">Research Tracker</a> | <a href="index.html" class="text-amber-700 font-medium">Dashboard</a></p>
+  </section>
+
+</main>
+
+<script src="shared.js"></script>
+<div class="text-center py-4 px-4"><p class="text-xs text-stone-400">This is a research and educational tool, not medical advice. For HD support, visit <a href="https://hdsa.org" class="text-stone-500 underline">hdsa.org</a>.</p></div>
+</body></html>
