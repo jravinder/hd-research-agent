@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HD + AI Landscape | HD Research Hub</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="shared.css" rel="stylesheet"/>
+<style>.editorial-shadow { box-shadow: 0 20px 40px rgba(30, 41, 59, 0.04); }</style>
+</head>
+<body class="bg-[#fdf9e9] text-[#1c1c13] antialiased" style="font-size:18px;">
+
+<header class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
+  <div class="flex justify-between items-center max-w-5xl mx-auto px-6 h-16">
+    <a href="index.html" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2">
+      <span class="material-symbols-outlined text-amber-700">arrow_back</span> HD Research Hub
+    </a>
+    <div id="google_translate_element"></div>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+  <h1 class="text-3xl font-extrabold tracking-tighter text-stone-900 mb-2">HD + AI Landscape</h1>
+  <p class="text-stone-600 mb-12">Who's applying AI to Huntington's Disease, what approaches exist, and what makes this hard.</p>
+
+  <!-- Who's Doing What -->
+  <section class="mb-16">
+    <h2 class="text-xl font-bold text-stone-900 mb-6 flex items-center gap-2">
+      <span class="material-symbols-outlined text-amber-600">groups</span> Who's Working on AI + HD
+    </h2>
+
+    <div class="bg-white rounded-xl editorial-shadow overflow-x-auto">
+      <table class="w-full text-left text-sm">
+        <thead><tr class="bg-amber-50 border-b border-amber-100">
+          <th class="py-3 px-4 font-bold text-stone-600 uppercase text-xs tracking-wider">Who</th>
+          <th class="py-3 px-4 font-bold text-stone-600 uppercase text-xs tracking-wider">What They Do</th>
+          <th class="py-3 px-4 font-bold text-stone-600 uppercase text-xs tracking-wider">AI Type</th>
+          <th class="py-3 px-4 font-bold text-stone-600 uppercase text-xs tracking-wider">Stage</th>
+          <th class="py-3 px-4 font-bold text-stone-600 uppercase text-xs tracking-wider">Open?</th>
+        </tr></thead>
+        <tbody class="divide-y divide-stone-100">
+          <tr><td class="py-3 px-4 font-medium">Novartis</td><td class="py-3 px-4 text-stone-600">Designed 15M candidate compounds for HD</td><td class="py-3 px-4 text-stone-600">Generative chemistry</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-amber-100 text-amber-700 rounded text-xs font-medium">Optimization</span></td><td class="py-3 px-4 text-stone-500">No</td></tr>
+          <tr><td class="py-3 px-4 font-medium">Unlearn</td><td class="py-3 px-4 text-stone-600">Digital twins from 30K Enroll-HD patients</td><td class="py-3 px-4 text-stone-600">ML forecasting</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Active</span></td><td class="py-3 px-4 text-stone-500">No</td></tr>
+          <tr><td class="py-3 px-4 font-medium">SOM Biotech</td><td class="py-3 px-4 text-stone-600">AI-discovered bevantolol for chorea</td><td class="py-3 px-4 text-stone-600">Drug repurposing</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Phase IIb</span></td><td class="py-3 px-4 text-stone-500">No</td></tr>
+          <tr><td class="py-3 px-4 font-medium">IBM + CHDI</td><td class="py-3 px-4 text-stone-600">ML model of 9 HD disease states</td><td class="py-3 px-4 text-stone-600">Progression modeling</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-xs font-medium">Published</span></td><td class="py-3 px-4 text-stone-500">Partially</td></tr>
+          <tr><td class="py-3 px-4 font-medium">BDASeq (academic)</td><td class="py-3 px-4 text-stone-600">AI transcriptomics, 394 druggable HD genes</td><td class="py-3 px-4 text-stone-600">Transcriptomic AI</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-xs font-medium">Published</span></td><td class="py-3 px-4 text-stone-500">Paper only</td></tr>
+          <tr><td class="py-3 px-4 font-medium">AlphaFold (DeepMind)</td><td class="py-3 px-4 text-stone-600">HTT protein structure predicted</td><td class="py-3 px-4 text-stone-600">Protein folding</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Available</span></td><td class="py-3 px-4 text-green-600 font-medium">Yes</td></tr>
+          <tr class="bg-amber-50/50"><td class="py-3 px-4 font-medium">HD Research Hub (us)</td><td class="py-3 px-4 text-stone-600">Autonomous agents, drug repurposing, full-text RAG</td><td class="py-3 px-4 text-stone-600">Agentic AI + RAG</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Live</span></td><td class="py-3 px-4 text-green-600 font-medium">Yes (MIT)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-6 bg-amber-50 border border-amber-200 rounded-xl p-5">
+      <h3 class="font-bold text-stone-900 mb-2">What nobody else is doing</h3>
+      <ul class="text-stone-600 text-sm space-y-1">
+        <li>No open-source autonomous research agents for HD</li>
+        <li>No full-text knowledge base you can chat with</li>
+        <li>No auto-refreshing research dashboard combining PubMed + ClinicalTrials.gov + HDBuzz</li>
+        <li>No published AI drug repurposing hypotheses with methodology and limitations</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Challenges -->
+  <section class="mb-16">
+    <h2 class="text-xl font-bold text-stone-900 mb-6 flex items-center gap-2">
+      <span class="material-symbols-outlined text-amber-600">warning</span> Why This Is Hard
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-white rounded-xl p-6 editorial-shadow">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="material-symbols-outlined text-rose-400">lock</span>
+          <h3 class="font-bold text-stone-900">Blood-Brain Barrier</h3>
+        </div>
+        <p class="text-stone-600 text-sm">Most drugs can't reach the brain. Gene therapies require brain surgery. Small molecules need to cross the BBB. This limits which AI-generated candidates are actually viable.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 editorial-shadow">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="material-symbols-outlined text-rose-400">hourglass_empty</span>
+          <h3 class="font-bold text-stone-900">15-19 Year Timeline</h3>
+        </div>
+        <p class="text-stone-600 text-sm">CNS drugs take 15-19 years from discovery to approval on average. Longer than any other drug class. AI can accelerate parts of this, but clinical trials still take years.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 editorial-shadow">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="material-symbols-outlined text-rose-400">troubleshoot</span>
+          <h3 class="font-bold text-stone-900">98% Failure Rate</h3>
+        </div>
+        <p class="text-stone-600 text-sm">For neurodegenerative disease clinical trials, the attrition rate is ~98%. Most candidates that look promising in the lab fail in humans. AI can help identify failures earlier, but can't eliminate them.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 editorial-shadow">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="material-symbols-outlined text-rose-400">dataset</span>
+          <h3 class="font-bold text-stone-900">Limited Data</h3>
+        </div>
+        <p class="text-stone-600 text-sm">HD is a rare disease (~30K patients globally in studies). AI models need data to learn from. Enroll-HD (30K participants) is the largest dataset, but it's tiny compared to what deep learning typically needs.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 editorial-shadow">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="material-symbols-outlined text-rose-400">psychology</span>
+          <h3 class="font-bold text-stone-900">Disease Complexity</h3>
+        </div>
+        <p class="text-stone-600 text-sm">HD involves protein aggregation, transcriptional dysregulation, mitochondrial dysfunction, neuroinflammation, and somatic DNA expansion. No single target addresses all mechanisms. AI must reason across all of them.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 editorial-shadow">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="material-symbols-outlined text-rose-400">visibility_off</span>
+          <h3 class="font-bold text-stone-900">AI Hallucination Risk</h3>
+        </div>
+        <p class="text-stone-600 text-sm">LLMs can generate plausible-sounding hypotheses that are scientifically wrong. Our Experiment #1 suggested Riluzole without knowing it was already tested. Every AI output needs expert review.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 editorial-shadow">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="material-symbols-outlined text-rose-400">gavel</span>
+          <h3 class="font-bold text-stone-900">Regulatory Uncertainty</h3>
+        </div>
+        <p class="text-stone-600 text-sm">The FDA hasn't established clear guidelines for AI-generated drug candidates. AMT-130 (the most promising HD therapy) is stuck in regulatory debate despite 75% disease slowing in trials.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 editorial-shadow">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="material-symbols-outlined text-rose-400">money_off</span>
+          <h3 class="font-bold text-stone-900">Commercial Incentive</h3>
+        </div>
+        <p class="text-stone-600 text-sm">HD affects ~30K people in the US. Pharma companies prioritize diseases with larger patient populations. This is why open-source and non-commercial research matters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Where AI Can Help -->
+  <section class="mb-16">
+    <h2 class="text-xl font-bold text-stone-900 mb-6 flex items-center gap-2">
+      <span class="material-symbols-outlined text-amber-600">auto_awesome</span> Where AI Can Make a Difference
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-white rounded-xl p-6 editorial-shadow border-t-4 border-green-500">
+        <h3 class="font-bold text-stone-900 mb-2">Literature Synthesis</h3>
+        <p class="text-stone-600 text-sm">Thousands of HD papers published yearly. AI can read them all, find cross-paper patterns, surface connections humans miss. This is what our agents do.</p>
+        <p class="text-xs text-green-600 font-medium mt-3">We're doing this now.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 editorial-shadow border-t-4 border-green-500">
+        <h3 class="font-bold text-stone-900 mb-2">Drug Repurposing</h3>
+        <p class="text-stone-600 text-sm">Screen thousands of FDA-approved drugs against HD targets. Faster path because safety is already proven. AI can generate and score hypotheses at scale.</p>
+        <p class="text-xs text-green-600 font-medium mt-3">We're doing this now.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 editorial-shadow border-t-4 border-amber-500">
+        <h3 class="font-bold text-stone-900 mb-2">Clinical Trial Design</h3>
+        <p class="text-stone-600 text-sm">Digital twins (Unlearn) can simulate patient controls. AI can identify optimal endpoints, predict enrollment challenges, and stratify patient populations.</p>
+        <p class="text-xs text-amber-600 font-medium mt-3">Others are leading this.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 editorial-shadow border-t-4 border-amber-500">
+        <h3 class="font-bold text-stone-900 mb-2">Molecular Design</h3>
+        <p class="text-stone-600 text-sm">Generative AI designing brain-penetrant molecules (Novartis). AlphaFold predicting protein structures. Computational chemistry at a scale impossible manually.</p>
+        <p class="text-xs text-amber-600 font-medium mt-3">Requires wet-lab validation.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 editorial-shadow border-t-4 border-green-500">
+        <h3 class="font-bold text-stone-900 mb-2">Biomarker Discovery</h3>
+        <p class="text-stone-600 text-sm">ML on patient data to find early indicators of disease onset and progression. NfL is established. AI can find new ones from multi-omics data.</p>
+        <p class="text-xs text-green-600 font-medium mt-3">Active research area.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 editorial-shadow border-t-4 border-green-500">
+        <h3 class="font-bold text-stone-900 mb-2">Accessibility</h3>
+        <p class="text-stone-600 text-sm">Making research understandable to patients, families, and non-specialists. Multilingual chatbots, plain-language summaries, curated learning paths.</p>
+        <p class="text-xs text-green-600 font-medium mt-3">We're doing this now.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="text-center">
+    <a href="index.html" class="text-amber-700 font-medium">Back to HD Research Hub</a>
+  </div>
+
+</main>
+
+<script src="shared.js"></script>
+<div class="text-center py-4 px-4"><p class="text-xs text-stone-400">This is a research and educational tool, not medical advice. For HD support, visit <a href="https://hdsa.org" class="text-stone-500 underline">hdsa.org</a>.</p></div>
+</body></html>
