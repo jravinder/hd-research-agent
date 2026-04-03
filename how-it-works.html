@@ -150,6 +150,12 @@ tailwind.config={theme:{extend:{colors:{
         <p class="text-xs text-on-surface-variant group-hover:text-on-primary-container/70 mt-1 mb-3">Weekly research summary</p>
         <span class="px-2 py-1 bg-surface-high group-hover:bg-on-primary-container/20 rounded text-[10px] font-bold">Weekly</span>
       </div>
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant/10 hover:bg-primary-container hover:text-on-primary-container transition-colors group">
+        <span class="material-symbols-outlined text-primary group-hover:text-on-primary-container mb-3">menu_book</span>
+        <h4 class="font-bold">Wiki Compiler</h4>
+        <p class="text-xs text-on-surface-variant group-hover:text-on-primary-container/70 mt-1 mb-3">Compiles knowledge</p>
+        <span class="px-2 py-1 bg-surface-high group-hover:bg-on-primary-container/20 rounded text-[10px] font-bold">After each run</span>
+      </div>
       <div class="bg-gradient-to-br from-primary-container to-secondary-container p-6 rounded-2xl shadow-md">
         <span class="material-symbols-outlined text-on-primary-container mb-3">rocket_launch</span>
         <h4 class="font-bold text-on-primary-container">Auto-Publish</h4>
@@ -159,16 +165,67 @@ tailwind.config={theme:{extend:{colors:{
     </div>
   </section>
 
+  <!-- Flow 5: The Autoresearch Loop -->
+  <section class="bg-surface-low rounded-3xl p-8 md:p-12 mb-12">
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="material-symbols-outlined text-primary">all_inclusive</span>
+        <h2 class="text-2xl font-bold tracking-tight">The Loop (Karpathy Pattern)</h2>
+      </div>
+      <p class="text-on-surface-variant max-w-xl">Experiments generate data. Wiki compiles knowledge. Knowledge feeds back into next experiment. The system gets smarter every cycle.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-2 md:gap-3 items-center">
+      <div class="flex flex-col items-center gap-2 w-28">
+        <div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center border-2 border-primary-container">
+          <span class="material-symbols-outlined text-primary">science</span>
+        </div>
+        <p class="text-[10px] font-bold text-center uppercase">Run Experiment</p>
+      </div>
+      <span class="material-symbols-outlined text-outline-variant hidden md:block">arrow_forward</span>
+      <div class="flex flex-col items-center gap-2 w-28">
+        <div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center">
+          <span class="material-symbols-outlined text-primary">storage</span>
+        </div>
+        <p class="text-[10px] font-bold text-center uppercase">data/*.json</p>
+      </div>
+      <span class="material-symbols-outlined text-outline-variant hidden md:block">arrow_forward</span>
+      <div class="flex flex-col items-center gap-2 w-28">
+        <div class="w-16 h-16 rounded-full bg-primary-container shadow-md flex items-center justify-center">
+          <span class="material-symbols-outlined text-on-primary-container">menu_book</span>
+        </div>
+        <p class="text-[10px] font-bold text-center uppercase">Wiki Compiler</p>
+      </div>
+      <span class="material-symbols-outlined text-outline-variant hidden md:block">arrow_forward</span>
+      <div class="flex flex-col items-center gap-2 w-28">
+        <div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center">
+          <span class="material-symbols-outlined text-primary">auto_stories</span>
+        </div>
+        <p class="text-[10px] font-bold text-center uppercase">wiki/ pages</p>
+      </div>
+      <span class="material-symbols-outlined text-outline-variant hidden md:block">arrow_forward</span>
+      <div class="flex flex-col items-center gap-2 w-28">
+        <div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center border-2 border-primary-container">
+          <span class="material-symbols-outlined text-primary">science</span>
+        </div>
+        <p class="text-[10px] font-bold text-center uppercase">Next Experiment</p>
+      </div>
+    </div>
+    <p class="text-center text-xs text-on-surface-variant mt-6">Every cycle, the wiki grows. 117 targets, 5 hypotheses, 4 experiments compiled so far.</p>
+  </section>
+
   <!-- Tech Stack -->
   <section class="text-center mb-12">
     <h3 class="text-[10px] uppercase tracking-[0.3em] font-bold text-on-surface-variant mb-8">Built With</h3>
     <div class="flex flex-wrap justify-center gap-8 text-on-surface-variant/50">
+      <span class="font-bold">Gemma 4</span>
+      <span class="font-bold">Llama 3.1</span>
       <span class="font-bold">Ollama</span>
+      <span class="font-bold">NVIDIA NIM</span>
+      <span class="font-bold">Jetson AGX Orin</span>
+      <span class="font-bold">Upstash Vector</span>
+      <span class="font-bold">Sarvam AI</span>
       <span class="font-bold">Vercel</span>
       <span class="font-bold">PubMed</span>
-      <span class="font-bold">NVIDIA NIM</span>
-      <span class="font-bold">Sarvam AI</span>
-      <span class="font-bold">Jetson AGX Orin</span>
       <span class="font-bold">GitHub Actions</span>
     </div>
   </section>
