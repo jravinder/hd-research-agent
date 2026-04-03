@@ -1,34 +1,39 @@
 # Drug Repurposing Hypotheses
 
-All AI-generated. None reviewed by domain experts. None experimentally validated. Starting points for researchers to evaluate.
+*Auto-compiled on 2026-04-03. None reviewed by domain experts.*
 
-## Active Hypotheses
+| Drug | Target | Score | Source |
+|------|--------|-------|--------|
+| Tocilizumab | IL-6 / neuroinflammation | 80/100 | Tracker |
+| Metformin | mTOR / AMPK / autophagy | 72/100 | Tracker |
+| Rapamycin | mTOR | 68/100 | Tracker |
+| Riluzole | Glutamate excitotoxicity | 60/100 | Tracker |
+| Lithium | TDP-43 / GSK-3β | 55/100 | Tracker |
 
-| Drug | Target | Score | Source | Status | Evidence Trend |
-|------|--------|-------|--------|--------|----------------|
-| cGAS inhibitor (class) | cGAS-STING / neuroinflammation | 90/100 | EXP-002 | Exploring | New (1 check) |
-| Tocilizumab | IL-6 / neuroinflammation | 80/100 | EXP-001 | Exploring | Stable (1 check) |
-| LIG1 K845N modulator | DNA repair / somatic expansion | 80/100 | EXP-002 | Exploring | New (1 check) |
-| Metformin | mTOR / AMPK / autophagy | 72/100 | EXP-001 | Exploring | Stable (1 check) |
-| CRISPR mito delivery | Mitochondrial biogenesis | 70/100 | EXP-002 | Exploring | New (1 check) |
-| Rapamycin | mTOR | 68/100 | EXP-001 | Exploring | Stable (1 check) |
-| Riluzole | Glutamate excitotoxicity | 60/100 | EXP-001 | Already tested | Known (modest results in trials) |
-| Lithium | TDP-43 / GSK-3B | 55/100 | EXP-001 | Exploring | Stable (1 check) |
+## All Hypotheses Detail
 
-## How Scoring Works
+### Tocilizumab (80/100)
+- **Target:** IL-6 / neuroinflammation
+- **Source:** Tracker
+- **Rationale:** IL-6 receptor blockade may reduce inflammation from mutant huntingtin aggregation
 
-- LLM generates a hypothesis, then self-rates its confidence 0-100
-- Score reflects the model's assessment of mechanistic rationale, not clinical probability
-- 80+ = interesting starting point worth literature deep-dive
-- 60-79 = plausible but needs more evidence
-- <60 = speculative or already known
+### Metformin (72/100)
+- **Target:** mTOR / AMPK / autophagy
+- **Source:** Tracker
+- **Rationale:** Promotes autophagy which may help clear mutant HTT aggregates
 
-## What Changed Between Experiments
+### Rapamycin (68/100)
+- **Target:** mTOR
+- **Source:** Tracker
+- **Rationale:** mTOR inhibitor demonstrated clearance of mutant HTT in preclinical models
 
-**EXP-001 (abstracts):** Generated broad hypotheses. Tocilizumab and Metformin. Also suggested Riluzole without knowing it was already tested.
+### Riluzole (60/100)
+- **Target:** Glutamate excitotoxicity
+- **Source:** Tracker
+- **Rationale:** Glutamate release inhibitor, may reduce excitotoxicity in HD
 
-**EXP-002 (full text):** Generated more specific hypotheses. cGAS pathway and LIG1 variant only visible from reading Methods and Discussion sections. Higher specificity, fewer hallucinations.
+### Lithium (55/100)
+- **Target:** TDP-43 / GSK-3β
+- **Source:** Tracker
+- **Rationale:** May reduce TDP-43 phosphorylation and aggregation via GSK-3β inhibition, relevant to newly discovered HD-TDP-43 connection
 
-## Refiner History
-
-Run #1 (2026-03-29): Searched PubMed for each hypothesis + HD. No new papers found for any. Scores unchanged. These combinations are underexplored.
