@@ -76,6 +76,10 @@ def main():
     if run_all or args.digest:
         results["Digest Writer"] = run_agent("Digest Writer", agents_dir / "digest_writer.py")
 
+    # Always compile wiki after agents run (closes the loop)
+    if run_all:
+        results["Wiki Compiler"] = run_agent("Wiki Compiler", agents_dir / "wiki_compiler.py")
+
     # Also rebuild the site with fresh data
     if run_all:
         print("\nRebuilding site...")
