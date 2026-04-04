@@ -31,6 +31,36 @@ function googleTranslateElementInit() {
   document.head.appendChild(s);
 })();
 
+/* Universal nav — injected on subpages (not index.html) */
+(function() {
+  // Skip index.html (has its own nav)
+  if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) return;
+  // Skip if page already has a nav with data-universal-nav
+  if (document.querySelector('[data-universal-nav]')) return;
+
+  // Find existing header/nav and replace it
+  var existing = document.querySelector('header, nav');
+  if (!existing) return;
+
+  var nav = document.createElement('header');
+  nav.setAttribute('data-universal-nav', 'true');
+  nav.className = 'sticky top-0 z-50 backdrop-blur-md shadow-sm';
+  nav.style.background = 'rgba(253,249,233,0.8)';
+  nav.innerHTML = '<div style="display:flex;justify-content:space-between;align-items:center;max-width:80rem;margin:0 auto;padding:0 1.5rem;height:4rem;">' +
+    '<a href="index.html" style="display:flex;align-items:center;gap:0.5rem;font-weight:600;font-size:1.125rem;letter-spacing:-0.025em;color:#1c1917;text-decoration:none;">' +
+      '<span class="material-symbols-outlined" style="color:#b45309;">arrow_back</span> HD Research Hub' +
+    '</a>' +
+    '<div style="display:flex;align-items:center;gap:0.75rem;">' +
+      '<div id="google_translate_element"></div>' +
+      '<a href="chat.html" style="font-size:0.875rem;font-weight:600;color:#b45309;text-decoration:none;display:flex;align-items:center;gap:0.25rem;">' +
+        '<span class="material-symbols-outlined" style="font-size:1rem;">chat</span> Ask HD Research' +
+      '</a>' +
+    '</div>' +
+  '</div>';
+
+  existing.parentNode.replaceChild(nav, existing);
+})();
+
 /* Universal footer — injected on every page */
 (function() {
   // Only add if no footer already exists
