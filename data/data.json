@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-04T08:34:34.895590",
+  "last_updated": "2026-04-04T23:35:35.342214",
   "papers": [
     {
       "pmid": "40650880",
@@ -38,15 +38,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/40874597/"
     },
     {
-      "pmid": "41880816",
-      "title": "Emerging role of cell membrane-coated nanoparticles in targeted therapy for brain disorders.",
-      "abstract": "Brain disorders, including neurodegenerative diseases such as Alzheimer's disease, Parkinson's disease, and Huntington's disease, as well as conditions like multiple sclerosis and ischemic stroke, represent a significant global health burden. These disorders are often marked by progressive neuronal degeneration, cognitive impairment, and motor dysfunction. Effective therapeutic intervention remains a challenge due to the protective but restrictive nature of blood-CNS barriers, particularly the b",
-      "journal": "Biomaterials advances",
-      "pub_date": "2026 Jul",
-      "authors": "Kumari V, Shahrukh M, Jabin K",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41880816/"
-    },
-    {
       "pmid": "40536996",
       "title": "Neuroglobin: A promising candidate to treat neurological diseases.",
       "abstract": "Neurodevelopmental and neurodegenerative illnesses constitute a global health issue and a foremost economic burden since they are a large cause of incapacity and death worldwide. Altogether, the burden of neurological disorders has increased considerably over the past 30 years because of population aging. Overall, neurological diseases significantly impair cognitive and motor functions and their incidence will increase as societies age and the world's population continues to grow. Autism spectru",
@@ -65,22 +56,13 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/40313114/"
     },
     {
-      "pmid": "41540979",
-      "title": "Efficacy and Safety of VMAT2 Inhibitors in the Treatment of Huntington Disease: A Meta-Analysis of Randomized Clinical Trials.",
-      "abstract": "Vesicular monoamine transporter 2 inhibitors (VMAT2is) have demonstrated effectiveness in attenuating motor symptoms of Huntington disease (HD). However, evidence regarding their long-term safety and overall efficacy in this population remains limited. The aim of this study was to investigate the efficacy and safety of VMAT2is in the treatment of HD. We performed a meta-analysis of placebo-controlled, randomized controlled trials (RCTs) of VMAT2is in patients with HD. PubMed, Embase, and Cochran",
-      "journal": "Neurology. Clinical practice",
-      "pub_date": "2026 Apr",
-      "authors": "Leite EM, Lages AL, Moura JFB",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41540979/"
-    },
-    {
-      "pmid": "40537002",
-      "title": "Mitochondrial damage-associated molecular patterns: Neuroimmunomodulators in central nervous system pathophysiology.",
-      "abstract": "Neuroinflammation contributes to a wide range of neurodegenerative diseases including Alzheimer's disease, Parkinson's disease, Huntington's disease, and multiple sclerosis. It is driven by non-neuronal glial cells, mainly microglia and astrocytes. Microglia are the resident immune cells of the central nervous system, while astrocytes are the main support cells for neuronal functions but can also participate in neuroimmune responses. Both these glial cell types can become reactive upon detection",
-      "journal": "Neural regeneration research",
-      "pub_date": "2026 Apr",
-      "authors": "Brooks NAH, Riar I, Klegeris A",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/40537002/"
+      "pmid": "41880816",
+      "title": "Emerging role of cell membrane-coated nanoparticles in targeted therapy for brain disorders.",
+      "abstract": "Brain disorders, including neurodegenerative diseases such as Alzheimer's disease, Parkinson's disease, and Huntington's disease, as well as conditions like multiple sclerosis and ischemic stroke, represent a significant global health burden. These disorders are often marked by progressive neuronal degeneration, cognitive impairment, and motor dysfunction. Effective therapeutic intervention remains a challenge due to the protective but restrictive nature of blood-CNS barriers, particularly the b",
+      "journal": "Biomaterials advances",
+      "pub_date": "2026 Jul",
+      "authors": "Kumari V, Shahrukh M, Jabin K",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41880816/"
     },
     {
       "pmid": "41925063",
@@ -92,22 +74,13 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41925063/"
     },
     {
-      "pmid": "41933422",
-      "title": "Sex-related differences in Huntington's disease: a scoping review.",
-      "abstract": "Huntington's disease (HD) is an autosomal-dominant neurodegenerative disorder and emerging evidence indicates sex-specific differences in disease manifestation and progression. To summarize current evidence on sex-related differences in HD across genetic, clinical, biomarker, and treatment domains and identify gaps in knowledge. A literature search was performed in PubMed and Google Scholar (up to 31.01.2026). Eligible studies examined sex- or gender-related differences in individuals with genet",
-      "journal": "Biology of sex differences",
+      "pmid": "41540979",
+      "title": "Efficacy and Safety of VMAT2 Inhibitors in the Treatment of Huntington Disease: A Meta-Analysis of Randomized Clinical Trials.",
+      "abstract": "Vesicular monoamine transporter 2 inhibitors (VMAT2is) have demonstrated effectiveness in attenuating motor symptoms of Huntington disease (HD). However, evidence regarding their long-term safety and overall efficacy in this population remains limited. The aim of this study was to investigate the efficacy and safety of VMAT2is in the treatment of HD. We performed a meta-analysis of placebo-controlled, randomized controlled trials (RCTs) of VMAT2is in patients with HD. PubMed, Embase, and Cochran",
+      "journal": "Neurology. Clinical practice",
       "pub_date": "2026 Apr",
-      "authors": "Hemicker G, Schwarzov\u00e1 K, Cerejo C",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41933422/"
-    },
-    {
-      "pmid": "40091796",
-      "title": "Structural-functional analyses of the huntingtin/HAP40 complex in ",
-      "abstract": "Huntington's disease (HD) is a neurodegenerative disorder caused by an abnormal CAG expansion in the Huntingtin (HTT) gene. Given its simple genetic cause but complex pathogenic mechanisms, interest in targeting HTT for HD treatment is growing, necessitating a clear understanding of HTT regulation. HTT protein primarily exists in a core complex with HAP40, forming a highly ordered structure with two large globular domains connected by a bridge. We previously demonstrated that HAP40 is conserved ",
-      "journal": "Journal of biomolecular structure & dynamics",
-      "pub_date": "2026 Apr",
-      "authors": "Farmer SM, Solbach A, Xu S",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/40091796/"
+      "authors": "Leite EM, Lages AL, Moura JFB",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41540979/"
     },
     {
       "pmid": "41933174",
@@ -119,13 +92,13 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41933174/"
     },
     {
-      "pmid": "41913587",
-      "title": "Associations Between Lifetime Stressor Exposure and Externalizing Problems in Youth at Risk for Huntington Disease.",
-      "abstract": "Children face significant stressors while growing up in families impacted by Huntington disease (HD). However, the sources of these stressors and how they are related to psychological difficulties have not been well-characterized in this population. In this study, we examined the lifetime stressors experienced by youth at risk for HD using a comprehensive measure of lifetime stressor exposure and investigated how these stressors relate to psychological difficulties. Participants included 94 adol",
-      "journal": "Brain and behavior",
+      "pmid": "40537002",
+      "title": "Mitochondrial damage-associated molecular patterns: Neuroimmunomodulators in central nervous system pathophysiology.",
+      "abstract": "Neuroinflammation contributes to a wide range of neurodegenerative diseases including Alzheimer's disease, Parkinson's disease, Huntington's disease, and multiple sclerosis. It is driven by non-neuronal glial cells, mainly microglia and astrocytes. Microglia are the resident immune cells of the central nervous system, while astrocytes are the main support cells for neuronal functions but can also participate in neuroimmune responses. Both these glial cell types can become reactive upon detection",
+      "journal": "Neural regeneration research",
       "pub_date": "2026 Apr",
-      "authors": "McDonell KE, Shiino S, Key EM",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41913587/"
+      "authors": "Brooks NAH, Riar I, Klegeris A",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40537002/"
     },
     {
       "pmid": "41925785",
@@ -135,6 +108,24 @@
       "pub_date": "2026 Apr",
       "authors": "Jellinger KA",
       "url": "https://pubmed.ncbi.nlm.nih.gov/41925785/"
+    },
+    {
+      "pmid": "40091796",
+      "title": "Structural-functional analyses of the huntingtin/HAP40 complex in ",
+      "abstract": "Huntington's disease (HD) is a neurodegenerative disorder caused by an abnormal CAG expansion in the Huntingtin (HTT) gene. Given its simple genetic cause but complex pathogenic mechanisms, interest in targeting HTT for HD treatment is growing, necessitating a clear understanding of HTT regulation. HTT protein primarily exists in a core complex with HAP40, forming a highly ordered structure with two large globular domains connected by a bridge. We previously demonstrated that HAP40 is conserved ",
+      "journal": "Journal of biomolecular structure & dynamics",
+      "pub_date": "2026 Apr",
+      "authors": "Farmer SM, Solbach A, Xu S",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40091796/"
+    },
+    {
+      "pmid": "41913587",
+      "title": "Associations Between Lifetime Stressor Exposure and Externalizing Problems in Youth at Risk for Huntington Disease.",
+      "abstract": "Children face significant stressors while growing up in families impacted by Huntington disease (HD). However, the sources of these stressors and how they are related to psychological difficulties have not been well-characterized in this population. In this study, we examined the lifetime stressors experienced by youth at risk for HD using a comprehensive measure of lifetime stressor exposure and investigated how these stressors relate to psychological difficulties. Participants included 94 adol",
+      "journal": "Brain and behavior",
+      "pub_date": "2026 Apr",
+      "authors": "McDonell KE, Shiino S, Key EM",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41913587/"
     },
     {
       "pmid": "41906693",
@@ -164,15 +155,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41877246/"
     },
     {
-      "pmid": "41268922",
-      "title": "Performance of an Artificial Intelligence-Powered Smartphone Application in Identifying Gluten-free Foods for Individuals With Celiac Disease.",
-      "abstract": "Gluten-free diet (GFD) adherence is critical for individuals with celiac disease but is often hindered by food labeling inconsistencies and limited dietary support. We evaluated an AI-powered smartphone application's performance in classifying the GFD compatibility of packaged foods. Compatibility was assessed by gastroenterology-focused registered dietitians. Of 100 products (1,884 ingredients), dietitians classified 64 as GFD-compatible, of which only 37.5% (24/64) displayed a gluten-free labe",
-      "journal": "The American journal of gastroenterology",
-      "pub_date": "2026 Apr",
-      "authors": "Samaan JS, Srinivasan N, Feldman E",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41268922/"
-    },
-    {
       "pmid": "41837536",
       "title": "Metabolic-based therapeutic strategies to treat Huntington's disease.",
       "abstract": "Huntington's disease is an autosomal dominant neurodegenerative disorder marked by progressive motor, cognitive, and psychiatric decline. Huntington's disease arises from the expansion of particular DNA sequences (cytosine/ adenosine/guanine repeats that encode glutamine) within the huntingtin (HTT) gene. This expansion leads to the synthesis of a mutant huntingtin protein (mhtt) featuring an excessively long polyglutamine segment, which is harmful and prone to form aggregates or clusters within",
@@ -180,6 +162,24 @@
       "pub_date": "2026 Mar",
       "authors": "Moraes MC, Buhari MO, Vieira LB",
       "url": "https://pubmed.ncbi.nlm.nih.gov/41837536/"
+    },
+    {
+      "pmid": "41933422",
+      "title": "Sex-related differences in Huntington's disease: a scoping review.",
+      "abstract": "Huntington's disease (HD) is an autosomal-dominant neurodegenerative disorder and emerging evidence indicates sex-specific differences in disease manifestation and progression. To summarize current evidence on sex-related differences in HD across genetic, clinical, biomarker, and treatment domains and identify gaps in knowledge. A literature search was performed in PubMed and Google Scholar (up to 31.01.2026). Eligible studies examined sex- or gender-related differences in individuals with genet",
+      "journal": "Biology of sex differences",
+      "pub_date": "2026 Apr",
+      "authors": "Hemicker G, Schwarzov\u00e1 K, Cerejo C",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41933422/"
+    },
+    {
+      "pmid": "41770933",
+      "title": "Huntington's disease LIG1 modifier variant increases ligase fidelity and suppresses somatic CAG repeat expansion.",
+      "abstract": "Huntington's disease (HD) is a fatal neurodegenerative disorder caused by inheriting an expanded CAG repeat tract in the huntingtin gene (",
+      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+      "pub_date": "2026 Mar",
+      "authors": "Lee E, Kim W, Beier DH",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41770933/"
     }
   ],
   "trials": [
