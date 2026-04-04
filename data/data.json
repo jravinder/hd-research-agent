@@ -1,15 +1,6 @@
 {
-  "last_updated": "2026-03-28T10:44:49.786868",
+  "last_updated": "2026-04-04T05:33:04.779572",
   "papers": [
-    {
-      "pmid": "40522761",
-      "title": "Potential common pathogenesis of several neurodegenerative diseases.",
-      "abstract": "With the gradual advancement of research methods and technologies, various biological processes have been identified as playing roles in the pathogenesis of neurodegenerative diseases. However, current descriptions of these biological processes do not fully explain the onset, progression, and development of these conditions. Therefore, exploration of the pathogenesis of neurodegenerative diseases remains a valuable area of research. This review summarizes the potential common pathogeneses of Alz",
-      "journal": "Neural regeneration research",
-      "pub_date": "2026 Mar",
-      "authors": "Fan T, Peng J, Liang H",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/40522761/"
-    },
     {
       "pmid": "40650880",
       "title": "Brain atrophy patterns in anti-IgLON5 disease.",
@@ -18,6 +9,15 @@
       "pub_date": "2026 Mar",
       "authors": "Yogeshwar SM, Bartels F, Gr\u00fcter T",
       "url": "https://pubmed.ncbi.nlm.nih.gov/40650880/"
+    },
+    {
+      "pmid": "40145977",
+      "title": "Potential targets of microglia in the treatment of neurodegenerative diseases: Mechanism and therapeutic implications.",
+      "abstract": "For diverse neurodegenerative disorders, microglial cells are activated. Furthermore, dysfunctional and hyperactivated microglia initiate mitochondrial autophagy, oxidative stress, and pathological protein accumulation, ending with neuroinflammation that exacerbates damage to dopaminergic neurons and contributes significantly to the pathology of neurodegenerative disorder. Microglial over-activation is closely associated with the secretion of pro-inflammatory cytokines, the phagocytosis of injur",
+      "journal": "Neural regeneration research",
+      "pub_date": "2026 Apr",
+      "authors": "Zhao W, Liu Z, Wu J",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40145977/"
     },
     {
       "pmid": "41813136",
@@ -29,85 +29,112 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41813136/"
     },
     {
-      "pmid": "40576748",
-      "title": "Innovative Interventions: Postbiotics and Psychobiotics in Neurodegenerative Disease Treatment.",
-      "abstract": "Neurodegenerative disorders, including Huntington's disease, Amyotrophic lateral sclerosis, Alzheimer's disease, and Parkinson's disease, create more challenges as the population gets older and there are no curative therapies available. Recent advances in gut microbiome research have spotlighted postbiotics and psychobiotics as innovative therapeutic strategies targeting the gut-brain axis to alleviate neurodegenerative symptoms and slow disease progression. Postbiotics, which are metabolites an",
-      "journal": "Probiotics and antimicrobial proteins",
-      "pub_date": "2026 Mar",
-      "authors": "Gupta MK, Chauhan K, Bhardwaj S",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/40576748/"
-    },
-    {
-      "pmid": "41841355",
-      "title": "Discovery and Optimization of Thienopyrazine RNA-Splicing Modulators for the Treatment of Huntington's Disease.",
-      "abstract": "Huntington's disease (HD) is a progressive neurodegenerative disorder caused by a CAG-repeat expansion in the Huntington gene (HTT). Herein, we describe the discovery of a series of HTT pre-mRNA-splicing modulators that promote the inclusion of a cryptic stop codon that in turn lowers levels of mutant Huntington protein (mHTT). Optimization of the starting thienopyridine amide core resulted in the discovery of the potent, CNS-penetrant, selective, and orally bioavailable HTT-splicing modulator B",
-      "journal": "Journal of medicinal chemistry",
-      "pub_date": "2026 Mar",
-      "authors": "Xu C, Abraham N, Bansal N",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41841355/"
-    },
-    {
-      "pmid": "41827217",
-      "title": "The New Wave of Gene and Cell Therapies Across Diseases.",
-      "abstract": "Recent years have seen rapid progress in biological treatments for genetic diseases, as well as conditions like type 1 diabetes that lack an obvious genetic component. The authors sought to explain why this progress has emerged at this particular moment. The best way to illustrate this is by showcasing a wide range of therapies targeting diverse diseases. This progress has been driven by technological advances in genetically modified CAR-T and CAR-NK cells (e.g., using CRISPR or transgenes), whi",
-      "journal": "Journal of clinical medicine",
-      "pub_date": "2026 Feb",
-      "authors": "Rieske A, Grot D, Tr\u0119da C",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41827217/"
-    },
-    {
-      "pmid": "41318997",
-      "title": "The impact of tau deletion on Huntington's disease: An in vivo perspective.",
-      "abstract": "Although an emerging body of evidence suggests that abnormal forms of tau are present and contribute to Huntington's disease (HD)-a genetic neurodegenerative disorder primarily characterized by the aggregation of the mutant huntingtin (mHtt) protein affecting cognitive, motor, and psychiatric function-it is not clear to what extent this is relevant to the disease phenotype, and hence future treatments. We therefore generated a novel murine model by crossing heterozygous zQ175 knockin HD mice wit",
-      "journal": "Molecular therapy : the journal of the American Society of Gene Therapy",
-      "pub_date": "2026 Mar",
-      "authors": "Lepinay E, Saint-Pierre M, Teixeira M",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41318997/"
-    },
-    {
-      "pmid": "41846052",
-      "title": "Human iPSC-derived exosomes for amelioration of Huntington's disease through mitochondrial, synaptic, and anti-apoptotic mechanisms.",
-      "abstract": "Huntington's disease (HD) is driven by expanded CAG repeats in the huntingtin gene, resulting in mutant huntingtin (mHtt) aggregation, mitochondrial dysfunction, neuronal loss, and neuroinflammation. Although stem cell-based therapies provide potent regenerative, anti-inflammatory, and neuroprotective effects, their clinical translation remains constrained by tumorigenicity and poor engraftment efficiency. Therefore, we investigated whether exosomes derived from human induced pluripotent stem ce",
-      "journal": "Biomedicine & pharmacotherapy = Biomedecine & pharmacotherapie",
+      "pmid": "40874597",
+      "title": "Therapeutic strategies for Huntington's disease: current approaches and future direction.",
+      "abstract": "Huntington's disease (HD) is an autosomal, progressive, dominant inherited neurological disorder characterized by motor dysfunction, cognitive decline, and psychiatric symptoms. HD is caused by abnormal expansion of trinucleotide CAG in exon1 of the ",
+      "journal": "Neurodegenerative disease management",
       "pub_date": "2026 Apr",
-      "authors": "Jahng S, Palomar-Alonso N, Moon J",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41846052/"
+      "authors": "Gulzar M, Kauser S, Khan S",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40874597/"
     },
     {
-      "pmid": "41783572",
-      "title": "Copper Homeostasis and Cuproptosis in Neurological Disorders.",
-      "abstract": "Neurological disorders such as Alzheimer's disease (AD) and Parkinson's disease (PD) pose a serious global public health threat, with complex etiologies involving genetic, environmental, and metabolic factors. Current data indicate that the prevalence of these disorders is rapidly increasing with the aging population, resulting in a growing economic and healthcare burden worldwide. In recent years, the imbalance of copper homeostasis has been increasingly implicated in the pathogenesis of neurol",
-      "journal": "Drug design, development and therapy",
-      "pub_date": "2026",
-      "authors": "Liu W, Xue Y, Cao C",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41783572/"
+      "pmid": "41880816",
+      "title": "Emerging role of cell membrane-coated nanoparticles in targeted therapy for brain disorders.",
+      "abstract": "Brain disorders, including neurodegenerative diseases such as Alzheimer's disease, Parkinson's disease, and Huntington's disease, as well as conditions like multiple sclerosis and ischemic stroke, represent a significant global health burden. These disorders are often marked by progressive neuronal degeneration, cognitive impairment, and motor dysfunction. Effective therapeutic intervention remains a challenge due to the protective but restrictive nature of blood-CNS barriers, particularly the b",
+      "journal": "Biomaterials advances",
+      "pub_date": "2026 Jul",
+      "authors": "Kumari V, Shahrukh M, Jabin K",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41880816/"
     },
     {
-      "pmid": "41407165",
-      "title": "Nutraceutical interventions for neuroprotection: a comprehensive review.",
-      "abstract": "Nutraceuticals, bioactive compounds derived from food sources, are emerging as promising agents for neuroprotection, particularly through their modulation of gut health. Unlike conventional single-molecule therapeutics that often target isolated pathways, nutraceuticals offer a multi-targeted approach by influencing the gut-brain axis, a bidirectional communication network linking the gut microbiota and the central nervous system. Key nutraceuticals such as probiotics, prebiotics, polyphenols, o",
-      "journal": "Biochemical pharmacology",
+      "pmid": "40536996",
+      "title": "Neuroglobin: A promising candidate to treat neurological diseases.",
+      "abstract": "Neurodevelopmental and neurodegenerative illnesses constitute a global health issue and a foremost economic burden since they are a large cause of incapacity and death worldwide. Altogether, the burden of neurological disorders has increased considerably over the past 30 years because of population aging. Overall, neurological diseases significantly impair cognitive and motor functions and their incidence will increase as societies age and the world's population continues to grow. Autism spectru",
+      "journal": "Neural regeneration research",
+      "pub_date": "2026 Apr",
+      "authors": "Ya\u00f1ez IM, Torres-Cuevas I, Corral-Debrinski M",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40536996/"
+    },
+    {
+      "pmid": "40313114",
+      "title": "Inherent potential of mitochondria-targeted interventions for chronic neurodegenerative diseases.",
+      "abstract": "The cure rate for chronic neurodegenerative diseases remains low, creating an urgent need for improved intervention methods. Recent studies have shown that enhancing mitochondrial function can mitigate the effects of these diseases. This paper comprehensively reviews the relationship between mitochondrial dysfunction and chronic neurodegenerative diseases, aiming to uncover the potential use of targeted mitochondrial interventions as viable therapeutic options. We detail five targeted mitochondr",
+      "journal": "Neural regeneration research",
+      "pub_date": "2026 Apr",
+      "authors": "Zhou M, Zheng M, Liang S",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40313114/"
+    },
+    {
+      "pmid": "41540979",
+      "title": "Efficacy and Safety of VMAT2 Inhibitors in the Treatment of Huntington Disease: A Meta-Analysis of Randomized Clinical Trials.",
+      "abstract": "Vesicular monoamine transporter 2 inhibitors (VMAT2is) have demonstrated effectiveness in attenuating motor symptoms of Huntington disease (HD). However, evidence regarding their long-term safety and overall efficacy in this population remains limited. The aim of this study was to investigate the efficacy and safety of VMAT2is in the treatment of HD. We performed a meta-analysis of placebo-controlled, randomized controlled trials (RCTs) of VMAT2is in patients with HD. PubMed, Embase, and Cochran",
+      "journal": "Neurology. Clinical practice",
+      "pub_date": "2026 Apr",
+      "authors": "Leite EM, Lages AL, Moura JFB",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41540979/"
+    },
+    {
+      "pmid": "40537002",
+      "title": "Mitochondrial damage-associated molecular patterns: Neuroimmunomodulators in central nervous system pathophysiology.",
+      "abstract": "Neuroinflammation contributes to a wide range of neurodegenerative diseases including Alzheimer's disease, Parkinson's disease, Huntington's disease, and multiple sclerosis. It is driven by non-neuronal glial cells, mainly microglia and astrocytes. Microglia are the resident immune cells of the central nervous system, while astrocytes are the main support cells for neuronal functions but can also participate in neuroimmune responses. Both these glial cell types can become reactive upon detection",
+      "journal": "Neural regeneration research",
+      "pub_date": "2026 Apr",
+      "authors": "Brooks NAH, Riar I, Klegeris A",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40537002/"
+    },
+    {
+      "pmid": "41933174",
+      "title": "Target product profiles for treatments to delay or prevent symptomatic Alzheimer's disease.",
+      "abstract": "Despite advances in understanding the mechanisms, risk factors and treatment strategies for Alzheimer's disease (AD), no approved therapies exist to prevent or delay onset in at-risk individuals or those with elevated biomarkers who do not yet show symptoms. Multiple candidate interventions are now being evaluated in clinical trials in these settings, raising key questions around which populations are most appropriate and what criteria should guide regulatory and clinical decision-making. Data a",
+      "journal": "Nature medicine",
+      "pub_date": "2026 Apr",
+      "authors": "Cummings JL, Agadjanyan MG, Barry M",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41933174/"
+    },
+    {
+      "pmid": "40091796",
+      "title": "Structural-functional analyses of the huntingtin/HAP40 complex in ",
+      "abstract": "Huntington's disease (HD) is a neurodegenerative disorder caused by an abnormal CAG expansion in the Huntingtin (HTT) gene. Given its simple genetic cause but complex pathogenic mechanisms, interest in targeting HTT for HD treatment is growing, necessitating a clear understanding of HTT regulation. HTT protein primarily exists in a core complex with HAP40, forming a highly ordered structure with two large globular domains connected by a bridge. We previously demonstrated that HAP40 is conserved ",
+      "journal": "Journal of biomolecular structure & dynamics",
+      "pub_date": "2026 Apr",
+      "authors": "Farmer SM, Solbach A, Xu S",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40091796/"
+    },
+    {
+      "pmid": "41925785",
+      "title": "Psychosis in Huntington disease: a short update.",
+      "abstract": "",
+      "journal": "Journal of neural transmission (Vienna, Austria : 1996)",
+      "pub_date": "2026 Apr",
+      "authors": "Jellinger KA",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41925785/"
+    },
+    {
+      "pmid": "41913587",
+      "title": "Associations Between Lifetime Stressor Exposure and Externalizing Problems in Youth at Risk for Huntington Disease.",
+      "abstract": "Children face significant stressors while growing up in families impacted by Huntington disease (HD). However, the sources of these stressors and how they are related to psychological difficulties have not been well-characterized in this population. In this study, we examined the lifetime stressors experienced by youth at risk for HD using a comprehensive measure of lifetime stressor exposure and investigated how these stressors relate to psychological difficulties. Participants included 94 adol",
+      "journal": "Brain and behavior",
+      "pub_date": "2026 Apr",
+      "authors": "McDonell KE, Shiino S, Key EM",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41913587/"
+    },
+    {
+      "pmid": "41906693",
+      "title": "Inhibition of the NLRP3 Inflammasome With MCC950 Improves Gut Health in Huntington's Disease Mice.",
+      "abstract": "Huntington's disease (HD) is an autosomal dominant neurodegenerative disorder featuring abnormal cognition, psychiatric symptoms, movement, and gastrointestinal function. It is caused by a tandem-repeat gene mutation encoding an expanded polyglutamine tract in the huntingtin protein. Our group was the first to demonstrate gut microbial disruption in both clinical HD cohorts and validated preclinical models, supporting a role for microbiota-gut-brain axis dysfunction in HD. The NLRP3 inflammasome",
+      "journal": "Journal of neurochemistry",
+      "pub_date": "2026 Apr",
+      "authors": "Sarkar SK, Ekwudo MN, Lu D",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41906693/"
+    },
+    {
+      "pmid": "41877246",
+      "title": "Axonopathy: mechanisms and potential therapeutic targets for neurodegenerative diseases.",
+      "abstract": "Axons are unique structural and functional features of nerve cells, which play a critical role in regulating neuronal homeostasis. Dysfunction and degeneration of axons (axonopathy) has been established as an early and prominent contributing mechanism to the pathogenesis of neurodegenerative diseases including Alzheimer's disease, Parkinson's disease, Huntington's disease, and\u00a0amyotrophic lateral sclerosis. In this review, we briefly summarize the structure and function of axons, and highlight r",
+      "journal": "Translational neurodegeneration",
       "pub_date": "2026 Mar",
-      "authors": "Ghosh N, Ghosh J, Ghosh S",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41407165/"
-    },
-    {
-      "pmid": "40517187",
-      "title": "Crossing the blood-brain barrier: nanoparticle-based strategies for neurodegenerative disease therapy.",
-      "abstract": "Neurodegenerative conditions, including Alzheimer's, Parkinson's, amyotrophic lateral sclerosis, and Huntington's disease, represent a critical medical challenge due to their increasing prevalence, severe consequences, and absence of curative treatments. Beyond the need for a deeper understanding of the fundamental mechanisms underlying neurodegeneration, the development of effective treatments is hindered by the blood-brain barrier, which poses a major obstacle to delivering therapeutic agents ",
-      "journal": "Drug delivery and translational research",
-      "pub_date": "2026 Mar",
-      "authors": "Haro-Mart\u00ednez E, Muscolino E, Moral N",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/40517187/"
-    },
-    {
-      "pmid": "41690900",
-      "title": "Huntington's disease is the best investment in neuroscience today.",
-      "abstract": "Huntington's disease (HD) is usually described as rare, tragic, and intractable. Yet, HD offers a strategically unique entry point for neuroscience. With its genetic clarity, relatively predictable course, and organized global community, HD provides the clearest path to advancing brain repair.",
-      "journal": "Trends in molecular medicine",
-      "pub_date": "2026 Mar",
-      "authors": "Maimon R",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41690900/"
+      "authors": "Shen R, Sung K, Ding J",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41877246/"
     },
     {
       "pmid": "41552385",
@@ -119,31 +146,13 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41552385/"
     },
     {
-      "pmid": "41850226",
-      "title": "Global burden of adverse effects of medical treatment from 1990 to 2021: a Global Burden of Disease Study 2021.",
-      "abstract": "This study aims to evaluate the global burden of adverse effects of medical treatment (AEMT) using data from the Global Burden of Disease Study (GBD) 2021. Data were extracted from the GBD 2021, covering 204 countries/territories from 1990 to 2021. AEMT was defined using ICD-9 and ICD-10 codes, encompassing complications from medical procedures, treatments, or healthcare exposures. Estimates were categorized into fatal and non-fatal outcomes and stratified by age, sex, year, and covariates, incl",
-      "journal": "The Korean journal of internal medicine",
-      "pub_date": "2026 Mar",
-      "authors": " ",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41850226/"
-    },
-    {
-      "pmid": "41553746",
-      "title": "Implant Therapy in Patients With Neurodegenerative Diseases-A Scoping Review.",
-      "abstract": "The increasing longevity of populations has resulted in a growing number of older adults requiring prosthodontic care, including those with neurodegenerative diseases (NDs). Neurodegenerative diseases pose significant challenges to prosthodontic care, and it remains unclear whether implant therapy in this population achieves outcomes comparable to those observed in the general older population. A first systematic review was reframed to a scoping review using a PCC framework with Population (indi",
-      "journal": "Clinical oral implants research",
-      "pub_date": "2026 Mar",
-      "authors": "David L, Maniewicz S, Chebib N",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41553746/"
-    },
-    {
-      "pmid": "40268841",
-      "title": "Emerging nano-derived therapy for the treatment of dementia: a comprehensive review.",
-      "abstract": "Dementia includes a variety of neurodegenerative diseases that affect and target the brain's fundamental cognitive functions. It is undoubtedly one of the diseases that affects people globally. The ameliorating the disease is still not known; the symptoms, however, can be prevented to an extent. Dementia encompasses Alzheimer's disease, Parkinson's disease, Huntington's disease, Lewy body dementia, mixed dementia, and various other diseases. The aggregation of \u03b2-amyloid protein plaques and the f",
-      "journal": "Drug delivery and translational research",
-      "pub_date": "2026 Mar",
-      "authors": "Ahmad S, Ahmad L, Adil M",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/40268841/"
+      "pmid": "41268922",
+      "title": "Performance of an Artificial Intelligence-Powered Smartphone Application in Identifying Gluten-free Foods for Individuals With Celiac Disease.",
+      "abstract": "Gluten-free diet (GFD) adherence is critical for individuals with celiac disease but is often hindered by food labeling inconsistencies and limited dietary support. We evaluated an AI-powered smartphone application's performance in classifying the GFD compatibility of packaged foods. Compatibility was assessed by gastroenterology-focused registered dietitians. Of 100 products (1,884 ingredients), dietitians classified 64 as GFD-compatible, of which only 37.5% (24/64) displayed a gluten-free labe",
+      "journal": "The American journal of gastroenterology",
+      "pub_date": "2026 Apr",
+      "authors": "Samaan JS, Srinivasan N, Feldman E",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41268922/"
     },
     {
       "pmid": "41837536",
@@ -155,22 +164,13 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41837536/"
     },
     {
-      "pmid": "41376158",
-      "title": "Administration of a barcoded AAV capsid library to the putamen of non-human primates identifies variants with efficient retrograde transport.",
-      "abstract": "Adeno-associated viral vectors have become a leading choice for gene therapy in the central nervous system due to their safety profile, efficient neuronal transduction, and capacity for sustained transgene expression. We previously reported that AAV2-derived capsids developed using the BRAVE (Barcoded Rational AAV Vector Evolution) approach have enhanced retrograde transport properties in the rodent brain, compared with parental AAV2. Retrograde transport enables broader coverage of connected br",
-      "journal": "Molecular therapy : the journal of the American Society of Gene Therapy",
-      "pub_date": "2026 Mar",
-      "authors": "Dzhashiashvili Y, McBride JL, Fabyanic E",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41376158/"
-    },
-    {
-      "pmid": "41779298",
-      "title": "Digital Technologies for Symptom Monitoring in Parkinson Disease.",
-      "abstract": "Digital health technologies (DHT) are promising tools for symptom monitoring in Parkinson disease (PD), offering objective and continuous data in real-life settings. This article reviews recent literature on DHT for symptom monitoring in PD, with a focus on remote monitoring devices. Research studies have demonstrated that DHT can accurately and reliably monitor both motor and non-motor symptoms of PD, surpassing the limitations of subjective and episodic traditional clinical assessments. Digita",
-      "journal": "Current neurology and neuroscience reports",
-      "pub_date": "2026 Mar",
-      "authors": "Chunga N, Reddy V, Barbosa W",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41779298/"
+      "pmid": "41933422",
+      "title": "Sex-related differences in Huntington's disease: a scoping review.",
+      "abstract": "Huntington's disease (HD) is an autosomal-dominant neurodegenerative disorder and emerging evidence indicates sex-specific differences in disease manifestation and progression. To summarize current evidence on sex-related differences in HD across genetic, clinical, biomarker, and treatment domains and identify gaps in knowledge. A literature search was performed in PubMed and Google Scholar (up to 31.01.2026). Eligible studies examined sex- or gender-related differences in individuals with genet",
+      "journal": "Biology of sex differences",
+      "pub_date": "2026 Apr",
+      "authors": "Hemicker G, Schwarzov\u00e1 K, Cerejo C",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41933422/"
     },
     {
       "pmid": "41770933",
@@ -184,125 +184,26 @@
   ],
   "trials": [
     {
-      "nct_id": "NCT04713982",
-      "title": "Impact of Deutetrabenazine on Functional Speech and Gait Dynamics in Huntington Disease",
-      "status": "ACTIVE_NOT_RECRUITING",
-      "phase": "PHASE2, PHASE3",
-      "sponsor": "Vanderbilt University Medical Center",
-      "intervention": "Deutetrabenazine",
-      "enrollment": 30,
-      "url": "https://clinicaltrials.gov/study/NCT04713982",
-      "start_date": "2021-11-19"
-    },
-    {
-      "nct_id": "NCT06826612",
-      "title": "A Randomized Study of SPK-10001 Gene Therapy in Participants With Huntington's Disease",
-      "status": "RECRUITING",
-      "phase": "PHASE1, PHASE2",
-      "sponsor": "Hoffmann-La Roche",
-      "intervention": "SPK-10001; Placebo Surgery Control",
-      "enrollment": 53,
-      "url": "https://clinicaltrials.gov/study/NCT06826612",
-      "start_date": "2025-02-21"
-    },
-    {
-      "nct_id": "NCT05943054",
-      "title": "Striatum and Hippocampus on Different Time Scales",
-      "status": "RECRUITING",
-      "phase": "NA",
-      "sponsor": "Assistance Publique - H\u00f4pitaux de Paris",
-      "intervention": "Temporal perception tasks",
-      "enrollment": 104,
-      "url": "https://clinicaltrials.gov/study/NCT05943054",
-      "start_date": "2023-01-06"
-    },
-    {
-      "nct_id": "NCT05360082",
-      "title": "Comparison Between [11C]UCB-J and [18F]SynVest-1 PET in HD.",
-      "status": "RECRUITING",
-      "phase": "NA",
-      "sponsor": "Universitaire Ziekenhuizen KU Leuven",
-      "intervention": "[11C]UCB-J PET; [18F]SynVest-1 PET",
-      "enrollment": 35,
-      "url": "https://clinicaltrials.gov/study/NCT05360082",
-      "start_date": "2024-11-18"
-    },
-    {
-      "nct_id": "NCT06448546",
-      "title": "Gut Microbiomes in HD",
+      "nct_id": "NCT06546488",
+      "title": "Cognitive Assessment Tools for Huntington's Disease.",
       "status": "RECRUITING",
       "phase": "N/A",
-      "sponsor": "University of Central Florida",
+      "sponsor": "Ohio State University",
+      "intervention": "Assessments",
+      "enrollment": 76,
+      "url": "https://clinicaltrials.gov/study/NCT06546488",
+      "start_date": "2025-06-20"
+    },
+    {
+      "nct_id": "NCT01860339",
+      "title": "Child to Adult Neurodevelopment in Gene Expanded Huntington's Disease",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "sponsor": "Peggy C Nopoulos",
       "intervention": "",
-      "enrollment": 36,
-      "url": "https://clinicaltrials.gov/study/NCT06448546",
-      "start_date": "2025-06"
-    },
-    {
-      "nct_id": "NCT04478734",
-      "title": "Trial of the Combined Use of Thiamine and Biotin in Patients With Huntington's Disease",
-      "status": "RECRUITING",
-      "phase": "PHASE2",
-      "sponsor": "Fundaci\u00f3n P\u00fablica Andaluza para la gesti\u00f3n de la Investigaci\u00f3n en Sevilla",
-      "intervention": "Moderate doses of Thiamine y Biotin; High doses of Thiamine y Biotin",
-      "enrollment": 24,
-      "url": "https://clinicaltrials.gov/study/NCT04478734",
-      "start_date": "2023-04-12"
-    },
-    {
-      "nct_id": "NCT06941662",
-      "title": "Huntington's Disease Biobank: Advancing Remote Monitoring and Deep Phenotyping",
-      "status": "RECRUITING",
-      "phase": "N/A",
-      "sponsor": "Stanford University",
-      "intervention": "computer vision, remote monitoring, blood, urine, wrist bands, mobile-app",
-      "enrollment": 200,
-      "url": "https://clinicaltrials.gov/study/NCT06941662",
-      "start_date": "2024-06-01"
-    },
-    {
-      "nct_id": "NCT06147414",
-      "title": "Development of Non-Invasive Prenatal Diagnosis for Single Gene Disorders",
-      "status": "RECRUITING",
-      "phase": "N/A",
-      "sponsor": "Assistance Publique - H\u00f4pitaux de Paris",
-      "intervention": "Blood sample",
-      "enrollment": 550,
-      "url": "https://clinicaltrials.gov/study/NCT06147414",
-      "start_date": "2024-10-23"
-    },
-    {
-      "nct_id": "NCT04400331",
-      "title": "Open-Label Rollover Study for Continuing Valbenazine Administration for the Treatment of Chorea Associated With Huntington Disease",
-      "status": "ACTIVE_NOT_RECRUITING",
-      "phase": "PHASE3",
-      "sponsor": "Neurocrine Biosciences",
-      "intervention": "Valbenazine",
-      "enrollment": 154,
-      "url": "https://clinicaltrials.gov/study/NCT04400331",
-      "start_date": "2020-09-18"
-    },
-    {
-      "nct_id": "NCT02252380",
-      "title": "ExAblate Transcranial MRgFUS for the Management of Treatment-Refractory Movement Disorders",
-      "status": "ACTIVE_NOT_RECRUITING",
-      "phase": "NA",
-      "sponsor": "InSightec",
-      "intervention": "Transcranial ExAblate System",
-      "enrollment": 10,
-      "url": "https://clinicaltrials.gov/study/NCT02252380",
-      "start_date": "2015-05"
-    },
-    {
-      "nct_id": "NCT05509153",
-      "title": "A Randomised Controlled Trial, Of N-Acetyl Cysteine (NAC), for Premanifest Huntingtin Gene Expansion Carriers",
-      "status": "RECRUITING",
-      "phase": "PHASE2",
-      "sponsor": "Western Sydney Local Health District",
-      "intervention": "NAC; Placebo",
-      "enrollment": 160,
-      "url": "https://clinicaltrials.gov/study/NCT05509153",
-      "start_date": "2024-06-01"
+      "enrollment": 400,
+      "url": "https://clinicaltrials.gov/study/NCT01860339",
+      "start_date": "2005-07"
     },
     {
       "nct_id": "NCT06209515",
@@ -316,70 +217,70 @@
       "start_date": "2022-01-01"
     },
     {
-      "nct_id": "NCT01574053",
-      "title": "Enroll -HD: A Prospective Registry Study in a Global Huntington's Disease Cohort",
-      "status": "RECRUITING",
-      "phase": "N/A",
-      "sponsor": "CHDI Foundation, Inc.",
-      "intervention": "",
-      "enrollment": 35000,
-      "url": "https://clinicaltrials.gov/study/NCT01574053",
-      "start_date": "2012-07"
-    },
-    {
-      "nct_id": "NCT06312189",
-      "title": "Long-term Study to Evaluate Safety and Tolerability of Valbenazine in Participants With Chorea Associated With Huntington Disease in Canada",
-      "status": "ENROLLING_BY_INVITATION",
-      "phase": "PHASE3",
-      "sponsor": "Neurocrine Biosciences",
-      "intervention": "Valbenazine",
-      "enrollment": 7,
-      "url": "https://clinicaltrials.gov/study/NCT06312189",
-      "start_date": "2024-04-24"
-    },
-    {
-      "nct_id": "NCT07344519",
-      "title": "The Safety and Tolerability Study With ER2001 Intravenous Injection Repetitive Treatment in Adults With Early Manifest Huntington's Disease.",
-      "status": "ACTIVE_NOT_RECRUITING",
-      "phase": "EARLY_PHASE1",
-      "sponsor": "ExoRNA Bioscience",
-      "intervention": "ER2001 injection",
-      "enrollment": 9,
-      "url": "https://clinicaltrials.gov/study/NCT07344519",
-      "start_date": "2024-06-25"
-    },
-    {
-      "nct_id": "NCT05326451",
-      "title": "Home-based Transcranial Direct Current Stimulation Open Trial for Behavioral and Cognitive Symptoms in Huntington's Disease",
+      "nct_id": "NCT06828471",
+      "title": "Social Cognition Training in Individuals With Huntington's Disease",
       "status": "RECRUITING",
       "phase": "NA",
-      "sponsor": "The University of Texas Health Science Center, Houston",
-      "intervention": "active tDCS",
-      "enrollment": 10,
-      "url": "https://clinicaltrials.gov/study/NCT05326451",
-      "start_date": "2023-06-21"
+      "sponsor": "Rush University Medical Center",
+      "intervention": "Social Cognition Training",
+      "enrollment": 20,
+      "url": "https://clinicaltrials.gov/study/NCT06828471",
+      "start_date": "2025-11-15"
     },
     {
-      "nct_id": "NCT05541627",
-      "title": "A Study to Evaluate AB-1001 Striatal Administration in Adults With Early Manifest Huntington's Disease",
+      "nct_id": "NCT05596760",
+      "title": "Promoting Goals-of-Care Discussions for Patients With Memory Problems and Their Caregivers",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "sponsor": "University of Washington",
+      "intervention": "Jumpstart Guide",
+      "enrollment": 1800,
+      "url": "https://clinicaltrials.gov/study/NCT05596760",
+      "start_date": "2023-09-11"
+    },
+    {
+      "nct_id": "NCT00874783",
+      "title": "Development of IPS from Donated Somatic Cells of Patients with Neurological Diseases",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "sponsor": "Hadassah Medical Organization",
+      "intervention": "",
+      "enrollment": 120,
+      "url": "https://clinicaltrials.gov/study/NCT00874783",
+      "start_date": "2009-04"
+    },
+    {
+      "nct_id": "NCT07339514",
+      "title": "A Phase I Clinical Study of ER2001 Injection for the Treatment of Early Manifest Huntington's Disease.",
       "status": "ACTIVE_NOT_RECRUITING",
       "phase": "PHASE1, PHASE2",
-      "sponsor": "Brainvectis, a subsidiary of Asklepios BioPharmaceutical, Inc. (AskBio)",
-      "intervention": "AB-1001 Gene Therapy",
-      "enrollment": 5,
-      "url": "https://clinicaltrials.gov/study/NCT05541627",
-      "start_date": "2022-10-12"
+      "sponsor": "ExoRNA Bioscience",
+      "intervention": "ER2001 intravenous injection; Placebo",
+      "enrollment": 27,
+      "url": "https://clinicaltrials.gov/study/NCT07339514",
+      "start_date": "2025-02-11"
     },
     {
-      "nct_id": "NCT05822908",
-      "title": "A Safety and Pharmacokinetics Trial of VO659 in SCA1, SCA3 and HD",
+      "nct_id": "NCT04012411",
+      "title": "Study of BDNF Pathway Biomarkers in the Cerebrospinal Fluid in Patients With Huntington's Disease",
       "status": "RECRUITING",
-      "phase": "PHASE1, PHASE2",
-      "sponsor": "Vico Therapeutics B. V.",
-      "intervention": "VO659",
-      "enrollment": 68,
-      "url": "https://clinicaltrials.gov/study/NCT05822908",
-      "start_date": "2023-02-14"
+      "phase": "NA",
+      "sponsor": "University Hospital, Montpellier",
+      "intervention": "Brain MRI; Lumbar Punction; Blood sample",
+      "enrollment": 135,
+      "url": "https://clinicaltrials.gov/study/NCT04012411",
+      "start_date": "2020-03-03"
+    },
+    {
+      "nct_id": "NCT05808153",
+      "title": "Innovative Imaging and Cognitive BIOmarkers to Predict Huntington's Disease Progression",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "sponsor": "Assistance Publique - H\u00f4pitaux de Paris",
+      "intervention": "radiotracer injection",
+      "enrollment": 80,
+      "url": "https://clinicaltrials.gov/study/NCT05808153",
+      "start_date": "2024-03-21"
     },
     {
       "nct_id": "NCT07326709",
@@ -390,95 +291,18 @@
       "intervention": "Votoplam (blinded); Placebo",
       "enrollment": 770,
       "url": "https://clinicaltrials.gov/study/NCT07326709",
-      "start_date": "2026-06-01"
+      "start_date": "2026-03-24"
     },
     {
-      "nct_id": "NCT06807892",
-      "title": "Comparison of Two Cognitive-Motor Rehabilitation Approaches Via Exergames: a Study of Cognitive, Motor and Behavioral Functions in Huntington's Disease Patients",
+      "nct_id": "NCT05360082",
+      "title": "Comparison Between [11C]UCB-J and [18F]SynVest-1 PET in HD.",
       "status": "RECRUITING",
       "phase": "NA",
-      "sponsor": "University Hospital, Angers",
-      "intervention": "Synergistic management; Sequential management",
-      "enrollment": 40,
-      "url": "https://clinicaltrials.gov/study/NCT06807892",
-      "start_date": "2025-07-31"
-    },
-    {
-      "nct_id": "NCT00051324",
-      "title": "Neurobiological Predictors of Huntington's Disease (PREDICT-HD)",
-      "status": "ACTIVE_NOT_RECRUITING",
-      "phase": "N/A",
-      "sponsor": "Jordan Schultz",
-      "intervention": "",
-      "enrollment": 1700,
-      "url": "https://clinicaltrials.gov/study/NCT00051324",
-      "start_date": "2002-08"
-    },
-    {
-      "nct_id": "NCT06254482",
-      "title": "An Extension Study to Evaluate the Long-Term Safety and Efficacy of Votoplam in Participants With Huntington's Disease (HD)",
-      "status": "ACTIVE_NOT_RECRUITING",
-      "phase": "PHASE2",
-      "sponsor": "Novartis Pharmaceuticals",
-      "intervention": "Votoplam",
-      "enrollment": 144,
-      "url": "https://clinicaltrials.gov/study/NCT06254482",
-      "start_date": "2023-08-25"
-    },
-    {
-      "nct_id": "NCT06843252",
-      "title": "Home-based TDCS (Transcranial Direct Current Stimulation) for Cognitive and Behavioral Symptoms in Huntington's Disease",
-      "status": "RECRUITING",
-      "phase": "NA",
-      "sponsor": "The University of Texas Health Science Center at San Antonio",
-      "intervention": "Transcranial direct current stimulation (tDCS); Sham tDCS",
-      "enrollment": 16,
-      "url": "https://clinicaltrials.gov/study/NCT06843252",
-      "start_date": "2025-09-02"
-    },
-    {
-      "nct_id": "NCT06203106",
-      "title": "NYSCF Scientific Discovery Biobank",
-      "status": "RECRUITING",
-      "phase": "N/A",
-      "sponsor": "New York Stem Cell Foundation Research Institute",
-      "intervention": "Biological Sample Collection",
-      "enrollment": 10000,
-      "url": "https://clinicaltrials.gov/study/NCT06203106",
-      "start_date": "2022-11-10"
-    },
-    {
-      "nct_id": "NCT07253038",
-      "title": "Evaluation of Three Tests to Assess Social Cognition in Huntington Disease",
-      "status": "RECRUITING",
-      "phase": "N/A",
-      "sponsor": "Region Skane",
-      "intervention": "",
-      "enrollment": 40,
-      "url": "https://clinicaltrials.gov/study/NCT07253038",
-      "start_date": "2025-12-01"
-    },
-    {
-      "nct_id": "NCT06853743",
-      "title": "The NAD-HD Study: A Study to Investigate Efficacy and Safety of Nicotinamide Riboside Compared With Placebo in Huntington's Disease",
-      "status": "RECRUITING",
-      "phase": "PHASE2",
-      "sponsor": "Oslo University Hospital",
-      "intervention": "Nicotinamide Riboside (NR); Placebo",
-      "enrollment": 120,
-      "url": "https://clinicaltrials.gov/study/NCT06853743",
-      "start_date": "2025-03-18"
-    },
-    {
-      "nct_id": "NCT06774443",
-      "title": "Hinting Task for Huntington's Disease",
-      "status": "RECRUITING",
-      "phase": "N/A",
-      "sponsor": "University Medical Center Groningen",
-      "intervention": "Neuropsychological assessment",
-      "enrollment": 52,
-      "url": "https://clinicaltrials.gov/study/NCT06774443",
-      "start_date": "2025-09-01"
+      "sponsor": "Universitaire Ziekenhuizen KU Leuven",
+      "intervention": "[11C]UCB-J PET; [18F]SynVest-1 PET",
+      "enrollment": 35,
+      "url": "https://clinicaltrials.gov/study/NCT05360082",
+      "start_date": "2024-11-18"
     },
     {
       "nct_id": "NCT07213648",
@@ -492,29 +316,217 @@
       "start_date": "2025-11-20"
     },
     {
-      "nct_id": "NCT07299682",
-      "title": "Facilitating Effective Eating With DoddleBags: A Single-Arm Acceptability Study Of DoddleBags to Assess Impact on Self Feeding Behaviours in a Huntington's Disease Population",
-      "status": "RECRUITING",
-      "phase": "NA",
-      "sponsor": "University of Hull",
-      "intervention": "DoddleBags",
-      "enrollment": 10,
-      "url": "https://clinicaltrials.gov/study/NCT07299682",
-      "start_date": "2024-11-29"
-    },
-    {
-      "nct_id": "NCT05773196",
-      "title": "Prospective Single-Timepoint Huntington's Disease Biospecimen Collection Study",
+      "nct_id": "NCT06147414",
+      "title": "Development of Non-Invasive Prenatal Diagnosis for Single Gene Disorders",
       "status": "RECRUITING",
       "phase": "N/A",
-      "sponsor": "Sanguine Biosciences",
-      "intervention": "Biospecimen Collection",
-      "enrollment": 5,
-      "url": "https://clinicaltrials.gov/study/NCT05773196",
-      "start_date": "2023-03-14"
+      "sponsor": "Assistance Publique - H\u00f4pitaux de Paris",
+      "intervention": "Blood sample",
+      "enrollment": 550,
+      "url": "https://clinicaltrials.gov/study/NCT06147414",
+      "start_date": "2024-10-23"
+    },
+    {
+      "nct_id": "NCT07253038",
+      "title": "Evaluation of Three Tests to Assess Social Cognition in Huntington Disease",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "sponsor": "Region Skane",
+      "intervention": "",
+      "enrollment": 40,
+      "url": "https://clinicaltrials.gov/study/NCT07253038",
+      "start_date": "2025-12-01"
+    },
+    {
+      "nct_id": "NCT02855476",
+      "title": "HDClarity: a Multi-site Cerebrospinal Fluid Collection Initiative to Facilitate Therapeutic Development for Huntington's Disease",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "sponsor": "University College, London",
+      "intervention": "",
+      "enrollment": 2500,
+      "url": "https://clinicaltrials.gov/study/NCT02855476",
+      "start_date": "2017-01-01"
+    },
+    {
+      "nct_id": "NCT07503743",
+      "title": "Biology-Driven Cognitive Profiling in Huntington's Disease",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "phase": "N/A",
+      "sponsor": "Fundaci\u00f3 Institut de Recerca de l'Hospital de la Santa Creu i Sant Pau",
+      "intervention": "",
+      "enrollment": 90,
+      "url": "https://clinicaltrials.gov/study/NCT07503743",
+      "start_date": "2021-09-01"
+    },
+    {
+      "nct_id": "NCT06585449",
+      "title": "A Study to Evaluate ALN-HTT02 in Adult Patients With Huntington's Disease",
+      "status": "RECRUITING",
+      "phase": "PHASE1",
+      "sponsor": "Alnylam Pharmaceuticals",
+      "intervention": "ALN-HTT02; Placebo",
+      "enrollment": 66,
+      "url": "https://clinicaltrials.gov/study/NCT06585449",
+      "start_date": "2024-10-14"
+    },
+    {
+      "nct_id": "NCT06391619",
+      "title": "Huntington's Disease Young Adult Study 2.0",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "phase": "N/A",
+      "sponsor": "University College, London",
+      "intervention": "No intervention",
+      "enrollment": 154,
+      "url": "https://clinicaltrials.gov/study/NCT06391619",
+      "start_date": "2022-04-06"
+    },
+    {
+      "nct_id": "NCT07344519",
+      "title": "The Safety and Tolerability Study With ER2001 Intravenous Injection Repetitive Treatment in Adults With Early Manifest Huntington's Disease.",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "phase": "EARLY_PHASE1",
+      "sponsor": "ExoRNA Bioscience",
+      "intervention": "ER2001 injection",
+      "enrollment": 9,
+      "url": "https://clinicaltrials.gov/study/NCT07344519",
+      "start_date": "2024-06-25"
+    },
+    {
+      "nct_id": "NCT04400331",
+      "title": "Open-Label Rollover Study for Continuing Valbenazine Administration for the Treatment of Chorea Associated With Huntington Disease",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "phase": "PHASE3",
+      "sponsor": "Neurocrine Biosciences",
+      "intervention": "Valbenazine",
+      "enrollment": 154,
+      "url": "https://clinicaltrials.gov/study/NCT04400331",
+      "start_date": "2020-09-18"
+    },
+    {
+      "nct_id": "NCT06941662",
+      "title": "Huntington's Disease Biobank: Advancing Remote Monitoring and Deep Phenotyping",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "sponsor": "Stanford University",
+      "intervention": "computer vision, remote monitoring, blood, urine, wrist bands, mobile-app",
+      "enrollment": 200,
+      "url": "https://clinicaltrials.gov/study/NCT06941662",
+      "start_date": "2024-06-01"
+    },
+    {
+      "nct_id": "NCT06444217",
+      "title": "Gene Therapy Development and Validation for Huntington's Disease Fibro TG-HD",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "sponsor": "University Hospital, Angers",
+      "intervention": "skin biopsy",
+      "enrollment": 20,
+      "url": "https://clinicaltrials.gov/study/NCT06444217",
+      "start_date": "2024-09-23"
+    },
+    {
+      "nct_id": "NCT05509153",
+      "title": "A Randomised Controlled Trial, Of N-Acetyl Cysteine (NAC), for Premanifest Huntingtin Gene Expansion Carriers",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "sponsor": "Western Sydney Local Health District",
+      "intervention": "NAC; Placebo",
+      "enrollment": 160,
+      "url": "https://clinicaltrials.gov/study/NCT05509153",
+      "start_date": "2024-06-01"
+    },
+    {
+      "nct_id": "NCT06634628",
+      "title": "iMagemHTT-009- FIH Evaluation of Novel Mutant Huntingtin PET Radioligand [11C]CHDI-00491009",
+      "status": "RECRUITING",
+      "phase": "EARLY_PHASE1",
+      "sponsor": "CHDI Foundation, Inc.",
+      "intervention": "Radioligand [11C]CHDI-00491009",
+      "enrollment": 27,
+      "url": "https://clinicaltrials.gov/study/NCT06634628",
+      "start_date": "2026-02-24"
+    },
+    {
+      "nct_id": "NCT06448546",
+      "title": "Gut Microbiomes in HD",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "sponsor": "University of Central Florida",
+      "intervention": "",
+      "enrollment": 36,
+      "url": "https://clinicaltrials.gov/study/NCT06448546",
+      "start_date": "2025-06"
+    },
+    {
+      "nct_id": "NCT07010705",
+      "title": "Digital Measures for Clinical Trial Endpoints in Huntington's Disease",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "sponsor": "University of Rochester",
+      "intervention": "ActiGraph LEAP; Axivity AX6",
+      "enrollment": 100,
+      "url": "https://clinicaltrials.gov/study/NCT07010705",
+      "start_date": "2025-06-20"
+    },
+    {
+      "nct_id": "NCT06807892",
+      "title": "Comparison of Two Cognitive-Motor Rehabilitation Approaches Via Exergames: a Study of Cognitive, Motor and Behavioral Functions in Huntington's Disease Patients",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "sponsor": "University Hospital, Angers",
+      "intervention": "Synergistic management; Sequential management",
+      "enrollment": 40,
+      "url": "https://clinicaltrials.gov/study/NCT06807892",
+      "start_date": "2025-07-31"
+    },
+    {
+      "nct_id": "NCT05707663",
+      "title": "Longitudinal Assessment of Brain Structure and Function in Juvenile-onset Huntington's Disease",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "sponsor": "University of Iowa",
+      "intervention": "",
+      "enrollment": 40,
+      "url": "https://clinicaltrials.gov/study/NCT05707663",
+      "start_date": "2020-01-01"
+    },
+    {
+      "nct_id": "NCT06626308",
+      "title": "Early Biomarkers in Premanifest Huntington's Disease Gene Carriers: a Pilot Study",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "sponsor": "University Hospital, Grenoble",
+      "intervention": "brain functional MRI",
+      "enrollment": 20,
+      "url": "https://clinicaltrials.gov/study/NCT06626308",
+      "start_date": "2025-02-20"
+    },
+    {
+      "nct_id": "NCT06312189",
+      "title": "Long-term Study to Evaluate Safety and Tolerability of Valbenazine in Participants With Chorea Associated With Huntington Disease in Canada",
+      "status": "ENROLLING_BY_INVITATION",
+      "phase": "PHASE3",
+      "sponsor": "Neurocrine Biosciences",
+      "intervention": "Valbenazine",
+      "enrollment": 7,
+      "url": "https://clinicaltrials.gov/study/NCT06312189",
+      "start_date": "2024-04-24"
     }
   ],
   "hdbuzz": [
+    {
+      "title": "Your Wrist on Watch: Could a Smartwatch Reveal Huntington\u2019s Disease Symptoms?",
+      "link": "https://en.hdbuzz.net/your-wrist-on-watch-could-a-smartwatch-reveal-huntingtons-disease-symptoms/",
+      "pub_date": "Thu, 02 Apr 2026 12:00:00 +0000",
+      "description": "\u23f1\ufe0f 7 min read &#124; A wrist sensor tracked arm movements in people with HD for a week and could see who had HD and who didn\u2019t. This kind of technology could change how we measure drug effects in trials."
+    },
+    {
+      "title": "March 2026: This Month in Huntington\u2019s Disease Research",
+      "link": "https://en.hdbuzz.net/march-2026-this-month-in-huntingtons-disease-research/",
+      "pub_date": "Mon, 30 Mar 2026 09:52:47 +0000",
+      "description": "\u23f1\ufe0f 9 min read &#124; March brought us the annual CHDI therapeutics conference along with updates from 3 ongoing clinical trials. We also covered new research on somatic expansion and honored the community that built our science during Gratitude Day."
+    },
     {
       "title": "Two Heads Are Better Than One: Combined Physical and Music Therapy for Late-Stage Huntington\u2019s Disease",
       "link": "https://en.hdbuzz.net/two-heads-are-better-than-one-combined-physical-and-music-therapy-for-late-stage-huntingtons-disease/",
@@ -562,18 +574,6 @@
       "link": "https://en.hdbuzz.net/australia-opens-the-door-for-sky-0515-skyhawk-seeks-provisional-approval-for-its-oral-hd-drug/",
       "pub_date": "Tue, 03 Mar 2026 14:57:47 +0000",
       "description": "\u23f1\ufe0f 8 min read &#124; An oral Huntington's disease drug is eligible for accelerated approval in Australia. This isn't full approval yet, but it opens a faster path to potentially getting this once-daily pill to people with HD sooner."
-    },
-    {
-      "title": "The road ahead for uniQure: FDA says more data needed for AMT-130 gene therapy",
-      "link": "https://en.hdbuzz.net/the-road-ahead-for-uniqure-fda-says-more-data-needed-for-amt-130-gene-therapy/",
-      "pub_date": "Mon, 02 Mar 2026 21:54:11 +0000",
-      "description": "\u23f1\ufe0f 10 min read &#124; The FDA wants more data before approving AMT-130 for Huntington\u2019s disease in the U.S. On March 2026, uniQure shared in an update that current Phase 1/2 data weren\u2019t enough for the agency. A new randomized, sham-controlled trial may be required."
-    },
-    {
-      "title": "Vico\u2019s Trial Adjusts With Twice-Yearly Dosing, And The U.S. Is Next",
-      "link": "https://en.hdbuzz.net/vicos-trial-adjusts-with-twice-yearly-dosing-and-the-u-s-is-next/",
-      "pub_date": "Mon, 02 Mar 2026 10:00:00 +0000",
-      "description": "\u23f1\ufe0f 6 min read &#124; Vico Therapeutics' Huntington\u2019s disease drug VO659 is now being tested just twice a year, and the FDA has cleared the way for US trials to begin later this year."
     }
   ],
   "targets": [],
@@ -582,7 +582,7 @@
     "trials_count": 30,
     "hdbuzz_count": 10,
     "targets_count": 0,
-    "total_enrollment": 110780,
-    "recruiting_count": 21
+    "total_enrollment": 69104,
+    "recruiting_count": 23
   }
 }
