@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Experiment #3: Gemma 4 | HD Research Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="shared.css" rel="stylesheet"/>
+<style>.editorial-shadow { box-shadow: 0 20px 40px rgba(30, 41, 59, 0.04); }</style>
+</head>
+<body class="bg-[#fdf9e9] text-[#1c1c13] antialiased min-h-screen" style="font-size:18px;">
+
+<header class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
+  <div class="flex justify-between items-center max-w-5xl mx-auto px-6 h-16">
+    <a href="index.html" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2">
+      <span class="material-symbols-outlined text-amber-700">arrow_back</span> HD Research Hub
+    </a>
+    <div class="flex items-center gap-3">
+      <div id="google_translate_element"></div>
+      <a href="experiment-2.html" class="text-stone-500 text-sm hover:text-stone-800 hidden md:flex items-center gap-1">Experiment #2</a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 pb-20">
+
+  <section class="py-12 md:py-20">
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-stone-900 leading-[1.1] mb-4">Gemma 4 Finds What Llama 3.1 Missed</h1>
+    <p class="text-lg text-stone-500">Experiment #3 | April 2, 2026</p>
+  </section>
+
+  <!-- Experiment Card -->
+  <section class="mb-12">
+    <div class="bg-white rounded-xl editorial-shadow overflow-hidden">
+      <div class="bg-amber-50 px-6 py-3 border-b border-amber-100">
+        <h2 class="text-sm font-bold text-amber-800 uppercase tracking-widest">Experiment Card</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-stone-100">
+        <div class="bg-white p-5"><div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">ID</div><div class="text-stone-900 font-medium">EXP-003-GEMMA4</div></div>
+        <div class="bg-white p-5"><div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Date</div><div class="text-stone-900 font-medium">2026-04-02</div></div>
+        <div class="bg-white p-5"><div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Type</div><div class="text-stone-900 font-medium">Multi-Model Comparison (same papers as EXP-002)</div></div>
+        <div class="bg-white p-5"><div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Status</div><div class="text-stone-900 font-medium"><span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-1"></span> Complete</div></div>
+        <div class="bg-white p-5 md:col-span-2 border-t border-stone-100">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Infrastructure</div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+            <div><span class="text-stone-400">Model:</span> <span class="text-stone-900 font-medium">Gemma 4 (26B)</span></div>
+            <div><span class="text-stone-400">Context:</span> <span class="text-stone-900 font-medium">256K available</span></div>
+            <div><span class="text-stone-400">Hardware:</span> <span class="text-stone-900 font-medium">Mac M2 MBP (100% GPU)</span></div>
+            <div><span class="text-stone-400">Cost:</span> <span class="text-stone-900 font-medium">$0 (local)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Comparison -->
+  <section class="bg-[#f8f4e4] py-12 px-8 rounded-2xl mb-16 text-center">
+    <span class="inline-block px-4 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold tracking-widest uppercase mb-6">The Question</span>
+    <p class="text-xl md:text-2xl font-medium text-stone-800 leading-relaxed max-w-3xl mx-auto">Same 16 papers. Different model. Does Google's Gemma 4 (26B) find things that Llama 3.1 (8B) missed?</p>
+  </section>
+
+  <!-- Side by Side -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-8">Model Comparison</h2>
+    <div class="bg-white rounded-xl editorial-shadow overflow-x-auto">
+      <table class="w-full text-left text-sm">
+        <thead><tr class="bg-amber-50 border-b border-amber-100">
+          <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Metric</th>
+          <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Llama 3.1 8B (EXP-002)</th>
+          <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Gemma 4 26B (EXP-003)</th>
+        </tr></thead>
+        <tbody class="divide-y divide-stone-100">
+          <tr><td class="py-3 px-5 font-medium">Top hypothesis score</td><td class="py-3 px-5">90/100</td><td class="py-3 px-5 font-bold text-amber-700">95/100</td></tr>
+          <tr><td class="py-3 px-5 font-medium">Top insight</td><td class="py-3 px-5">cGAS inhibition (single target)</td><td class="py-3 px-5 font-bold text-amber-700">Copper → mitochondria → cGAS cascade (multi-target)</td></tr>
+          <tr><td class="py-3 px-5 font-medium">Depth of reasoning</td><td class="py-3 px-5">Individual mechanisms</td><td class="py-3 px-5 font-bold text-amber-700">Interconnected pathogenic networks</td></tr>
+          <tr><td class="py-3 px-5 font-medium">Cross-paper synthesis</td><td class="py-3 px-5">Found copper debate</td><td class="py-3 px-5 font-bold text-amber-700">"Papers build on each other" (more nuanced)</td></tr>
+          <tr><td class="py-3 px-5 font-medium">Research gaps</td><td class="py-3 px-5">Gut microbiota, CRISPR in humans</td><td class="py-3 px-5 font-bold text-amber-700">Same + translational models, long-term CRISPR safety</td></tr>
+          <tr><td class="py-3 px-5 font-medium">Papers analyzed</td><td class="py-3 px-5">16</td><td class="py-3 px-5">16 (same)</td></tr>
+          <tr><td class="py-3 px-5 font-medium">Characters read</td><td class="py-3 px-5">1,935,627</td><td class="py-3 px-5">1,935,627 (same)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Top Hypotheses -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-8">Gemma 4 Hypotheses</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl p-6 editorial-shadow">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-1">Multi-Target Cascade</h4>
+        <h3 class="text-xl font-bold mb-4">Copper → Mito → cGAS</h3>
+        <div class="flex justify-between text-sm font-semibold mb-1"><span class="text-stone-600">Confidence</span><span class="text-amber-700">95/100</span></div>
+        <div class="h-2 w-full bg-stone-100 rounded-full overflow-hidden mb-4"><div class="h-full bg-amber-500 rounded-full" style="width:95%"></div></div>
+        <p class="text-stone-600 text-sm">Copper dysregulation (cuproptosis) triggers mitochondrial failure, which releases mtDNA, activating cGAS-STING neuroinflammation. A self-perpetuating cycle across HD, AD, PD.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 editorial-shadow">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-1">Metabolic Restoration</h4>
+        <h3 class="text-xl font-bold mb-4">Insulin Sensitizers</h3>
+        <div class="flex justify-between text-sm font-semibold mb-1"><span class="text-stone-600">Confidence</span><span class="text-amber-700">92/100</span></div>
+        <div class="h-2 w-full bg-stone-100 rounded-full overflow-hidden mb-4"><div class="h-full bg-amber-500 rounded-full" style="width:92%"></div></div>
+        <p class="text-stone-600 text-sm">Restoring metabolic balance stabilizes mitochondria, preventing mtDNA release and dampening the inflammatory switch before irreversible structural atrophy begins.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 editorial-shadow">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-1">DNA Repair Fidelity</h4>
+        <h3 class="text-xl font-bold mb-4">LIG1 Enhancement</h3>
+        <div class="flex justify-between text-sm font-semibold mb-1"><span class="text-stone-600">Confidence</span><span class="text-amber-700">88/100</span></div>
+        <div class="h-2 w-full bg-stone-100 rounded-full overflow-hidden mb-4"><div class="h-full bg-amber-500 rounded-full" style="width:88%"></div></div>
+        <p class="text-stone-600 text-sm">Enhancing DNA repair enzyme fidelity (LIG1) reduces oxidative damage accumulation, protecting mitochondrial integrity and reducing DAMP-fueled neuroinflammation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Insight -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-8">The Key Insight</h2>
+    <div class="bg-white p-6 rounded-xl editorial-shadow border-l-4 border-amber-500">
+      <p class="text-stone-700 leading-relaxed">Gemma 4 didn't just find individual targets. It found the <strong>connections between them</strong>. Where Llama 3.1 saw "cGAS pathway" and "mitochondrial dysfunction" as separate findings, Gemma 4 traced the causal chain: copper dysregulation → mitochondrial failure → mtDNA release → cGAS-STING activation → chronic neuroinflammation → protein aggregation. One self-perpetuating cycle, not isolated mechanisms.</p>
+      <p class="text-stone-700 leading-relaxed mt-4">This is what a larger, more capable model adds: <strong>systems-level reasoning</strong> across multiple papers.</p>
+    </div>
+  </section>
+
+  <!-- Limitations -->
+  <section class="mb-16">
+    <div class="bg-amber-50 border-l-8 border-amber-500 p-8 rounded-xl">
+      <div class="flex items-center gap-3 mb-4"><span class="material-symbols-outlined text-amber-600 text-2xl" style="font-variation-settings:'FILL' 1;">warning</span><h2 class="text-xl font-extrabold text-amber-800">Limitations</h2></div>
+      <ul class="space-y-2 text-stone-700 text-sm">
+        <li>Single model, single run. Different prompt or temperature could produce different results.</li>
+        <li>Not reviewed by HD domain experts.</li>
+        <li>The "cascade" hypothesis is the model's synthesis, not an established scientific finding.</li>
+        <li>Only open-access papers analyzed.</li>
+        <li>This comparison shows a larger model reasons deeper, but does not validate the hypotheses themselves.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- What This Means -->
+  <section class="mb-16 border-t border-stone-200 pt-12">
+    <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-6">What This Means for HD Research Hub</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-white p-5 rounded-xl editorial-shadow">
+        <h3 class="font-bold text-stone-900 mb-2">Model size matters</h3>
+        <p class="text-stone-600 text-sm">26B produces systems-level insights that 8B misses. Worth the slower inference. Justifies applying for API credits (Gemini Pro, Claude) for even larger models.</p>
+      </div>
+      <div class="bg-white p-5 rounded-xl editorial-shadow">
+        <h3 class="font-bold text-stone-900 mb-2">Gemma 4 is our new default</h3>
+        <p class="text-stone-600 text-sm">Apache 2.0, 256K context, runs locally on Mac. Better quality than Llama 3.1 on our workload. No API costs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-stone-200 pt-8 text-center text-sm text-stone-500">
+    <p><a href="experiment-1.html" class="text-amber-700 font-medium">Exp #1 (abstracts)</a> · <a href="experiment-2.html" class="text-amber-700 font-medium">Exp #2 (full text)</a> · <a href="research.html" class="text-amber-700 font-medium">Research Tracker</a> · <a href="index.html" class="text-amber-700 font-medium">Dashboard</a></p>
+  </section>
+
+</main>
+
+<script src="shared.js"></script>
+<div class="text-center py-4 px-4"><p class="text-xs text-stone-400">This is a research and educational tool, not medical advice. For HD support, visit <a href="https://hdsa.org" class="text-stone-500 underline">hdsa.org</a>.</p></div>
+</body></html>
