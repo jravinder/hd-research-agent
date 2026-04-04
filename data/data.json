@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-04T05:33:04.779572",
+  "last_updated": "2026-04-04T08:34:34.895590",
   "papers": [
     {
       "pmid": "40650880",
@@ -83,13 +83,22 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/40537002/"
     },
     {
-      "pmid": "41933174",
-      "title": "Target product profiles for treatments to delay or prevent symptomatic Alzheimer's disease.",
-      "abstract": "Despite advances in understanding the mechanisms, risk factors and treatment strategies for Alzheimer's disease (AD), no approved therapies exist to prevent or delay onset in at-risk individuals or those with elevated biomarkers who do not yet show symptoms. Multiple candidate interventions are now being evaluated in clinical trials in these settings, raising key questions around which populations are most appropriate and what criteria should guide regulatory and clinical decision-making. Data a",
-      "journal": "Nature medicine",
+      "pmid": "41925063",
+      "title": "Combination Disease-Modifying Therapy for Neurodegenerative Diseases Using Repurposed Drugs.",
+      "abstract": "We review the positive effects of several existing drugs from different classes, such as chemical chaperones, glucagon-like peptide-1 receptor agonists (GLP-1 RAs), iron chelators, and cluster-Abelson tyrosine kinase inhibitors (c-Abl TKIs), in preclinical disease models and in available published human data following use of these drugs in individuals with common neurodegenerative diseases (NDs), including Parkinson's disease (PD), Alzheimer's disease (AD), amyotrophic lateral sclerosis (ALS), a",
+      "journal": "Annals of neurology",
       "pub_date": "2026 Apr",
-      "authors": "Cummings JL, Agadjanyan MG, Barry M",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41933174/"
+      "authors": "Shtilbans A, Lang AE",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41925063/"
+    },
+    {
+      "pmid": "41933422",
+      "title": "Sex-related differences in Huntington's disease: a scoping review.",
+      "abstract": "Huntington's disease (HD) is an autosomal-dominant neurodegenerative disorder and emerging evidence indicates sex-specific differences in disease manifestation and progression. To summarize current evidence on sex-related differences in HD across genetic, clinical, biomarker, and treatment domains and identify gaps in knowledge. A literature search was performed in PubMed and Google Scholar (up to 31.01.2026). Eligible studies examined sex- or gender-related differences in individuals with genet",
+      "journal": "Biology of sex differences",
+      "pub_date": "2026 Apr",
+      "authors": "Hemicker G, Schwarzov\u00e1 K, Cerejo C",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41933422/"
     },
     {
       "pmid": "40091796",
@@ -101,13 +110,13 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/40091796/"
     },
     {
-      "pmid": "41925785",
-      "title": "Psychosis in Huntington disease: a short update.",
-      "abstract": "",
-      "journal": "Journal of neural transmission (Vienna, Austria : 1996)",
+      "pmid": "41933174",
+      "title": "Target product profiles for treatments to delay or prevent symptomatic Alzheimer's disease.",
+      "abstract": "Despite advances in understanding the mechanisms, risk factors and treatment strategies for Alzheimer's disease (AD), no approved therapies exist to prevent or delay onset in at-risk individuals or those with elevated biomarkers who do not yet show symptoms. Multiple candidate interventions are now being evaluated in clinical trials in these settings, raising key questions around which populations are most appropriate and what criteria should guide regulatory and clinical decision-making. Data a",
+      "journal": "Nature medicine",
       "pub_date": "2026 Apr",
-      "authors": "Jellinger KA",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41925785/"
+      "authors": "Cummings JL, Agadjanyan MG, Barry M",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41933174/"
     },
     {
       "pmid": "41913587",
@@ -119,6 +128,15 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41913587/"
     },
     {
+      "pmid": "41925785",
+      "title": "Psychosis in Huntington disease: a short update.",
+      "abstract": "",
+      "journal": "Journal of neural transmission (Vienna, Austria : 1996)",
+      "pub_date": "2026 Apr",
+      "authors": "Jellinger KA",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41925785/"
+    },
+    {
       "pmid": "41906693",
       "title": "Inhibition of the NLRP3 Inflammasome With MCC950 Improves Gut Health in Huntington's Disease Mice.",
       "abstract": "Huntington's disease (HD) is an autosomal dominant neurodegenerative disorder featuring abnormal cognition, psychiatric symptoms, movement, and gastrointestinal function. It is caused by a tandem-repeat gene mutation encoding an expanded polyglutamine tract in the huntingtin protein. Our group was the first to demonstrate gut microbial disruption in both clinical HD cohorts and validated preclinical models, supporting a role for microbiota-gut-brain axis dysfunction in HD. The NLRP3 inflammasome",
@@ -128,15 +146,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41906693/"
     },
     {
-      "pmid": "41877246",
-      "title": "Axonopathy: mechanisms and potential therapeutic targets for neurodegenerative diseases.",
-      "abstract": "Axons are unique structural and functional features of nerve cells, which play a critical role in regulating neuronal homeostasis. Dysfunction and degeneration of axons (axonopathy) has been established as an early and prominent contributing mechanism to the pathogenesis of neurodegenerative diseases including Alzheimer's disease, Parkinson's disease, Huntington's disease, and\u00a0amyotrophic lateral sclerosis. In this review, we briefly summarize the structure and function of axons, and highlight r",
-      "journal": "Translational neurodegeneration",
-      "pub_date": "2026 Mar",
-      "authors": "Shen R, Sung K, Ding J",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41877246/"
-    },
-    {
       "pmid": "41552385",
       "title": "An acyclic nucleic acid-modified siRNA targeting CAG expansions for polyglutamine disease treatment.",
       "abstract": "Polyglutamine (polyQ) diseases are inherited neurological disorders caused by an expansion of the cytosine-adenine-guanine (CAG) repeat in the causative genes. These include Huntington's disease, spinal and bulbar muscular atrophy (SBMA), and spinocerebellar ataxias (SCAs). Clinical trials have been conducted using nucleic acid therapeutics to silence the causative gene for these diseases, but none have been approved for use. Furthermore, while oligonucleotides targeting the CAG repeats are an a",
@@ -144,6 +153,15 @@
       "pub_date": "2026 Mar",
       "authors": "Maeda K, Hirunagi T, Sahashi K",
       "url": "https://pubmed.ncbi.nlm.nih.gov/41552385/"
+    },
+    {
+      "pmid": "41877246",
+      "title": "Axonopathy: mechanisms and potential therapeutic targets for neurodegenerative diseases.",
+      "abstract": "Axons are unique structural and functional features of nerve cells, which play a critical role in regulating neuronal homeostasis. Dysfunction and degeneration of axons (axonopathy) has been established as an early and prominent contributing mechanism to the pathogenesis of neurodegenerative diseases including Alzheimer's disease, Parkinson's disease, Huntington's disease, and\u00a0amyotrophic lateral sclerosis. In this review, we briefly summarize the structure and function of axons, and highlight r",
+      "journal": "Translational neurodegeneration",
+      "pub_date": "2026 Mar",
+      "authors": "Shen R, Sung K, Ding J",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41877246/"
     },
     {
       "pmid": "41268922",
@@ -162,24 +180,6 @@
       "pub_date": "2026 Mar",
       "authors": "Moraes MC, Buhari MO, Vieira LB",
       "url": "https://pubmed.ncbi.nlm.nih.gov/41837536/"
-    },
-    {
-      "pmid": "41933422",
-      "title": "Sex-related differences in Huntington's disease: a scoping review.",
-      "abstract": "Huntington's disease (HD) is an autosomal-dominant neurodegenerative disorder and emerging evidence indicates sex-specific differences in disease manifestation and progression. To summarize current evidence on sex-related differences in HD across genetic, clinical, biomarker, and treatment domains and identify gaps in knowledge. A literature search was performed in PubMed and Google Scholar (up to 31.01.2026). Eligible studies examined sex- or gender-related differences in individuals with genet",
-      "journal": "Biology of sex differences",
-      "pub_date": "2026 Apr",
-      "authors": "Hemicker G, Schwarzov\u00e1 K, Cerejo C",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41933422/"
-    },
-    {
-      "pmid": "41770933",
-      "title": "Huntington's disease LIG1 modifier variant increases ligase fidelity and suppresses somatic CAG repeat expansion.",
-      "abstract": "Huntington's disease (HD) is a fatal neurodegenerative disorder caused by inheriting an expanded CAG repeat tract in the huntingtin gene (",
-      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
-      "pub_date": "2026 Mar",
-      "authors": "Lee E, Kim W, Beier DH",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41770933/"
     }
   ],
   "trials": [
