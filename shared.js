@@ -30,3 +30,16 @@ function googleTranslateElementInit() {
   s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
   document.head.appendChild(s);
 })();
+
+/* Universal footer — injected on every page */
+(function() {
+  // Only add if no footer already exists
+  if (document.querySelector('[data-universal-footer]')) return;
+
+  var footer = document.createElement('div');
+  footer.setAttribute('data-universal-footer', 'true');
+  footer.style.textAlign = 'center';
+  footer.style.padding = '16px';
+  footer.innerHTML = '<p style="font-size:12px;color:#a8a29e;">This is a research and educational tool, not medical advice. For HD support, visit <a href="https://hdsa.org" style="color:#78716c;text-decoration:underline;">hdsa.org</a>.</p>';
+  document.body.appendChild(footer);
+})();
