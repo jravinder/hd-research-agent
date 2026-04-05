@@ -1,15 +1,6 @@
 {
-  "last_updated": "2026-04-04T08:34:34.895590",
+  "last_updated": "2026-04-05T01:16:42.956865",
   "papers": [
-    {
-      "pmid": "40650880",
-      "title": "Brain atrophy patterns in anti-IgLON5 disease.",
-      "abstract": "Anti-IgLON5 disease is an autoimmune encephalitis that presents with a heterogenous clinical phenotype, including sleep disorders, movement abnormalities and bulbar involvement. It is characterized by autoantibodies against IgLON5, 85% association with HLA-DQB1*05:\u223c and a brainstem-dominant tauopathy. Cellular and murine models report pathogenic effects of the autoantibodies, and neurodegenerative factors suggest progressive atrophy as a common sequela. However, evidence from in vivo patient dat",
-      "journal": "Brain : a journal of neurology",
-      "pub_date": "2026 Mar",
-      "authors": "Yogeshwar SM, Bartels F, Gr\u00fcter T",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/40650880/"
-    },
     {
       "pmid": "40145977",
       "title": "Potential targets of microglia in the treatment of neurodegenerative diseases: Mechanism and therapeutic implications.",
@@ -38,15 +29,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/40874597/"
     },
     {
-      "pmid": "41880816",
-      "title": "Emerging role of cell membrane-coated nanoparticles in targeted therapy for brain disorders.",
-      "abstract": "Brain disorders, including neurodegenerative diseases such as Alzheimer's disease, Parkinson's disease, and Huntington's disease, as well as conditions like multiple sclerosis and ischemic stroke, represent a significant global health burden. These disorders are often marked by progressive neuronal degeneration, cognitive impairment, and motor dysfunction. Effective therapeutic intervention remains a challenge due to the protective but restrictive nature of blood-CNS barriers, particularly the b",
-      "journal": "Biomaterials advances",
-      "pub_date": "2026 Jul",
-      "authors": "Kumari V, Shahrukh M, Jabin K",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41880816/"
-    },
-    {
       "pmid": "40536996",
       "title": "Neuroglobin: A promising candidate to treat neurological diseases.",
       "abstract": "Neurodevelopmental and neurodegenerative illnesses constitute a global health issue and a foremost economic burden since they are a large cause of incapacity and death worldwide. Altogether, the burden of neurological disorders has increased considerably over the past 30 years because of population aging. Overall, neurological diseases significantly impair cognitive and motor functions and their incidence will increase as societies age and the world's population continues to grow. Autism spectru",
@@ -63,6 +45,24 @@
       "pub_date": "2026 Apr",
       "authors": "Zhou M, Zheng M, Liang S",
       "url": "https://pubmed.ncbi.nlm.nih.gov/40313114/"
+    },
+    {
+      "pmid": "41880816",
+      "title": "Emerging role of cell membrane-coated nanoparticles in targeted therapy for brain disorders.",
+      "abstract": "Brain disorders, including neurodegenerative diseases such as Alzheimer's disease, Parkinson's disease, and Huntington's disease, as well as conditions like multiple sclerosis and ischemic stroke, represent a significant global health burden. These disorders are often marked by progressive neuronal degeneration, cognitive impairment, and motor dysfunction. Effective therapeutic intervention remains a challenge due to the protective but restrictive nature of blood-CNS barriers, particularly the b",
+      "journal": "Biomaterials advances",
+      "pub_date": "2026 Jul",
+      "authors": "Kumari V, Shahrukh M, Jabin K",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41880816/"
+    },
+    {
+      "pmid": "41925063",
+      "title": "Combination Disease-Modifying Therapy for Neurodegenerative Diseases Using Repurposed Drugs.",
+      "abstract": "We review the positive effects of several existing drugs from different classes, such as chemical chaperones, glucagon-like peptide-1 receptor agonists (GLP-1 RAs), iron chelators, and cluster-Abelson tyrosine kinase inhibitors (c-Abl TKIs), in preclinical disease models and in available published human data following use of these drugs in individuals with common neurodegenerative diseases (NDs), including Parkinson's disease (PD), Alzheimer's disease (AD), amyotrophic lateral sclerosis (ALS), a",
+      "journal": "Annals of neurology",
+      "pub_date": "2026 Apr",
+      "authors": "Shtilbans A, Lang AE",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41925063/"
     },
     {
       "pmid": "41540979",
@@ -83,33 +83,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/40537002/"
     },
     {
-      "pmid": "41925063",
-      "title": "Combination Disease-Modifying Therapy for Neurodegenerative Diseases Using Repurposed Drugs.",
-      "abstract": "We review the positive effects of several existing drugs from different classes, such as chemical chaperones, glucagon-like peptide-1 receptor agonists (GLP-1 RAs), iron chelators, and cluster-Abelson tyrosine kinase inhibitors (c-Abl TKIs), in preclinical disease models and in available published human data following use of these drugs in individuals with common neurodegenerative diseases (NDs), including Parkinson's disease (PD), Alzheimer's disease (AD), amyotrophic lateral sclerosis (ALS), a",
-      "journal": "Annals of neurology",
-      "pub_date": "2026 Apr",
-      "authors": "Shtilbans A, Lang AE",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41925063/"
-    },
-    {
-      "pmid": "41933422",
-      "title": "Sex-related differences in Huntington's disease: a scoping review.",
-      "abstract": "Huntington's disease (HD) is an autosomal-dominant neurodegenerative disorder and emerging evidence indicates sex-specific differences in disease manifestation and progression. To summarize current evidence on sex-related differences in HD across genetic, clinical, biomarker, and treatment domains and identify gaps in knowledge. A literature search was performed in PubMed and Google Scholar (up to 31.01.2026). Eligible studies examined sex- or gender-related differences in individuals with genet",
-      "journal": "Biology of sex differences",
-      "pub_date": "2026 Apr",
-      "authors": "Hemicker G, Schwarzov\u00e1 K, Cerejo C",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41933422/"
-    },
-    {
-      "pmid": "40091796",
-      "title": "Structural-functional analyses of the huntingtin/HAP40 complex in ",
-      "abstract": "Huntington's disease (HD) is a neurodegenerative disorder caused by an abnormal CAG expansion in the Huntingtin (HTT) gene. Given its simple genetic cause but complex pathogenic mechanisms, interest in targeting HTT for HD treatment is growing, necessitating a clear understanding of HTT regulation. HTT protein primarily exists in a core complex with HAP40, forming a highly ordered structure with two large globular domains connected by a bridge. We previously demonstrated that HAP40 is conserved ",
-      "journal": "Journal of biomolecular structure & dynamics",
-      "pub_date": "2026 Apr",
-      "authors": "Farmer SM, Solbach A, Xu S",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/40091796/"
-    },
-    {
       "pmid": "41933174",
       "title": "Target product profiles for treatments to delay or prevent symptomatic Alzheimer's disease.",
       "abstract": "Despite advances in understanding the mechanisms, risk factors and treatment strategies for Alzheimer's disease (AD), no approved therapies exist to prevent or delay onset in at-risk individuals or those with elevated biomarkers who do not yet show symptoms. Multiple candidate interventions are now being evaluated in clinical trials in these settings, raising key questions around which populations are most appropriate and what criteria should guide regulatory and clinical decision-making. Data a",
@@ -117,15 +90,6 @@
       "pub_date": "2026 Apr",
       "authors": "Cummings JL, Agadjanyan MG, Barry M",
       "url": "https://pubmed.ncbi.nlm.nih.gov/41933174/"
-    },
-    {
-      "pmid": "41913587",
-      "title": "Associations Between Lifetime Stressor Exposure and Externalizing Problems in Youth at Risk for Huntington Disease.",
-      "abstract": "Children face significant stressors while growing up in families impacted by Huntington disease (HD). However, the sources of these stressors and how they are related to psychological difficulties have not been well-characterized in this population. In this study, we examined the lifetime stressors experienced by youth at risk for HD using a comprehensive measure of lifetime stressor exposure and investigated how these stressors relate to psychological difficulties. Participants included 94 adol",
-      "journal": "Brain and behavior",
-      "pub_date": "2026 Apr",
-      "authors": "McDonell KE, Shiino S, Key EM",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41913587/"
     },
     {
       "pmid": "41925785",
@@ -137,22 +101,22 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41925785/"
     },
     {
-      "pmid": "41906693",
-      "title": "Inhibition of the NLRP3 Inflammasome With MCC950 Improves Gut Health in Huntington's Disease Mice.",
-      "abstract": "Huntington's disease (HD) is an autosomal dominant neurodegenerative disorder featuring abnormal cognition, psychiatric symptoms, movement, and gastrointestinal function. It is caused by a tandem-repeat gene mutation encoding an expanded polyglutamine tract in the huntingtin protein. Our group was the first to demonstrate gut microbial disruption in both clinical HD cohorts and validated preclinical models, supporting a role for microbiota-gut-brain axis dysfunction in HD. The NLRP3 inflammasome",
-      "journal": "Journal of neurochemistry",
+      "pmid": "41913587",
+      "title": "Associations Between Lifetime Stressor Exposure and Externalizing Problems in Youth at Risk for Huntington Disease.",
+      "abstract": "Children face significant stressors while growing up in families impacted by Huntington disease (HD). However, the sources of these stressors and how they are related to psychological difficulties have not been well-characterized in this population. In this study, we examined the lifetime stressors experienced by youth at risk for HD using a comprehensive measure of lifetime stressor exposure and investigated how these stressors relate to psychological difficulties. Participants included 94 adol",
+      "journal": "Brain and behavior",
       "pub_date": "2026 Apr",
-      "authors": "Sarkar SK, Ekwudo MN, Lu D",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41906693/"
+      "authors": "McDonell KE, Shiino S, Key EM",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41913587/"
     },
     {
-      "pmid": "41552385",
-      "title": "An acyclic nucleic acid-modified siRNA targeting CAG expansions for polyglutamine disease treatment.",
-      "abstract": "Polyglutamine (polyQ) diseases are inherited neurological disorders caused by an expansion of the cytosine-adenine-guanine (CAG) repeat in the causative genes. These include Huntington's disease, spinal and bulbar muscular atrophy (SBMA), and spinocerebellar ataxias (SCAs). Clinical trials have been conducted using nucleic acid therapeutics to silence the causative gene for these diseases, but none have been approved for use. Furthermore, while oligonucleotides targeting the CAG repeats are an a",
-      "journal": "Molecular therapy. Nucleic acids",
-      "pub_date": "2026 Mar",
-      "authors": "Maeda K, Hirunagi T, Sahashi K",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41552385/"
+      "pmid": "40091796",
+      "title": "Structural-functional analyses of the huntingtin/HAP40 complex in ",
+      "abstract": "Huntington's disease (HD) is a neurodegenerative disorder caused by an abnormal CAG expansion in the Huntingtin (HTT) gene. Given its simple genetic cause but complex pathogenic mechanisms, interest in targeting HTT for HD treatment is growing, necessitating a clear understanding of HTT regulation. HTT protein primarily exists in a core complex with HAP40, forming a highly ordered structure with two large globular domains connected by a bridge. We previously demonstrated that HAP40 is conserved ",
+      "journal": "Journal of biomolecular structure & dynamics",
+      "pub_date": "2026 Apr",
+      "authors": "Farmer SM, Solbach A, Xu S",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40091796/"
     },
     {
       "pmid": "41877246",
@@ -164,13 +128,22 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41877246/"
     },
     {
-      "pmid": "41268922",
-      "title": "Performance of an Artificial Intelligence-Powered Smartphone Application in Identifying Gluten-free Foods for Individuals With Celiac Disease.",
-      "abstract": "Gluten-free diet (GFD) adherence is critical for individuals with celiac disease but is often hindered by food labeling inconsistencies and limited dietary support. We evaluated an AI-powered smartphone application's performance in classifying the GFD compatibility of packaged foods. Compatibility was assessed by gastroenterology-focused registered dietitians. Of 100 products (1,884 ingredients), dietitians classified 64 as GFD-compatible, of which only 37.5% (24/64) displayed a gluten-free labe",
-      "journal": "The American journal of gastroenterology",
+      "pmid": "41552385",
+      "title": "An acyclic nucleic acid-modified siRNA targeting CAG expansions for polyglutamine disease treatment.",
+      "abstract": "Polyglutamine (polyQ) diseases are inherited neurological disorders caused by an expansion of the cytosine-adenine-guanine (CAG) repeat in the causative genes. These include Huntington's disease, spinal and bulbar muscular atrophy (SBMA), and spinocerebellar ataxias (SCAs). Clinical trials have been conducted using nucleic acid therapeutics to silence the causative gene for these diseases, but none have been approved for use. Furthermore, while oligonucleotides targeting the CAG repeats are an a",
+      "journal": "Molecular therapy. Nucleic acids",
+      "pub_date": "2026 Mar",
+      "authors": "Maeda K, Hirunagi T, Sahashi K",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41552385/"
+    },
+    {
+      "pmid": "41906693",
+      "title": "Inhibition of the NLRP3 Inflammasome With MCC950 Improves Gut Health in Huntington's Disease Mice.",
+      "abstract": "Huntington's disease (HD) is an autosomal dominant neurodegenerative disorder featuring abnormal cognition, psychiatric symptoms, movement, and gastrointestinal function. It is caused by a tandem-repeat gene mutation encoding an expanded polyglutamine tract in the huntingtin protein. Our group was the first to demonstrate gut microbial disruption in both clinical HD cohorts and validated preclinical models, supporting a role for microbiota-gut-brain axis dysfunction in HD. The NLRP3 inflammasome",
+      "journal": "Journal of neurochemistry",
       "pub_date": "2026 Apr",
-      "authors": "Samaan JS, Srinivasan N, Feldman E",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41268922/"
+      "authors": "Sarkar SK, Ekwudo MN, Lu D",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41906693/"
     },
     {
       "pmid": "41837536",
@@ -180,6 +153,33 @@
       "pub_date": "2026 Mar",
       "authors": "Moraes MC, Buhari MO, Vieira LB",
       "url": "https://pubmed.ncbi.nlm.nih.gov/41837536/"
+    },
+    {
+      "pmid": "41933422",
+      "title": "Sex-related differences in Huntington's disease: a scoping review.",
+      "abstract": "Huntington's disease (HD) is an autosomal-dominant neurodegenerative disorder and emerging evidence indicates sex-specific differences in disease manifestation and progression. To summarize current evidence on sex-related differences in HD across genetic, clinical, biomarker, and treatment domains and identify gaps in knowledge. A literature search was performed in PubMed and Google Scholar (up to 31.01.2026). Eligible studies examined sex- or gender-related differences in individuals with genet",
+      "journal": "Biology of sex differences",
+      "pub_date": "2026 Apr",
+      "authors": "Hemicker G, Schwarzov\u00e1 K, Cerejo C",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41933422/"
+    },
+    {
+      "pmid": "41770933",
+      "title": "Huntington's disease LIG1 modifier variant increases ligase fidelity and suppresses somatic CAG repeat expansion.",
+      "abstract": "Huntington's disease (HD) is a fatal neurodegenerative disorder caused by inheriting an expanded CAG repeat tract in the huntingtin gene (",
+      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+      "pub_date": "2026 Mar",
+      "authors": "Lee E, Kim W, Beier DH",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41770933/"
+    },
+    {
+      "pmid": "41849580",
+      "title": "Selective targeting of mutant ",
+      "abstract": "Huntington's disease (HD) arises from the toxic gain of function caused by a CAG expansion in the coding region of the ",
+      "journal": "Science translational medicine",
+      "pub_date": "2026 Mar",
+      "authors": "Bragg RM, Landles C, Smith EJ",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41849580/"
     }
   ],
   "trials": [
