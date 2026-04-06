@@ -1,6 +1,15 @@
 {
-  "last_updated": "2026-04-05T01:16:42.956865",
+  "last_updated": "2026-04-06T09:02:48.134795",
   "papers": [
+    {
+      "pmid": "41651710",
+      "title": "Safety and efficacy of VMAT2 inhibitors in Huntington Disease: A systematic review.",
+      "abstract": "Chorea affects quality of life and functional independence in most adults with Huntington disease (HD). Vesicular monoamine transporter 2 (VMAT2) inhibitors, tetrabenazine, deutetrabenazine, and valbenazine, are pharmacological agents used to manage HD-related chorea. This systematic review evaluates the safety and efficacy of these agents in individuals with HD. This review was conducted in accordance with PRISMA guidelines and registered with PROSPERO, CRD42024581306. A comprehensive literatur",
+      "journal": "Parkinsonism & related disorders",
+      "pub_date": "2026 Apr",
+      "authors": "Baghaei A, Dehnavi AZ, Hashempour Z",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41651710/"
+    },
     {
       "pmid": "40145977",
       "title": "Potential targets of microglia in the treatment of neurodegenerative diseases: Mechanism and therapeutic implications.",
@@ -47,31 +56,22 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/40313114/"
     },
     {
-      "pmid": "41880816",
-      "title": "Emerging role of cell membrane-coated nanoparticles in targeted therapy for brain disorders.",
-      "abstract": "Brain disorders, including neurodegenerative diseases such as Alzheimer's disease, Parkinson's disease, and Huntington's disease, as well as conditions like multiple sclerosis and ischemic stroke, represent a significant global health burden. These disorders are often marked by progressive neuronal degeneration, cognitive impairment, and motor dysfunction. Effective therapeutic intervention remains a challenge due to the protective but restrictive nature of blood-CNS barriers, particularly the b",
-      "journal": "Biomaterials advances",
-      "pub_date": "2026 Jul",
-      "authors": "Kumari V, Shahrukh M, Jabin K",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41880816/"
+      "pmid": "41770933",
+      "title": "Huntington's disease LIG1 modifier variant increases ligase fidelity and suppresses somatic CAG repeat expansion.",
+      "abstract": "Huntington's disease (HD) is a fatal neurodegenerative disorder caused by inheriting an expanded CAG repeat tract in the huntingtin gene (",
+      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+      "pub_date": "2026 Mar",
+      "authors": "Lee E, Kim W, Beier DH",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41770933/"
     },
     {
-      "pmid": "41925063",
-      "title": "Combination Disease-Modifying Therapy for Neurodegenerative Diseases Using Repurposed Drugs.",
-      "abstract": "We review the positive effects of several existing drugs from different classes, such as chemical chaperones, glucagon-like peptide-1 receptor agonists (GLP-1 RAs), iron chelators, and cluster-Abelson tyrosine kinase inhibitors (c-Abl TKIs), in preclinical disease models and in available published human data following use of these drugs in individuals with common neurodegenerative diseases (NDs), including Parkinson's disease (PD), Alzheimer's disease (AD), amyotrophic lateral sclerosis (ALS), a",
-      "journal": "Annals of neurology",
+      "pmid": "41937092",
+      "title": "The role of cannabinoid ligands in neurodegenerative diseases: emerging anti-inflammatory, immunomodulation and disease-modifying perspectives.",
+      "abstract": "Neurodegenerative diseases (NDs) constitute a growing global health burden driven by population aging and remain without disease-modifying therapies. Although chronic neuroinflammation and aberrant protein aggregation are widely recognized as shared pathological hallmarks of major NDs - including Alzheimer's, Parkinson's, Huntington's diseases and multiple sclerosis - the causal relationships linking immunoinflammatory signaling to neurodegenerative progression remain contentious. Therapeutic st",
+      "journal": "Pharmacological research",
       "pub_date": "2026 Apr",
-      "authors": "Shtilbans A, Lang AE",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41925063/"
-    },
-    {
-      "pmid": "41540979",
-      "title": "Efficacy and Safety of VMAT2 Inhibitors in the Treatment of Huntington Disease: A Meta-Analysis of Randomized Clinical Trials.",
-      "abstract": "Vesicular monoamine transporter 2 inhibitors (VMAT2is) have demonstrated effectiveness in attenuating motor symptoms of Huntington disease (HD). However, evidence regarding their long-term safety and overall efficacy in this population remains limited. The aim of this study was to investigate the efficacy and safety of VMAT2is in the treatment of HD. We performed a meta-analysis of placebo-controlled, randomized controlled trials (RCTs) of VMAT2is in patients with HD. PubMed, Embase, and Cochran",
-      "journal": "Neurology. Clinical practice",
-      "pub_date": "2026 Apr",
-      "authors": "Leite EM, Lages AL, Moura JFB",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41540979/"
+      "authors": "Baldasso GM, Paes RS, Moreira AG",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41937092/"
     },
     {
       "pmid": "40537002",
@@ -83,33 +83,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/40537002/"
     },
     {
-      "pmid": "41933174",
-      "title": "Target product profiles for treatments to delay or prevent symptomatic Alzheimer's disease.",
-      "abstract": "Despite advances in understanding the mechanisms, risk factors and treatment strategies for Alzheimer's disease (AD), no approved therapies exist to prevent or delay onset in at-risk individuals or those with elevated biomarkers who do not yet show symptoms. Multiple candidate interventions are now being evaluated in clinical trials in these settings, raising key questions around which populations are most appropriate and what criteria should guide regulatory and clinical decision-making. Data a",
-      "journal": "Nature medicine",
-      "pub_date": "2026 Apr",
-      "authors": "Cummings JL, Agadjanyan MG, Barry M",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41933174/"
-    },
-    {
-      "pmid": "41925785",
-      "title": "Psychosis in Huntington disease: a short update.",
-      "abstract": "",
-      "journal": "Journal of neural transmission (Vienna, Austria : 1996)",
-      "pub_date": "2026 Apr",
-      "authors": "Jellinger KA",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41925785/"
-    },
-    {
-      "pmid": "41913587",
-      "title": "Associations Between Lifetime Stressor Exposure and Externalizing Problems in Youth at Risk for Huntington Disease.",
-      "abstract": "Children face significant stressors while growing up in families impacted by Huntington disease (HD). However, the sources of these stressors and how they are related to psychological difficulties have not been well-characterized in this population. In this study, we examined the lifetime stressors experienced by youth at risk for HD using a comprehensive measure of lifetime stressor exposure and investigated how these stressors relate to psychological difficulties. Participants included 94 adol",
-      "journal": "Brain and behavior",
-      "pub_date": "2026 Apr",
-      "authors": "McDonell KE, Shiino S, Key EM",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41913587/"
-    },
-    {
       "pmid": "40091796",
       "title": "Structural-functional analyses of the huntingtin/HAP40 complex in ",
       "abstract": "Huntington's disease (HD) is a neurodegenerative disorder caused by an abnormal CAG expansion in the Huntingtin (HTT) gene. Given its simple genetic cause but complex pathogenic mechanisms, interest in targeting HTT for HD treatment is growing, necessitating a clear understanding of HTT regulation. HTT protein primarily exists in a core complex with HAP40, forming a highly ordered structure with two large globular domains connected by a bridge. We previously demonstrated that HAP40 is conserved ",
@@ -117,15 +90,6 @@
       "pub_date": "2026 Apr",
       "authors": "Farmer SM, Solbach A, Xu S",
       "url": "https://pubmed.ncbi.nlm.nih.gov/40091796/"
-    },
-    {
-      "pmid": "41877246",
-      "title": "Axonopathy: mechanisms and potential therapeutic targets for neurodegenerative diseases.",
-      "abstract": "Axons are unique structural and functional features of nerve cells, which play a critical role in regulating neuronal homeostasis. Dysfunction and degeneration of axons (axonopathy) has been established as an early and prominent contributing mechanism to the pathogenesis of neurodegenerative diseases including Alzheimer's disease, Parkinson's disease, Huntington's disease, and\u00a0amyotrophic lateral sclerosis. In this review, we briefly summarize the structure and function of axons, and highlight r",
-      "journal": "Translational neurodegeneration",
-      "pub_date": "2026 Mar",
-      "authors": "Shen R, Sung K, Ding J",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41877246/"
     },
     {
       "pmid": "41552385",
@@ -137,13 +101,13 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41552385/"
     },
     {
-      "pmid": "41906693",
-      "title": "Inhibition of the NLRP3 Inflammasome With MCC950 Improves Gut Health in Huntington's Disease Mice.",
-      "abstract": "Huntington's disease (HD) is an autosomal dominant neurodegenerative disorder featuring abnormal cognition, psychiatric symptoms, movement, and gastrointestinal function. It is caused by a tandem-repeat gene mutation encoding an expanded polyglutamine tract in the huntingtin protein. Our group was the first to demonstrate gut microbial disruption in both clinical HD cohorts and validated preclinical models, supporting a role for microbiota-gut-brain axis dysfunction in HD. The NLRP3 inflammasome",
-      "journal": "Journal of neurochemistry",
-      "pub_date": "2026 Apr",
-      "authors": "Sarkar SK, Ekwudo MN, Lu D",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41906693/"
+      "pmid": "41877246",
+      "title": "Axonopathy: mechanisms and potential therapeutic targets for neurodegenerative diseases.",
+      "abstract": "Axons are unique structural and functional features of nerve cells, which play a critical role in regulating neuronal homeostasis. Dysfunction and degeneration of axons (axonopathy) has been established as an early and prominent contributing mechanism to the pathogenesis of neurodegenerative diseases including Alzheimer's disease, Parkinson's disease, Huntington's disease, and\u00a0amyotrophic lateral sclerosis. In this review, we briefly summarize the structure and function of axons, and highlight r",
+      "journal": "Translational neurodegeneration",
+      "pub_date": "2026 Mar",
+      "authors": "Shen R, Sung K, Ding J",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41877246/"
     },
     {
       "pmid": "41837536",
@@ -155,6 +119,33 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41837536/"
     },
     {
+      "pmid": "41564629",
+      "title": "Shape matters: Predicting Huntington's disease using progression modelling.",
+      "abstract": "Despite evidence of group-level differences in striatal morphometry among persons with Huntington's Disease (PwHD), current models of HD progression used for participant selection and assessment of treatment outcomes in clinical trials do not leverage shape information. We first validated the capability of a discriminative deep neural network to derive descriptors of shape from all subcortical structures affected by HD, utilizing 2,932 brain scans in 615 PwHD across three longitudinal datasets (",
+      "journal": "Computer methods and programs in biomedicine",
+      "pub_date": "2026 Apr",
+      "authors": "Ghofrani-Jahromi M, Saha S, Razi A",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41564629/"
+    },
+    {
+      "pmid": "41833035",
+      "title": "Synergistic Roles of Neuropeptide S and Environmental Enrichment in Preclinical Huntington's Disease Depression Models.",
+      "abstract": "Huntington's disease (HD) is a progressive neurodegenerative disorder marked by motor, cognitive, and psychiatric impairments, with depression as a major comorbidity. Existing treatments for Huntington-related depression are inadequate, highlighting the need for strategies that target molecular mechanisms underlying mood dysregulation. This review examines the mechanistic interplay between environmental enrichment (EE), a paradigm enhancing sensory, cognitive, and social stimulation and Neuropep",
+      "journal": "CNS & neurological disorders drug targets",
+      "pub_date": "2026 Mar",
+      "authors": "Rahangdale G, Gupta KR, Ume MJ",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41833035/"
+    },
+    {
+      "pmid": "41841355",
+      "title": "Discovery and Optimization of Thienopyrazine RNA-Splicing Modulators for the Treatment of Huntington's Disease.",
+      "abstract": "Huntington's disease (HD) is a progressive neurodegenerative disorder caused by a CAG-repeat expansion in the Huntington gene (HTT). Herein, we describe the discovery of a series of HTT pre-mRNA-splicing modulators that promote the inclusion of a cryptic stop codon that in turn lowers levels of mutant Huntington protein (mHTT). Optimization of the starting thienopyridine amide core resulted in the discovery of the potent, CNS-penetrant, selective, and orally bioavailable HTT-splicing modulator B",
+      "journal": "Journal of medicinal chemistry",
+      "pub_date": "2026 Mar",
+      "authors": "Xu C, Abraham N, Bansal N",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41841355/"
+    },
+    {
       "pmid": "41933422",
       "title": "Sex-related differences in Huntington's disease: a scoping review.",
       "abstract": "Huntington's disease (HD) is an autosomal-dominant neurodegenerative disorder and emerging evidence indicates sex-specific differences in disease manifestation and progression. To summarize current evidence on sex-related differences in HD across genetic, clinical, biomarker, and treatment domains and identify gaps in knowledge. A literature search was performed in PubMed and Google Scholar (up to 31.01.2026). Eligible studies examined sex- or gender-related differences in individuals with genet",
@@ -164,22 +155,31 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41933422/"
     },
     {
-      "pmid": "41770933",
-      "title": "Huntington's disease LIG1 modifier variant increases ligase fidelity and suppresses somatic CAG repeat expansion.",
-      "abstract": "Huntington's disease (HD) is a fatal neurodegenerative disorder caused by inheriting an expanded CAG repeat tract in the huntingtin gene (",
-      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
-      "pub_date": "2026 Mar",
-      "authors": "Lee E, Kim W, Beier DH",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41770933/"
+      "pmid": "41540979",
+      "title": "Efficacy and Safety of VMAT2 Inhibitors in the Treatment of Huntington Disease: A Meta-Analysis of Randomized Clinical Trials.",
+      "abstract": "Vesicular monoamine transporter 2 inhibitors (VMAT2is) have demonstrated effectiveness in attenuating motor symptoms of Huntington disease (HD). However, evidence regarding their long-term safety and overall efficacy in this population remains limited. The aim of this study was to investigate the efficacy and safety of VMAT2is in the treatment of HD. We performed a meta-analysis of placebo-controlled, randomized controlled trials (RCTs) of VMAT2is in patients with HD. PubMed, Embase, and Cochran",
+      "journal": "Neurology. Clinical practice",
+      "pub_date": "2026 Apr",
+      "authors": "Leite EM, Lages AL, Moura JFB",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41540979/"
     },
     {
-      "pmid": "41849580",
-      "title": "Selective targeting of mutant ",
-      "abstract": "Huntington's disease (HD) arises from the toxic gain of function caused by a CAG expansion in the coding region of the ",
-      "journal": "Science translational medicine",
+      "pmid": "41846052",
+      "title": "Human iPSC-derived exosomes for amelioration of Huntington's disease through mitochondrial, synaptic, and anti-apoptotic mechanisms.",
+      "abstract": "Huntington's disease (HD) is driven by expanded CAG repeats in the huntingtin gene, resulting in mutant huntingtin (mHtt) aggregation, mitochondrial dysfunction, neuronal loss, and neuroinflammation. Although stem cell-based therapies provide potent regenerative, anti-inflammatory, and neuroprotective effects, their clinical translation remains constrained by tumorigenicity and poor engraftment efficiency. Therefore, we investigated whether exosomes derived from human induced pluripotent stem ce",
+      "journal": "Biomedicine & pharmacotherapy = Biomedecine & pharmacotherapie",
+      "pub_date": "2026 Apr",
+      "authors": "Jahng S, Palomar-Alonso N, Moon J",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41846052/"
+    },
+    {
+      "pmid": "41861523",
+      "title": "Targeting NLRP3 inflammasome signaling for atrial fibrillation therapy.",
+      "abstract": "Atrial fibrillation (AF), the most common cardiac arrhythmia, is associated with substantial morbidity and mortality in patients with cardiovascular diseases (CVD). Accumulating evidence from preclinical models and clinical trials over the past decade indicates a robust link between excessive inflammatory activation and AF pathogenesis. The NACHT, LRR, and PYD domain-containing protein 3 (NLRP3) inflammasome plays a central role in this process. It can be activated by pathogen- and damage-associ",
+      "journal": "Biomedicine & pharmacotherapy = Biomedecine & pharmacotherapie",
       "pub_date": "2026 Mar",
-      "authors": "Bragg RM, Landles C, Smith EJ",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41849580/"
+      "authors": "Liu Y, Zhou L, Lin W",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41861523/"
     }
   ],
   "trials": [
