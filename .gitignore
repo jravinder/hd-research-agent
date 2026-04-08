@@ -7,3 +7,5 @@ dist/
 build/
 .venv/
 .vercel
+.venv-txgnn/
+txgnn_lib/

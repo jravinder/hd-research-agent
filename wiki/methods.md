@@ -1,6 +1,6 @@
 # Methods + Experiment Log
 
-*Auto-compiled on 2026-04-03*
+*Auto-compiled on 2026-04-08*
 
 ## Experiment History
 
@@ -10,6 +10,7 @@
 | EXP-002 | 2026-04-01 | qwen3.5:27b | 16 | 0 | 1,935,627 |
 | EXP-003_GEMMA4 | 2026-04-02 | gemma4:latest | 16 | 14 | 1,935,627 |
 | EXP-003 | 2026-04-02 | qwen3.5:27b | 16 | 0 | 1,935,627 |
+| EXP-004_SOMATIC_CAG | 2026-04-07 | gemma4:latest | 75 | 68 | 4,976,515 |
 
 ## Reproducibility
 

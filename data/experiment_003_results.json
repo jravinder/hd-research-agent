@@ -1,0 +1,206 @@
+{
+  "experiment_id": "EXP-003",
+  "timestamp": "2026-04-02T00:14:33.803685",
+  "model": "qwen3.5:27b",
+  "type": "multi_model_comparison_qwen35",
+  "papers_analyzed": 16,
+  "total_sections_read": 380,
+  "total_characters_read": 1935627,
+  "analyses": [
+    {
+      "pmid": 40522761,
+      "pmcid": "PMC12296512",
+      "title": "",
+      "journal": "",
+      "sections_count": 15,
+      "total_chars": 97621,
+      "analysis": {
+        "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)",
+        "main_finding": "Analysis failed"
+      }
+    },
+    {
+      "pmid": 40650880,
+      "pmcid": "PMC13017494",
+      "title": "",
+      "journal": "",
+      "sections_count": 14,
+      "total_chars": 52601,
+      "analysis": {
+        "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)",
+        "main_finding": "Analysis failed"
+      }
+    },
+    {
+      "pmid": 41295902,
+      "pmcid": "PMC12847458",
+      "title": "",
+      "journal": "",
+      "sections_count": 5,
+      "total_chars": 28612,
+      "analysis": {
+        "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)",
+        "main_finding": "Analysis failed"
+      }
+    },
+    {
+      "pmid": 41827217,
+      "pmcid": "PMC12986383",
+      "title": "",
+      "journal": "",
+      "sections_count": 11,
+      "total_chars": 66958,
+      "analysis": {
+        "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)",
+        "main_finding": "Analysis failed"
+      }
+    },
+    {
+      "pmid": 41783572,
+      "pmcid": "PMC12955603",
+      "title": "",
+      "journal": "",
+      "sections_count": 38,
+      "total_chars": 153744,
+      "analysis": {
+        "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)",
+        "main_finding": "Analysis failed"
+      }
+    },
+    {
+      "pmid": 41770933,
+      "pmcid": "PMC12974472",
+      "title": "",
+      "journal": "",
+      "sections_count": 19,
+      "total_chars": 94008,
+      "analysis": {
+        "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)",
+        "main_finding": "Analysis failed"
+      }
+    },
+    {
+      "pmid": 41639620,
+      "pmcid": "PMC12964631",
+      "title": "",
+      "journal": "",
+      "sections_count": 36,
+      "total_chars": 297072,
+      "analysis": {
+        "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)",
+        "main_finding": "Analysis failed"
+      }
+    },
+    {
+      "pmid": 41492395,
+      "pmcid": "PMC12765053",
+      "title": "",
+      "journal": "",
+      "sections_count": 17,
+      "total_chars": 61806,
+      "analysis": {
+        "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)",
+        "main_finding": "Analysis failed"
+      }
+    },
+    {
+      "pmid": 41828602,
+      "pmcid": "PMC12985888",
+      "title": "",
+      "journal": "",
+      "sections_count": 17,
+      "total_chars": 43774,
+      "analysis": {
+        "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)",
+        "main_finding": "Analysis failed"
+      }
+    },
+    {
+      "pmid": 41674784,
+      "pmcid": "PMC12887895",
+      "title": "",
+      "journal": "",
+      "sections_count": 30,
+      "total_chars": 263278,
+      "analysis": {
+        "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)",
+        "main_finding": "Analysis failed"
+      }
+    },
+    {
+      "pmid": 41708002,
+      "pmcid": "PMC12993198",
+      "title": "",
+      "journal": "",
+      "sections_count": 21,
+      "total_chars": 99360,
+      "analysis": {
+        "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)",
+        "main_finding": "Analysis failed"
+      }
+    },
+    {
+      "pmid": 41849610,
+      "pmcid": "PMC12998519",
+      "title": "",
+      "journal": "",
+      "sections_count": 30,
+      "total_chars": 117363,
+      "analysis": {
+        "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)",
+        "main_finding": "Analysis failed"
+      }
+    },
+    {
+      "pmid": 41618467,
+      "pmcid": "PMC12895692",
+      "title": "",
+      "journal": "",
+      "sections_count": 65,
+      "total_chars": 260165,
+      "analysis": {
+        "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)",
+        "main_finding": "Analysis failed"
+      }
+    },
+    {
+      "pmid": 41689141,
+      "pmcid": "PMC12903234",
+      "title": "",
+      "journal": "",
+      "sections_count": 24,
+      "total_chars": 122588,
+      "analysis": {
+        "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)",
+        "main_finding": "Analysis failed"
+      }
+    },
+    {
+      "pmid": 41699331,
+      "pmcid": "PMC12909434",
+      "title": "",
+      "journal": "",
+      "sections_count": 20,
+      "total_chars": 94165,
+      "analysis": {
+        "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)",
+        "main_finding": "Analysis failed"
+      }
+    },
+    {
+      "pmid": 41693955,
+      "pmcid": "PMC12893954",
+      "title": "",
+      "journal": "",
+      "sections_count": 18,
+      "total_chars": 82512,
+      "analysis": {
+        "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)",
+        "main_finding": "Analysis failed"
+      }
+    }
+  ],
+  "synthesis": {
+    "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=1800)"
+  }
+}
