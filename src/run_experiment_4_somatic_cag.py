@@ -16,6 +16,7 @@ Model: Gemma 4 (26B) running locally on Mac M2
 
 import json
 import os
+import re
 import sys
 import time
 import xml.etree.ElementTree as ET
@@ -85,13 +86,9 @@ def ask_json(prompt, system=""):
         return json.loads(text)
     except json.JSONDecodeError:
         # Fix common LLM JSON errors: unescaped backslashes, control chars
-        import re
         text = re.sub(r'(?<!\\)\\(?!["\\/bfnrtu])', r'\\\\', text)
         text = re.sub(r'[\x00-\x1f]', ' ', text)
-        try:
-            return json.loads(text)
-        except json.JSONDecodeError as e:
-            raise e
+        return json.loads(text)
 
 
 def search_pubmed(query, max_results=30):
