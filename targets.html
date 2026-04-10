@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Somatic Expansion Targets | HD Research Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="shared.css" rel="stylesheet"/>
+<style>
+  .editorial-shadow { box-shadow: 0 20px 40px rgba(30, 41, 59, 0.04); }
+  .structure-viewer { width: 100%; height: 350px; position: relative; border-radius: 0.75rem; overflow: hidden; }
+</style>
+<!-- PDBe Molstar for 3D protein structures -->
+<link rel="stylesheet" href="https://www.ebi.ac.uk/pdbe/pdb-component-library/css/pdbe-molstar-3.1.0.css"/>
+<script src="https://www.ebi.ac.uk/pdbe/pdb-component-library/js/pdbe-molstar-component-3.1.0.js" type="text/javascript"></script>
+</head>
+<body class="bg-[#fdf9e9] text-[#1c1c13] antialiased min-h-screen" style="font-size:18px;">
+
+<header class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
+  <div class="flex justify-between items-center max-w-5xl mx-auto px-6 h-16">
+    <a href="index.html" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2">
+      <span class="material-symbols-outlined text-amber-700">arrow_back</span> HD Research Hub
+    </a>
+    <div class="flex items-center gap-3">
+      <div id="google_translate_element"></div>
+      <a href="experiment-4.html" class="text-stone-500 text-sm hover:text-stone-800 hidden md:flex items-center gap-1">Experiment #4</a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 pb-20">
+
+  <section class="py-12 md:py-16">
+    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tighter text-stone-900 leading-[1.1] mb-3">Somatic Expansion Targets</h1>
+    <p class="text-lg text-stone-500 max-w-2xl">The 5 validated drug targets for slowing somatic CAG repeat expansion in Huntington's Disease. 3D protein structures from AlphaFold.</p>
+  </section>
+
+  <!-- The Pathway -->
+  <section class="bg-[#f8f4e4] py-10 px-8 rounded-2xl mb-16">
+    <h2 class="text-sm font-bold text-amber-800 uppercase tracking-widest mb-4">The Somatic Expansion Pathway</h2>
+    <div class="flex flex-wrap items-center justify-center gap-3 text-sm md:text-base font-medium text-stone-700">
+      <span class="bg-white px-4 py-2 rounded-lg shadow-sm border border-amber-200">CAG loops form</span>
+      <span class="material-symbols-outlined text-amber-500">arrow_forward</span>
+      <span class="bg-amber-100 px-4 py-2 rounded-lg shadow-sm border border-amber-300 font-bold text-amber-800">MSH3 recognizes</span>
+      <span class="material-symbols-outlined text-amber-500">arrow_forward</span>
+      <span class="bg-amber-100 px-4 py-2 rounded-lg shadow-sm border border-amber-300 font-bold text-amber-800">MLH1 nicks DNA</span>
+      <span class="material-symbols-outlined text-amber-500">arrow_forward</span>
+      <span class="bg-white px-4 py-2 rounded-lg shadow-sm border border-amber-200">Pol-delta adds repeats</span>
+      <span class="material-symbols-outlined text-amber-500">arrow_forward</span>
+      <span class="bg-amber-100 px-4 py-2 rounded-lg shadow-sm border border-amber-300 font-bold text-amber-800">LIG1 seals</span>
+    </div>
+    <div class="flex items-center justify-center gap-3 mt-4 text-sm md:text-base font-medium">
+      <span class="bg-green-100 px-4 py-2 rounded-lg shadow-sm border border-green-300 font-bold text-green-800">FAN1 opposes (contraction)</span>
+      <span class="text-stone-400">|</span>
+      <span class="bg-blue-100 px-4 py-2 rounded-lg shadow-sm border border-blue-300 font-bold text-blue-800">PMS1 enables expansion</span>
+    </div>
+    <p class="text-center text-stone-500 text-sm mt-4">Natural genetic variants in these genes delay HD onset by 6-8 years. Drugs that mimic these effects could be transformative.</p>
+  </section>
+
+  <!-- MSH3 -->
+  <section class="mb-12" id="msh3">
+    <div class="bg-white rounded-xl editorial-shadow overflow-hidden">
+      <div class="bg-amber-50 px-6 py-3 border-b border-amber-100 flex items-center justify-between">
+        <h2 class="text-lg font-bold text-stone-900">MSH3 <span class="text-sm font-normal text-stone-500 ml-2">MutS Homolog 3</span></h2>
+        <span class="px-2 py-0.5 bg-red-100 text-red-700 rounded text-xs font-bold">Drives Expansion</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div class="p-6">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Role in Somatic Expansion</div>
+          <p class="text-stone-700 text-sm leading-relaxed mb-4">Part of MutSbeta complex (MSH2-MSH3). Recognizes CAG repeat loops that form during DNA repair. When 3+ MutSbeta molecules bind, they resist dissociation and recruit endonuclease activity. MSH3 is rate-limiting: 50% reduction in MSH3 leads to ~50% less expansion.</p>
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Druggability</div>
+          <p class="text-sm text-green-700 font-medium mb-4">High. siRNA/shRNA knockdown demonstrated in animal models. Multiple companies developing MSH3-targeted drugs.</p>
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Key Drug Candidates</div>
+          <ul class="text-stone-600 text-sm space-y-1">
+            <li>siRNA/shRNA targeting MSH3 (90/100 confidence)</li>
+            <li>LQT-23 (LoQus23, allosteric inhibitor, IND 2026)</li>
+            <li>Di-valent siRNA (single dose blocks expansion 4 months)</li>
+          </ul>
+          <div class="mt-4 text-xs text-stone-400">UniProt: <a href="https://www.uniprot.org/uniprotkb/P20585" target="_blank" rel="noopener noreferrer" class="text-amber-700 underline">P20585</a> | Papers mentioning: 42</div>
+        </div>
+        <div class="bg-stone-50 p-4 flex flex-col">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">AlphaFold Predicted Structure</div>
+          <div id="msh3-viewer" class="structure-viewer bg-stone-100"></div>
+          <p class="text-xs text-stone-400 mt-2 text-center">Interactive 3D structure. Drag to rotate, scroll to zoom.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAN1 -->
+  <section class="mb-12" id="fan1">
+    <div class="bg-white rounded-xl editorial-shadow overflow-hidden">
+      <div class="bg-amber-50 px-6 py-3 border-b border-amber-100 flex items-center justify-between">
+        <h2 class="text-lg font-bold text-stone-900">FAN1 <span class="text-sm font-normal text-stone-500 ml-2">Fanconi Anemia-Associated Nuclease 1</span></h2>
+        <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-bold">Opposes Expansion</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div class="p-6">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Role in Somatic Expansion</div>
+          <p class="text-stone-700 text-sm leading-relaxed mb-4">A protective DNA repair nuclease that opposes somatic expansion. Has the strongest genetic association to delayed disease onset. Works via PCNA-mediated assembly to target the expanded strand, directing nuclease activity to remove loops (contraction). Also has a nuclease-independent protective mechanism.</p>
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Druggability</div>
+          <p class="text-sm text-amber-700 font-medium mb-4">Medium. Upregulation (not inhibition) is the goal. Harness Therapeutics developing HRN001 (MISBA platform) for FAN1 upregulation.</p>
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Key Drug Candidates</div>
+          <ul class="text-stone-600 text-sm space-y-1">
+            <li>HRN001 (Harness Therapeutics, ASO, FIH 2027)</li>
+            <li>miR-124-3p antagomir (FAN1 upregulation via mRNA site blocking)</li>
+          </ul>
+          <div class="mt-4 text-xs text-stone-400">UniProt: <a href="https://www.uniprot.org/uniprotkb/Q9Y2M0" target="_blank" rel="noopener noreferrer" class="text-amber-700 underline">Q9Y2M0</a> | Papers mentioning: 41</div>
+        </div>
+        <div class="bg-stone-50 p-4 flex flex-col">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">AlphaFold Predicted Structure</div>
+          <div id="fan1-viewer" class="structure-viewer bg-stone-100"></div>
+          <p class="text-xs text-stone-400 mt-2 text-center">Interactive 3D structure. Drag to rotate, scroll to zoom.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PMS1 -->
+  <section class="mb-12" id="pms1">
+    <div class="bg-white rounded-xl editorial-shadow overflow-hidden">
+      <div class="bg-amber-50 px-6 py-3 border-b border-amber-100 flex items-center justify-between">
+        <h2 class="text-lg font-bold text-stone-900">PMS1 <span class="text-sm font-normal text-stone-500 ml-2">Post-Meiotic Segregation 1</span></h2>
+        <span class="px-2 py-0.5 bg-red-100 text-red-700 rounded text-xs font-bold">Enables Expansion</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div class="p-6">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Role in Somatic Expansion</div>
+          <p class="text-stone-700 text-sm leading-relaxed mb-4">Part of the MutL family. Homozygous PMS1 inactivation reduces CAG repeat expansion. A pseudoexon in PMS1 can be targeted by splice modulators to reduce PMS1 protein levels dose-dependently, suppressing somatic expansion while preserving enough normal MMR to avoid cancer risk.</p>
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Druggability</div>
+          <p class="text-sm text-green-700 font-medium mb-4">High. Splice modulation demonstrated. SKY-0515 (Skyhawk) already in Phase 2/3 clinical trial (FALCON-HD).</p>
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Key Drug Candidates</div>
+          <ul class="text-stone-600 text-sm space-y-1">
+            <li>SKY-0515 (Skyhawk, Phase 2/3, 62% mHTT + 26% PMS1 reduction)</li>
+            <li>RGT-0474060 (Rgenta, oral PMS1 inhibitor, preclinical)</li>
+            <li>Branaplam (Novartis, discontinued due to neuropathy, but validated mechanism)</li>
+          </ul>
+          <div class="mt-4 text-xs text-stone-400">UniProt: <a href="https://www.uniprot.org/uniprotkb/P54277" target="_blank" rel="noopener noreferrer" class="text-amber-700 underline">P54277</a> | Papers mentioning: 38</div>
+        </div>
+        <div class="bg-stone-50 p-4 flex flex-col">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">AlphaFold Predicted Structure</div>
+          <div id="pms1-viewer" class="structure-viewer bg-stone-100"></div>
+          <p class="text-xs text-stone-400 mt-2 text-center">Interactive 3D structure. Drag to rotate, scroll to zoom.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MLH1 -->
+  <section class="mb-12" id="mlh1">
+    <div class="bg-white rounded-xl editorial-shadow overflow-hidden">
+      <div class="bg-amber-50 px-6 py-3 border-b border-amber-100 flex items-center justify-between">
+        <h2 class="text-lg font-bold text-stone-900">MLH1 <span class="text-sm font-normal text-stone-500 ml-2">MutL Homolog 1</span></h2>
+        <span class="px-2 py-0.5 bg-red-100 text-red-700 rounded text-xs font-bold">Drives Expansion</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div class="p-6">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Role in Somatic Expansion</div>
+          <p class="text-stone-700 text-sm leading-relaxed mb-4">Forms MutLgamma complex with MLH3 (MLH1-MLH3). MutLgamma is an endonuclease that nicks DNA opposite the CAG loop, generating nicks that enable displacement synthesis. Reduced MLH1 slows repeat expansion the most of all MutL family members. A point mutation in MLH3's endonuclease domain completely eliminates CAG expansion.</p>
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Druggability</div>
+          <p class="text-sm text-amber-700 font-medium mb-4">Medium. Gene knockdown demonstrated in cell models. Challenge: MLH1 is also critical for cancer prevention (Lynch syndrome).</p>
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Key Drug Candidates</div>
+          <ul class="text-stone-600 text-sm space-y-1">
+            <li>Cyclic peptide inhibitors of MLH1-MSH3 interaction (nanomolar potency, academic)</li>
+            <li>MLH3 splice redirectors (exon skipping, preclinical)</li>
+          </ul>
+          <div class="mt-4 text-xs text-stone-400">UniProt: <a href="https://www.uniprot.org/uniprotkb/P40692" target="_blank" rel="noopener noreferrer" class="text-amber-700 underline">P40692</a> | Papers mentioning: 40</div>
+        </div>
+        <div class="bg-stone-50 p-4 flex flex-col">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">AlphaFold Predicted Structure</div>
+          <div id="mlh1-viewer" class="structure-viewer bg-stone-100"></div>
+          <p class="text-xs text-stone-400 mt-2 text-center">Interactive 3D structure. Drag to rotate, scroll to zoom.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIG1 -->
+  <section class="mb-12" id="lig1">
+    <div class="bg-white rounded-xl editorial-shadow overflow-hidden">
+      <div class="bg-amber-50 px-6 py-3 border-b border-amber-100 flex items-center justify-between">
+        <h2 class="text-lg font-bold text-stone-900">LIG1 <span class="text-sm font-normal text-stone-500 ml-2">DNA Ligase 1</span></h2>
+        <span class="px-2 py-0.5 bg-amber-100 text-amber-700 rounded text-xs font-bold">Locks In Expansion</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div class="p-6">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Role in Somatic Expansion</div>
+          <p class="text-stone-700 text-sm leading-relaxed mb-4">Seals nicks during DNA repair, locking in the expanded CAG repeats. The K845N variant is associated with a 7-8 year delay in motor onset, one of the strongest single-modifier effects known. K845N enhances discrimination against mismatched substrates (increases repair fidelity). Published in PNAS, March 2026.</p>
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Druggability</div>
+          <p class="text-sm text-amber-700 font-medium mb-4">Emerging. Small molecules that increase ligase fidelity could mimic the K845N protective effect. No clinical candidates yet.</p>
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Key Drug Candidates</div>
+          <ul class="text-stone-600 text-sm space-y-1">
+            <li>Ligase fidelity enhancers (concept stage, based on K845N mechanism)</li>
+            <li>No named clinical candidates yet</li>
+          </ul>
+          <div class="mt-4 text-xs text-stone-400">UniProt: <a href="https://www.uniprot.org/uniprotkb/P18858" target="_blank" rel="noopener noreferrer" class="text-amber-700 underline">P18858</a> | Papers mentioning: 42</div>
+        </div>
+        <div class="bg-stone-50 p-4 flex flex-col">
+          <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">AlphaFold Predicted Structure</div>
+          <div id="lig1-viewer" class="structure-viewer bg-stone-100"></div>
+          <p class="text-xs text-stone-400 mt-2 text-center">Interactive 3D structure. Drag to rotate, scroll to zoom.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data Sources -->
+  <section class="mb-12">
+    <div class="bg-amber-50 border-l-8 border-amber-500 p-8 rounded-xl">
+      <div class="flex items-center gap-3 mb-4"><span class="material-symbols-outlined text-amber-600 text-2xl" style="font-variation-settings:'FILL' 1;">info</span><h2 class="text-xl font-extrabold text-amber-800">About This Data</h2></div>
+      <ul class="space-y-2 text-stone-700 text-sm">
+        <li>Drug candidates and paper counts from <a href="experiment-4.html" class="text-amber-700 underline">Experiment #4</a> (75 papers, 4.97M characters analyzed by Gemma 4).</li>
+        <li>3D structures predicted by <a href="https://alphafold.ebi.ac.uk/" target="_blank" rel="noopener noreferrer" class="text-amber-700 underline">AlphaFold</a> (DeepMind). These are computational predictions, not experimental crystal structures.</li>
+        <li>Colored by AlphaFold confidence: <span class="text-blue-600 font-medium">blue = very high</span>, <span class="text-cyan-600 font-medium">cyan = confident</span>, <span class="text-yellow-600 font-medium">yellow = low</span>, <span class="text-orange-600 font-medium">orange = very low</span>.</li>
+        <li>Drug rankings reflect AI assessment from published literature, not clinical validation.</li>
+        <li>This page is not medical advice. For HD support, visit <a href="https://hdsa.org" target="_blank" rel="noopener noreferrer" class="text-amber-700 underline">hdsa.org</a>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="border-t border-stone-200 pt-8 text-center text-sm text-stone-500">
+    <p><a href="experiment-4.html" class="text-amber-700 font-medium">Exp #4 (drug screen)</a> · <a href="experiment-3.html" class="text-amber-700 font-medium">Exp #3</a> · <a href="landscape.html" class="text-amber-700 font-medium">Landscape</a> · <a href="research.html" class="text-amber-700 font-medium">Research Tracker</a> · <a href="index.html" class="text-amber-700 font-medium">Dashboard</a></p>
+  </section>
+
+</main>
+
+<!-- Initialize AlphaFold 3D viewers -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var targets = [
+    { id: 'msh3-viewer', alphafold: 'AF-P20585-F1' },
+    { id: 'fan1-viewer', alphafold: 'AF-Q9Y2M0-F1' },
+    { id: 'pms1-viewer', alphafold: 'AF-P54277-F1' },
+    { id: 'mlh1-viewer', alphafold: 'AF-P40692-F1' },
+    { id: 'lig1-viewer', alphafold: 'AF-P18858-F1' },
+  ];
+
+  targets.forEach(function(t) {
+    var el = document.getElementById(t.id);
+    if (!el) return;
+
+    var viewer = new PDBeMolstarPlugin();
+    viewer.render(el, {
+      customData: {
+        url: 'https://alphafold.ebi.ac.uk/files/' + t.alphafold + '-model_v4.cif',
+        format: 'cif',
+      },
+      alphafoldView: true,
+      hideControls: true,
+      bgColor: { r: 245, g: 245, b: 244 },
+      sequencePanel: false,
+      landscape: true,
+      reactive: true,
+    });
+  });
+});
+</script>
+
+<script src="shared.js"></script>
+<div class="text-center py-4 px-4"><p class="text-xs text-stone-400">This is a research and educational tool, not medical advice. For HD support, visit <a href="https://hdsa.org" target="_blank" rel="noopener noreferrer" class="text-stone-500 underline">hdsa.org</a>.</p></div>
+</body></html>
