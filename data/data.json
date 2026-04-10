@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-09T09:01:40.586406",
+  "last_updated": "2026-04-10T09:02:33.978340",
   "papers": [
     {
       "pmid": "41933422",
@@ -38,15 +38,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41849583/"
     },
     {
-      "pmid": "41925063",
-      "title": "Combination Disease-Modifying Therapy for Neurodegenerative Diseases Using Repurposed Drugs.",
-      "abstract": "We review the positive effects of several existing drugs from different classes, such as chemical chaperones, glucagon-like peptide-1 receptor agonists (GLP-1 RAs), iron chelators, and cluster-Abelson tyrosine kinase inhibitors (c-Abl TKIs), in preclinical disease models and in available published human data following use of these drugs in individuals with common neurodegenerative diseases (NDs), including Parkinson's disease (PD), Alzheimer's disease (AD), amyotrophic lateral sclerosis (ALS), a",
-      "journal": "Annals of neurology",
-      "pub_date": "2026 Apr",
-      "authors": "Shtilbans A, Lang AE",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41925063/"
-    },
-    {
       "pmid": "41651710",
       "title": "Safety and efficacy of VMAT2 inhibitors in Huntington Disease: A systematic review.",
       "abstract": "Chorea affects quality of life and functional independence in most adults with Huntington disease (HD). Vesicular monoamine transporter 2 (VMAT2) inhibitors, tetrabenazine, deutetrabenazine, and valbenazine, are pharmacological agents used to manage HD-related chorea. This systematic review evaluates the safety and efficacy of these agents in individuals with HD. This review was conducted in accordance with PRISMA guidelines and registered with PROSPERO, CRD42024581306. A comprehensive literatur",
@@ -54,6 +45,15 @@
       "pub_date": "2026 Apr",
       "authors": "Baghaei A, Dehnavi AZ, Hashempour Z",
       "url": "https://pubmed.ncbi.nlm.nih.gov/41651710/"
+    },
+    {
+      "pmid": "41925063",
+      "title": "Combination Disease-Modifying Therapy for Neurodegenerative Diseases Using Repurposed Drugs.",
+      "abstract": "We review the positive effects of several existing drugs from different classes, such as chemical chaperones, glucagon-like peptide-1 receptor agonists (GLP-1 RAs), iron chelators, and cluster-Abelson tyrosine kinase inhibitors (c-Abl TKIs), in preclinical disease models and in available published human data following use of these drugs in individuals with common neurodegenerative diseases (NDs), including Parkinson's disease (PD), Alzheimer's disease (AD), amyotrophic lateral sclerosis (ALS), a",
+      "journal": "Annals of neurology",
+      "pub_date": "2026 Apr",
+      "authors": "Shtilbans A, Lang AE",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41925063/"
     },
     {
       "pmid": "40091796",
@@ -92,6 +92,15 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41552385/"
     },
     {
+      "pmid": "41919473",
+      "title": "Long non-coding RNAs in neurodegenerative diseases - Molecular mechanisms, liquid biopsy biomarkers, and therapeutic targets: A review.",
+      "abstract": "Neurodegenerative diseases (NDDs), such as Alzheimer's disease (AD), Parkinson's disease (PD), amyotrophic lateral sclerosis (ALS), and Huntington's disease (HD), are age-related disorders characterized by progressive neuronal loss, cognitive decline, and limited options for disease-modifying treatments. Increasing evidence suggests that long non-coding RNAs (lncRNAs) play significant roles in neurodevelopment, neuronal homeostasis, and disease progression; however, their involvement in shared p",
+      "journal": "Biomolecules & biomedicine",
+      "pub_date": "2026 Mar",
+      "authors": "Cheng Y, Qiu M, Yu Z",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41919473/"
+    },
+    {
       "pmid": "41837536",
       "title": "Metabolic-based therapeutic strategies to treat Huntington's disease.",
       "abstract": "Huntington's disease is an autosomal dominant neurodegenerative disorder marked by progressive motor, cognitive, and psychiatric decline. Huntington's disease arises from the expansion of particular DNA sequences (cytosine/ adenosine/guanine repeats that encode glutamine) within the huntingtin (HTT) gene. This expansion leads to the synthesis of a mutant huntingtin protein (mhtt) featuring an excessively long polyglutamine segment, which is harmful and prone to form aggregates or clusters within",
@@ -126,15 +135,6 @@
       "pub_date": "2026 Apr",
       "authors": "Jellinger KA",
       "url": "https://pubmed.ncbi.nlm.nih.gov/41925785/"
-    },
-    {
-      "pmid": "41770933",
-      "title": "Huntington's disease LIG1 modifier variant increases ligase fidelity and suppresses somatic CAG repeat expansion.",
-      "abstract": "Huntington's disease (HD) is a fatal neurodegenerative disorder caused by inheriting an expanded CAG repeat tract in the huntingtin gene (",
-      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
-      "pub_date": "2026 Mar",
-      "authors": "Lee E, Kim W, Beier DH",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41770933/"
     },
     {
       "pmid": "41846052",
@@ -173,37 +173,37 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41913587/"
     },
     {
-      "pmid": "41833035",
-      "title": "Synergistic Roles of Neuropeptide S and Environmental Enrichment in Preclinical Huntington's Disease Depression Models.",
-      "abstract": "Huntington's disease (HD) is a progressive neurodegenerative disorder marked by motor, cognitive, and psychiatric impairments, with depression as a major comorbidity. Existing treatments for Huntington-related depression are inadequate, highlighting the need for strategies that target molecular mechanisms underlying mood dysregulation. This review examines the mechanistic interplay between environmental enrichment (EE), a paradigm enhancing sensory, cognitive, and social stimulation and Neuropep",
-      "journal": "CNS & neurological disorders drug targets",
-      "pub_date": "2026 Mar",
-      "authors": "Rahangdale G, Gupta KR, Ume MJ",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41833035/"
+      "pmid": "41956800",
+      "title": "Reverse haplotyping: taking full advantage of 25% risk testing for the 50% at-risk parent in Huntington's disease.",
+      "abstract": "Presymptomatic testing (PT) for Huntington's disease (HD) has been available for over 40 years. Individuals who opt for PT are typically at a 50% risk, though in rare cases, '25% at-risk individuals' request to know their genetic status. Family planning is one of the main reasons why predictive testing is requested and with the availability of a direct test, new choices regarding reproduction emerged. In pregnancies, couples of whom the at-risk parent (ARP) does not want to know their own status",
+      "journal": "Journal of medical genetics",
+      "pub_date": "2026 Apr",
+      "authors": "Bijlsma EK, Koopmann TT, de Bot ST",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41956800/"
     }
   ],
   "trials": [
     {
-      "nct_id": "NCT06546488",
-      "title": "Cognitive Assessment Tools for Huntington's Disease.",
+      "nct_id": "NCT06585449",
+      "title": "A Study to Evaluate ALN-HTT02 in Adult Patients With Huntington's Disease",
       "status": "RECRUITING",
-      "phase": "N/A",
-      "sponsor": "Ohio State University",
-      "intervention": "Assessments",
-      "enrollment": 76,
-      "url": "https://clinicaltrials.gov/study/NCT06546488",
-      "start_date": "2025-06-20"
+      "phase": "PHASE1",
+      "sponsor": "Alnylam Pharmaceuticals",
+      "intervention": "ALN-HTT02; Placebo",
+      "enrollment": 66,
+      "url": "https://clinicaltrials.gov/study/NCT06585449",
+      "start_date": "2024-10-14"
     },
     {
-      "nct_id": "NCT06876857",
-      "title": "University of Central Florida CereBank",
+      "nct_id": "NCT06667414",
+      "title": "Frequency of Selected Single Nucleotide Polymorphisms in Huntington Disease Gene Expansion Carriers",
       "status": "RECRUITING",
       "phase": "N/A",
-      "sponsor": "University of Central Florida",
+      "sponsor": "Hoffmann-La Roche",
       "intervention": "",
-      "enrollment": 50000,
-      "url": "https://clinicaltrials.gov/study/NCT06876857",
-      "start_date": "2025-02-25"
+      "enrollment": 600,
+      "url": "https://clinicaltrials.gov/study/NCT06667414",
+      "start_date": "2024-09-02"
     },
     {
       "nct_id": "NCT03434548",
@@ -217,15 +217,59 @@
       "start_date": "2021-07-20"
     },
     {
-      "nct_id": "NCT04012411",
-      "title": "Study of BDNF Pathway Biomarkers in the Cerebrospinal Fluid in Patients With Huntington's Disease",
+      "nct_id": "NCT05808153",
+      "title": "Innovative Imaging and Cognitive BIOmarkers to Predict Huntington's Disease Progression",
       "status": "RECRUITING",
       "phase": "NA",
-      "sponsor": "University Hospital, Montpellier",
-      "intervention": "Brain MRI; Lumbar Punction; Blood sample",
-      "enrollment": 135,
-      "url": "https://clinicaltrials.gov/study/NCT04012411",
-      "start_date": "2020-03-03"
+      "sponsor": "Assistance Publique - H\u00f4pitaux de Paris",
+      "intervention": "radiotracer injection",
+      "enrollment": 80,
+      "url": "https://clinicaltrials.gov/study/NCT05808153",
+      "start_date": "2024-03-21"
+    },
+    {
+      "nct_id": "NCT07339514",
+      "title": "A Phase I Clinical Study of ER2001 Injection for the Treatment of Early Manifest Huntington's Disease.",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "phase": "PHASE1, PHASE2",
+      "sponsor": "ExoRNA Bioscience",
+      "intervention": "ER2001 intravenous injection; Placebo",
+      "enrollment": 27,
+      "url": "https://clinicaltrials.gov/study/NCT07339514",
+      "start_date": "2025-02-11"
+    },
+    {
+      "nct_id": "NCT07136844",
+      "title": "Gait Analysis Parameter and Upper Limb Evaluation in Adult Patients With Neurological or Metabolic Pathology",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "sponsor": "Centre Hospitalier Universitaire de Liege",
+      "intervention": "Syde; Dynamometric measurements of muscle strength; The 6-minute walk test (6MWT)",
+      "enrollment": 300,
+      "url": "https://clinicaltrials.gov/study/NCT07136844",
+      "start_date": "2024-03-29"
+    },
+    {
+      "nct_id": "NCT06941662",
+      "title": "Huntington's Disease Biobank: Advancing Remote Monitoring and Deep Phenotyping",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "sponsor": "Stanford University",
+      "intervention": "computer vision, remote monitoring, blood, urine, wrist bands, mobile-app",
+      "enrollment": 200,
+      "url": "https://clinicaltrials.gov/study/NCT06941662",
+      "start_date": "2024-06-01"
+    },
+    {
+      "nct_id": "NCT02994719",
+      "title": "Gait Analysis in Neurological Disease",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "sponsor": "Beth Israel Deaconess Medical Center",
+      "intervention": "Anti-Parkinson medication; Deep Brain Stimulation",
+      "enrollment": 120,
+      "url": "https://clinicaltrials.gov/study/NCT02994719",
+      "start_date": "2016-03-01"
     },
     {
       "nct_id": "NCT06843252",
@@ -250,48 +294,59 @@
       "start_date": "2005-07"
     },
     {
-      "nct_id": "NCT05707663",
-      "title": "Longitudinal Assessment of Brain Structure and Function in Juvenile-onset Huntington's Disease",
+      "nct_id": "NCT05596760",
+      "title": "Promoting Goals-of-Care Discussions for Patients With Memory Problems and Their Caregivers",
       "status": "RECRUITING",
-      "phase": "N/A",
-      "sponsor": "University of Iowa",
-      "intervention": "",
-      "enrollment": 40,
-      "url": "https://clinicaltrials.gov/study/NCT05707663",
-      "start_date": "2020-01-01"
+      "phase": "NA",
+      "sponsor": "University of Washington",
+      "intervention": "Jumpstart Guide",
+      "enrollment": 1800,
+      "url": "https://clinicaltrials.gov/study/NCT05596760",
+      "start_date": "2023-09-11"
     },
     {
-      "nct_id": "NCT06634628",
-      "title": "iMagemHTT-009- FIH Evaluation of Novel Mutant Huntingtin PET Radioligand [11C]CHDI-00491009",
-      "status": "RECRUITING",
-      "phase": "EARLY_PHASE1",
-      "sponsor": "CHDI Foundation, Inc.",
-      "intervention": "Radioligand [11C]CHDI-00491009",
-      "enrollment": 27,
-      "url": "https://clinicaltrials.gov/study/NCT06634628",
-      "start_date": "2026-02-24"
-    },
-    {
-      "nct_id": "NCT06475898",
-      "title": "Longitudinal Endpoint Assessment of Disease Burden in HD",
-      "status": "RECRUITING",
-      "phase": "N/A",
-      "sponsor": "Huntington Study Group",
-      "intervention": "",
-      "enrollment": 600,
-      "url": "https://clinicaltrials.gov/study/NCT06475898",
-      "start_date": "2024-06-25"
-    },
-    {
-      "nct_id": "NCT07344519",
-      "title": "The Safety and Tolerability Study With ER2001 Intravenous Injection Repetitive Treatment in Adults With Early Manifest Huntington's Disease.",
+      "nct_id": "NCT04400331",
+      "title": "Open-Label Rollover Study for Continuing Valbenazine Administration for the Treatment of Chorea Associated With Huntington Disease",
       "status": "ACTIVE_NOT_RECRUITING",
-      "phase": "EARLY_PHASE1",
-      "sponsor": "ExoRNA Bioscience",
-      "intervention": "ER2001 injection",
-      "enrollment": 9,
-      "url": "https://clinicaltrials.gov/study/NCT07344519",
-      "start_date": "2024-06-25"
+      "phase": "PHASE3",
+      "sponsor": "Neurocrine Biosciences",
+      "intervention": "Valbenazine",
+      "enrollment": 154,
+      "url": "https://clinicaltrials.gov/study/NCT04400331",
+      "start_date": "2020-09-18"
+    },
+    {
+      "nct_id": "NCT04120493",
+      "title": "Safety and Proof-of-Concept (POC) Study With AMT-130 in Adults With Early Manifest Huntington's Disease",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "phase": "PHASE1, PHASE2",
+      "sponsor": "UniQure Biopharma B.V.",
+      "intervention": "intra-striatal rAAV5-miHTT; Imitation (sham) surgery",
+      "enrollment": 43,
+      "url": "https://clinicaltrials.gov/study/NCT04120493",
+      "start_date": "2019-09-06"
+    },
+    {
+      "nct_id": "NCT06147414",
+      "title": "Development of Non-Invasive Prenatal Diagnosis for Single Gene Disorders",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "sponsor": "Assistance Publique - H\u00f4pitaux de Paris",
+      "intervention": "Blood sample",
+      "enrollment": 550,
+      "url": "https://clinicaltrials.gov/study/NCT06147414",
+      "start_date": "2024-10-23"
+    },
+    {
+      "nct_id": "NCT05686551",
+      "title": "GENERATION HD2. A Study to Evaluate the Safety, Biomarkers, and Efficacy of Tominersen Compared With Placebo in Participants With Prodromal and Early Manifest Huntington's Disease",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "phase": "PHASE2",
+      "sponsor": "Hoffmann-La Roche",
+      "intervention": "Tominersen; Placebo",
+      "enrollment": 301,
+      "url": "https://clinicaltrials.gov/study/NCT05686551",
+      "start_date": "2023-02-03"
     },
     {
       "nct_id": "NCT05509153",
@@ -316,158 +371,15 @@
       "start_date": "2023-03-14"
     },
     {
-      "nct_id": "NCT06448546",
-      "title": "Gut Microbiomes in HD",
+      "nct_id": "NCT06082713",
+      "title": "Extracellular Vesicles for HD",
       "status": "RECRUITING",
       "phase": "N/A",
       "sponsor": "University of Central Florida",
       "intervention": "",
-      "enrollment": 36,
-      "url": "https://clinicaltrials.gov/study/NCT06448546",
-      "start_date": "2025-06"
-    },
-    {
-      "nct_id": "NCT05402488",
-      "title": "Exploring the Recovery Function of Sleep in Neurodegeneration",
-      "status": "RECRUITING",
-      "phase": "NA",
-      "sponsor": "University of Zurich",
-      "intervention": "Auditory stimulation",
-      "enrollment": 200,
-      "url": "https://clinicaltrials.gov/study/NCT05402488",
-      "start_date": "2022-03-14"
-    },
-    {
-      "nct_id": "NCT07378644",
-      "title": "Study to Evaluate the Pharmacodynamics, Safety and Efficacy of SKY-0515 in Participants With Huntington's Disease",
-      "status": "RECRUITING",
-      "phase": "PHASE2, PHASE3",
-      "sponsor": "Skyhawk Therapeutics, Inc.",
-      "intervention": "SKY-0515; SKY-0515 Placebo",
-      "enrollment": 400,
-      "url": "https://clinicaltrials.gov/study/NCT07378644",
-      "start_date": "2026-01-06"
-    },
-    {
-      "nct_id": "NCT04120493",
-      "title": "Safety and Proof-of-Concept (POC) Study With AMT-130 in Adults With Early Manifest Huntington's Disease",
-      "status": "ACTIVE_NOT_RECRUITING",
-      "phase": "PHASE1, PHASE2",
-      "sponsor": "UniQure Biopharma B.V.",
-      "intervention": "intra-striatal rAAV5-miHTT; Imitation (sham) surgery",
-      "enrollment": 43,
-      "url": "https://clinicaltrials.gov/study/NCT04120493",
-      "start_date": "2019-09-06"
-    },
-    {
-      "nct_id": "NCT06853743",
-      "title": "The NAD-HD Study: A Study to Investigate Efficacy and Safety of Nicotinamide Riboside Compared With Placebo in Huntington's Disease",
-      "status": "RECRUITING",
-      "phase": "PHASE2",
-      "sponsor": "Oslo University Hospital",
-      "intervention": "Nicotinamide Riboside (NR); Placebo",
-      "enrollment": 120,
-      "url": "https://clinicaltrials.gov/study/NCT06853743",
-      "start_date": "2025-03-18"
-    },
-    {
-      "nct_id": "NCT06147414",
-      "title": "Development of Non-Invasive Prenatal Diagnosis for Single Gene Disorders",
-      "status": "RECRUITING",
-      "phase": "N/A",
-      "sponsor": "Assistance Publique - H\u00f4pitaux de Paris",
-      "intervention": "Blood sample",
-      "enrollment": 550,
-      "url": "https://clinicaltrials.gov/study/NCT06147414",
-      "start_date": "2024-10-23"
-    },
-    {
-      "nct_id": "NCT02252380",
-      "title": "ExAblate Transcranial MRgFUS for the Management of Treatment-Refractory Movement Disorders",
-      "status": "ACTIVE_NOT_RECRUITING",
-      "phase": "NA",
-      "sponsor": "InSightec",
-      "intervention": "Transcranial ExAblate System",
-      "enrollment": 10,
-      "url": "https://clinicaltrials.gov/study/NCT02252380",
-      "start_date": "2015-05"
-    },
-    {
-      "nct_id": "NCT04713982",
-      "title": "Impact of Deutetrabenazine on Functional Speech and Gait Dynamics in Huntington Disease",
-      "status": "ACTIVE_NOT_RECRUITING",
-      "phase": "PHASE2, PHASE3",
-      "sponsor": "Vanderbilt University Medical Center",
-      "intervention": "Deutetrabenazine",
-      "enrollment": 30,
-      "url": "https://clinicaltrials.gov/study/NCT04713982",
-      "start_date": "2021-11-19"
-    },
-    {
-      "nct_id": "NCT05541627",
-      "title": "A Study to Evaluate AB-1001 Striatal Administration in Adults With Early Manifest Huntington's Disease",
-      "status": "ACTIVE_NOT_RECRUITING",
-      "phase": "PHASE1, PHASE2",
-      "sponsor": "Brainvectis, a subsidiary of Asklepios BioPharmaceutical, Inc. (AskBio)",
-      "intervention": "AB-1001 Gene Therapy",
-      "enrollment": 5,
-      "url": "https://clinicaltrials.gov/study/NCT05541627",
-      "start_date": "2022-10-12"
-    },
-    {
-      "nct_id": "NCT00874783",
-      "title": "Development of IPS from Donated Somatic Cells of Patients with Neurological Diseases",
-      "status": "RECRUITING",
-      "phase": "N/A",
-      "sponsor": "Hadassah Medical Organization",
-      "intervention": "",
-      "enrollment": 120,
-      "url": "https://clinicaltrials.gov/study/NCT00874783",
-      "start_date": "2009-04"
-    },
-    {
-      "nct_id": "NCT06444217",
-      "title": "Gene Therapy Development and Validation for Huntington's Disease Fibro TG-HD",
-      "status": "RECRUITING",
-      "phase": "NA",
-      "sponsor": "University Hospital, Angers",
-      "intervention": "skin biopsy",
-      "enrollment": 20,
-      "url": "https://clinicaltrials.gov/study/NCT06444217",
-      "start_date": "2024-09-23"
-    },
-    {
-      "nct_id": "NCT06774443",
-      "title": "Hinting Task for Huntington's Disease",
-      "status": "RECRUITING",
-      "phase": "N/A",
-      "sponsor": "University Medical Center Groningen",
-      "intervention": "Neuropsychological assessment",
-      "enrollment": 52,
-      "url": "https://clinicaltrials.gov/study/NCT06774443",
-      "start_date": "2025-09-01"
-    },
-    {
-      "nct_id": "NCT03233646",
-      "title": "Retinal Imaging in Neurodegenerative Disease",
-      "status": "RECRUITING",
-      "phase": "N/A",
-      "sponsor": "Duke University",
-      "intervention": "Retinal and Choroidal Imaging",
-      "enrollment": 2000,
-      "url": "https://clinicaltrials.gov/study/NCT03233646",
-      "start_date": "2017-07-20"
-    },
-    {
-      "nct_id": "NCT05326451",
-      "title": "Home-based Transcranial Direct Current Stimulation Open Trial for Behavioral and Cognitive Symptoms in Huntington's Disease",
-      "status": "RECRUITING",
-      "phase": "NA",
-      "sponsor": "The University of Texas Health Science Center, Houston",
-      "intervention": "active tDCS",
-      "enrollment": 10,
-      "url": "https://clinicaltrials.gov/study/NCT05326451",
-      "start_date": "2023-06-21"
+      "enrollment": 100,
+      "url": "https://clinicaltrials.gov/study/NCT06082713",
+      "start_date": "2023-10-25"
     },
     {
       "nct_id": "NCT07246941",
@@ -481,40 +393,134 @@
       "start_date": "2025-11-19"
     },
     {
-      "nct_id": "NCT06626308",
-      "title": "Early Biomarkers in Premanifest Huntington's Disease Gene Carriers: a Pilot Study",
-      "status": "RECRUITING",
-      "phase": "NA",
-      "sponsor": "University Hospital, Grenoble",
-      "intervention": "brain functional MRI",
-      "enrollment": 20,
-      "url": "https://clinicaltrials.gov/study/NCT06626308",
-      "start_date": "2025-02-20"
+      "nct_id": "NCT04713982",
+      "title": "Impact of Deutetrabenazine on Functional Speech and Gait Dynamics in Huntington Disease",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "phase": "PHASE2, PHASE3",
+      "sponsor": "Vanderbilt University Medical Center",
+      "intervention": "Deutetrabenazine",
+      "enrollment": 30,
+      "url": "https://clinicaltrials.gov/study/NCT04713982",
+      "start_date": "2021-11-19"
     },
     {
-      "nct_id": "NCT04400331",
-      "title": "Open-Label Rollover Study for Continuing Valbenazine Administration for the Treatment of Chorea Associated With Huntington Disease",
+      "nct_id": "NCT02252380",
+      "title": "ExAblate Transcranial MRgFUS for the Management of Treatment-Refractory Movement Disorders",
       "status": "ACTIVE_NOT_RECRUITING",
+      "phase": "NA",
+      "sponsor": "InSightec",
+      "intervention": "Transcranial ExAblate System",
+      "enrollment": 10,
+      "url": "https://clinicaltrials.gov/study/NCT02252380",
+      "start_date": "2015-05"
+    },
+    {
+      "nct_id": "NCT00051324",
+      "title": "Neurobiological Predictors of Huntington's Disease (PREDICT-HD)",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "phase": "N/A",
+      "sponsor": "Jordan Schultz",
+      "intervention": "",
+      "enrollment": 1700,
+      "url": "https://clinicaltrials.gov/study/NCT00051324",
+      "start_date": "2002-08"
+    },
+    {
+      "nct_id": "NCT05326451",
+      "title": "Home-based Transcranial Direct Current Stimulation Open Trial for Behavioral and Cognitive Symptoms in Huntington's Disease",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "sponsor": "The University of Texas Health Science Center, Houston",
+      "intervention": "active tDCS",
+      "enrollment": 10,
+      "url": "https://clinicaltrials.gov/study/NCT05326451",
+      "start_date": "2023-06-21"
+    },
+    {
+      "nct_id": "NCT06853743",
+      "title": "The NAD-HD Study: A Study to Investigate Efficacy and Safety of Nicotinamide Riboside Compared With Placebo in Huntington's Disease",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "sponsor": "Oslo University Hospital",
+      "intervention": "Nicotinamide Riboside (NR); Placebo",
+      "enrollment": 120,
+      "url": "https://clinicaltrials.gov/study/NCT06853743",
+      "start_date": "2025-03-18"
+    },
+    {
+      "nct_id": "NCT05243017",
+      "title": "Safety and Efficacy of AMT-130 in European Adults With Early Manifest Huntington's Disease",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "phase": "PHASE1, PHASE2",
+      "sponsor": "UniQure Biopharma B.V.",
+      "intervention": "intra-striatal rAAV5-miHTT",
+      "enrollment": 14,
+      "url": "https://clinicaltrials.gov/study/NCT05243017",
+      "start_date": "2021-10-07"
+    },
+    {
+      "nct_id": "NCT06774443",
+      "title": "Hinting Task for Huntington's Disease",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "sponsor": "University Medical Center Groningen",
+      "intervention": "Neuropsychological assessment",
+      "enrollment": 52,
+      "url": "https://clinicaltrials.gov/study/NCT06774443",
+      "start_date": "2025-09-01"
+    },
+    {
+      "nct_id": "NCT04012411",
+      "title": "Study of BDNF Pathway Biomarkers in the Cerebrospinal Fluid in Patients With Huntington's Disease",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "sponsor": "University Hospital, Montpellier",
+      "intervention": "Brain MRI; Lumbar Punction; Blood sample",
+      "enrollment": 135,
+      "url": "https://clinicaltrials.gov/study/NCT04012411",
+      "start_date": "2020-03-03"
+    },
+    {
+      "nct_id": "NCT06807892",
+      "title": "Comparison of Two Cognitive-Motor Rehabilitation Approaches Via Exergames: a Study of Cognitive, Motor and Behavioral Functions in Huntington's Disease Patients",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "sponsor": "University Hospital, Angers",
+      "intervention": "Synergistic management; Sequential management",
+      "enrollment": 40,
+      "url": "https://clinicaltrials.gov/study/NCT06807892",
+      "start_date": "2025-07-31"
+    },
+    {
+      "nct_id": "NCT06312189",
+      "title": "Long-term Study to Evaluate Safety and Tolerability of Valbenazine in Participants With Chorea Associated With Huntington Disease in Canada",
+      "status": "ENROLLING_BY_INVITATION",
       "phase": "PHASE3",
       "sponsor": "Neurocrine Biosciences",
       "intervention": "Valbenazine",
-      "enrollment": 154,
-      "url": "https://clinicaltrials.gov/study/NCT04400331",
-      "start_date": "2020-09-18"
+      "enrollment": 7,
+      "url": "https://clinicaltrials.gov/study/NCT06312189",
+      "start_date": "2024-04-24"
     },
     {
-      "nct_id": "NCT06539169",
-      "title": "FLOWER: Following Longitudinal Outcomes With Epidemiology for Rare Diseases",
-      "status": "RECRUITING",
+      "nct_id": "NCT07503743",
+      "title": "Biology-Driven Cognitive Profiling in Huntington's Disease",
+      "status": "ACTIVE_NOT_RECRUITING",
       "phase": "N/A",
-      "sponsor": "xCures",
+      "sponsor": "Fundaci\u00f3 Institut de Recerca de l'Hospital de la Santa Creu i Sant Pau",
       "intervention": "",
-      "enrollment": 1000,
-      "url": "https://clinicaltrials.gov/study/NCT06539169",
-      "start_date": "2024-06-10"
+      "enrollment": 90,
+      "url": "https://clinicaltrials.gov/study/NCT07503743",
+      "start_date": "2021-09-01"
     }
   ],
   "hdbuzz": [
+    {
+      "title": "Blocking a toxic fragment: new mouse study highlights the importance of HTT1a in Huntington\u2019s disease",
+      "link": "https://en.hdbuzz.net/blocking-a-toxic-fragment-new-mouse-study-highlights-the-importance-of-htt1a-in-huntingtons-disease/",
+      "pub_date": "Thu, 09 Apr 2026 13:00:00 +0000",
+      "description": "\u23f1\ufe0f 9 min read &#124;New research in a HD mouse model points to a key culprit: a small fragment called HTT1a. Lowering HTT1a levels successfully delayed disease signs in mice that model HD, perhaps shaping the next generation of HTT-lowering therapies."
+    },
     {
       "title": "Between Care, Genes, and Systems: Navigating Huntington\u2019s Disease as a Caregiver",
       "link": "https://en.hdbuzz.net/between-care-genes-and-systems-navigating-huntingtons-disease-as-a-caregiver/",
@@ -568,12 +574,6 @@
       "link": "https://en.hdbuzz.net/huntingtons-disease-therapeutics-conference-2026-day-2/",
       "pub_date": "Tue, 10 Mar 2026 14:57:58 +0000",
       "description": "\u23f1\ufe0f 18 min read &#124; HDBuzz is back with Day 2 of the 21st annual CHDI HD Therapeutics Conference in Palm Springs, CA. We heard about new techniques to zoom in on HD biology in extraordinary detail."
-    },
-    {
-      "title": "Huntington\u2019s Disease Therapeutics Conference 2026 \u2013 Day 1",
-      "link": "https://en.hdbuzz.net/huntingtons-disease-therapeutics-conference-2026-day-1/",
-      "pub_date": "Mon, 09 Mar 2026 13:57:00 +0000",
-      "description": "\u23f1\ufe0f 33 min read &#124; HDBuzz is at CHDI's Huntington's Disease Therapeutics Conference, ready to bring you live updates from the most recent research in the field. Get ready for some exciting science!"
     }
   ],
   "targets": [],
@@ -582,7 +582,7 @@
     "trials_count": 30,
     "hdbuzz_count": 10,
     "targets_count": 0,
-    "total_enrollment": 56391,
-    "recruiting_count": 24
+    "total_enrollment": 7283,
+    "recruiting_count": 20
   }
 }
