@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-10T09:02:33.978340",
+  "last_updated": "2026-04-11T08:36:20.206035",
   "papers": [
     {
       "pmid": "41933422",
@@ -92,15 +92,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41552385/"
     },
     {
-      "pmid": "41919473",
-      "title": "Long non-coding RNAs in neurodegenerative diseases - Molecular mechanisms, liquid biopsy biomarkers, and therapeutic targets: A review.",
-      "abstract": "Neurodegenerative diseases (NDDs), such as Alzheimer's disease (AD), Parkinson's disease (PD), amyotrophic lateral sclerosis (ALS), and Huntington's disease (HD), are age-related disorders characterized by progressive neuronal loss, cognitive decline, and limited options for disease-modifying treatments. Increasing evidence suggests that long non-coding RNAs (lncRNAs) play significant roles in neurodevelopment, neuronal homeostasis, and disease progression; however, their involvement in shared p",
-      "journal": "Biomolecules & biomedicine",
-      "pub_date": "2026 Mar",
-      "authors": "Cheng Y, Qiu M, Yu Z",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41919473/"
-    },
-    {
       "pmid": "41837536",
       "title": "Metabolic-based therapeutic strategies to treat Huntington's disease.",
       "abstract": "Huntington's disease is an autosomal dominant neurodegenerative disorder marked by progressive motor, cognitive, and psychiatric decline. Huntington's disease arises from the expansion of particular DNA sequences (cytosine/ adenosine/guanine repeats that encode glutamine) within the huntingtin (HTT) gene. This expansion leads to the synthesis of a mutant huntingtin protein (mhtt) featuring an excessively long polyglutamine segment, which is harmful and prone to form aggregates or clusters within",
@@ -155,15 +146,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/40313114/"
     },
     {
-      "pmid": "41813136",
-      "title": "ALS and Huntington Disease: Unraveling the Connections between TDP-43 and Huntingtin.",
-      "abstract": "Amyotrophic lateral sclerosis (ALS) and Huntington disease (HD) are lethal neurodegenerative diseases affecting motor function. Though their etiology and pathology are distinct, recent evidence suggests commonalities between TAR DNA-binding protein (TDP-43), which is associated with 97% of ALS cases, and huntingtin (HTT), the causative protein of HD. ALS is a heterogeneous, lethal neurodegenerative disease characterized by the progressive loss of upper and lower motor neurons, as well as brainst",
-      "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
-      "pub_date": "2026 Mar",
-      "authors": "Perry CM, Martin DDO",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41813136/"
-    },
-    {
       "pmid": "41913587",
       "title": "Associations Between Lifetime Stressor Exposure and Externalizing Problems in Youth at Risk for Huntington Disease.",
       "abstract": "Children face significant stressors while growing up in families impacted by Huntington disease (HD). However, the sources of these stressors and how they are related to psychological difficulties have not been well-characterized in this population. In this study, we examined the lifetime stressors experienced by youth at risk for HD using a comprehensive measure of lifetime stressor exposure and investigated how these stressors relate to psychological difficulties. Participants included 94 adol",
@@ -173,13 +155,31 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41913587/"
     },
     {
-      "pmid": "41956800",
-      "title": "Reverse haplotyping: taking full advantage of 25% risk testing for the 50% at-risk parent in Huntington's disease.",
-      "abstract": "Presymptomatic testing (PT) for Huntington's disease (HD) has been available for over 40 years. Individuals who opt for PT are typically at a 50% risk, though in rare cases, '25% at-risk individuals' request to know their genetic status. Family planning is one of the main reasons why predictive testing is requested and with the availability of a direct test, new choices regarding reproduction emerged. In pregnancies, couples of whom the at-risk parent (ARP) does not want to know their own status",
-      "journal": "Journal of medical genetics",
-      "pub_date": "2026 Apr",
-      "authors": "Bijlsma EK, Koopmann TT, de Bot ST",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41956800/"
+      "pmid": "41919473",
+      "title": "Long non-coding RNAs in neurodegenerative diseases - Molecular mechanisms, liquid biopsy biomarkers, and therapeutic targets: A review.",
+      "abstract": "Neurodegenerative diseases (NDDs), such as Alzheimer's disease (AD), Parkinson's disease (PD), amyotrophic lateral sclerosis (ALS), and Huntington's disease (HD), are age-related disorders characterized by progressive neuronal loss, cognitive decline, and limited options for disease-modifying treatments. Increasing evidence suggests that long non-coding RNAs (lncRNAs) play significant roles in neurodevelopment, neuronal homeostasis, and disease progression; however, their involvement in shared p",
+      "journal": "Biomolecules & biomedicine",
+      "pub_date": "2026 Mar",
+      "authors": "Cheng Y, Qiu M, Yu Z",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41919473/"
+    },
+    {
+      "pmid": "41833035",
+      "title": "Synergistic Roles of Neuropeptide S and Environmental Enrichment in Preclinical Huntington's Disease Depression Models.",
+      "abstract": "Huntington's disease (HD) is a progressive neurodegenerative disorder marked by motor, cognitive, and psychiatric impairments, with depression as a major comorbidity. Existing treatments for Huntington-related depression are inadequate, highlighting the need for strategies that target molecular mechanisms underlying mood dysregulation. This review examines the mechanistic interplay between environmental enrichment (EE), a paradigm enhancing sensory, cognitive, and social stimulation and Neuropep",
+      "journal": "CNS & neurological disorders drug targets",
+      "pub_date": "2026 Mar",
+      "authors": "Rahangdale G, Gupta KR, Ume MJ",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41833035/"
+    },
+    {
+      "pmid": "41838909",
+      "title": "High-affinity, structure-validated and selective macrocyclic peptide tools for chemical biology studies of Huntingtin.",
+      "abstract": "Huntington's disease (HD) is a fatal neurodegenerative disorder caused by a Cytosine-Adenosine-Guanine (CAG) repeat expansion in the ",
+      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+      "pub_date": "2026 Mar",
+      "authors": "Fanti R, Wolf E, Ikenoue T",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41838909/"
     }
   ],
   "trials": [
