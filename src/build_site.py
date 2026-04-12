@@ -16,6 +16,7 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).parent.parent
 DATA_FILE = ROOT / "data" / "data.json"
+HYPOTHESES_FILE = ROOT / "data" / "hypotheses_tracker.json"
 INDEX_FILE = ROOT / "index.html"
 
 
@@ -26,6 +27,15 @@ def load_data():
         sys.exit(1)
     with open(DATA_FILE) as f:
         return json.load(f)
+
+
+def load_hypotheses():
+    """Load tracked hypotheses if available."""
+    if not HYPOTHESES_FILE.exists():
+        return []
+    with open(HYPOTHESES_FILE) as f:
+        tracker = json.load(f)
+    return tracker.get("hypotheses", [])
 
 
 def sanitize_url(url):
@@ -148,6 +158,56 @@ def build_hdbuzz_html(articles):
     return "\n".join(items)
 
 
+def build_hypotheses_html(hypotheses):
+    """Build HTML for tracked hypotheses instead of hard-coded cards."""
+    if not hypotheses:
+        return ""
+
+    status_styles = {
+        "exploring": ("amber", "Exploring"),
+        "promising": ("green", "Promising"),
+        "known_tested": ("stone", "Known/Tested"),
+        "deprioritized": ("red", "Deprioritized"),
+    }
+
+    cards = []
+    ranked = sorted(
+        hypotheses,
+        key=lambda h: (h.get("scores", [0])[-1] if h.get("scores") else 0, h.get("dates", [""])[-1] if h.get("dates") else ""),
+        reverse=True,
+    )
+
+    for h in ranked[:6]:
+        score = h.get("scores", [0])[-1] if h.get("scores") else 0
+        status_key = h.get("status", "exploring")
+        color, status_label = status_styles.get(status_key, ("stone", text(status_key.replace("_", " ").title())))
+        drug = text(h.get("drug", "Unknown"))
+        target = text(h.get("target", ""))
+        rationale = text(h.get("rationale", "")[:220])
+        evidence_for = len(h.get("evidence_for", []))
+        evidence_against = len(h.get("evidence_against", []))
+        updated = ""
+        if h.get("dates"):
+            updated = text(str(h["dates"][-1])[:10])
+
+        cards.append(f'''
+      <div class="border border-{color}-200 bg-{color}-50/30 rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="flex items-center justify-between mb-3 gap-3">
+          <span class="text-lg font-bold text-stone-900">{drug}</span>
+          <span class="px-2 py-0.5 bg-{color}-100 text-{color}-700 rounded text-xs font-medium">{status_label}</span>
+        </div>
+        <div class="text-sm text-stone-800 font-medium mb-2">Target: {target}</div>
+        <p class="text-sm text-stone-700">{rationale}</p>
+        <div class="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-stone-600">
+          <span>Latest score: {score}/100</span>
+          <span>Support: {evidence_for}</span>
+          <span>Concerns: {evidence_against}</span>
+          {f"<span>Updated: {updated}</span>" if updated else ""}
+        </div>
+      </div>''')
+    return "\n".join(cards)
+
+
 def build_page(data):
     """Generate the full index.html from data."""
     stats = data.get("stats", {})
@@ -155,6 +215,7 @@ def build_page(data):
     trials = data.get("trials", [])
     hdbuzz = data.get("hdbuzz", [])
     targets = data.get("targets", [])
+    hypotheses = load_hypotheses()
     last_updated = data.get("last_updated", "")
 
     try:
@@ -203,7 +264,7 @@ def build_page(data):
         <span class="material-symbols-outlined">menu</span>
       </button>
       <div id="mobile-nav" class="mobile-menu hidden md:flex items-center gap-8 text-sm font-medium">
-        <a href="#papers" class="text-stone-800 hover:text-amber-700 transition-colors">Research</a>
+        <a href="#pillars" class="text-stone-800 hover:text-amber-700 transition-colors">Start Here</a>
         <a href="#trials" class="text-stone-800 hover:text-amber-700 transition-colors">Trials</a>
         <a href="#ideas" class="text-stone-800 hover:text-amber-700 transition-colors">Ideas</a>
         <a href="#resources" class="text-stone-800 hover:text-amber-700 transition-colors">Resources</a>
@@ -227,14 +288,14 @@ def build_page(data):
   </div>
   <div class="relative z-10 space-y-6 max-w-3xl">
     <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-white text-shadow-hero leading-tight">
-      A New Horizon in Discovery
+      Learn HD. Explore the Evidence. Chat With the Data.
     </h1>
     <p class="text-lg md:text-xl text-white/90 font-medium max-w-2xl mx-auto leading-relaxed">
-      An open experiment in applying AI to Huntington's Disease research. Built for data scientists, researchers, and curious builders.
+      A public HD research workspace with three jobs: help people learn the field, keep an always-updating view of papers and trials, and answer questions from a grounded research corpus.
     </p>
     <div class="flex flex-wrap justify-center gap-4">
       <a href="chat.html" class="bg-amber-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] transition-all">Ask HD Research</a>
-      <a href="about.html" class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all">Our Story</a>
+      <a href="learn.html" class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all">Start Learning</a>
     </div>
   </div>
 </section>
@@ -264,37 +325,63 @@ def build_page(data):
   </div>
 </section>
 
-<!-- AI + HD: What makes this site unique -->
-<section id="ai-lens" class="py-16 px-4 md:px-8">
+<!-- Core product pillars -->
+<section id="pillars" class="py-16 px-4 md:px-8">
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-12">
-      <div class="text-sm font-bold text-amber-700 uppercase tracking-wider mb-2">What Makes This Different</div>
-      <h2 class="text-2xl md:text-3xl font-bold text-stone-900">An AI + Data Science Lens on HD</h2>
-      <p class="text-stone-700 mt-2 max-w-xl mx-auto">We're not duplicating what HDSA and HDBuzz do brilliantly. We're asking: what can AI uniquely contribute?</p>
+      <div class="text-sm font-bold text-amber-700 uppercase tracking-wider mb-2">Start Here</div>
+      <h2 class="text-2xl md:text-3xl font-bold text-stone-900">Three Useful Ways In</h2>
+      <p class="text-stone-700 mt-2 max-w-2xl mx-auto">This project is most useful when it helps people do one of three things well: get oriented, ask better questions, and stay current without manually monitoring every source.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
       <div class="bg-gradient-to-br from-amber-50 to-amber-100/50 border border-amber-200 rounded-2xl p-6">
         <div class="w-11 h-11 bg-amber-500 rounded-xl flex items-center justify-center mb-4">
-          <span class="material-symbols-outlined text-white">auto_awesome</span>
+          <span class="material-symbols-outlined text-white">school</span>
         </div>
-        <h3 class="text-lg font-bold text-stone-900 mb-2">Autonomous Research Agent</h3>
-        <p class="text-stone-700 text-sm">Our AI agent runs overnight — generating hypotheses, searching PubMed, scoring drug candidates, refining. Hundreds of experiments while you sleep.</p>
-        <a href="https://github.com/jravinder/hd-research-agent" target="_blank" class="text-amber-700 text-sm font-medium mt-3 inline-flex items-center gap-1">See the code <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+        <h3 class="text-lg font-bold text-stone-900 mb-2">Learn the Basics</h3>
+        <p class="text-stone-700 text-sm">The site should help a newcomer move from “what is HD?” to targets, biomarkers, trials, and current debates without needing to decode raw papers first.</p>
+        <a href="learn.html" class="text-amber-700 text-sm font-medium mt-3 inline-flex items-center gap-1">Open learning path <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
       </div>
       <div class="bg-gradient-to-br from-orange-50 to-orange-100/50 border border-orange-200 rounded-2xl p-6">
         <div class="w-11 h-11 bg-orange-500 rounded-xl flex items-center justify-center mb-4">
-          <span class="material-symbols-outlined text-white">biotech</span>
+          <span class="material-symbols-outlined text-white">chat</span>
         </div>
-        <h3 class="text-lg font-bold text-stone-900 mb-2">Drug Repurposing via AI</h3>
-        <p class="text-stone-700 text-sm">Cross-referencing 16 HD targets against thousands of FDA-approved drugs. If a treatment already exists for something else, maybe it can help HD too — and skip years of safety testing.</p>
-        <a href="#ideas" class="text-orange-600 text-sm font-medium mt-3 inline-flex items-center gap-1">See candidates below <span class="material-symbols-outlined text-sm">arrow_downward</span></a>
+        <h3 class="text-lg font-bold text-stone-900 mb-2">Chat With Grounded Data</h3>
+        <p class="text-stone-700 text-sm">A useful chat tool answers plain-English questions against the HD corpus, experiment reports, and trial data, then points back to sources instead of bluffing confidence.</p>
+        <a href="chat.html" class="text-orange-600 text-sm font-medium mt-3 inline-flex items-center gap-1">Ask the corpus <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
       </div>
       <div class="bg-gradient-to-br from-green-50 to-green-100/50 border border-green-200 rounded-2xl p-6">
         <div class="w-11 h-11 bg-green-500 rounded-xl flex items-center justify-center mb-4">
-          <span class="material-symbols-outlined text-white">diversity_3</span>
+          <span class="material-symbols-outlined text-white">sync</span>
         </div>
-        <h3 class="text-lg font-bold text-stone-900 mb-2">Digital Twins for Trials</h3>
-        <p class="text-stone-700 text-sm">AI-simulated patient controls could accelerate clinical trials by reducing the need for traditional placebo arms. Companies like Unlearn are pioneering this for HD.</p>
+        <h3 class="text-lg font-bold text-stone-900 mb-2">Automated Research Gatherer</h3>
+        <p class="text-stone-700 text-sm">The engine behind the site is the daily gatherer: papers, trials, feeds, and tracked hypotheses collected into one inspectable workspace so someone does not have to monitor everything manually.</p>
+        <a href="research.html" class="text-green-700 text-sm font-medium mt-3 inline-flex items-center gap-1">See the workflow <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Guided value section -->
+<section class="py-12 px-4 md:px-8">
+  <div class="max-w-5xl mx-auto">
+    <div class="bg-gradient-to-br from-white to-amber-50 border border-amber-200 rounded-3xl p-6 md:p-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="bg-[#fdf9e9] rounded-2xl border border-stone-200 p-5">
+          <div class="text-xs font-bold uppercase tracking-wider text-amber-700 mb-2">For Learners</div>
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Start With the Field Map</h3>
+          <p class="text-sm text-stone-700">Use the learning path to build the basics first, then read experiment pages once the vocabulary makes sense.</p>
+        </div>
+        <div class="bg-[#fdf9e9] rounded-2xl border border-stone-200 p-5">
+          <div class="text-xs font-bold uppercase tracking-wider text-orange-600 mb-2">For Questions</div>
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Use Chat as a Research Interface</h3>
+          <p class="text-sm text-stone-700">Ask about a mechanism, treatment, or trial, then use the linked sources and reports to verify the answer.</p>
+        </div>
+        <div class="bg-[#fdf9e9] rounded-2xl border border-stone-200 p-5">
+          <div class="text-xs font-bold uppercase tracking-wider text-green-700 mb-2">For Staying Current</div>
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Let the Gatherer Do the Watching</h3>
+          <p class="text-sm text-stone-700">The automation layer refreshes the raw inputs so the dashboard and chat have something current to stand on.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -369,68 +456,15 @@ def build_page(data):
     <div class="text-center mb-10">
       <div class="text-sm font-bold text-orange-600 uppercase tracking-wider mb-2">Open Research</div>
       <h2 class="text-2xl md:text-3xl font-bold text-stone-900">Published Research Ideas</h2>
-      <p class="text-stone-700 mt-2 max-w-xl mx-auto">AI-generated drug repurposing hypotheses from our autonomous research agent. These are ideas worth exploring — not medical claims. All open for the community to build on.</p>
+      <p class="text-stone-700 mt-2 max-w-xl mx-auto">AI-assisted repurposing ideas with explicit uncertainty. These are starting points for review, not recommendations or validated findings.</p>
       <a href="experiment-1.html" class="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-amber-500 text-white rounded-lg text-sm font-medium hover:bg-amber-600 transition-colors">Read Experiment #1: Full Analysis <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div class="border border-amber-200 bg-amber-50/30 rounded-xl p-5 hover:shadow-md transition-shadow">
-        <div class="flex items-center justify-between mb-3">
-          <span class="text-lg font-bold text-stone-900">Metformin</span>
-          <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Preclinical data</span>
-        </div>
-        <div class="text-sm text-amber-700 font-medium mb-2">Target: mTOR / AMPK</div>
-        <p class="text-sm text-stone-700">Promotes autophagy — the cell's self-cleaning mechanism. May help clear mutant HTT protein aggregates. Already FDA-approved for diabetes with well-known safety profile.</p>
-        <div class="mt-3 text-xs text-stone-600">Hypothesis score: 72/100</div>
-      </div>
-      <div class="border border-amber-200 bg-amber-50/30 rounded-xl p-5 hover:shadow-md transition-shadow">
-        <div class="flex items-center justify-between mb-3">
-          <span class="text-lg font-bold text-stone-900">Rapamycin</span>
-          <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Preclinical data</span>
-        </div>
-        <div class="text-sm text-amber-700 font-medium mb-2">Target: mTOR</div>
-        <p class="text-sm text-stone-700">mTOR inhibitor — has demonstrated clearance of mutant HTT in preclinical HD models. Strong mechanistic rationale for inducing autophagy of toxic protein aggregates.</p>
-        <div class="mt-3 text-xs text-stone-600">Hypothesis score: 68/100</div>
-      </div>
-      <div class="border border-orange-200 bg-orange-50/30 rounded-xl p-5 hover:shadow-md transition-shadow">
-        <div class="flex items-center justify-between mb-3">
-          <span class="text-lg font-bold text-stone-900">Bevantolol (SOM3355)</span>
-          <span class="px-2 py-0.5 bg-amber-100 text-amber-800 rounded text-xs font-medium">Phase II</span>
-        </div>
-        <div class="text-sm text-orange-600 font-medium mb-2">Target: Chorea</div>
-        <p class="text-sm text-stone-700">AI-discovered by SOM Biotech using their SOMAIPRO platform. Beta-blocker repurposed for HD chorea. Proof that AI drug repurposing works in practice.</p>
-        <div class="mt-3 text-xs text-stone-600">Already in clinical trials</div>
-      </div>
-      <div class="border border-green-200 bg-green-50/30 rounded-xl p-5 hover:shadow-md transition-shadow">
-        <div class="flex items-center justify-between mb-3">
-          <span class="text-lg font-bold text-stone-900">CBD</span>
-          <span class="px-2 py-0.5 bg-amber-100 text-amber-800 rounded text-xs font-medium">Early human data</span>
-        </div>
-        <div class="text-sm text-green-600 font-medium mb-2">Target: CB1 / CB2 receptors</div>
-        <p class="text-sm text-stone-700">Cannabinoid receptors are lost early in HD. Early human trial data suggests potential for slowing progression. CB2 modulation may also address neuroinflammation.</p>
-        <div class="mt-3 text-xs text-stone-600">Hypothesis score: 61/100</div>
-      </div>
-      <div class="border border-purple-200 bg-purple-50/30 rounded-xl p-5 hover:shadow-md transition-shadow">
-        <div class="flex items-center justify-between mb-3">
-          <span class="text-lg font-bold text-stone-900">Vorinostat (SAHA)</span>
-          <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Preclinical</span>
-        </div>
-        <div class="text-sm text-purple-600 font-medium mb-2">Target: HDAC</div>
-        <p class="text-sm text-stone-700">HDAC inhibitor addressing epigenetic dysregulation in HD. Already FDA-approved for lymphoma. May restore gene expression patterns disrupted by mutant HTT.</p>
-        <div class="mt-3 text-xs text-stone-600">Hypothesis score: 64/100</div>
-      </div>
-      <div class="border border-stone-200 bg-[#f8f4e4]/30 rounded-xl p-5 hover:shadow-md transition-shadow">
-        <div class="flex items-center justify-between mb-3">
-          <span class="text-lg font-bold text-stone-900">Simvastatin</span>
-          <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Preclinical</span>
-        </div>
-        <div class="text-sm text-stone-800 font-medium mb-2">Target: BDNF</div>
-        <p class="text-sm text-stone-700">Common statin that increases brain-derived neurotrophic factor (BDNF) — critically reduced in HD. BDNF supports the survival of neurons most vulnerable in HD.</p>
-        <div class="mt-3 text-xs text-stone-600">Hypothesis score: 58/100</div>
-      </div>
+{build_hypotheses_html(hypotheses)}
     </div>
     <div class="mt-8 bg-orange-50 border border-orange-200 rounded-xl p-5 text-center">
-      <p class="text-sm text-stone-800"><strong>Important:</strong> These hypotheses are AI-generated starting points — not validated findings. They have not been reviewed by HD domain experts or tested experimentally. We publish them openly for the community to evaluate.</p>
-      <p class="text-sm text-stone-700 mt-2">Are you an HD researcher? We'd love your feedback. <a href="https://github.com/jravinder/hd-research-agent/discussions" target="_blank" class="text-amber-700 underline font-medium">Review and discuss on GitHub</a></p>
+      <p class="text-sm text-stone-800"><strong>Important:</strong> These hypotheses are triage artifacts, not evidence of efficacy. They have not been clinically validated, experimentally confirmed, or expert-reviewed unless explicitly stated.</p>
+      <p class="text-sm text-stone-700 mt-2">These cards are generated from <code>data/hypotheses_tracker.json</code>, not hand-picked homepage copy. Are you an HD researcher? We'd love your feedback. <a href="https://github.com/jravinder/hd-research-agent/discussions" target="_blank" class="text-amber-700 underline font-medium">Review and discuss on GitHub</a></p>
     </div>
   </div>
 </section>
@@ -445,7 +479,7 @@ def build_page(data):
         </div>
         <div class="flex-1">
           <h2 class="text-xl font-bold text-stone-900 mb-2">Who This Is For</h2>
-          <p class="text-stone-800 text-sm leading-relaxed mb-4">This is an <strong>experimentation playground</strong> — a place where data scientists, AI engineers, ML researchers, bioinformaticians, and curious builders can explore how AI tools apply to a real-world problem: Huntington's Disease drug discovery.</p>
+          <p class="text-stone-800 text-sm leading-relaxed mb-4">This is best viewed as <strong>open research infrastructure</strong>: a place where data scientists, AI engineers, bioinformaticians, and researchers can test whether agent workflows actually help with literature review, hypothesis triage, and research communication.</p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
             <div class="bg-white rounded-xl p-4 border border-stone-200">
               <div class="font-bold text-stone-900 text-sm mb-1">Data Scientists + AI/ML Engineers</div>

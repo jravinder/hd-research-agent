@@ -19,7 +19,7 @@
 
   <div class="mb-12">
     <h1 class="text-3xl font-extrabold text-stone-900 mb-3">Journey</h1>
-    <p class="text-stone-600">How this project came together and where it's going.</p>
+    <p class="text-stone-600">How the project evolved from a curiosity-driven build into a more useful research workspace.</p>
   </div>
 
   <!-- Timeline -->
@@ -35,8 +35,8 @@
       </div>
       <div>
         <div class="text-xs text-amber-700 font-bold uppercase tracking-wider mb-1">Milestone 1</div>
-        <h3 class="text-lg font-bold text-stone-900 mb-2">Researched the landscape, built the platform</h3>
-        <p class="text-stone-600 text-sm leading-relaxed">Scanned PubMed, ClinicalTrials.gov, X, Reddit, HDBuzz for everything HD-related. Found 7+ active therapies and no open-source AI research agents in the space. Built a literature agent, drug repurposing scanner (16 HD targets), trial tracker, and autoresearch loop. All running on an NVIDIA Jetson AGX Orin via Ollama.</p>
+        <h3 class="text-lg font-bold text-stone-900 mb-2">Started with the question: can open tools make HD research easier to follow?</h3>
+        <p class="text-stone-600 text-sm leading-relaxed">The first step was not model prompting. It was landscape work: understanding the HD pipeline, the public data sources, and what was missing for non-specialists and builders. That led to a stack for papers, trials, hypotheses, and site generation running locally on a Jetson.</p>
       </div>
     </div>
 
@@ -49,8 +49,8 @@
       </div>
       <div>
         <div class="text-xs text-green-700 font-bold uppercase tracking-wider mb-1">Milestone 2</div>
-        <h3 class="text-lg font-bold text-stone-900 mb-2">22 papers analyzed, 5 hypotheses generated</h3>
-        <p class="text-stone-600 text-sm leading-relaxed">Fed recent HD papers to Llama 3.1 8B. The LLM extracted targets and generated drug repurposing ideas. Top hypothesis: Tocilizumab for neuroinflammation (80/100). Also flagged a novel TDP-43/HD connection. Published what worked and what didn't.</p>
+        <h3 class="text-lg font-bold text-stone-900 mb-2">Moved from collection to experiments</h3>
+        <p class="text-stone-600 text-sm leading-relaxed">Once the data pipeline existed, the next step was to test what LLMs were actually good for: extracting structure from papers, surfacing targets, and proposing hypotheses worth human review. The important part was publishing both the outputs and their limitations.</p>
         <a href="experiment-1.html" class="inline-flex items-center gap-1 mt-2 text-amber-700 text-sm font-medium hover:underline">Read the report <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
       </div>
     </div>
@@ -64,8 +64,8 @@
       </div>
       <div>
         <div class="text-xs text-amber-700 font-bold uppercase tracking-wider mb-1">Milestone 3</div>
-        <h3 class="text-lg font-bold text-stone-900 mb-2">Dashboard, chatbot, 4 autonomous agents, 46-paper corpus</h3>
-        <p class="text-stone-600 text-sm leading-relaxed">Published the research dashboard with live data from 4 sources, RAG chatbot (NVIDIA NIM + Sarvam AI for Indian languages), medical guardrails, and 4 research agents (Paper Scout, Hypothesis Refiner, Social Watcher, Digest Writer). Auto-refreshes daily via GitHub Actions. 21 languages supported.</p>
+        <h3 class="text-lg font-bold text-stone-900 mb-2">Turned the experiments into a usable interface</h3>
+        <p class="text-stone-600 text-sm leading-relaxed">The project became more than a backend once the dashboard, chat interface, learning path, and automation loop started working together. That changed the purpose of the site: not just running experiments, but helping someone learn the field, inspect the evidence, and stay current.</p>
       </div>
     </div>
 
@@ -78,12 +78,12 @@
       </div>
       <div>
         <div class="text-xs text-stone-500 font-bold uppercase tracking-wider mb-1">Next</div>
-        <h3 class="text-lg font-bold text-stone-900 mb-2">What's ahead</h3>
+        <h3 class="text-lg font-bold text-stone-900 mb-2">What needs to get better next</h3>
         <ul class="text-sm text-stone-600 space-y-1">
-          <li>Weekly auto-generated research digests</li>
-          <li>Hypothesis confidence tracking over time</li>
-          <li>Somatic expansion drug screen (MSH3, FAN1, PMS1)</li>
-          <li>Database migration for scale</li>
+          <li>Make chat more visibly source-grounded and easier to verify</li>
+          <li>Improve the learning path so newcomers can ramp faster</li>
+          <li>Strengthen automated gathering and hypothesis provenance</li>
+          <li>Add more validation around what gets published to the site</li>
         </ul>
       </div>
     </div>
@@ -99,7 +99,7 @@
     </div>
   </div>
 
-  <p class="text-center text-sm text-stone-400 mt-8 italic">Problem → Idea → Iterate</p>
+  <p class="text-center text-sm text-stone-400 mt-8 italic">Build the loop. Make it legible. Improve it in public.</p>
 
 </main>
 

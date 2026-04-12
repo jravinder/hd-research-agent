@@ -26,13 +26,13 @@
 
     <div class="text-gray-600 leading-relaxed space-y-5 text-base">
 
-      <p>I'm an engineer and builder at heart. I've spent 18+ years shipping software. from distributed systems to GenAI products. This project is my attempt to contribute to Huntington's Disease research using the tools I know best: data, AI, and code.</p>
+      <p>I'm an engineer and builder. I've spent 18+ years shipping software, from distributed systems to GenAI products. This project is my attempt to contribute to Huntington's Disease research using the tools I know best: data, AI, and code.</p>
 
-      <p>Applying the power of agentic AI to hard problems is something I want to do. HD is one of the hardest. and the tools are finally here. Gene therapies are showing real results (<a href="https://www.nature.com/articles/d41586-025-03139-9" class="text-amber-700 underline" target="_blank">Nature, 2025</a>). AI is designing millions of candidate compounds (<a href="https://www.drugtargetreview.com/news/154613/novartis-licenses-innovative-treatment-for-huntingtons-disease/" class="text-amber-700 underline" target="_blank">Drug Target Review</a>). Digital twins are accelerating trials (<a href="https://www.newswire.com/news/unlearn-advances-huntingtons-disease-ai-modeling-through-access-to-22732325" class="text-amber-700 underline" target="_blank">Newswire, 2026</a>). I wanted to see what autonomous agents and open-source tools could contribute.</p>
+      <p>I want to apply agent workflows to hard, real problems. HD is one of the hardest. Recent progress in therapies, computational biology, and trial design makes it worth testing where open tools can actually help. I wanted to see whether autonomous agents and public data could improve literature review, hypothesis triage, and research communication without pretending to replace domain experts.</p>
 
-      <p>So I built autonomous research agents that scan PubMed, track clinical trials, generate drug repurposing hypotheses, and publish what they find. openly, with full methodology, and honest about limitations. Everything runs on an NVIDIA Jetson in my home office. Zero cloud cost.</p>
+      <p>So I built research agents that scan PubMed, track clinical trials, generate repurposing hypotheses, and publish what they find openly, with methodology and limitations visible. Everything runs on an NVIDIA Jetson in my home office.</p>
 
-      <p>This is an experiment in applying AI to a real problem. Our hypotheses are starting points for researchers to evaluate, not conclusions. We publish what works and what doesn't, because that's how good research operates.</p>
+      <p>This is an experiment in applying AI to a real problem. The output should be treated as triage material for researchers to inspect, not conclusions to trust. We publish what works and what does not because that is the only way this becomes useful infrastructure instead of marketing.</p>
 
       <p>Everything is open source. MIT-licensed. Built on public data from <a href="https://pubmed.ncbi.nlm.nih.gov" class="text-amber-700 underline" target="_blank">PubMed</a>, <a href="https://clinicaltrials.gov" class="text-amber-700 underline" target="_blank">ClinicalTrials.gov</a>, and <a href="https://en.hdbuzz.net" class="text-amber-700 underline" target="_blank">HDBuzz</a>.</p>
 
@@ -54,31 +54,29 @@
 
   <hr class="border-gray-200 my-12"/>
 
-  <!-- Soul -->
+  <!-- Philosophy -->
   <div class="mb-16">
-    <h2 class="text-2xl font-bold text-stone-900 mb-2">The Soul of This Project</h2>
-    <p class="text-gray-500 text-sm mb-6">Five principles we operate by. Inspired by people who changed how we think about technology.</p>
+    <h2 class="text-2xl font-bold text-stone-900 mb-2">How I Think About This Work</h2>
+    <p class="text-gray-500 text-sm mb-6">A practical philosophy for building AI tools around a serious research problem.</p>
 
     <div class="space-y-4">
       <div class="flex gap-4 items-start">
         <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-          <span class="material-symbols-outlined text-orange-600">rocket_launch</span>
+          <span class="material-symbols-outlined text-orange-600">visibility</span>
         </div>
         <div>
-          <div class="font-bold text-stone-900">First Principles</div>
-          <p class="text-sm text-gray-500">Reason from fundamentals, not by analogy to what's been done before. "People's thinking process is too bound by convention." Break the problem down to its atoms and rebuild.</p>
-          <p class="text-xs text-gray-300 mt-1">Inspired by Elon Musk</p>
+          <div class="font-bold text-stone-900">Make the Work Legible</div>
+          <p class="text-sm text-gray-500">A useful research tool should reduce confusion, not add another opaque layer. That means showing sources, methods, caveats, and intermediate outputs so people can inspect the work instead of trusting a black box.</p>
         </div>
       </div>
 
       <div class="flex gap-4 items-start">
         <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-          <span class="material-symbols-outlined text-green-600">bolt</span>
+          <span class="material-symbols-outlined text-green-600">schedule</span>
         </div>
         <div>
-          <div class="font-bold text-stone-900">Speed of Light</div>
-          <p class="text-sm text-gray-500">The only constraint should be physics, not process. How fast can it be done. and why aren't we doing it that fast? No task is beneath us. Urgency is real when people are waiting.</p>
-          <p class="text-xs text-gray-300 mt-1">Inspired by Jensen Huang</p>
+          <div class="font-bold text-stone-900">Use Automation Where It Saves Real Time</div>
+          <p class="text-sm text-gray-500">Automation matters when it handles repetitive gathering, tagging, summarizing, and tracking. The point is not autonomous theater. The point is giving researchers and curious builders a better starting point every day.</p>
         </div>
       </div>
 
@@ -87,9 +85,8 @@
           <span class="material-symbols-outlined text-amber-700">science</span>
         </div>
         <div>
-          <div class="font-bold text-stone-900">Autonomous Experimentation</div>
-          <p class="text-sm text-gray-500">Ship the loop, not the slide deck. Set up the agent, define the reward signal, let it run 100 experiments overnight. The human role shifts from experimenter to experimental designer.</p>
-          <p class="text-xs text-gray-300 mt-1">Inspired by Andrej Karpathy</p>
+          <div class="font-bold text-stone-900">Treat AI Output as Triage, Not Truth</div>
+          <p class="text-sm text-gray-500">LLMs are good at surfacing possibilities, organizing information, and compressing large volumes of text. They are not evidence. In this project, AI output should help prioritize human attention, not replace scientific judgment.</p>
         </div>
       </div>
 
@@ -98,9 +95,8 @@
           <span class="material-symbols-outlined text-blue-600">school</span>
         </div>
         <div>
-          <div class="font-bold text-stone-900">Democratize</div>
-          <p class="text-sm text-gray-500">AI is the new electricity. make it accessible to everyone, not just experts. If 8 million people can learn ML through a free course, imagine what open HD research tools can unlock.</p>
-          <p class="text-xs text-gray-300 mt-1">Inspired by Andrew Ng</p>
+          <div class="font-bold text-stone-900">Lower the Barrier to Entry</div>
+          <p class="text-sm text-gray-500">Most people cannot jump straight into primary literature. A good system should help someone learn the basics, ask better questions, and gradually move from outsider to informed participant.</p>
         </div>
       </div>
 
@@ -109,16 +105,15 @@
           <span class="material-symbols-outlined text-purple-600">favorite</span>
         </div>
         <div>
-          <div class="font-bold text-stone-900">Benevolent Technology</div>
-          <p class="text-sm text-gray-500">"Tools don't have independent values. their values are human values." Every tool we've ever created, we wanted to use for good. That's the arc of civilization. Our technology reflects our values.</p>
-          <p class="text-xs text-gray-300 mt-1">Inspired by Fei-Fei Li</p>
+          <div class="font-bold text-stone-900">Publish Honestly</div>
+          <p class="text-sm text-gray-500">If a hypothesis is weak, say so. If a result is preliminary, say so. If a feature is more promising than proven, say so. The only way this becomes durable is by resisting the urge to make it sound more certain than it is.</p>
         </div>
       </div>
     </div>
 
     <div class="mt-8 bg-gray-50 rounded-xl p-6 text-center">
-      <p class="text-lg font-bold text-stone-900 mb-1">Problem → Idea → Iterate</p>
-      <p class="text-sm text-gray-500">That's the whole method.</p>
+      <p class="text-lg font-bold text-stone-900 mb-1">Learn → Gather → Question → Inspect</p>
+      <p class="text-sm text-gray-500">That is the operating loop behind the site.</p>
     </div>
   </div>
 
