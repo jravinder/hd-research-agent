@@ -146,7 +146,7 @@ def unique_sources(items):
 
 def extract_pmids(text):
     """Extract PubMed IDs cited like [12345678] from model output."""
-    return re.findall(r"\[(\d{8})\]", text or "")
+    return re.findall(r"\[(\d{1,9})\]", text or "")
 
 
 def prioritize_sources_by_citation(response_text, sources):

@@ -222,7 +222,7 @@ function removeTyping() { const el = document.getElementById('typing'); if (el) 
 function formatResponse(text) {
   text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   text = text.replace(/\*(.+?)\*/g, '<em>$1</em>');
-  text = text.replace(/\[(\d{8})\]/g, '<a href="https://pubmed.ncbi.nlm.nih.gov/$1/" target="_blank" class="text-primary underline">[$1]</a>');
+  text = text.replace(/\[(\d{1,9})\]/g, '<a href="https://pubmed.ncbi.nlm.nih.gov/$1/" target="_blank" class="text-primary underline">[$1]</a>');
   text = text.replace(/\n\n/g, '</p><p class="mt-3">');
   text = text.replace(/\n/g, '<br>');
   return '<p>' + text + '</p>';
