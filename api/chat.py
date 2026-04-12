@@ -128,9 +128,56 @@ def find_relevant_papers(query, max_papers=8):
     return [p for _, p in scored[:max_papers]]
 
 
+def unique_sources(items):
+    """Return unique source records keyed by PMID."""
+    seen = set()
+    sources = []
+    for item in items:
+        pmid = str(item.get("pmid", "")).strip()
+        if not pmid or pmid in seen:
+            continue
+        seen.add(pmid)
+        sources.append({
+            "pmid": pmid,
+            "title": item.get("title", "")[:120],
+        })
+    return sources
+
+
+def extract_pmids(text):
+    """Extract PubMed IDs cited like [12345678] from model output."""
+    return re.findall(r"\[(\d{8})\]", text or "")
+
+
+def prioritize_sources_by_citation(response_text, sources):
+    """Move explicitly cited PMIDs to the front while preserving uniqueness."""
+    cited_pmids = extract_pmids(response_text)
+    if not cited_pmids or not sources:
+        return sources
+
+    by_pmid = {str(source.get("pmid", "")).strip(): source for source in sources}
+    ordered = []
+    seen = set()
+
+    for pmid in cited_pmids:
+        source = by_pmid.get(pmid)
+        if source and pmid not in seen:
+            ordered.append(source)
+            seen.add(pmid)
+
+    for source in sources:
+        pmid = str(source.get("pmid", "")).strip()
+        if pmid and pmid not in seen:
+            ordered.append(source)
+            seen.add(pmid)
+
+    return ordered
+
+
 def build_context(query):
     """Build RAG context from knowledge base, corpus, experiments, and trial data."""
     context_parts = []
+    sources = []
 
     # Semantic search via Upstash Vector (primary source)
     chunks = search_semantic(query)
@@ -140,6 +187,7 @@ def build_context(query):
         chunks = find_relevant_chunks(query)
 
     if chunks:
+        sources.extend(unique_sources(chunks))
         context_parts.append("RELEVANT RESEARCH (from full-text papers):")
         for c in chunks:
             pmid = c.get("pmid", "")
@@ -152,6 +200,7 @@ def build_context(query):
     if not chunks:
         papers = find_relevant_papers(query)
         if papers:
+            sources.extend(unique_sources(papers))
             context_parts.append("RELEVANT RESEARCH PAPERS (abstracts):")
             for p in papers:
                 analysis = p.get("analysis", {})
@@ -181,7 +230,11 @@ def build_context(query):
     if stats:
         context_parts.append(f"\nCURRENT HD TRIAL STATS: {stats.get('trials_count', 0)} active trials, {stats.get('recruiting_count', 0)} recruiting, {stats.get('total_enrollment', 0)} patients enrolled")
 
-    return "\n".join(context_parts)
+    return {
+        "text": "\n".join(context_parts),
+        "sources": sources[:8],
+        "source_count": len(sources),
+    }
 
 
 def call_nim(messages):
@@ -245,8 +298,12 @@ HARD RULES (never break these):
 3. NEVER predict someone's prognosis or life expectancy.
 4. NEVER suggest someone should or should not get genetic testing — that is a deeply personal decision for a genetic counselor.
 5. NEVER frame AI-generated hypotheses as validated treatments. Always say they are "unvalidated computational ideas that need expert review and experimental testing."
-6. ALWAYS ground answers in the provided research context. Cite PubMed IDs.
-7. ALWAYS end responses with: "*This is AI-generated research analysis, not medical advice.*"
+6. ALWAYS ground answers in the provided research context.
+7. When making factual claims from papers, cite PubMed IDs inline using the format [12345678].
+8. If the available context does not support a claim strongly, say that plainly instead of filling the gap.
+9. If the question is about trials or site-level statistics, use the provided context and be explicit when the answer comes from site data rather than a paper.
+10. If there are relevant papers in context, do not return an uncited research summary.
+11. ALWAYS end responses with: "*This is AI-generated research analysis, not medical advice.*"
 
 WHAT YOU CAN DO:
 - Explain what a research paper found (citing the PubMed ID)
@@ -256,7 +313,33 @@ WHAT YOU CAN DO:
 - Point people to HDSA, HDBuzz, HDYO, Enroll-HD for real support
 - Explain the HD treatment pipeline at a high level
 
+FORMAT:
+- Prefer this structure whenever the question is research-facing:
+  **Summary**
+  2-4 sentences.
+
+  **What The Evidence Here Says**
+  2-5 bullet points, each grounded in the provided context.
+
+  **Limits / Uncertainty**
+  1-3 bullet points on ambiguity, missing evidence, or why this should be treated cautiously.
+
+  **Where To Look Next**
+  1-3 bullet points pointing to trials, reports, or papers in the context.
+- If the user asks a very narrow factual question, you may answer more briefly, but still cite PMIDs when using papers.
+- Keep answers concise and readable. Avoid long walls of text.
+
 TONE: Warm, careful, honest. You are a librarian helping someone navigate research, not a doctor giving advice. When in doubt, redirect to professionals."""
+
+
+def has_research_context(context_bundle):
+    """Whether the answer had research sources available for citation."""
+    return bool(context_bundle.get("sources"))
+
+
+def has_inline_citations(text):
+    """Whether the model included PMID-style citations in the response."""
+    return bool(extract_pmids(text))
 
 
 class handler(BaseHTTPRequestHandler):
@@ -296,7 +379,9 @@ class handler(BaseHTTPRequestHandler):
                 return
 
             # Build RAG context
-            context = build_context(query_for_rag)
+            context_bundle = build_context(query_for_rag)
+            context = context_bundle["text"]
+            sources = context_bundle["sources"]
 
             messages = [
                 {"role": "system", "content": SYSTEM_PROMPT},
@@ -314,16 +399,27 @@ class handler(BaseHTTPRequestHandler):
                 messages = full_messages
 
             response = call_nim(messages)
+            sources = prioritize_sources_by_citation(response, sources)
+
+            response_has_inline_citations = has_inline_citations(response)
+            citation_warning = None
+            if has_research_context(context_bundle) and not response_has_inline_citations:
+                citation_warning = "This answer used retrieved research context but did not include inline PubMed citations. Treat it as lower-confidence summary text."
 
             # Translate response back to user's language if needed
             response_lang = "en-IN"
             if user_lang != "en-IN":
                 response = sarvam_translate(response, "en-IN", user_lang)
                 response_lang = user_lang
+                if citation_warning:
+                    citation_warning = sarvam_translate(citation_warning, "en-IN", user_lang)
 
             self._respond(200, {
                 "response": response,
-                "papers_cited": len(find_relevant_papers(query_for_rag)),
+                "papers_cited": len(sources),
+                "sources": sources,
+                "citation_warning": citation_warning,
+                "has_inline_citations": response_has_inline_citations,
                 "corpus_size": len(CORPUS.get("papers", {})),
                 "language": response_lang,
                 "language_name": SUPPORTED_LANGS.get(response_lang, "English"),

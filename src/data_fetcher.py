@@ -29,7 +29,85 @@ CT_API = "https://clinicaltrials.gov/api/v2/studies"
 HDBUZZ_RSS = "https://en.hdbuzz.net/feed"
 
 
-def fetch_pubmed(query="huntington disease treatment OR huntington disease gene therapy", days=30, max_results=20):
+HD_INCLUDE_TERMS = {
+    "huntington disease": 6,
+    "huntington's disease": 6,
+    "hd ": 1,
+    " hd": 1,
+    "huntingtin": 5,
+    "htt": 3,
+    "polyglutamine": 3,
+    "polyq": 3,
+    "cag": 1,
+    "chorea": 1,
+    "striatal": 2,
+    "basal ganglia": 2,
+}
+
+HD_PRIORITY_TERMS = {
+    "treatment": 2,
+    "therapy": 2,
+    "therapeutic": 2,
+    "trial": 2,
+    "gene therapy": 2,
+    "biomarker": 2,
+    "review": 1,
+    "mechanism": 1,
+    "drug": 1,
+    "repurpos": 2,
+}
+
+HD_EXCLUDE_TERMS = {
+    "atrial fibrillation": 6,
+    "cardiovascular": 4,
+    "arrhythmia": 4,
+    "myocard": 4,
+    "cancer": 3,
+    "tumor": 3,
+    "diabetes": 2,
+}
+
+
+def _xml_text(element) -> str:
+    """Flatten XML element text, preserving nested tag content."""
+    if element is None:
+        return ""
+    return "".join(element.itertext()).strip()
+
+
+def _score_hd_relevance(title: str, abstract: str, journal: str, keywords: list[str]) -> tuple[int, list[str]]:
+    """Score whether a paper is meaningfully related to Huntington's disease."""
+    haystack = " ".join([title, abstract, journal, " ".join(keywords)]).lower()
+    score = 0
+    reasons = []
+
+    for term, weight in HD_INCLUDE_TERMS.items():
+        if term in haystack:
+            score += weight
+            reasons.append(f"+{term}")
+
+    for term, weight in HD_PRIORITY_TERMS.items():
+        if term in haystack:
+            score += weight
+
+    for term, weight in HD_EXCLUDE_TERMS.items():
+        if term in haystack:
+            score -= weight
+            reasons.append(f"-{term}")
+
+    if "huntington" in title.lower():
+        score += 3
+    if "huntington" in abstract.lower():
+        score += 2
+
+    return score, reasons
+
+
+def fetch_pubmed(
+    query='("Huntington Disease"[Title/Abstract] OR "Huntington Disease"[MeSH Terms] OR huntingtin[Title/Abstract] OR HTT[Title/Abstract])',
+    days=30,
+    max_results=20,
+):
     """Fetch recent HD papers from PubMed."""
     print(f"  PubMed: searching '{query}' (last {days} days)...")
     min_date = (datetime.now() - timedelta(days=days)).strftime("%Y/%m/%d")
@@ -38,7 +116,7 @@ def fetch_pubmed(query="huntington disease treatment OR huntington disease gene 
     params = {
         "db": "pubmed",
         "term": query,
-        "retmax": max_results,
+        "retmax": max_results * 3,
         "sort": "relevance",
         "datetype": "pdat",
         "mindate": min_date,
@@ -62,14 +140,17 @@ def fetch_pubmed(query="huntington disease treatment OR huntington disease gene 
 
         root = ET.fromstring(resp2.text)
         papers = []
+        skipped = []
         for article in root.findall(".//PubmedArticle"):
             medline = article.find(".//MedlineCitation")
             art = medline.find(".//Article")
             pmid = medline.findtext(".//PMID", "")
-            title = art.findtext(".//ArticleTitle", "")
+            title = _xml_text(art.find(".//ArticleTitle"))
             abstract_parts = art.findall(".//Abstract/AbstractText")
-            abstract = " ".join(t.text or "" for t in abstract_parts)[:500]
+            abstract = " ".join(_xml_text(t) for t in abstract_parts).strip()[:500]
             journal = art.findtext(".//Journal/Title", "")
+            kw_list = medline.findall(".//KeywordList/Keyword")
+            keywords = [_xml_text(kw) for kw in kw_list if _xml_text(kw)]
 
             pub_date_el = art.find(".//Journal/JournalIssue/PubDate")
             pub_date = ""
@@ -84,6 +165,11 @@ def fetch_pubmed(query="huntington disease treatment OR huntington disease gene 
                 for a in author_list[:3]
             )
 
+            score, reasons = _score_hd_relevance(title, abstract, journal, keywords)
+            if score < 6:
+                skipped.append((pmid, title[:80], score, reasons[:3]))
+                continue
+
             papers.append({
                 "pmid": pmid,
                 "title": title,
@@ -91,8 +177,16 @@ def fetch_pubmed(query="huntington disease treatment OR huntington disease gene 
                 "journal": journal,
                 "pub_date": pub_date,
                 "authors": authors,
+                "keywords": keywords[:8],
+                "hd_relevance_score": score,
                 "url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
             })
+        papers.sort(key=lambda p: (p.get("hd_relevance_score", 0), p.get("pub_date", "")), reverse=True)
+        papers = papers[:max_results]
+        print(f"  PubMed: kept {len(papers)} HD-relevant papers")
+        if skipped:
+            sample = "; ".join(f"{pmid}:{score}" for pmid, _, score, _ in skipped[:5])
+            print(f"  PubMed: skipped {len(skipped)} weak matches ({sample})")
         return papers
     except Exception as e:
         print(f"  PubMed ERROR: {e}")

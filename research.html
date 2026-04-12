@@ -22,28 +22,28 @@
 
 <main class="max-w-5xl mx-auto px-6 py-12">
 
-  <h1 class="text-3xl font-extrabold tracking-tighter text-stone-900 mb-2">Research Tracker</h1>
-  <p class="text-stone-600 mb-10">Everything we've built, every experiment we've run, and what's coming next.</p>
+  <h1 class="text-3xl font-extrabold tracking-tighter text-stone-900 mb-2">Research Workspace</h1>
+  <p class="text-stone-600 mb-10">A status view of the current research stack: what is running, what has been tested, and what still needs stronger validation.</p>
 
   <!-- Infrastructure -->
   <section class="mb-12">
     <h2 class="text-xl font-bold text-stone-900 mb-4 flex items-center gap-2">
-      <span class="material-symbols-outlined text-amber-600">storage</span> Infrastructure
+      <span class="material-symbols-outlined text-amber-600">storage</span> Current Stack
     </h2>
     <div class="bg-white rounded-xl editorial-shadow overflow-hidden">
       <table class="w-full text-left text-sm">
         <thead><tr class="bg-amber-50 border-b border-amber-100">
           <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Component</th>
-          <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Status</th>
+          <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">State</th>
           <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Details</th>
         </tr></thead>
         <tbody class="divide-y divide-stone-100">
-          <tr><td class="py-3 px-5 font-medium">Knowledge Base</td><td class="py-3 px-5"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Live</span></td><td class="py-3 px-5 text-stone-600">1,571 chunks from 46 papers (20 full text + 26 abstracts)</td></tr>
-          <tr><td class="py-3 px-5 font-medium">Vector Search (Upstash)</td><td class="py-3 px-5"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Live</span></td><td class="py-3 px-5 text-stone-600">1,571 vectors, BGE-base-en-v1.5, 768 dim, cosine</td></tr>
-          <tr><td class="py-3 px-5 font-medium">Chatbot (Ask HD Research)</td><td class="py-3 px-5"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Live</span></td><td class="py-3 px-5 text-stone-600">NVIDIA NIM + Sarvam AI (22 Indian languages) + semantic RAG</td></tr>
-          <tr><td class="py-3 px-5 font-medium">Daily Data Refresh</td><td class="py-3 px-5"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Active</span></td><td class="py-3 px-5 text-stone-600">GitHub Actions, 8am UTC, PubMed + ClinicalTrials.gov + HDBuzz</td></tr>
-          <tr><td class="py-3 px-5 font-medium">Guardrails</td><td class="py-3 px-5"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Active</span></td><td class="py-3 px-5 text-stone-600">Pre-commit hook checks all pages for medical disclaimers</td></tr>
-          <tr><td class="py-3 px-5 font-medium">Google Analytics</td><td class="py-3 px-5"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Live</span></td><td class="py-3 px-5 text-stone-600">G-N8BMJ7ZG5V across all pages</td></tr>
+          <tr><td class="py-3 px-5 font-medium">Knowledge Base</td><td class="py-3 px-5"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Running</span></td><td class="py-3 px-5 text-stone-600">1,571 chunks from 46 papers. This is the retrieval layer behind the chat experience.</td></tr>
+          <tr><td class="py-3 px-5 font-medium">Vector Search (Upstash)</td><td class="py-3 px-5"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Running</span></td><td class="py-3 px-5 text-stone-600">1,571 vectors, BGE-base-en-v1.5, 768 dim, cosine. Powers semantic retrieval over the corpus.</td></tr>
+          <tr><td class="py-3 px-5 font-medium">Chat Interface</td><td class="py-3 px-5"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Available</span></td><td class="py-3 px-5 text-stone-600">Source-grounded HD Q&amp;A over the research corpus, experiment outputs, and trial data.</td></tr>
+          <tr><td class="py-3 px-5 font-medium">Daily Data Refresh</td><td class="py-3 px-5"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Scheduled</span></td><td class="py-3 px-5 text-stone-600">Pulls PubMed, ClinicalTrials.gov, and HDBuzz into the site data layer each day.</td></tr>
+          <tr><td class="py-3 px-5 font-medium">Publishing Guardrails</td><td class="py-3 px-5"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Enabled</span></td><td class="py-3 px-5 text-stone-600">Checks for required medical disclaimers before changes are shipped.</td></tr>
+          <tr><td class="py-3 px-5 font-medium">Analytics</td><td class="py-3 px-5"><span class="px-2 py-0.5 bg-stone-100 text-stone-700 rounded text-xs font-medium">Ancillary</span></td><td class="py-3 px-5 text-stone-600">Traffic measurement only. Not part of the research logic.</td></tr>
         </tbody>
       </table>
     </div>
@@ -52,7 +52,7 @@
   <!-- Experiments -->
   <section class="mb-12">
     <h2 class="text-xl font-bold text-stone-900 mb-4 flex items-center gap-2">
-      <span class="material-symbols-outlined text-amber-600">science</span> Experiments
+      <span class="material-symbols-outlined text-amber-600">science</span> Experiments Run
     </h2>
     <div class="bg-white rounded-xl editorial-shadow overflow-hidden">
       <table class="w-full text-left text-sm">
@@ -60,52 +60,53 @@
           <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">ID</th>
           <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Name</th>
           <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Date</th>
-          <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Status</th>
-          <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Key Result</th>
+          <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">State</th>
+          <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">What Was Tested</th>
           <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Report</th>
         </tr></thead>
         <tbody class="divide-y divide-stone-100">
           <tr>
             <td class="py-3 px-5 font-mono text-xs">EXP-001</td>
-            <td class="py-3 px-5 font-medium">22 HD Papers Analyzed</td>
+            <td class="py-3 px-5 font-medium">Abstract-Level HD Paper Pass</td>
             <td class="py-3 px-5 text-stone-600">2026-03-27</td>
-            <td class="py-3 px-5"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Complete</span></td>
-            <td class="py-3 px-5 text-stone-600">Tocilizumab 80/100, 7 novel targets, TDP-43 connection</td>
+            <td class="py-3 px-5"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Completed</span></td>
+            <td class="py-3 px-5 text-stone-600">Whether an LLM could extract structured targets, compounds, and candidate hypotheses from 22 HD paper abstracts.</td>
             <td class="py-3 px-5"><a href="experiment-1.html" class="text-amber-700 underline text-xs">View</a></td>
           </tr>
           <tr>
             <td class="py-3 px-5 font-mono text-xs">EXP-002</td>
             <td class="py-3 px-5 font-medium">Full-Text Deep Analysis (16 papers)</td>
             <td class="py-3 px-5 text-stone-600">2026-03-30</td>
-            <td class="py-3 px-5"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Complete</span></td>
-            <td class="py-3 px-5 text-stone-600">1.9M chars read. cGAS mtDNA inhibition 90/100, LIG1 K845N 80/100</td>
+            <td class="py-3 px-5"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Completed</span></td>
+            <td class="py-3 px-5 text-stone-600">What changes when the model reads full papers instead of abstracts: 16 papers, 1.9M characters, deeper mechanism extraction.</td>
             <td class="py-3 px-5"><a href="experiment-2.html" class="text-amber-700 underline text-xs">View</a></td>
           </tr>
           <tr class="bg-stone-50/50">
             <td class="py-3 px-5 font-mono text-xs">EXP-003</td>
             <td class="py-3 px-5 font-medium">Gemma 4 vs Llama 3.1</td>
             <td class="py-3 px-5 text-stone-600"></td>
-            <td class="py-3 px-5"><span class="px-2 py-0.5 bg-amber-100 text-amber-700 rounded text-xs font-medium">Planned</span></td>
-            <td class="py-3 px-5 text-stone-600">Same papers through Claude, Gemini 3 Pro, Llama 3.1. Compare results.</td>
+            <td class="py-3 px-5"><span class="px-2 py-0.5 bg-amber-100 text-amber-700 rounded text-xs font-medium">Designed</span></td>
+            <td class="py-3 px-5 text-stone-600">Planned model-comparison pass using the same paper set to compare extraction quality and hypothesis differences.</td>
             <td class="py-3 px-5 text-stone-400 text-xs"><a href="experiment-3.html" class="text-amber-700 underline text-xs">View</a></td>
           </tr>
           <tr class="bg-stone-50/50">
             <td class="py-3 px-5 font-mono text-xs">EXP-004</td>
             <td class="py-3 px-5 font-medium">Somatic CAG Expansion Screen</td>
-            <td class="py-3 px-5 text-stone-600"></td>
-            <td class="py-3 px-5"><span class="px-2 py-0.5 bg-stone-100 text-stone-500 rounded text-xs font-medium">Planned</span></td>
-            <td class="py-3 px-5 text-stone-600">AI drug screen against MSH3/FAN1/PMS1 targets</td>
-            <td class="py-3 px-5 text-stone-400 text-xs">Pending</td>
+            <td class="py-3 px-5 text-stone-600">2026-04-07</td>
+            <td class="py-3 px-5"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Completed</span></td>
+            <td class="py-3 px-5 text-stone-600">Focused screen on somatic expansion modifiers. 92 relevant papers were identified and synthesized into mechanistic intervention ideas.</td>
+            <td class="py-3 px-5"><a href="experiment-4.html" class="text-amber-700 underline text-xs">View</a></td>
           </tr>
         </tbody>
       </table>
     </div>
+    <p class="text-xs text-stone-500 mt-3">This table tracks research passes, not product launches. “Completed” means the analysis was run and published, not that the conclusions are validated.</p>
   </section>
 
   <!-- Agents -->
   <section class="mb-12">
     <h2 class="text-xl font-bold text-stone-900 mb-4 flex items-center gap-2">
-      <span class="material-symbols-outlined text-amber-600">smart_toy</span> Agent Runs
+      <span class="material-symbols-outlined text-amber-600">smart_toy</span> Automation Status
     </h2>
     <div class="bg-white rounded-xl editorial-shadow overflow-hidden">
       <table class="w-full text-left text-sm">
@@ -113,7 +114,7 @@
           <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Agent</th>
           <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Last Run</th>
           <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Total Runs</th>
-          <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Result</th>
+          <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Latest Outcome</th>
           <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Schedule</th>
         </tr></thead>
         <tbody class="divide-y divide-stone-100">
@@ -121,28 +122,28 @@
             <td class="py-3 px-5 font-medium">Paper Scout</td>
             <td class="py-3 px-5 text-stone-600">2026-03-28</td>
             <td class="py-3 px-5 text-stone-600">1</td>
-            <td class="py-3 px-5 text-stone-600">46 papers discovered and analyzed</td>
+            <td class="py-3 px-5 text-stone-600">Initial corpus build completed; future value depends on repeated runs and stronger validation.</td>
             <td class="py-3 px-5 text-xs text-stone-500">Every 6h</td>
           </tr>
           <tr>
             <td class="py-3 px-5 font-medium">Hypothesis Refiner</td>
             <td class="py-3 px-5 text-stone-600">2026-03-29</td>
             <td class="py-3 px-5 text-stone-600">1</td>
-            <td class="py-3 px-5 text-stone-600">5 hypotheses stable, no new evidence</td>
+            <td class="py-3 px-5 text-stone-600">Initial tracker pass completed; score histories exist, but evidence trails are still thin.</td>
             <td class="py-3 px-5 text-xs text-stone-500">Daily</td>
           </tr>
           <tr class="bg-stone-50/50">
             <td class="py-3 px-5 font-medium">Social Watcher</td>
             <td class="py-3 px-5 text-stone-400">Never</td>
             <td class="py-3 px-5 text-stone-400">0</td>
-            <td class="py-3 px-5 text-stone-400">Not yet run</td>
+            <td class="py-3 px-5 text-stone-400">Scaffold exists, but this agent is not yet part of a trustworthy production workflow.</td>
             <td class="py-3 px-5 text-xs text-stone-500">Daily</td>
           </tr>
           <tr class="bg-stone-50/50">
             <td class="py-3 px-5 font-medium">Digest Writer</td>
             <td class="py-3 px-5 text-stone-400">Never</td>
             <td class="py-3 px-5 text-stone-400">0</td>
-            <td class="py-3 px-5 text-stone-400">Not yet run</td>
+            <td class="py-3 px-5 text-stone-400">Planned summarization layer; not yet used as a stable public artifact.</td>
             <td class="py-3 px-5 text-xs text-stone-500">Weekly</td>
           </tr>
         </tbody>
@@ -161,7 +162,7 @@
           <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Drug</th>
           <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Target</th>
           <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Score</th>
-          <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Trend</th>
+          <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Evidence Record</th>
           <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Status</th>
         </tr></thead>
         <tbody class="divide-y divide-stone-100">
@@ -169,61 +170,61 @@
             <td class="py-3 px-5 font-medium">Tocilizumab</td>
             <td class="py-3 px-5 text-stone-600">IL-6 / neuroinflammation</td>
             <td class="py-3 px-5"><span class="font-bold text-amber-700">80</span>/100</td>
-            <td class="py-3 px-5 text-stone-500">Stable (1 check)</td>
+            <td class="py-3 px-5 text-stone-500">1 score entry; no supporting or contradicting evidence logged yet</td>
             <td class="py-3 px-5"><span class="px-2 py-0.5 bg-amber-100 text-amber-700 rounded text-xs font-medium">Exploring</span></td>
           </tr>
           <tr>
             <td class="py-3 px-5 font-medium">Metformin</td>
             <td class="py-3 px-5 text-stone-600">mTOR / AMPK / autophagy</td>
             <td class="py-3 px-5"><span class="font-bold text-amber-700">72</span>/100</td>
-            <td class="py-3 px-5 text-stone-500">Stable (1 check)</td>
+            <td class="py-3 px-5 text-stone-500">1 score entry; rationale captured in tracker</td>
             <td class="py-3 px-5"><span class="px-2 py-0.5 bg-amber-100 text-amber-700 rounded text-xs font-medium">Exploring</span></td>
           </tr>
           <tr>
             <td class="py-3 px-5 font-medium">Rapamycin</td>
             <td class="py-3 px-5 text-stone-600">mTOR</td>
             <td class="py-3 px-5"><span class="font-bold text-amber-700">68</span>/100</td>
-            <td class="py-3 px-5 text-stone-500">Stable (1 check)</td>
+            <td class="py-3 px-5 text-stone-500">1 score entry; still an unvalidated mechanistic lead</td>
             <td class="py-3 px-5"><span class="px-2 py-0.5 bg-amber-100 text-amber-700 rounded text-xs font-medium">Exploring</span></td>
           </tr>
           <tr>
             <td class="py-3 px-5 font-medium">Riluzole</td>
             <td class="py-3 px-5 text-stone-600">Glutamate excitotoxicity</td>
             <td class="py-3 px-5"><span class="font-bold text-stone-500">60</span>/100</td>
-            <td class="py-3 px-5 text-stone-500">Stable (1 check)</td>
-            <td class="py-3 px-5"><span class="px-2 py-0.5 bg-stone-100 text-stone-500 rounded text-xs font-medium">Already tested</span></td>
+            <td class="py-3 px-5 text-stone-500">1 known negative/limiting note in tracker</td>
+            <td class="py-3 px-5"><span class="px-2 py-0.5 bg-stone-100 text-stone-500 rounded text-xs font-medium">Known/Tested</span></td>
           </tr>
           <tr>
             <td class="py-3 px-5 font-medium">Lithium</td>
             <td class="py-3 px-5 text-stone-600">TDP-43 / GSK-3B</td>
             <td class="py-3 px-5"><span class="font-bold text-stone-500">55</span>/100</td>
-            <td class="py-3 px-5 text-stone-500">Stable (1 check)</td>
+            <td class="py-3 px-5 text-stone-500">1 score entry; mechanism needs stronger support</td>
             <td class="py-3 px-5"><span class="px-2 py-0.5 bg-amber-100 text-amber-700 rounded text-xs font-medium">Exploring</span></td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p class="text-xs text-stone-400 mt-3">Scores are AI-generated confidence ratings, not clinical probability. These hypotheses have not been reviewed by HD domain experts.</p>
+    <p class="text-xs text-stone-400 mt-3">Tracker rows are pulled from the current hypothesis file, not manually curated homepage claims. Scores are AI-generated prioritization signals, not clinical probability.</p>
   </section>
 
   <!-- Tools + Stack -->
   <section class="mb-12">
     <h2 class="text-xl font-bold text-stone-900 mb-4 flex items-center gap-2">
-      <span class="material-symbols-outlined text-amber-600">build</span> Tools We Use
+      <span class="material-symbols-outlined text-amber-600">build</span> Tooling
     </h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">Claude Code</p><p class="text-xs text-stone-500">Development</p></div>
-      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">Ollama</p><p class="text-xs text-stone-500">Local LLM inference</p></div>
-      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">Llama 3.1 8B</p><p class="text-xs text-stone-500">Paper analysis</p></div>
-      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">NVIDIA NIM</p><p class="text-xs text-stone-500">Chatbot inference</p></div>
-      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">Jetson AGX Orin</p><p class="text-xs text-stone-500">Edge AI hardware</p></div>
-      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">Upstash Vector</p><p class="text-xs text-stone-500">Semantic search</p></div>
-      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">Sarvam AI</p><p class="text-xs text-stone-500">Indian languages</p></div>
-      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">Vercel</p><p class="text-xs text-stone-500">Hosting + serverless</p></div>
-      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">Google Stitch</p><p class="text-xs text-stone-500">UI design</p></div>
-      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">PubMed API</p><p class="text-xs text-stone-500">Paper data</p></div>
-      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">ClinicalTrials.gov</p><p class="text-xs text-stone-500">Trial data</p></div>
-      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">GitHub Actions</p><p class="text-xs text-stone-500">Daily refresh + CI</p></div>
+      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">Claude Code</p><p class="text-xs text-stone-500">Development workflow</p></div>
+      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">Ollama</p><p class="text-xs text-stone-500">Local model serving</p></div>
+      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">Llama 3.1 8B</p><p class="text-xs text-stone-500">Experiment model</p></div>
+      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">NVIDIA NIM</p><p class="text-xs text-stone-500">Chat inference</p></div>
+      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">Jetson AGX Orin</p><p class="text-xs text-stone-500">Local compute</p></div>
+      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">Upstash Vector</p><p class="text-xs text-stone-500">Retrieval layer</p></div>
+      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">Sarvam AI</p><p class="text-xs text-stone-500">Language coverage</p></div>
+      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">Vercel</p><p class="text-xs text-stone-500">Static hosting + APIs</p></div>
+      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">PubMed API</p><p class="text-xs text-stone-500">Literature source</p></div>
+      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">ClinicalTrials.gov</p><p class="text-xs text-stone-500">Trial source</p></div>
+      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">HDBuzz RSS</p><p class="text-xs text-stone-500">News source</p></div>
+      <div class="bg-white rounded-xl p-4 editorial-shadow text-center"><p class="font-bold text-sm">GitHub Actions</p><p class="text-xs text-stone-500">Scheduled refresh</p></div>
     </div>
   </section>
 

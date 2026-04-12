@@ -19,6 +19,13 @@ PUBMED_SEARCH = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
 PUBMED_FETCH = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
 
 
+def _xml_text(element) -> str:
+    """Flatten XML element text, preserving nested tag content."""
+    if element is None:
+        return ""
+    return "".join(element.itertext()).strip()
+
+
 @dataclass
 class Paper:
     pmid: str
@@ -72,9 +79,9 @@ def fetch_papers(pmids: list[str]) -> list[Paper]:
         art = medline.find(".//Article")
 
         pmid = medline.findtext(".//PMID", "")
-        title = art.findtext(".//ArticleTitle", "")
+        title = _xml_text(art.find(".//ArticleTitle"))
         abstract_parts = art.findall(".//Abstract/AbstractText")
-        abstract = " ".join(t.text or "" for t in abstract_parts)
+        abstract = " ".join(_xml_text(t) for t in abstract_parts).strip()
 
         author_list = art.findall(".//AuthorList/Author")
         authors = ", ".join(
@@ -95,7 +102,7 @@ def fetch_papers(pmids: list[str]) -> list[Paper]:
             pub_date = ""
 
         kw_list = medline.findall(".//KeywordList/Keyword")
-        keywords = [kw.text for kw in kw_list if kw.text]
+        keywords = [_xml_text(kw) for kw in kw_list if _xml_text(kw)]
 
         papers.append(Paper(
             pmid=pmid, title=title, abstract=abstract,

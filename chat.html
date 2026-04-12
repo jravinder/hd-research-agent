@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Ask HD Research</title>
+<title>Chat With HD Research Data</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -33,7 +33,7 @@ tailwind.config = { theme: { extend: { colors: {
     <a href="index.html" class="flex items-center gap-3">
       <span class="material-symbols-outlined text-primary">arrow_back</span>
       <div>
-        <h1 class="font-semibold tracking-tight text-lg text-primary">Ask HD Research</h1>
+        <h1 class="font-semibold tracking-tight text-lg text-primary">Chat With HD Research Data</h1>
         <span class="text-[10px] font-bold uppercase tracking-widest text-secondary opacity-70">HD Research Hub</span>
       </div>
     </a>
@@ -41,7 +41,7 @@ tailwind.config = { theme: { extend: { colors: {
       <div id="google_translate_element"></div>
       <div class="flex items-center gap-1">
         <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-        <span class="text-xs text-on-surface-variant opacity-60" id="status">Ready</span>
+        <span class="text-xs text-on-surface-variant opacity-60" id="status">Grounded</span>
       </div>
     </div>
   </div>
@@ -62,8 +62,8 @@ tailwind.config = { theme: { extend: { colors: {
             <span class="material-symbols-outlined text-on-primary-container text-2xl">science</span>
           </div>
           <div>
-            <h2 class="text-xl font-bold tracking-tight text-on-surface mb-2">HD Research Hub AI</h2>
-            <p class="text-on-surface-variant font-medium leading-relaxed">I'm grounded in 1,571 full-text research chunks from 46 HD papers. Ask me about treatments, clinical trials, molecular targets, or our AI experiment findings.</p>
+            <h2 class="text-xl font-bold tracking-tight text-on-surface mb-2">Research Interface</h2>
+            <p class="text-on-surface-variant font-medium leading-relaxed">Ask questions against the HD corpus, experiment outputs, and current trial data. This interface is meant to help you inspect evidence faster, not replace expert judgment.</p>
           </div>
         </div>
       </div>
@@ -72,27 +72,43 @@ tailwind.config = { theme: { extend: { colors: {
     <!-- Disclaimer -->
     <div class="bg-secondary/5 border-l-4 border-secondary p-4 rounded-r-xl flex items-center gap-3">
       <span class="material-symbols-outlined text-secondary">warning</span>
-      <p class="text-secondary text-sm font-medium">I cannot give medical advice. For support, contact <a href="https://hdsa.org" target="_blank" class="font-bold underline">HDSA</a> (1-800-345-HDSA).</p>
+      <p class="text-secondary text-sm font-medium">This interface cannot give personal medical advice. For support, contact <a href="https://hdsa.org" target="_blank" class="font-bold underline">HDSA</a> (1-800-345-HDSA).</p>
+    </div>
+
+    <!-- Provenance -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+      <div class="bg-surface-low border border-outline-variant/20 rounded-xl p-4">
+        <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary/60 mb-2">Corpus</div>
+        <p class="text-sm text-on-surface font-medium">1,571 research chunks from 46 HD papers</p>
+      </div>
+      <div class="bg-surface-low border border-outline-variant/20 rounded-xl p-4">
+        <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary/60 mb-2">Also Uses</div>
+        <p class="text-sm text-on-surface font-medium">Experiment outputs and current trial statistics</p>
+      </div>
+      <div class="bg-surface-low border border-outline-variant/20 rounded-xl p-4">
+        <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary/60 mb-2">Expect</div>
+        <p class="text-sm text-on-surface font-medium">PubMed IDs in answers when relevant</p>
+      </div>
     </div>
 
     <!-- Suggestions -->
     <div>
-      <h3 class="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary/50 mb-4">Suggested Questions</h3>
+      <h3 class="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary/50 mb-4">Evidence-Shaped Prompts</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
         <button onclick="askSuggestion(this)" class="text-left p-4 bg-surface-low hover:bg-surface-high transition-all rounded-xl group border border-transparent hover:border-outline-variant/30 flex justify-between items-center active:scale-[0.98]">
-          <span class="text-on-surface font-semibold text-sm">What's the latest on AMT-130?</span>
+          <span class="text-on-surface font-semibold text-sm">Summarize the latest evidence in this corpus on AMT-130 and cite the relevant papers.</span>
           <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity text-sm">arrow_forward</span>
         </button>
         <button onclick="askSuggestion(this)" class="text-left p-4 bg-surface-low hover:bg-surface-high transition-all rounded-xl group border border-transparent hover:border-outline-variant/30 flex justify-between items-center active:scale-[0.98]">
-          <span class="text-on-surface font-semibold text-sm">How does somatic expansion work?</span>
+          <span class="text-on-surface font-semibold text-sm">Explain somatic CAG expansion in plain language, then point me to the strongest papers in the corpus.</span>
           <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity text-sm">arrow_forward</span>
         </button>
         <button onclick="askSuggestion(this)" class="text-left p-4 bg-surface-low hover:bg-surface-high transition-all rounded-xl group border border-transparent hover:border-outline-variant/30 flex justify-between items-center active:scale-[0.98]">
-          <span class="text-on-surface font-semibold text-sm">Which drugs might help with neuroinflammation?</span>
+          <span class="text-on-surface font-semibold text-sm">Which neuroinflammation-related hypotheses are in the tracker, and what evidence is missing?</span>
           <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity text-sm">arrow_forward</span>
         </button>
         <button onclick="askSuggestion(this)" class="text-left p-4 bg-surface-low hover:bg-surface-high transition-all rounded-xl group border border-transparent hover:border-outline-variant/30 flex justify-between items-center active:scale-[0.98]">
-          <span class="text-on-surface font-semibold text-sm">What did Experiment #1 find?</span>
+          <span class="text-on-surface font-semibold text-sm">Compare what Experiment #1 and Experiment #2 were testing, and tell me what changed with full-text analysis.</span>
           <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity text-sm">arrow_forward</span>
         </button>
       </div>
@@ -111,7 +127,7 @@ tailwind.config = { theme: { extend: { colors: {
           <input
             id="chat-input"
             type="text"
-            placeholder="Ask about HD research, papers, or trials..."
+            placeholder="Ask about HD papers, trials, targets, or experiment results..."
             class="flex-grow bg-transparent border-none focus:ring-0 px-4 py-3 text-on-surface font-medium placeholder:text-on-surface-variant/40 text-base"
             autocomplete="off"
           />
@@ -121,7 +137,7 @@ tailwind.config = { theme: { extend: { colors: {
         </div>
       </form>
       <p class="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant opacity-30">
-        Powered by 1,571 research chunks from <span id="corpus-count">46</span> papers
+        Grounded in <span id="corpus-count">46</span> papers plus tracked experiments and trial data
       </p>
     </div>
   </div>
@@ -136,7 +152,22 @@ const statusEl = document.getElementById('status');
 const corpusCountEl = document.getElementById('corpus-count');
 let history = [];
 
-function addMessage(role, content) {
+function renderSources(sources) {
+  if (!sources || !sources.length) return '';
+  const chips = sources.slice(0, 6).map((source) => {
+    const pmid = escapeHtml(String(source.pmid || ''));
+    const title = escapeHtml(source.title || `PubMed ${pmid}`);
+    return `<a href="https://pubmed.ncbi.nlm.nih.gov/${pmid}/" target="_blank" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-low text-primary text-xs font-medium border border-outline-variant/20 hover:bg-surface-high" title="${title}">PMID ${pmid}<span class="material-symbols-outlined text-[14px]">open_in_new</span></a>`;
+  }).join('');
+  return `<div class="mt-3 pt-3 border-t border-outline-variant/10"><div class="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary/50 mb-2">Retrieved Sources</div><div class="flex flex-wrap gap-2">${chips}</div></div>`;
+}
+
+function renderCitationWarning(warning) {
+  if (!warning) return '';
+  return `<div class="mt-3 p-3 rounded-xl bg-secondary/5 border border-secondary/20 text-secondary text-xs font-medium">${escapeHtml(warning)}</div>`;
+}
+
+function addMessage(role, content, meta = {}) {
   const div = document.createElement('div');
   div.className = 'chat-bubble';
 
@@ -154,7 +185,10 @@ function addMessage(role, content) {
           <span class="material-symbols-outlined text-sm text-secondary">science</span>
         </div>
         <div class="bg-white text-on-surface px-5 py-3 rounded-2xl rounded-tl-none editorial-shadow border border-outline-variant/10">
+          <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary/50 mb-2">Grounded Response</div>
           <div class="leading-relaxed">${formatResponse(content)}</div>
+          ${renderCitationWarning(meta.citationWarning)}
+          ${renderSources(meta.sources)}
         </div>
       </div>`;
   }
@@ -201,7 +235,7 @@ async function sendMessage(message) {
   addMessage('user', message);
   chatInput.value = '';
   sendBtn.disabled = true;
-  statusEl.textContent = 'Thinking...';
+  statusEl.textContent = 'Searching';
   addTyping();
 
   try {
@@ -217,16 +251,19 @@ async function sendMessage(message) {
       return;
     }
     const data = await resp.json();
-    addMessage('assistant', data.response);
+    addMessage('assistant', data.response, {
+      sources: data.sources || [],
+      citationWarning: data.citation_warning || '',
+    });
     if (data.corpus_size) corpusCountEl.textContent = data.corpus_size;
     history.push({ role: 'user', content: message });
     history.push({ role: 'assistant', content: data.response });
   } catch (e) {
     removeTyping();
-    addMessage('assistant', 'The research API is temporarily unavailable. Try the dashboard or experiment report in the meantime.');
+    addMessage('assistant', 'The research API is temporarily unavailable. Try the dashboard or an experiment report while the retrieval layer is down.');
   } finally {
     sendBtn.disabled = false;
-    statusEl.textContent = 'Ready';
+    statusEl.textContent = 'Grounded';
     chatInput.focus();
   }
 }
@@ -239,5 +276,5 @@ chatForm.addEventListener('submit', (e) => { e.preventDefault(); sendMessage(cha
 chatInput.focus();
 </script>
 <script src="shared.js"></script>
-<div class="text-center py-2 px-4"><p class="text-xs text-on-surface-variant/30">This is a research tool, not medical advice. For HD support, visit <a href="https://hdsa.org" class="underline">hdsa.org</a>.</p></div>
+<div class="text-center py-2 px-4"><p class="text-xs text-on-surface-variant/30">This is a research interface over public HD data and internal experiment artifacts, not medical advice. For HD support, visit <a href="https://hdsa.org" class="underline">hdsa.org</a>.</p></div>
 </body></html>
