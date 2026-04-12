@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-11T23:01:34.055806",
+  "last_updated": "2026-04-12T08:40:31.358615",
   "papers": [
     {
       "pmid": "41557250",
@@ -61,6 +61,17 @@
       ],
       "hd_relevance_score": 26,
       "url": "https://pubmed.ncbi.nlm.nih.gov/41926221/"
+    },
+    {
+      "pmid": "41922802",
+      "title": "ATF3-dependent formation of inclusion bodies in polyQ-expressing human iPSC-derived neurons confers cellular protection.",
+      "abstract": "Huntington's disease (HD) is an incurable, neurodegenerative disorder. While the causative mutation - CAG expansions within the coding region of the Huntingtin (HTT) gene - has been identified over 30 years ago, the pathological mechanisms underlying HD are still not clear. The abnormal CAG track encodes a polyglutamine (polyQ) expanded protein, which leads to HTT protein misfolding. These polyQ aggregates can form insoluble inclusion bodies (IBs); however, whether IBs are protective or detrimen",
+      "journal": "Cell death and differentiation",
+      "pub_date": "2026 Apr",
+      "authors": "Oweis W, Nissim-Rafinia M, Dvir E",
+      "keywords": [],
+      "hd_relevance_score": 26,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41922802/"
     },
     {
       "pmid": "41889142",
@@ -142,6 +153,24 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41838909/"
     },
     {
+      "pmid": "41865407",
+      "title": "Early dysregulation of sphingomyelin metabolism in the striatum of Huntington's disease mouse models.",
+      "abstract": "Huntington's disease (HD) is a devastating neurodegenerative disorder caused by mutant huntingtin protein, leading to progressive motor, cognitive, and behavioral decline. This study investigates the dysregulation of sphingomyelin (SM) metabolism, the most abundant sphingolipid in cellular membranes, in the striatum of R6/2 and zQ175 HD mouse models. Our findings reveal significant alterations in the expression of SM-metabolizing enzymes and a concomitant accumulation of SM in symptomatic HD mic",
+      "journal": "Biochemical and biophysical research communications",
+      "pub_date": "2026 May",
+      "authors": "Pizzati L, Pepe G, Valentini N",
+      "keywords": [
+        "Early biomarkers",
+        "Huntington's disease",
+        "Mouse model",
+        "Smpd3",
+        "Sphingomyelin",
+        "Therapeutic target"
+      ],
+      "hd_relevance_score": 22,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41865407/"
+    },
+    {
       "pmid": "41841481",
       "title": "Challenges facing genetic diagnostics of Huntington's disease: an update.",
       "abstract": "Since 1993, when a polymorphic CAG trinucleotide repeat was established as the cause of Huntington's disease (HD), fragment analysis has been the first-tier test in genetic diagnosis of HD. However, in recent years it has become increasingly clear that, in addition to the repeat length itself, sequence variations within the HTT repeat and elsewhere in the genome also play a crucial role in the onset and clinical presentation of the disease. Sequence interruptions or non-canonical repeat motifs h",
@@ -169,40 +198,6 @@
       "keywords": [],
       "hd_relevance_score": 22,
       "url": "https://pubmed.ncbi.nlm.nih.gov/41849580/"
-    },
-    {
-      "pmid": "41833035",
-      "title": "Synergistic Roles of Neuropeptide S and Environmental Enrichment in Preclinical Huntington's Disease Depression Models.",
-      "abstract": "Huntington's disease (HD) is a progressive neurodegenerative disorder marked by motor, cognitive, and psychiatric impairments, with depression as a major comorbidity. Existing treatments for Huntington-related depression are inadequate, highlighting the need for strategies that target molecular mechanisms underlying mood dysregulation. This review examines the mechanistic interplay between environmental enrichment (EE), a paradigm enhancing sensory, cognitive, and social stimulation and Neuropep",
-      "journal": "CNS & neurological disorders drug targets",
-      "pub_date": "2026 Mar",
-      "authors": "Rahangdale G, Gupta KR, Ume MJ",
-      "keywords": [
-        "Neuropeptide",
-        "emerging technologies.",
-        "environmental enrichment",
-        "huntington disease"
-      ],
-      "hd_relevance_score": 22,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41833035/"
-    },
-    {
-      "pmid": "41865407",
-      "title": "Early dysregulation of sphingomyelin metabolism in the striatum of Huntington's disease mouse models.",
-      "abstract": "Huntington's disease (HD) is a devastating neurodegenerative disorder caused by mutant huntingtin protein, leading to progressive motor, cognitive, and behavioral decline. This study investigates the dysregulation of sphingomyelin (SM) metabolism, the most abundant sphingolipid in cellular membranes, in the striatum of R6/2 and zQ175 HD mouse models. Our findings reveal significant alterations in the expression of SM-metabolizing enzymes and a concomitant accumulation of SM in symptomatic HD mic",
-      "journal": "Biochemical and biophysical research communications",
-      "pub_date": "2026 Mar",
-      "authors": "Pizzati L, Pepe G, Valentini N",
-      "keywords": [
-        "Early biomarkers",
-        "Huntington's disease",
-        "Mouse model",
-        "Smpd3",
-        "Sphingomyelin",
-        "Therapeutic target"
-      ],
-      "hd_relevance_score": 22,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41865407/"
     },
     {
       "pmid": "41955484",
@@ -297,6 +292,23 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41906693/"
     },
     {
+      "pmid": "41926793",
+      "title": "Extensive transcriptomic changes in cellular and animal models of Huntington's disease depending on the length of CAG repeats in the exon 1 of the HTT gene.",
+      "abstract": "Although Huntington's disease - a severe, inherited, neurodegenerative disorder - is primarily caused by a pathological variant of the HTT gene (encoding huntingtin protein) which is characterized by the extension of CAG repeats in the 1st exon exceeding 36 triplets, the biochemical mechanisms underlying the disease remain poorly understood. Mutant huntingtin forms toxic aggregates in cells; however, the clinical symptoms usually appear in adulthood. Recent reports suggested that somatic expansi",
+      "journal": "Biochemical and biophysical research communications",
+      "pub_date": "2026 Apr",
+      "authors": "Szulc A, Walter BM, Gaffke L",
+      "keywords": [
+        "CAG extension",
+        "Cellular models",
+        "Huntington's disease",
+        "Mouse model",
+        "Transcriptomic analyses"
+      ],
+      "hd_relevance_score": 21,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41926793/"
+    },
+    {
       "pmid": "41846052",
       "title": "Human iPSC-derived exosomes for amelioration of Huntington's disease through mitochondrial, synaptic, and anti-apoptotic mechanisms.",
       "abstract": "Huntington's disease (HD) is driven by expanded CAG repeats in the huntingtin gene, resulting in mutant huntingtin (mHtt) aggregation, mitochondrial dysfunction, neuronal loss, and neuroinflammation. Although stem cell-based therapies provide potent regenerative, anti-inflammatory, and neuroprotective effects, their clinical translation remains constrained by tumorigenicity and poor engraftment efficiency. Therefore, we investigated whether exosomes derived from human induced pluripotent stem ce",
@@ -310,17 +322,6 @@
       ],
       "hd_relevance_score": 20,
       "url": "https://pubmed.ncbi.nlm.nih.gov/41846052/"
-    },
-    {
-      "pmid": "41850723",
-      "title": "Huntingtin (HTT) interactome in regulation of DNA repair/remodeling and RNA processing pathways.",
-      "abstract": "Huntington's disease (HD), an uncurable neurodegenerative disorder, is caused by CAG repeat expansion in the HD gene encoding mutant huntingtin protein. DNA damage response is implicated in HD pathogenesis. We used multiple approaches to assess normal and mutant HTT interactomes in the context of genotoxic stress. We show that double-strand break (DSB) repair response is impaired in HD neurons, which are more vulnerable to DSB-induced stress. We found that S1181 phosphorylation of HTT is regulat",
-      "journal": "Life science alliance",
-      "pub_date": "2026 Jun",
-      "authors": "Ratovitski T, Holland CD, O'Meally RN",
-      "keywords": [],
-      "hd_relevance_score": 19,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41850723/"
     }
   ],
   "trials": [
