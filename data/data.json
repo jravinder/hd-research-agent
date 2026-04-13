@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-12T08:40:31.358615",
+  "last_updated": "2026-04-13T09:49:52.924774",
   "papers": [
     {
       "pmid": "41557250",
@@ -63,17 +63,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41926221/"
     },
     {
-      "pmid": "41922802",
-      "title": "ATF3-dependent formation of inclusion bodies in polyQ-expressing human iPSC-derived neurons confers cellular protection.",
-      "abstract": "Huntington's disease (HD) is an incurable, neurodegenerative disorder. While the causative mutation - CAG expansions within the coding region of the Huntingtin (HTT) gene - has been identified over 30 years ago, the pathological mechanisms underlying HD are still not clear. The abnormal CAG track encodes a polyglutamine (polyQ) expanded protein, which leads to HTT protein misfolding. These polyQ aggregates can form insoluble inclusion bodies (IBs); however, whether IBs are protective or detrimen",
-      "journal": "Cell death and differentiation",
-      "pub_date": "2026 Apr",
-      "authors": "Oweis W, Nissim-Rafinia M, Dvir E",
-      "keywords": [],
-      "hd_relevance_score": 26,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41922802/"
-    },
-    {
       "pmid": "41889142",
       "title": "Neuroprotective Effects of Transplanted Induced Pluripotent Stem Cell-Derived Neural Precursors in Huntington's Disease Models.",
       "abstract": "Huntington's disease (HD) is characterized by progressive striatal degeneration associated with mutant huntingtin (mHTT)-related proteostatic disruption and chronic neuroinflammation. Although mHTT-lowering approaches hold therapeutic promise, their capacity to restore the degenerating neural microenvironment remains limited. Here, we evaluated the therapeutic potential of human induced pluripotent stem cell (iPSC)-derived neural precursor cells (s513-NPCs) in two complementary HD models, the ac",
@@ -89,6 +78,23 @@
       ],
       "hd_relevance_score": 25,
       "url": "https://pubmed.ncbi.nlm.nih.gov/41889142/"
+    },
+    {
+      "pmid": "41967079",
+      "title": "Stem cells enhance mitochondrial function in experimental Huntington's disease.",
+      "abstract": "Huntington's Disease (HD) is a neurodegenerative disorder caused by CAG triplet expansion in the HTT gene, producing a mutant Huntingtin protein that impairs mitochondrial dynamics by reducing fusion and increasing fission. Mesenchymal stem cells (MSCs) have shown potential therapeutic effects by sharing functional mitochondria and other secretomes. In this study, quinolinic acid-lesioned neuro-2a (QA-N2a) cells and glutamatergic neurons with 50 CAG repeats (HD neurons) were co-cultured with hum",
+      "journal": "Stem cells (Dayton, Ohio)",
+      "pub_date": "2026 Apr",
+      "authors": "D'Egidio F, Putthanbut N, Starahs M",
+      "keywords": [
+        "Huntington\u2019s disease",
+        "cell-free therapy",
+        "mesenchymal stem cells",
+        "mitochondrial transfer",
+        "secretome"
+      ],
+      "hd_relevance_score": 25,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41967079/"
     },
     {
       "pmid": "41946359",
