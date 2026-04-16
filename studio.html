@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HD Research Studio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+  body { font-family: 'Inter', sans-serif; margin: 0; overflow: hidden; height: 100vh; }
+  .sidebar-item { transition: all 0.15s; }
+  .sidebar-item:hover { background: rgba(255,255,255,0.05); }
+  .sidebar-item.active { background: rgba(180,83,9,0.15); border-left: 2px solid #b45309; }
+  .sidebar-item:not(.active) { border-left: 2px solid transparent; }
+  .tab { transition: all 0.15s; }
+  .tab:hover { background: #27272a; }
+  .tab.active { background: #27272a; border-bottom: 2px solid #b45309; }
+  .tab:not(.active) { border-bottom: 2px solid transparent; }
+  .status-dot { width: 6px; height: 6px; border-radius: 50%; }
+  .status-live { background: #22c55e; box-shadow: 0 0 6px rgba(34,197,94,0.5); }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  #content-frame { border: none; width: 100%; height: 100%; background: #fafafa; }
+</style>
+</head>
+<body class="bg-[#0A0A0A] text-white">
+
+<div class="flex h-screen">
+
+  <!-- Sidebar -->
+  <aside class="w-60 bg-[#141414] border-r border-zinc-800/50 flex flex-col h-full shrink-0">
+    <div class="px-5 py-5 border-b border-zinc-800/50">
+      <div class="flex items-center gap-2.5">
+        <div class="status-dot status-live"></div>
+        <span class="text-[11px] font-black uppercase tracking-[0.2em] text-zinc-300">HD Research</span>
+      </div>
+      <div class="text-[10px] text-zinc-600 uppercase tracking-widest mt-1 mono">Studio v1.0</div>
+    </div>
+
+    <nav class="flex-1 py-4 overflow-y-auto">
+      <div class="px-4 mb-3">
+        <span class="text-[9px] font-bold uppercase tracking-[0.3em] text-zinc-600">Research</span>
+      </div>
+      <a href="#" onclick="return loadPage('index.html','dashboard')" class="sidebar-item active flex items-center gap-3 px-5 py-2.5 cursor-pointer" id="nav-dashboard">
+        <span class="material-symbols-outlined text-[18px] text-zinc-500">dashboard</span>
+        <span class="text-[12px] font-semibold text-zinc-300">Dashboard</span>
+      </a>
+      <a href="#" onclick="return loadPage('research.html','research')" class="sidebar-item flex items-center gap-3 px-5 py-2.5 cursor-pointer" id="nav-research">
+        <span class="material-symbols-outlined text-[18px] text-zinc-500">science</span>
+        <span class="text-[12px] font-semibold text-zinc-300">Research Tracker</span>
+      </a>
+      <a href="#" onclick="return loadPage('chat.html','chat')" class="sidebar-item flex items-center gap-3 px-5 py-2.5 cursor-pointer" id="nav-chat">
+        <span class="material-symbols-outlined text-[18px] text-zinc-500">chat</span>
+        <span class="text-[12px] font-semibold text-zinc-300">Ask HD Research</span>
+      </a>
+
+      <div class="px-4 mt-6 mb-3">
+        <span class="text-[9px] font-bold uppercase tracking-[0.3em] text-zinc-600">Targets</span>
+      </div>
+      <a href="#" onclick="return loadPage('targets.html','targets')" class="sidebar-item flex items-center gap-3 px-5 py-2.5 cursor-pointer" id="nav-targets">
+        <span class="material-symbols-outlined text-[18px] text-zinc-500">genetics</span>
+        <span class="text-[12px] font-semibold text-zinc-300">Protein Targets</span>
+        <span class="ml-auto text-[10px] mono text-zinc-600">5</span>
+      </a>
+      <a href="#" onclick="return loadPage('targets.html#msh3','msh3')" class="sidebar-item flex items-center gap-3 px-5 py-2.5 pl-10 cursor-pointer" id="nav-msh3">
+        <span class="text-[11px] mono text-amber-600/70">MSH3</span>
+        <span class="ml-auto text-[10px] text-zinc-700 mono">90</span>
+      </a>
+      <a href="#" onclick="return loadPage('targets.html#pms1','pms1')" class="sidebar-item flex items-center gap-3 px-5 py-2.5 pl-10 cursor-pointer" id="nav-pms1">
+        <span class="text-[11px] mono text-amber-600/70">PMS1</span>
+        <span class="ml-auto text-[10px] text-zinc-700 mono">85</span>
+      </a>
+      <a href="#" onclick="return loadPage('targets.html#fan1','fan1')" class="sidebar-item flex items-center gap-3 px-5 py-2.5 pl-10 cursor-pointer" id="nav-fan1">
+        <span class="text-[11px] mono text-zinc-500">FAN1</span>
+        <span class="ml-auto text-[10px] text-zinc-700 mono">80</span>
+      </a>
+      <a href="#" onclick="return loadPage('targets.html#mlh1','mlh1')" class="sidebar-item flex items-center gap-3 px-5 py-2.5 pl-10 cursor-pointer" id="nav-mlh1">
+        <span class="text-[11px] mono text-zinc-500">MLH1</span>
+        <span class="ml-auto text-[10px] text-zinc-700 mono">70</span>
+      </a>
+      <a href="#" onclick="return loadPage('targets.html#lig1','lig1')" class="sidebar-item flex items-center gap-3 px-5 py-2.5 pl-10 cursor-pointer" id="nav-lig1">
+        <span class="text-[11px] mono text-zinc-600">LIG1</span>
+        <span class="ml-auto text-[10px] text-zinc-700 mono">60</span>
+      </a>
+
+      <div class="px-4 mt-6 mb-3">
+        <span class="text-[9px] font-bold uppercase tracking-[0.3em] text-zinc-600">Experiments</span>
+      </div>
+      <a href="#" onclick="return loadPage('experiment-4.html','exp4')" class="sidebar-item flex items-center gap-3 px-5 py-2.5 cursor-pointer" id="nav-exp4">
+        <span class="material-symbols-outlined text-[18px] text-zinc-500">experiment</span>
+        <span class="text-[12px] font-semibold text-zinc-300">#4 Somatic CAG</span>
+        <span class="ml-auto text-[9px] font-bold px-1.5 py-0.5 bg-amber-600/20 text-amber-500 rounded mono">NEW</span>
+      </a>
+      <a href="#" onclick="return loadPage('experiment-3.html','exp3')" class="sidebar-item flex items-center gap-3 px-5 py-2.5 cursor-pointer" id="nav-exp3">
+        <span class="material-symbols-outlined text-[18px] text-zinc-500">experiment</span>
+        <span class="text-[12px] font-semibold text-zinc-300">#3 Gemma 4</span>
+      </a>
+      <a href="#" onclick="return loadPage('experiment-2.html','exp2')" class="sidebar-item flex items-center gap-3 px-5 py-2.5 cursor-pointer" id="nav-exp2">
+        <span class="material-symbols-outlined text-[18px] text-zinc-500">experiment</span>
+        <span class="text-[12px] font-semibold text-zinc-300">#2 Full Text</span>
+      </a>
+      <a href="#" onclick="return loadPage('experiment-1.html','exp1')" class="sidebar-item flex items-center gap-3 px-5 py-2.5 cursor-pointer" id="nav-exp1">
+        <span class="material-symbols-outlined text-[18px] text-zinc-500">experiment</span>
+        <span class="text-[12px] font-semibold text-zinc-300">#1 Abstracts</span>
+      </a>
+
+      <div class="px-4 mt-6 mb-3">
+        <span class="text-[9px] font-bold uppercase tracking-[0.3em] text-zinc-600">Learn</span>
+      </div>
+      <a href="#" onclick="return loadPage('learn.html','learn')" class="sidebar-item flex items-center gap-3 px-5 py-2.5 cursor-pointer" id="nav-learn">
+        <span class="material-symbols-outlined text-[18px] text-zinc-500">school</span>
+        <span class="text-[12px] font-semibold text-zinc-300">HD Basics</span>
+      </a>
+      <a href="#" onclick="return loadPage('landscape.html','landscape')" class="sidebar-item flex items-center gap-3 px-5 py-2.5 cursor-pointer" id="nav-landscape">
+        <span class="material-symbols-outlined text-[18px] text-zinc-500">map</span>
+        <span class="text-[12px] font-semibold text-zinc-300">AI + HD Landscape</span>
+      </a>
+      <a href="#" onclick="return loadPage('how-it-works.html','how')" class="sidebar-item flex items-center gap-3 px-5 py-2.5 cursor-pointer" id="nav-how">
+        <span class="material-symbols-outlined text-[18px] text-zinc-500">build</span>
+        <span class="text-[12px] font-semibold text-zinc-300">How It Works</span>
+      </a>
+    </nav>
+
+    <div class="px-5 py-4 border-t border-zinc-800/50">
+      <a href="https://github.com/jravinder/hd-research-agent" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-zinc-600 hover:text-zinc-400 transition-colors">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <span class="text-[10px] font-bold uppercase tracking-widest">Source</span>
+      </a>
+      <div class="text-[9px] text-zinc-700 mt-2">Not medical advice. For HD support visit hdsa.org</div>
+    </div>
+  </aside>
+
+  <!-- Main area -->
+  <div class="flex-1 flex flex-col min-w-0">
+    <header class="h-10 bg-[#1A1A1A] border-b border-zinc-800/50 flex items-center px-4 shrink-0">
+      <div class="flex items-center gap-1" id="tab-bar">
+        <div class="tab active px-4 py-2 flex items-center gap-2 cursor-pointer rounded-t" data-tab="dashboard" onclick="loadPage('index.html','dashboard')">
+          <span class="text-[11px] font-semibold text-zinc-300">Dashboard</span>
+        </div>
+      </div>
+      <div class="ml-auto flex items-center gap-4">
+        <div class="flex items-center gap-2">
+          <span class="status-dot status-live"></span>
+          <span class="text-[10px] mono text-zinc-500">Auto-refresh active</span>
+        </div>
+        <span class="text-[10px] mono text-zinc-600">gemma4:26b</span>
+      </div>
+    </header>
+
+    <main class="flex-1 overflow-hidden">
+      <iframe id="content-frame" src="index.html"></iframe>
+    </main>
+
+    <footer class="h-6 bg-[#1A1A1A] border-t border-zinc-800/50 flex items-center px-4 shrink-0">
+      <div class="flex items-center gap-6 text-[10px] mono text-zinc-600">
+        <span>Huntington's Disease</span>
+        <span>65 papers</span>
+        <span>42 candidates</span>
+        <span>5 targets</span>
+        <span class="text-amber-600">$0 cloud cost</span>
+      </div>
+      <div class="ml-auto text-[10px] mono text-zinc-700">MIT License</div>
+    </footer>
+  </div>
+
+</div>
+
+<script>
+function loadPage(url, navId) {
+  document.getElementById('content-frame').src = url;
+  document.querySelectorAll('.sidebar-item').forEach(function(el) { el.classList.remove('active'); });
+  var navEl = document.getElementById('nav-' + navId);
+  if (navEl) navEl.classList.add('active');
+
+  var tabBar = document.getElementById('tab-bar');
+  var existingTab = tabBar.querySelector('[data-tab="' + navId + '"]');
+  tabBar.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+
+  if (existingTab) {
+    existingTab.classList.add('active');
+  } else {
+    var label = navEl ? navEl.querySelector('span.text-\\[12px\\], span.text-\\[11px\\]').textContent : navId;
+    var tab = document.createElement('div');
+    tab.className = 'tab active px-4 py-2 flex items-center gap-2 cursor-pointer rounded-t';
+    tab.setAttribute('data-tab', navId);
+    tab.innerHTML = '<span class="text-[11px] font-semibold text-zinc-300">' + label + '</span>' +
+      '<span class="text-zinc-600 hover:text-zinc-400 text-[14px] leading-none" onclick="event.stopPropagation(); closeTab(this)">&times;</span>';
+    tab.onclick = function() { loadPage(url, navId); };
+    tabBar.appendChild(tab);
+  }
+  return false;
+}
+
+function closeTab(closeBtn) {
+  var tab = closeBtn.parentElement;
+  var wasActive = tab.classList.contains('active');
+  tab.remove();
+  if (wasActive) {
+    var remaining = document.querySelectorAll('.tab');
+    if (remaining.length > 0) {
+      remaining[remaining.length - 1].classList.add('active');
+      remaining[remaining.length - 1].click();
+    }
+  }
+}
+</script>
+
+</body></html>

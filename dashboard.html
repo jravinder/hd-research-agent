@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "on-surface": "#191c1e",
+        "on-primary": "#ffffff",
+        "surface-bright": "#f7f9fb",
+        "on-secondary": "#ffffff",
+        "surface": "#f7f9fb",
+        "primary-container": "#0d1b3e",
+        "secondary-fixed": "#9cf0ff",
+        "on-primary-container": "#7784ad",
+        "surface-variant": "#e0e3e5",
+        "outline-variant": "#c6c6cf",
+        "on-tertiary-fixed-variant": "#3f4759",
+        "on-tertiary-container": "#7d859a",
+        "on-primary-fixed-variant": "#39456b",
+        "tertiary": "#00030e",
+        "surface-container-low": "#f2f4f6",
+        "surface-container-highest": "#e0e3e5",
+        "surface-dim": "#d8dadc",
+        "on-error": "#ffffff",
+        "surface-tint": "#515d84",
+        "surface-container-high": "#e6e8ea",
+        "tertiary-container": "#151d2e",
+        "on-secondary-container": "#00616d",
+        "primary-fixed-dim": "#b9c5f2",
+        "on-secondary-fixed": "#001f24",
+        "primary": "#00020e",
+        "primary-fixed": "#dbe1ff",
+        "surface-container": "#eceef0",
+        "inverse-primary": "#b9c5f2",
+        "on-error-container": "#93000a",
+        "inverse-on-surface": "#eff1f3",
+        "on-primary-fixed": "#0b1a3d",
+        "on-background": "#191c1e",
+        "tertiary-fixed": "#dbe2fa",
+        "error": "#ba1a1a",
+        "on-tertiary-fixed": "#141b2c",
+        "on-surface-variant": "#45464e",
+        "inverse-surface": "#2d3133",
+        "surface-container-lowest": "#ffffff",
+        "secondary-container": "#00e3fd",
+        "secondary": "#006875",
+        "on-tertiary": "#ffffff",
+        "outline": "#76767f",
+        "background": "#f7f9fb",
+        "secondary-fixed-dim": "#00323a",
+        "on-secondary-fixed-variant": "#004f58",
+        "tertiary-fixed-dim": "#bfc6dd",
+        "error-container": "#ffdad6"
+      },
+      borderRadius: {
+        DEFAULT: "1rem",
+        lg: "2rem",
+        xl: "3rem",
+        full: "9999px"
+      },
+      fontFamily: {
+        headline: ["Manrope"],
+        body: ["Inter"],
+        label: ["Inter"]
+      }
+    }
+  }
+}
+;</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-panel {
+  backdrop-filter: blur(24px);
+  background: rgba(255, 255, 255, 0.7);
+}
+.hero-orb {
+  background:
+    radial-gradient(circle at top left, rgba(0, 227, 253, 0.22), transparent 42%),
+    radial-gradient(circle at bottom right, rgba(13, 27, 62, 0.12), transparent 36%);
+}
+</style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<main class="pt-6 pb-12 px-6 md:px-12 min-h-screen">
+  <section class="max-w-4xl mx-auto mb-16">
+    <div class="hero-orb rounded-[2rem] px-6 py-7 mb-8 border border-white/50 bg-white/55 shadow-[0px_24px_48px_rgba(25,28,30,0.05)]">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+        <div class="max-w-2xl">
+          <div class="text-[10px] font-black uppercase tracking-[0.24em] text-cyan-700 mb-3">HD Research Workspace</div>
+          <h2 class="text-3xl font-black tracking-tight text-indigo-950 mb-3">Start simple. Go deep only when needed.</h2>
+          <p class="text-slate-600 leading-relaxed">
+            Ask a question, open the current priority area, or inspect live evidence.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-3 min-w-[220px]">
+          <div class="rounded-2xl bg-white/80 p-4 shadow-sm border border-white/70">
+            <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Recent Papers</div>
+            <div class="text-2xl font-black text-indigo-950 mt-2" id="hero-papers-count">20</div>
+          </div>
+          <div class="rounded-2xl bg-white/80 p-4 shadow-sm border border-white/70">
+            <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Active Trials</div>
+            <div class="text-2xl font-black text-indigo-950 mt-2" id="hero-trials-count">30</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass-panel p-2 rounded-xl shadow-[0px_32px_64px_rgba(25,28,30,0.1)] border border-white/50">
+      <form action="chat.html" class="relative flex items-center" method="get">
+        <div class="absolute left-6 text-cyan-600">
+          <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
+        </div>
+        <input class="w-full bg-transparent border-none focus:ring-0 py-6 pl-20 pr-32 font-headline text-xl font-bold tracking-tight text-indigo-950 placeholder-indigo-950/30" name="q" placeholder="Ask HD Research..." type="text"/>
+        <div class="absolute right-3 flex items-center gap-2">
+          <span class="hidden sm:block text-[10px] font-bold text-slate-400 tracking-widest uppercase px-3">Press ⌘K</span>
+          <button class="bg-indigo-950 text-white px-6 py-3 rounded-lg font-bold text-sm hover:bg-cyan-600 transition-colors duration-300" type="submit">
+            Search
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-4 text-[11px] font-semibold text-slate-500">
+      <span id="hero-updated-at">Updated from the latest local data refresh</span>
+    </div>
+    <div class="flex gap-4 mt-6 justify-center">
+      <a class="text-xs font-bold text-slate-400 uppercase tracking-widest hover:text-cyan-600 transition-colors" href="chat.html">Ask</a>
+      <a class="text-xs font-bold text-slate-400 uppercase tracking-widest hover:text-cyan-600 transition-colors" href="targets.html">Targets</a>
+      <a class="text-xs font-bold text-slate-400 uppercase tracking-widest hover:text-cyan-600 transition-colors" href="research.html">Papers</a>
+    </div>
+  </section>
+
+  <div class="grid grid-cols-12 gap-8">
+    <div class="col-span-12 xl:col-span-8 space-y-12">
+      <section>
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <h2 class="text-2xl font-extrabold tracking-tight text-indigo-950">Start Here</h2>
+            <p class="text-slate-500 leading-relaxed">Pick one path. Ignore the rest for now.</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <a class="block bg-surface-container-lowest p-6 rounded-lg shadow-[0px_24px_48px_rgba(25,28,30,0.06)] hover:translate-y-[-3px] transition-transform duration-300" href="learn.html">
+            <div class="w-11 h-11 rounded-2xl bg-cyan-50 text-cyan-700 flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined">school</span>
+            </div>
+            <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-2">Inception</div>
+            <h3 class="text-lg font-bold text-indigo-950 mb-2">Learn the HD basics first</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">Use the primer if you need the disease, mechanism, and target vocabulary before reading papers.</p>
+          </a>
+          <a class="block bg-surface-container-lowest p-6 rounded-lg shadow-[0px_24px_48px_rgba(25,28,30,0.06)] hover:translate-y-[-3px] transition-transform duration-300" href="chat.html">
+            <div class="w-11 h-11 rounded-2xl bg-indigo-50 text-indigo-700 flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined">chat</span>
+            </div>
+            <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-2">Newbie</div>
+            <h3 class="text-lg font-bold text-indigo-950 mb-2">Ask a grounded question</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">Start in plain language and let the workspace point you to the papers, trials, and targets that matter.</p>
+          </a>
+          <a class="block bg-surface-container-lowest p-6 rounded-lg shadow-[0px_24px_48px_rgba(25,28,30,0.06)] hover:translate-y-[-3px] transition-transform duration-300" href="targets.html">
+            <div class="w-11 h-11 rounded-2xl bg-slate-100 text-slate-700 flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined">genetics</span>
+            </div>
+            <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-2">Expert</div>
+            <h3 class="text-lg font-bold text-indigo-950 mb-2">Inspect current priorities</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">Jump straight into ranked targets, mechanistic threads, and active analysis artifacts.</p>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <h2 class="text-2xl font-extrabold tracking-tight text-indigo-950">Current Priorities</h2>
+            <p class="text-slate-500 leading-relaxed">The two HD threads this workspace is emphasizing right now.</p>
+          </div>
+          <a class="text-cyan-600 font-bold text-sm hover:underline" href="learn.html">View Primer</a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <a class="block bg-surface-container-lowest p-8 rounded-lg shadow-[0px_24px_48px_rgba(25,28,30,0.06)] group hover:translate-y-[-4px] transition-transform duration-300" href="targets.html#msh3">
+            <div class="flex justify-between items-start mb-6">
+              <div class="p-3 bg-secondary-fixed rounded-xl text-on-secondary-fixed">
+                <span class="material-symbols-outlined">genetics</span>
+              </div>
+              <span class="text-[10px] font-black tracking-widest text-cyan-600 uppercase">Core Mechanism</span>
+            </div>
+            <h3 class="text-xl font-bold text-indigo-950 mb-2">Somatic CAG Expansion</h3>
+            <p class="text-sm text-slate-500 mb-6">Repeat instability, DNA repair modifiers, and why MSH3 keeps rising to the top.</p>
+            <div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+              <div class="h-full bg-cyan-500 w-[82%] rounded-full shadow-[0_0_8px_rgba(6,182,212,0.5)]"></div>
+            </div>
+          </a>
+
+          <a class="block bg-surface-container-lowest p-8 rounded-lg shadow-[0px_24px_48px_rgba(25,28,30,0.06)] group hover:translate-y-[-4px] transition-transform duration-300" href="research.html">
+            <div class="flex justify-between items-start mb-6">
+              <div class="p-3 bg-indigo-50 rounded-xl text-indigo-600">
+                <span class="material-symbols-outlined">model_training</span>
+              </div>
+              <span class="text-[10px] font-black tracking-widest text-slate-400 uppercase">Therapeutic Lane</span>
+            </div>
+            <h3 class="text-xl font-bold text-indigo-950 mb-2">HTT Lowering Landscape</h3>
+            <p class="text-sm text-slate-500 mb-6">ASOs, gene therapy, delivery limits, and what the live trial set implies.</p>
+            <div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+              <div class="h-full bg-indigo-900 w-[45%] rounded-full"></div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <div class="mb-8">
+          <h2 class="text-2xl font-extrabold tracking-tight text-indigo-950">Active HD Workstreams</h2>
+          <p class="text-slate-500">Two places to continue once you want more detail.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <a class="relative overflow-hidden group rounded-lg bg-primary-container p-8 text-white min-h-[240px] flex flex-col justify-end" href="experiment-4.html">
+            <div class="absolute inset-0 opacity-20 pointer-events-none">
+              <div class="absolute inset-0 bg-gradient-to-br from-cyan-400 to-transparent"></div>
+              <div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent"></div>
+            </div>
+            <div class="relative z-10">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                <span class="text-[10px] font-bold tracking-widest uppercase opacity-60">High Priority - Active</span>
+              </div>
+              <h3 class="text-2xl font-extrabold mb-2">Somatic Expansion Studio</h3>
+              <p class="text-sm text-on-primary-container leading-relaxed mb-6">Mapping DNA repair modifiers, CAG instability evidence, and intervention hypotheses across the latest paper set.</p>
+              <div class="flex -space-x-2">
+                <div class="w-8 h-8 rounded-full border-2 border-primary-container bg-cyan-500 text-slate-950 flex items-center justify-center text-[10px] font-bold">KB</div>
+                <div class="w-8 h-8 rounded-full border-2 border-primary-container bg-indigo-300 text-indigo-950 flex items-center justify-center text-[10px] font-bold">TR</div>
+                <div class="w-8 h-8 rounded-full bg-cyan-600 flex items-center justify-center text-[10px] font-bold border-2 border-primary-container">+4</div>
+              </div>
+            </div>
+          </a>
+
+          <a class="bg-surface-container p-8 rounded-lg flex flex-col justify-between" href="targets.html">
+            <div>
+              <h3 class="text-xl font-bold text-indigo-950 mb-2">Target Prioritization</h3>
+              <p class="text-sm text-slate-500 mb-6 leading-relaxed">A compact target ranking across evidence strength and momentum.</p>
+            </div>
+            <div class="flex items-center justify-between border-t border-slate-200 pt-6">
+              <div class="flex items-center gap-4">
+                <div class="text-center">
+                  <div class="text-lg font-bold text-indigo-950" id="target-card-paper-count">46</div>
+                  <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Papers</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-lg font-bold text-indigo-950" id="target-card-hypothesis-count">5</div>
+                  <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Tracked Leads</div>
+                </div>
+              </div>
+              <button class="p-3 bg-white text-indigo-950 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </button>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl font-extrabold tracking-tight text-indigo-950">Expert Snapshot</h2>
+          <span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold text-indigo-950 tracking-widest uppercase" id="expert-sync-label">Local Data</span>
+        </div>
+        <p class="text-slate-500 mb-6">System state and latest refresh context.</p>
+        <div class="bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0px_24px_48px_rgba(25,28,30,0.06)]">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-slate-50">
+                <th class="px-6 py-4 text-[10px] font-black text-slate-400 uppercase tracking-widest">Run ID</th>
+                <th class="px-6 py-4 text-[10px] font-black text-slate-400 uppercase tracking-widest">Status</th>
+                <th class="px-6 py-4 text-[10px] font-black text-slate-400 uppercase tracking-widest">Success Rate</th>
+                <th class="px-6 py-4 text-[10px] font-black text-slate-400 uppercase tracking-widest">Runtime</th>
+                <th class="px-6 py-4"></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-5 font-bold text-indigo-950 text-sm">#HD-0042</td>
+                <td class="px-6 py-5">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-green-50 text-green-700 text-[10px] font-bold uppercase tracking-wider">Completed</span>
+                </td>
+                <td class="px-6 py-5">
+                  <div class="flex items-center gap-2">
+                    <span class="text-sm font-bold text-indigo-950">99.4%</span>
+                    <div class="w-12 h-1 bg-slate-100 rounded-full">
+                      <div class="w-full h-full bg-cyan-500 rounded-full"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-5 text-sm text-slate-500 font-medium">12.4s</td>
+                <td class="px-6 py-5 text-right">
+                  <a class="text-cyan-600 hover:text-cyan-700 font-bold text-xs" href="experiment-4.html">RESULTS</a>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-5 font-bold text-indigo-950 text-sm">#HD-0045</td>
+                <td class="px-6 py-5">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-50 text-amber-700 text-[10px] font-bold uppercase tracking-wider">Processing</span>
+                </td>
+                <td class="px-6 py-5">
+                  <div class="flex items-center gap-2">
+                    <span class="text-sm font-bold text-indigo-950">--</span>
+                    <div class="w-12 h-1 bg-slate-100 rounded-full overflow-hidden">
+                      <div class="w-1/2 h-full bg-indigo-300 rounded-full"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-5 text-sm text-slate-500 font-medium">2.1m</td>
+                <td class="px-6 py-5 text-right">
+                  <span class="text-slate-300 font-bold text-xs cursor-not-allowed">PENDING</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-5 font-bold text-indigo-950 text-sm">#HD-0021</td>
+                <td class="px-6 py-5">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-green-50 text-green-700 text-[10px] font-bold uppercase tracking-wider">Completed</span>
+                </td>
+                <td class="px-6 py-5">
+                  <div class="flex items-center gap-2">
+                    <span class="text-sm font-bold text-indigo-950">84.2%</span>
+                    <div class="w-12 h-1 bg-slate-100 rounded-full">
+                      <div class="w-4/5 h-full bg-cyan-500 rounded-full"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-5 text-sm text-slate-500 font-medium">45.0s</td>
+                <td class="px-6 py-5 text-right">
+                  <a class="text-cyan-600 hover:text-cyan-700 font-bold text-xs" href="experiment-2.html">RESULTS</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <div class="col-span-12 xl:col-span-4 space-y-8">
+      <section class="bg-indigo-950 rounded-lg p-8 text-white shadow-xl">
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-xl font-extrabold tracking-tight">Latest HD Digest</h2>
+          <span class="material-symbols-outlined text-cyan-400" style="font-variation-settings: 'FILL' 1;">bolt</span>
+        </div>
+        <p class="text-xs text-on-primary-container mb-6">One quick thing worth knowing before you open the full research view.</p>
+        <div class="space-y-6">
+          <div class="pb-6 border-b border-white/10">
+            <span class="text-[9px] font-bold text-cyan-400 tracking-widest uppercase mb-2 block" id="digest-stamp-1">Digest Update</span>
+            <h4 class="text-sm font-bold mb-2 leading-tight" id="digest-title-1">Mismatch Repair Modifiers Still Dominate the Latest HD Paper Cluster</h4>
+            <p class="text-xs text-on-primary-container leading-relaxed mb-4" id="digest-copy-1">Newly added papers continue to reinforce MSH3 and PMS1 as central somatic expansion nodes.</p>
+            <a class="inline-flex items-center text-xs font-bold text-cyan-400 hover:gap-2 transition-all" href="research.html">
+              Open Digest <span class="material-symbols-outlined text-sm ml-1">chevron_right</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-surface-container-lowest p-8 rounded-lg shadow-[0px_24px_48px_rgba(25,28,30,0.06)]">
+        <h3 class="text-sm font-black text-indigo-950 uppercase tracking-widest mb-6">Local Model Status</h3>
+        <div class="h-40 flex items-end justify-between gap-1">
+          <div class="w-full bg-slate-100 rounded-t-sm h-[30%]"></div>
+          <div class="w-full bg-slate-100 rounded-t-sm h-[45%]"></div>
+          <div class="w-full bg-cyan-100 rounded-t-sm h-[60%]"></div>
+          <div class="w-full bg-cyan-200 rounded-t-sm h-[80%]"></div>
+          <div class="w-full bg-cyan-500 rounded-t-sm h-[95%] shadow-[0_0_15px_rgba(6,182,212,0.3)]"></div>
+          <div class="w-full bg-cyan-200 rounded-t-sm h-[70%]"></div>
+          <div class="w-full bg-slate-100 rounded-t-sm h-[40%]"></div>
+          <div class="w-full bg-slate-100 rounded-t-sm h-[25%]"></div>
+        </div>
+        <div class="mt-6 pt-6 border-t border-slate-100">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-medium text-slate-500">Primary Local Pipeline</span>
+            <span class="text-xs font-bold text-indigo-950" id="pipeline-status">Active</span>
+          </div>
+          <div class="flex items-center justify-between mt-2">
+            <span class="text-xs font-medium text-slate-500">Retrieval Health</span>
+            <span class="text-xs font-bold text-green-600" id="retrieval-health">Optimal</span>
+          </div>
+          <div class="flex items-center justify-between mt-2">
+            <span class="text-xs font-medium text-slate-500">Corpus Depth</span>
+            <span class="text-xs font-bold text-indigo-950" id="kb-depth">46 papers</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-surface-container-lowest p-8 rounded-lg shadow-[0px_24px_48px_rgba(25,28,30,0.06)]">
+        <h3 class="text-sm font-black text-indigo-950 uppercase tracking-widest mb-6">Data Sources</h3>
+        <p class="text-sm text-slate-500 mb-6">The evidence streams currently feeding this workspace.</p>
+        <div class="space-y-4">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-900">
+              <span class="material-symbols-outlined">description</span>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-indigo-950">Paper Ingest</h4>
+              <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest" id="source-papers">20 Recent Papers</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-slate-400">
+              <span class="material-symbols-outlined">clinical_notes</span>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-indigo-950">Trial Tracker</h4>
+              <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest" id="source-trials">30 Active Trials</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 flex items-center justify-center text-cyan-700">
+              <span class="material-symbols-outlined">newspaper</span>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-indigo-950">HD News Feed</h4>
+              <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest" id="source-hdbuzz">10 Recent Posts</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+<script>
+function formatLocalDate(isoString) {
+  if (!isoString) return '';
+  const date = new Date(isoString);
+  if (Number.isNaN(date.getTime())) return '';
+  return date.toLocaleString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit'
+  });
+}
+
+Promise.all([
+  fetch('data/data.json').then((response) => response.json()),
+  fetch('data/knowledge_base.json').then((response) => response.json()),
+  fetch('data/hypotheses_tracker.json').then((response) => response.json())
+]).then(([data, knowledgeBase, hypotheses]) => {
+  const stats = data.stats || {};
+  const kbStats = knowledgeBase.stats || {};
+  const paperCount = stats.papers_count || 0;
+  const trialCount = stats.trials_count || 0;
+  const hdbuzzCount = stats.hdbuzz_count || 0;
+  const trackedLeads = (hypotheses.hypotheses || []).length;
+
+  document.getElementById('hero-papers-count').textContent = String(paperCount);
+  document.getElementById('hero-trials-count').textContent = String(trialCount);
+  document.getElementById('target-card-paper-count').textContent = String(kbStats.total_papers || paperCount);
+  document.getElementById('target-card-hypothesis-count').textContent = String(trackedLeads);
+  document.getElementById('source-papers').textContent = paperCount + ' Recent Papers';
+  document.getElementById('source-trials').textContent = trialCount + ' Active Trials';
+  document.getElementById('source-hdbuzz').textContent = hdbuzzCount + ' Recent Posts';
+  document.getElementById('kb-depth').textContent = (kbStats.total_papers || paperCount) + ' papers';
+
+  const updatedAt = formatLocalDate(data.last_updated);
+  if (updatedAt) {
+    document.getElementById('hero-updated-at').textContent = 'Updated ' + updatedAt;
+    document.getElementById('expert-sync-label').textContent = 'Updated ' + updatedAt;
+    document.getElementById('digest-stamp-1').textContent = 'Digest Update - ' + updatedAt;
+  }
+
+  const chunkCount = kbStats.total_chunks || 0;
+  if (chunkCount) {
+    document.getElementById('hero-kb-stats').textContent = 'Grounded in ' + chunkCount + ' retrieval chunks across the current corpus';
+  }
+
+  if ((data.papers || []).length) {
+    const topPaper = data.papers[0];
+    document.getElementById('digest-title-1').textContent = topPaper.title;
+    document.getElementById('digest-copy-1').textContent = 'Latest paper in the local ingest from ' + (topPaper.journal || 'the current corpus') + '. Use this as the first stop before going deeper into the paper list.';
+  }
+}).catch(() => {
+  document.getElementById('pipeline-status').textContent = 'Static View';
+  document.getElementById('retrieval-health').textContent = 'Unavailable';
+});
+</script>
+</body>
+</html>
