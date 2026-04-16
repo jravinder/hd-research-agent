@@ -1,4 +1,30 @@
-/* HD Research Hub — shared across all pages */
+/* HD Research Studio — shared across all pages */
+
+/* Hide page chrome when loaded inside workspace iframe */
+(function() {
+  if (window.self !== window.top) {
+    // We're inside an iframe (workspace shell)
+    document.documentElement.classList.add('in-workspace');
+    // Hide headers, nav, footers — workspace provides these
+    document.addEventListener('DOMContentLoaded', function() {
+      var els = document.querySelectorAll('header, [data-universal-nav], [data-universal-footer], nav.sticky, nav.fixed');
+      for (var i = 0; i < els.length; i++) {
+        els[i].style.display = 'none';
+      }
+      // Remove top padding that was for the fixed nav
+      var main = document.querySelector('main');
+      if (main) main.style.paddingTop = '1.5rem';
+      // Also hide any standalone footers at the end
+      var footers = document.querySelectorAll('footer, .text-center.py-4');
+      for (var j = 0; j < footers.length; j++) {
+        var ft = footers[j];
+        if (ft.textContent.indexOf('not medical advice') > -1 || ft.textContent.indexOf('hdsa.org') > -1) {
+          ft.style.display = 'none';
+        }
+      }
+    });
+  }
+})();
 
 /* Google Analytics */
 (function() {
