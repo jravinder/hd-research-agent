@@ -11,14 +11,14 @@
 </head>
 <body class="bg-[#fdf9e9] text-[#1c1c13] antialiased min-h-screen" style="font-size:18px;">
 
-<header class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
+<header data-universal-nav="true" class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
   <div class="flex justify-between items-center max-w-5xl mx-auto px-6 h-16">
-    <a href="index.html" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2">
+    <a href="index.html" class="text-lg font-semibold tracking-tight text-stone-900 flex items-center gap-2">
       <span class="material-symbols-outlined text-amber-700">arrow_back</span> HD Research Hub
     </a>
     <div class="flex items-center gap-3">
       <div id="google_translate_element"></div>
-      <a href="experiment-3.html" class="text-stone-500 text-sm hover:text-stone-800 hidden md:flex items-center gap-1">Experiment #3</a>
+      <a href="chat.html" class="text-amber-700 text-sm font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">chat</span> Ask HD Research</a>
     </div>
   </div>
 </header>
@@ -45,7 +45,7 @@
         <div class="bg-white p-5 md:col-span-2 border-t border-stone-100">
           <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Infrastructure</div>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-sm">
-            <div><span class="text-stone-400">Model:</span> <span class="text-stone-900 font-medium">Gemma 4 (26B)</span></div>
+            <div><span class="text-stone-400">Model:</span> <span class="text-stone-900 font-medium"><span title="Google's open AI model used for paper analysis" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">Gemma 4</span> (26B)</span></div>
             <div><span class="text-stone-400">Context:</span> <span class="text-stone-900 font-medium">64K</span></div>
             <div><span class="text-stone-400">Hardware:</span> <span class="text-stone-900 font-medium">Mac M2 MBP</span></div>
             <div><span class="text-stone-400">Cost:</span> <span class="text-stone-900 font-medium">$0 (local)</span></div>
@@ -67,15 +67,15 @@
   <!-- The Question -->
   <section class="bg-[#f8f4e4] py-12 px-8 rounded-2xl mb-16 text-center">
     <span class="inline-block px-4 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold tracking-widest uppercase mb-6">The Question</span>
-    <p class="text-xl md:text-2xl font-medium text-stone-800 leading-relaxed max-w-3xl mx-auto">Can AI screen 75 research papers and rank drug candidates targeting somatic CAG repeat expansion, the hottest frontier in HD therapeutics?</p>
+    <p class="text-xl md:text-2xl font-medium text-stone-800 leading-relaxed max-w-3xl mx-auto">Can AI screen 75 research papers and rank drug candidates targeting <span title="A DNA mutation that grows worse over time in brain cells" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">somatic CAG repeat expansion</span>, the hottest frontier in HD therapeutics?</p>
   </section>
 
   <!-- Why Somatic Expansion? -->
   <section class="mb-16">
     <h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-6">Why Somatic Expansion?</h2>
     <div class="bg-white rounded-xl editorial-shadow p-6 space-y-4">
-      <p class="text-stone-700 leading-relaxed">GWAS identified DNA repair genes as the <strong>strongest modifiers of HD onset</strong>. Natural variants in these genes shift onset by 6 to 8 years. That discovery changed the field: the disease is not just about the inherited CAG length. It is about <strong>ongoing expansion in the brain</strong>.</p>
-      <p class="text-stone-700 leading-relaxed"><strong>The pathway:</strong> MutSbeta (MSH3) recognizes CAG slip-out loops. MutLgamma (MLH1) nicks the DNA. Pol-delta adds extra repeats. LIG1 seals the nick. FAN1 opposes expansion by promoting contraction. Each step is a potential drug target.</p>
+      <p class="text-stone-700 leading-relaxed"><span title="Genome-wide study finding genetic variants linked to disease" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">GWAS</span> identified DNA repair genes as the <strong>strongest modifiers of HD onset</strong>. Natural variants in these genes shift onset by 6 to 8 years. That discovery changed the field: the disease is not just about the inherited CAG length. It is about <strong>ongoing expansion in the brain</strong>.</p>
+      <p class="text-stone-700 leading-relaxed"><strong>The pathway:</strong> <span title="A protein complex that recognizes DNA errors and drives repeat expansion" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">MutSbeta</span> (<span title="DNA repair gene. Drives somatic expansion. Top drug target." style="border-bottom: 1px dotted #a3a3a3; cursor: help;">MSH3</span>) recognizes CAG slip-out loops. MutLgamma (<span title="DNA repair gene. Part of the complex that nicks DNA during expansion." style="border-bottom: 1px dotted #a3a3a3; cursor: help;">MLH1</span>) nicks the DNA. Pol-delta adds extra repeats. <span title="DNA ligase. Seals nicks, locking in expanded repeats." style="border-bottom: 1px dotted #a3a3a3; cursor: help;">LIG1</span> seals the nick. <span title="DNA repair gene. Protects against expansion." style="border-bottom: 1px dotted #a3a3a3; cursor: help;">FAN1</span> opposes expansion by promoting contraction. Each step is a potential drug target.</p>
       <p class="text-stone-700 leading-relaxed">Multiple companies are now developing drugs against this pathway: <strong>LoQus23</strong> (MSH3), <strong>Harness Therapeutics</strong> (MSH3), <strong>Skyhawk Therapeutics</strong> (splicing), and <strong>Rgenta Therapeutics</strong> (splicing). This experiment asks: what does the published evidence say about which targets and modalities are most promising?</p>
     </div>
   </section>
@@ -93,8 +93,8 @@
           <th class="py-3 px-5 font-bold text-stone-600 uppercase text-xs tracking-wider">Key Challenge</th>
         </tr></thead>
         <tbody class="divide-y divide-stone-100">
-          <tr><td class="py-3 px-5 font-bold text-amber-700">MSH3</td><td class="py-3 px-5">7</td><td class="py-3 px-5">High (multiple siRNA/shRNA)</td><td class="py-3 px-5">Gene knockdown in animal models</td><td class="py-3 px-5">CNS delivery, off-target effects</td></tr>
-          <tr><td class="py-3 px-5 font-bold text-amber-700">PMS1</td><td class="py-3 px-5">4</td><td class="py-3 px-5">High (splicing modulation)</td><td class="py-3 px-5">ASOs / small molecules</td><td class="py-3 px-5">Preserving basal splicing function</td></tr>
+          <tr><td class="py-3 px-5 font-bold text-amber-700">MSH3</td><td class="py-3 px-5">7</td><td class="py-3 px-5">High (multiple <span title="A molecule that silences a specific gene" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">siRNA</span>/shRNA)</td><td class="py-3 px-5">Gene knockdown in animal models</td><td class="py-3 px-5">CNS delivery, off-target effects</td></tr>
+          <tr><td class="py-3 px-5 font-bold text-amber-700"><span title="DNA repair gene. Splice modulators can reduce it to slow expansion." style="border-bottom: 1px dotted #a3a3a3; cursor: help;">PMS1</span></td><td class="py-3 px-5">4</td><td class="py-3 px-5">High (splicing modulation)</td><td class="py-3 px-5"><span title="Antisense oligonucleotide: a short synthetic DNA that turns off a gene" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">ASOs</span> / small molecules</td><td class="py-3 px-5">Preserving basal splicing function</td></tr>
           <tr><td class="py-3 px-5 font-bold text-amber-700">FAN1</td><td class="py-3 px-5">3</td><td class="py-3 px-5">Medium (antagomir approach)</td><td class="py-3 px-5">Antagomir targeting mRNA</td><td class="py-3 px-5">Pleiotropic toxicity risk</td></tr>
           <tr><td class="py-3 px-5 font-bold text-amber-700">MSH2</td><td class="py-3 px-5">2</td><td class="py-3 px-5">Medium (knockdown shown)</td><td class="py-3 px-5">Gene knockdown in animals</td><td class="py-3 px-5">Core MMR component, systemic toxicity</td></tr>
           <tr><td class="py-3 px-5 font-bold text-amber-700">MLH1</td><td class="py-3 px-5">2</td><td class="py-3 px-5">Medium (knockdown shown)</td><td class="py-3 px-5">Gene knockdown in cells</td><td class="py-3 px-5">Vital for genome stability, narrow window</td></tr>
@@ -114,7 +114,7 @@
           <h4 class="text-xs font-bold uppercase tracking-widest text-amber-700">Gene Silencing</h4>
         </div>
         <h3 class="text-xl font-bold mb-1">siRNA/shRNA targeting MSH3</h3>
-        <p class="text-xs text-stone-400 mb-3">Preclinical (Animal Model)</p>
+        <p class="text-xs text-stone-400 mb-3"><span title="Tested in lab or animals, not yet in humans" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">Preclinical</span> (Animal Model)</p>
         <div class="flex justify-between text-sm font-semibold mb-1"><span class="text-stone-600">Confidence</span><span class="text-amber-700">90/100</span></div>
         <div class="h-2 w-full bg-stone-100 rounded-full overflow-hidden mb-4"><div class="h-full bg-amber-500 rounded-full" style="width:90%"></div></div>
         <p class="text-stone-600 text-sm">Multiple studies show that reducing MSH3 expression robustly prevents somatic CAG repeat expansion. One study demonstrated 78.1% reduction in striatal expansion with di-siRNA delivery.</p>
@@ -125,7 +125,7 @@
           <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-500 text-white text-sm font-bold">#2</span>
           <h4 class="text-xs font-bold uppercase tracking-widest text-amber-700">Splicing Modulation</h4>
         </div>
-        <h3 class="text-xl font-bold mb-1">Splice Modulators (PMS1)</h3>
+        <h3 class="text-xl font-bold mb-1"><span title="A drug that changes how a gene's instructions are read" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">Splice Modulators</span> (PMS1)</h3>
         <p class="text-xs text-stone-400 mb-3">Preclinical (Cell Model)</p>
         <div class="flex justify-between text-sm font-semibold mb-1"><span class="text-stone-600">Confidence</span><span class="text-amber-700">85/100</span></div>
         <div class="h-2 w-full bg-stone-100 rounded-full overflow-hidden mb-4"><div class="h-full bg-amber-500 rounded-full" style="width:85%"></div></div>
@@ -252,5 +252,4 @@
 </main>
 
 <script src="shared.js"></script>
-<div class="text-center py-4 px-4"><p class="text-xs text-stone-400">This is a research and educational tool, not medical advice. For HD support, visit <a href="https://hdsa.org" target="_blank" rel="noopener noreferrer" class="text-stone-500 underline">hdsa.org</a>.</p></div>
 </body></html>

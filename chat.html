@@ -28,16 +28,12 @@ tailwind.config = { theme: { extend: { colors: {
 <body class="bg-surface text-on-surface min-h-screen flex flex-col" style="font-size:18px;">
 
 <!-- Nav -->
-<header class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
+<header data-universal-nav="true" class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
   <div class="flex justify-between items-center max-w-4xl mx-auto px-6 h-16">
-    <a href="index.html" class="flex items-center gap-3">
-      <span class="material-symbols-outlined text-primary">arrow_back</span>
-      <div>
-        <h1 class="font-semibold tracking-tight text-lg text-primary">Chat With HD Research Data</h1>
-        <span class="text-[10px] font-bold uppercase tracking-widest text-secondary opacity-70">HD Research Hub</span>
-      </div>
+    <a href="index.html" class="text-lg font-semibold tracking-tight text-stone-900 flex items-center gap-2">
+      <span class="material-symbols-outlined text-amber-700">arrow_back</span> HD Research Hub
     </a>
-    <div class="flex items-center gap-2">
+    <div class="flex items-center gap-3">
       <div id="google_translate_element"></div>
       <div class="flex items-center gap-1">
         <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
@@ -276,5 +272,4 @@ chatForm.addEventListener('submit', (e) => { e.preventDefault(); sendMessage(cha
 chatInput.focus();
 </script>
 <script src="shared.js"></script>
-<div class="text-center py-2 px-4"><p class="text-xs text-on-surface-variant/30">This is a research interface over public HD data and internal experiment artifacts, not medical advice. For HD support, visit <a href="https://hdsa.org" class="underline">hdsa.org</a>.</p></div>
 </body></html>

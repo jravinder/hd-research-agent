@@ -11,12 +11,15 @@
 </head>
 <body class="bg-[#fdf9e9] text-[#1c1c13] antialiased" style="font-size:18px;">
 
-<header class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
+<header data-universal-nav="true" class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
   <div class="flex justify-between items-center max-w-5xl mx-auto px-6 h-16">
-    <a href="index.html" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2">
+    <a href="index.html" class="text-lg font-semibold tracking-tight text-stone-900 flex items-center gap-2">
       <span class="material-symbols-outlined text-amber-700">arrow_back</span> HD Research Hub
     </a>
-    <div id="google_translate_element"></div>
+    <div class="flex items-center gap-3">
+      <div id="google_translate_element"></div>
+      <a href="chat.html" class="text-amber-700 text-sm font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">chat</span> Ask HD Research</a>
+    </div>
   </div>
 </header>
 
@@ -109,7 +112,7 @@
           <div>
             <div class="text-xs font-bold text-amber-600 uppercase tracking-wider mb-1">Coursera (4 weeks)</div>
             <h3 class="font-bold text-stone-900">Genetics and Evolution</h3>
-            <p class="text-stone-600 text-sm mt-1">Duke. Mutations, DNA repair, population genetics. Directly relevant to understanding CAG repeat expansion.</p>
+            <p class="text-stone-600 text-sm mt-1">Duke. Mutations, DNA repair, population genetics. Directly relevant to understanding <span title="A DNA mutation that grows worse over time in brain cells" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">CAG repeat expansion</span>.</p>
           </div>
           <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded font-medium">Free audit</span>
         </div>
@@ -144,7 +147,7 @@
           <div>
             <div class="text-xs font-bold text-purple-600 uppercase tracking-wider mb-1">Coursera</div>
             <h3 class="font-bold text-stone-900">Drug Discovery</h3>
-            <p class="text-stone-600 text-sm mt-1">UCSD. How drugs are found, tested, and approved. Target identification, screening, clinical trials.</p>
+            <p class="text-stone-600 text-sm mt-1">UCSD. How drugs are found, tested, and approved. Target identification, screening, <span title="A study testing a treatment in real patients" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">clinical trials</span>.</p>
           </div>
           <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded font-medium">Free audit</span>
         </div>
@@ -253,5 +256,4 @@
 </main>
 
 <script src="shared.js"></script>
-<div class="text-center py-4 px-4"><p class="text-xs text-stone-400">This is a research and educational tool, not medical advice. For HD support, visit <a href="https://hdsa.org" class="text-stone-500 underline">hdsa.org</a>.</p></div>
 </body></html>
