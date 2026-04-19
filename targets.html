@@ -17,14 +17,14 @@
 </head>
 <body class="bg-[#fdf9e9] text-[#1c1c13] antialiased min-h-screen" style="font-size:18px;">
 
-<header class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
+<header data-universal-nav="true" class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
   <div class="flex justify-between items-center max-w-5xl mx-auto px-6 h-16">
-    <a href="index.html" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2">
+    <a href="index.html" class="text-lg font-semibold tracking-tight text-stone-900 flex items-center gap-2">
       <span class="material-symbols-outlined text-amber-700">arrow_back</span> HD Research Hub
     </a>
     <div class="flex items-center gap-3">
       <div id="google_translate_element"></div>
-      <a href="experiment-4.html" class="text-stone-500 text-sm hover:text-stone-800 hidden md:flex items-center gap-1">Experiment #4</a>
+      <a href="chat.html" class="text-amber-700 text-sm font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">chat</span> Ask HD Research</a>
     </div>
   </div>
 </header>
@@ -33,7 +33,7 @@
 
   <section class="py-12 md:py-16">
     <h1 class="text-3xl md:text-4xl font-extrabold tracking-tighter text-stone-900 leading-[1.1] mb-3">Somatic Expansion Targets</h1>
-    <p class="text-lg text-stone-500 max-w-2xl">The 5 validated drug targets for slowing somatic CAG repeat expansion in Huntington's Disease. 3D protein structures from AlphaFold.</p>
+    <p class="text-lg text-stone-500 max-w-2xl">The 5 validated <span title="A specific molecule in the body that a drug could interact with" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">drug targets</span> for slowing <span title="A DNA mutation that grows worse over time in brain cells" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">somatic CAG repeat expansion</span> in Huntington's Disease. 3D protein structures from <span title="Google's AI that predicts the 3D shape of proteins" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">AlphaFold</span>.</p>
   </section>
 
   <!-- The Pathway -->
@@ -68,9 +68,9 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
         <div class="p-6">
           <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Role in Somatic Expansion</div>
-          <p class="text-stone-700 text-sm leading-relaxed mb-4">Part of MutSbeta complex (MSH2-MSH3). Recognizes CAG repeat loops that form during DNA repair. When 3+ MutSbeta molecules bind, they resist dissociation and recruit endonuclease activity. MSH3 is rate-limiting: 50% reduction in MSH3 leads to ~50% less expansion.</p>
+          <p class="text-stone-700 text-sm leading-relaxed mb-4">Part of <span title="A protein complex that recognizes DNA errors and drives repeat expansion" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">MutSbeta</span> complex (MSH2-MSH3). Recognizes CAG repeat loops that form during DNA repair. When 3+ MutSbeta molecules bind, they resist dissociation and recruit endonuclease activity. MSH3 is rate-limiting: 50% reduction in MSH3 leads to ~50% less expansion.</p>
           <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Druggability</div>
-          <p class="text-sm text-green-700 font-medium mb-4">High. siRNA/shRNA knockdown demonstrated in animal models. Multiple companies developing MSH3-targeted drugs.</p>
+          <p class="text-sm text-green-700 font-medium mb-4">High. <span title="A molecule that silences a specific gene" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">siRNA</span>/shRNA knockdown demonstrated in animal models. Multiple companies developing MSH3-targeted drugs.</p>
           <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Key Drug Candidates</div>
           <ul class="text-stone-600 text-sm space-y-1">
             <li>siRNA/shRNA targeting MSH3 (90/100 confidence)</li>
@@ -103,7 +103,7 @@
           <p class="text-sm text-amber-700 font-medium mb-4">Medium. Upregulation (not inhibition) is the goal. Harness Therapeutics developing HRN001 (MISBA platform) for FAN1 upregulation.</p>
           <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Key Drug Candidates</div>
           <ul class="text-stone-600 text-sm space-y-1">
-            <li>HRN001 (Harness Therapeutics, ASO, FIH 2027)</li>
+            <li>HRN001 (Harness Therapeutics, <span title="Antisense oligonucleotide: a short synthetic DNA that turns off a gene" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">ASO</span>, FIH 2027)</li>
             <li>miR-124-3p antagomir (FAN1 upregulation via mRNA site blocking)</li>
           </ul>
           <div class="mt-4 text-xs text-stone-400">UniProt: <a href="https://www.uniprot.org/uniprotkb/Q9Y2M0" target="_blank" rel="noopener noreferrer" class="text-amber-700 underline">Q9Y2M0</a> | Papers mentioning: 41</div>
@@ -127,13 +127,13 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
         <div class="p-6">
           <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Role in Somatic Expansion</div>
-          <p class="text-stone-700 text-sm leading-relaxed mb-4">Part of the MutL family. Homozygous PMS1 inactivation reduces CAG repeat expansion. A pseudoexon in PMS1 can be targeted by splice modulators to reduce PMS1 protein levels dose-dependently, suppressing somatic expansion while preserving enough normal MMR to avoid cancer risk.</p>
+          <p class="text-stone-700 text-sm leading-relaxed mb-4">Part of the MutL family. Homozygous PMS1 inactivation reduces CAG repeat expansion. A pseudoexon in PMS1 can be targeted by <span title="A drug that changes how a gene's instructions are read" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">splice modulators</span> to reduce PMS1 protein levels dose-dependently, suppressing somatic expansion while preserving enough normal MMR to avoid cancer risk.</p>
           <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Druggability</div>
-          <p class="text-sm text-green-700 font-medium mb-4">High. Splice modulation demonstrated. SKY-0515 (Skyhawk) already in Phase 2/3 clinical trial (FALCON-HD).</p>
+          <p class="text-sm text-green-700 font-medium mb-4">High. Splice modulation demonstrated. SKY-0515 (Skyhawk) already in Phase 2/3 <span title="A study testing a treatment in real patients" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">clinical trial</span> (FALCON-HD).</p>
           <div class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Key Drug Candidates</div>
           <ul class="text-stone-600 text-sm space-y-1">
-            <li>SKY-0515 (Skyhawk, Phase 2/3, 62% mHTT + 26% PMS1 reduction)</li>
-            <li>RGT-0474060 (Rgenta, oral PMS1 inhibitor, preclinical)</li>
+            <li>SKY-0515 (Skyhawk, Phase 2/3, 62% <span title="Mutant huntingtin protein, the toxic form that causes HD" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">mHTT</span> + 26% PMS1 reduction)</li>
+            <li>RGT-0474060 (Rgenta, oral PMS1 inhibitor, <span title="Tested in lab or animals, not yet in humans" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">preclinical</span>)</li>
             <li>Branaplam (Novartis, discontinued due to neuropathy, but validated mechanism)</li>
           </ul>
           <div class="mt-4 text-xs text-stone-400">UniProt: <a href="https://www.uniprot.org/uniprotkb/P54277" target="_blank" rel="noopener noreferrer" class="text-amber-700 underline">P54277</a> | Papers mentioning: 38</div>
@@ -210,7 +210,7 @@
     <div class="bg-amber-50 border-l-8 border-amber-500 p-8 rounded-xl">
       <div class="flex items-center gap-3 mb-4"><span class="material-symbols-outlined text-amber-600 text-2xl" style="font-variation-settings:'FILL' 1;">info</span><h2 class="text-xl font-extrabold text-amber-800">About This Data</h2></div>
       <ul class="space-y-2 text-stone-700 text-sm">
-        <li>Drug candidates and paper counts from <a href="experiment-4.html" class="text-amber-700 underline">Experiment #4</a> (75 papers, 4.97M characters analyzed by Gemma 4).</li>
+        <li>Drug candidates and paper counts from <a href="experiment-4.html" class="text-amber-700 underline">Experiment #4</a> (75 papers, 4.97M characters analyzed by <span title="Google's open AI model used for paper analysis" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">Gemma 4</span>).</li>
         <li>3D structures predicted by <a href="https://alphafold.ebi.ac.uk/" target="_blank" rel="noopener noreferrer" class="text-amber-700 underline">AlphaFold</a> (DeepMind). These are computational predictions, not experimental crystal structures.</li>
         <li>Colored by AlphaFold confidence: <span class="text-blue-600 font-medium">blue = very high</span>, <span class="text-cyan-600 font-medium">cyan = confident</span>, <span class="text-yellow-600 font-medium">yellow = low</span>, <span class="text-orange-600 font-medium">orange = very low</span>.</li>
         <li>Drug rankings reflect AI assessment from published literature, not clinical validation.</li>
@@ -258,5 +258,4 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <script src="shared.js"></script>
-<div class="text-center py-4 px-4"><p class="text-xs text-stone-400">This is a research and educational tool, not medical advice. For HD support, visit <a href="https://hdsa.org" target="_blank" rel="noopener noreferrer" class="text-stone-500 underline">hdsa.org</a>.</p></div>
 </body></html>

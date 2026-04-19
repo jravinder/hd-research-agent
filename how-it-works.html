@@ -19,12 +19,15 @@ tailwind.config={theme:{extend:{colors:{
 </head>
 <body class="bg-surface text-on-surface" style="font-size:18px;">
 
-<header class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
+<header data-universal-nav="true" class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
   <div class="flex justify-between items-center max-w-6xl mx-auto px-6 h-16">
-    <a href="index.html" class="text-xl font-semibold tracking-tighter text-stone-900 flex items-center gap-2">
+    <a href="index.html" class="text-lg font-semibold tracking-tight text-stone-900 flex items-center gap-2">
       <span class="material-symbols-outlined text-amber-700">arrow_back</span> HD Research Hub
     </a>
-    <div id="google_translate_element"></div>
+    <div class="flex items-center gap-3">
+      <div id="google_translate_element"></div>
+      <a href="chat.html" class="text-amber-700 text-sm font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">chat</span> Ask HD Research</a>
+    </div>
   </div>
 </header>
 
@@ -237,5 +240,4 @@ tailwind.config={theme:{extend:{colors:{
 </main>
 
 <script src="shared.js"></script>
-<div class="text-center py-4 px-4"><p class="text-xs text-on-surface-variant/30">This is a research and educational tool, not medical advice. For HD support, visit <a href="https://hdsa.org" class="underline">hdsa.org</a>.</p></div>
 </body></html>

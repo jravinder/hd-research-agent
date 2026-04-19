@@ -11,12 +11,15 @@
 </head>
 <body class="bg-[#fdf9e9] text-[#1c1c13] antialiased" style="font-size:18px;">
 
-<header class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
+<header data-universal-nav="true" class="sticky top-0 z-50 bg-[#fdf9e9]/80 backdrop-blur-md shadow-sm">
   <div class="flex justify-between items-center max-w-5xl mx-auto px-6 h-16">
-    <a href="index.html" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2">
+    <a href="index.html" class="text-lg font-semibold tracking-tight text-stone-900 flex items-center gap-2">
       <span class="material-symbols-outlined text-amber-700">arrow_back</span> HD Research Hub
     </a>
-    <div id="google_translate_element"></div>
+    <div class="flex items-center gap-3">
+      <div id="google_translate_element"></div>
+      <a href="chat.html" class="text-amber-700 text-sm font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">chat</span> Ask HD Research</a>
+    </div>
   </div>
 </header>
 
@@ -44,7 +47,7 @@
           <tr><td class="py-3 px-4 font-medium">Isomorphic Labs</td><td class="py-3 px-4 text-stone-600">DeepMind spinoff. IsoDDE drug design engine. First AI-designed cancer drug entering Phase 1</td><td class="py-3 px-4 text-stone-600">Protein-ligand prediction</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Phase 1</span></td><td class="py-3 px-4 text-stone-500">No</td></tr>
           <tr><td class="py-3 px-4 font-medium">Aitia + UCB</td><td class="py-3 px-4 text-stone-600">Causal AI digital twins on CHDI TRACK-HD data (30K patients). Novel HD target identified</td><td class="py-3 px-4 text-stone-600">Causal AI</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Active</span></td><td class="py-3 px-4 text-stone-500">No</td></tr>
           <tr><td class="py-3 px-4 font-medium">Novartis</td><td class="py-3 px-4 text-stone-600">Generative AI designed 15M candidate compounds for HD, synthesized 60</td><td class="py-3 px-4 text-stone-600">Generative chemistry</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-amber-100 text-amber-700 rounded text-xs font-medium">Optimization</span></td><td class="py-3 px-4 text-stone-500">No</td></tr>
-          <tr><td class="py-3 px-4 font-medium">Healx</td><td class="py-3 px-4 text-stone-600">AI drug repurposing for rare diseases. Clinical trials in 24 months vs 10-15 years</td><td class="py-3 px-4 text-stone-600">Drug repurposing</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Active</span></td><td class="py-3 px-4 text-stone-500">No</td></tr>
+          <tr><td class="py-3 px-4 font-medium">Healx</td><td class="py-3 px-4 text-stone-600">AI <span title="Testing existing approved drugs for a new disease" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">drug repurposing</span> for rare diseases. <span title="A study testing a treatment in real patients" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">Clinical trials</span> in 24 months vs 10-15 years</td><td class="py-3 px-4 text-stone-600">Drug repurposing</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Active</span></td><td class="py-3 px-4 text-stone-500">No</td></tr>
           <tr><td class="py-3 px-4 font-medium">Insilico Medicine</td><td class="py-3 px-4 text-stone-600">End-to-end AI drug design. Rentosertib (first AI drug) validated in Nature Medicine</td><td class="py-3 px-4 text-stone-600">Generative biology</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Clinical</span></td><td class="py-3 px-4 text-stone-500">No</td></tr>
           <tr><td class="py-3 px-4 font-medium">Unlearn</td><td class="py-3 px-4 text-stone-600">Digital twins from 30K Enroll-HD patients</td><td class="py-3 px-4 text-stone-600">ML forecasting</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Active</span></td><td class="py-3 px-4 text-stone-500">No</td></tr>
           <tr><td class="py-3 px-4 font-medium">SOM Biotech</td><td class="py-3 px-4 text-stone-600">AI-discovered bevantolol (SOM3355) for chorea</td><td class="py-3 px-4 text-stone-600">Drug repurposing</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Phase IIb</span></td><td class="py-3 px-4 text-stone-500">No</td></tr>
@@ -53,10 +56,10 @@
           <tr><td class="py-3 px-4 font-medium">BDASeq (academic)</td><td class="py-3 px-4 text-stone-600">AI transcriptomics, 394 druggable HD genes</td><td class="py-3 px-4 text-stone-600">Transcriptomic AI</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-xs font-medium">Published</span></td><td class="py-3 px-4 text-stone-500">Paper only</td></tr>
           <tr><td class="py-3 px-4 font-medium">TxGNN (Harvard)</td><td class="py-3 px-4 text-stone-600">Foundation model for drug repurposing. 17K diseases, 8K therapeutics. Zero-shot</td><td class="py-3 px-4 text-stone-600">Graph neural network</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-xs font-medium">Published</span></td><td class="py-3 px-4 text-green-600 font-medium">Yes (MIT)</td></tr>
           <tr><td class="py-3 px-4 font-medium">TxGemma (Google)</td><td class="py-3 px-4 text-stone-600">Open Gemma models for drug discovery. Text + molecular structures</td><td class="py-3 px-4 text-stone-600">Multimodal LLM</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Available</span></td><td class="py-3 px-4 text-green-600 font-medium">Yes</td></tr>
-          <tr><td class="py-3 px-4 font-medium">AlphaFold (DeepMind)</td><td class="py-3 px-4 text-stone-600">HTT protein structure predicted</td><td class="py-3 px-4 text-stone-600">Protein folding</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Available</span></td><td class="py-3 px-4 text-green-600 font-medium">Yes</td></tr>
+          <tr><td class="py-3 px-4 font-medium"><span title="Google's AI that predicts the 3D shape of proteins" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">AlphaFold</span> (DeepMind)</td><td class="py-3 px-4 text-stone-600">HTT <span title="A specific molecule in the body that a drug could interact with" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">protein</span> structure predicted</td><td class="py-3 px-4 text-stone-600">Protein folding</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Available</span></td><td class="py-3 px-4 text-green-600 font-medium">Yes</td></tr>
           <tr><td class="py-3 px-4 font-medium">OpenMed AI</td><td class="py-3 px-4 text-stone-600">475+ biomedical NLP models. Disease, chemical, genomic entity extraction. 29.7M downloads</td><td class="py-3 px-4 text-stone-600">Biomedical NER</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Active</span></td><td class="py-3 px-4 text-green-600 font-medium">Yes (Apache 2.0)</td></tr>
           <tr><td class="py-3 px-4 font-medium">OpenAI Health</td><td class="py-3 px-4 text-stone-600">GPT-5.2 for clinical care. Deployed at MSK, Stanford Medicine, UCSF</td><td class="py-3 px-4 text-stone-600">Clinical LLM</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Deployed</span></td><td class="py-3 px-4 text-stone-500">No</td></tr>
-          <tr class="bg-amber-50/50"><td class="py-3 px-4 font-medium">HD Research Hub (us)</td><td class="py-3 px-4 text-stone-600">Autonomous agents, drug repurposing, full-text RAG, somatic expansion drug screen</td><td class="py-3 px-4 text-stone-600">Agentic AI + RAG</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Live</span></td><td class="py-3 px-4 text-green-600 font-medium">Yes (MIT)</td></tr>
+          <tr class="bg-amber-50/50"><td class="py-3 px-4 font-medium">HD Research Hub (us)</td><td class="py-3 px-4 text-stone-600">Autonomous agents, drug repurposing, full-text <span title="Retrieval-Augmented Generation: AI that looks up data before answering" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">RAG</span>, <span title="A DNA mutation that grows worse over time in brain cells" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">somatic expansion</span> drug screen</td><td class="py-3 px-4 text-stone-600">Agentic AI + RAG</td><td class="py-3 px-4"><span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">Live</span></td><td class="py-3 px-4 text-green-600 font-medium">Yes (MIT)</td></tr>
         </tbody>
       </table>
     </div>
@@ -68,7 +71,7 @@
         <li>Full-text knowledge base with semantic search and multilingual chatbot</li>
         <li>Auto-refreshing research dashboard combining PubMed + ClinicalTrials.gov + HDBuzz</li>
         <li>Published AI experiments with full methodology, limitations, and raw data</li>
-        <li>Somatic CAG expansion drug screen across 5 validated targets (MSH3, FAN1, PMS1, MLH1, LIG1)</li>
+        <li>Somatic CAG expansion drug screen across 5 validated targets (<span title="DNA repair gene. Drives somatic expansion. Top drug target." style="border-bottom: 1px dotted #a3a3a3; cursor: help;">MSH3</span>, <span title="DNA repair gene. Protects against expansion." style="border-bottom: 1px dotted #a3a3a3; cursor: help;">FAN1</span>, <span title="DNA repair gene. Splice modulators can reduce it to slow expansion." style="border-bottom: 1px dotted #a3a3a3; cursor: help;">PMS1</span>, <span title="DNA repair gene. Part of the complex that nicks DNA during expansion." style="border-bottom: 1px dotted #a3a3a3; cursor: help;">MLH1</span>, <span title="DNA ligase. Seals nicks, locking in expanded repeats." style="border-bottom: 1px dotted #a3a3a3; cursor: help;">LIG1</span>)</li>
       </ul>
       <p class="text-stone-500 text-xs mt-3">Most players above keep their models, data, and findings proprietary. We publish everything: code, prompts, raw results, and limitations. That's the point.</p>
     </div>
@@ -113,7 +116,7 @@
           <span class="material-symbols-outlined text-rose-400">lock</span>
           <h3 class="font-bold text-stone-900">Blood-Brain Barrier</h3>
         </div>
-        <p class="text-stone-600 text-sm">Most drugs can't reach the brain. Gene therapies require brain surgery. Small molecules need to cross the BBB. This limits which AI-generated candidates are actually viable.</p>
+        <p class="text-stone-600 text-sm">Most drugs can't reach the brain. Gene therapies require brain surgery. Small molecules need to cross the <span title="Blood-brain barrier: the protective layer most drugs can't cross" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">BBB</span>. This limits which AI-generated candidates are actually viable.</p>
       </div>
 
       <div class="bg-white rounded-xl p-6 editorial-shadow">
@@ -203,7 +206,7 @@
       </div>
       <div class="bg-white rounded-xl p-6 editorial-shadow border-t-4 border-green-500">
         <h3 class="font-bold text-stone-900 mb-2">Biomarker Discovery</h3>
-        <p class="text-stone-600 text-sm">ML on patient data to find early indicators of disease onset and progression. NfL is established. AI can find new ones from multi-omics data.</p>
+        <p class="text-stone-600 text-sm">ML on patient data to find early indicators of disease onset and progression. <span title="Neurofilament light chain: a blood biomarker for brain cell damage" style="border-bottom: 1px dotted #a3a3a3; cursor: help;">NfL</span> is established. AI can find new ones from multi-omics data.</p>
         <p class="text-xs text-green-600 font-medium mt-3">Active research area.</p>
       </div>
       <div class="bg-white rounded-xl p-6 editorial-shadow border-t-4 border-green-500">
@@ -221,5 +224,4 @@
 </main>
 
 <script src="shared.js"></script>
-<div class="text-center py-4 px-4"><p class="text-xs text-stone-400">This is a research and educational tool, not medical advice. For HD support, visit <a href="https://hdsa.org" class="text-stone-500 underline">hdsa.org</a>.</p></div>
 </body></html>
