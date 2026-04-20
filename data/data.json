@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-19T08:46:19.627102",
+  "last_updated": "2026-04-20T09:53:09.721041",
   "papers": [
     {
       "pmid": "41557250",
@@ -69,23 +69,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41889142/"
     },
     {
-      "pmid": "41967079",
-      "title": "Stem cells enhance mitochondrial function in experimental Huntington's disease.",
-      "abstract": "Huntington's Disease (HD) is a neurodegenerative disorder caused by CAG triplet expansion in the HTT gene, producing a mutant Huntingtin protein that impairs mitochondrial dynamics by reducing fusion and increasing fission. Mesenchymal stem cells (MSCs) have shown potential therapeutic effects by sharing functional mitochondria and other secretomes. In this study, quinolinic acid-lesioned neuro-2a (QA-N2a) cells and glutamatergic neurons with 50 CAG repeats (HD neurons) were co-cultured with hum",
-      "journal": "Stem cells (Dayton, Ohio)",
-      "pub_date": "2026 Apr",
-      "authors": "D'Egidio F, Putthanbut N, Starahs M",
-      "keywords": [
-        "Huntington\u2019s disease",
-        "cell-free therapy",
-        "mesenchymal stem cells",
-        "mitochondrial transfer",
-        "secretome"
-      ],
-      "hd_relevance_score": 25,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41967079/"
-    },
-    {
       "pmid": "41946359",
       "title": "Distinct autophagy impairment mechanisms of huntingtin aggregates with different polyQ lengths.",
       "abstract": "Huntington's disease (HD) is characterized by the aggregation of mutant huntingtin (mHTT) containing elongated polyglutamine (polyQ) tracts. mHTT aggregates that fail to be cleared by autophagy cause neurotoxicity. While the polyQ length in patients with HD ranges from 40 to over 90 repeats, how these varying polyQ lengths affect autophagy impairment remains unclear. Using polyQ aggregation sensors based on bimolecular fluorescence complementation (BiFC), we uncovered distinct autophagy impairme",
@@ -104,15 +87,21 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41946359/"
     },
     {
-      "pmid": "41849610",
-      "title": "Self-inactivating AAV-CRISPR at different ages enables sustained amelioration of Huntington's disease deficits in BAC226Q mice.",
-      "abstract": "Huntington's disease (HD) is a monogenic autosomal dominant neurodegenerative disorder caused by a CAG repeat expansion in exon 1 of the HTT gene, yielding a gain-of-toxic-function mutant Huntingtin protein (mHTT). CRISPR-Cas9 is a potentially powerful therapeutic strategy for HD by eliminating mutant HTT (mHTT) gene. We developed a specific SaCas9 guide RNA to target human mHTT and a self-inactivating gene editing system that abolishes SaCas9 after a short transient expression for high gene edi",
-      "journal": "Science advances",
-      "pub_date": "2026 Mar",
-      "authors": "Dai Y, Abudujielili Z, Ding Y",
-      "keywords": [],
-      "hd_relevance_score": 24,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41849610/"
+      "pmid": "41967079",
+      "title": "Stem cells enhance mitochondrial function in experimental Huntington's disease.",
+      "abstract": "Huntington's Disease (HD) is a neurodegenerative disorder caused by CAG triplet expansion in the HTT gene, producing a mutant Huntingtin protein that impairs mitochondrial dynamics by reducing fusion and increasing fission. Mesenchymal stem cells (MSCs) have shown potential therapeutic effects by sharing functional mitochondria and other secretomes. In this study, quinolinic acid-lesioned neuro-2a (QA-N2a) cells and glutamatergic neurons with 50 CAG repeats (HD neurons) were co-cultured with hum",
+      "journal": "Stem cells (Dayton, Ohio)",
+      "pub_date": "2026 Apr",
+      "authors": "D'Egidio F, Putthanbut N, Starahs M",
+      "keywords": [
+        "Huntington\u2019s disease",
+        "cell-free therapy",
+        "mesenchymal stem cells",
+        "mitochondrial transfer",
+        "secretome"
+      ],
+      "hd_relevance_score": 25,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41967079/"
     },
     {
       "pmid": "41838909",
@@ -129,6 +118,24 @@
       ],
       "hd_relevance_score": 23,
       "url": "https://pubmed.ncbi.nlm.nih.gov/41838909/"
+    },
+    {
+      "pmid": "41955484",
+      "title": "Wild-type huntingtin in neurodevelopment.",
+      "abstract": "Huntingtin (HTT) is an essential pleiotropic gene. Primarily known for its pathogenic role in Huntington's disease (HD), a progressive autosomal dominant neurodegenerative disorder. HD is caused by a CAG expansion located in HTT exon 1 that produces an altered protein product, mutant huntingtin, with an expanded polyglutamine stretch. Despite its monogenic origin, HD has a complex cellular pathology likely due to huntingtin's many protein-protein interactions and diverse functional roles. Wild-t",
+      "journal": "Journal of Huntington's disease",
+      "pub_date": "2026 Apr",
+      "authors": "Chan LL, Leavitt BR",
+      "keywords": [
+        "ciliogenesis",
+        "huntington's disease",
+        "lopes-Maciel-Rodan Syndrome",
+        "neurodevelopment",
+        "neurogenesis",
+        "wild-type huntingtin"
+      ],
+      "hd_relevance_score": 22,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41955484/"
     },
     {
       "pmid": "40091796",
@@ -150,24 +157,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/40091796/"
     },
     {
-      "pmid": "41955484",
-      "title": "Wild-type huntingtin in neurodevelopment.",
-      "abstract": "Huntingtin (HTT) is an essential pleiotropic gene. Primarily known for its pathogenic role in Huntington's disease (HD), a progressive autosomal dominant neurodegenerative disorder. HD is caused by a CAG expansion located in HTT exon 1 that produces an altered protein product, mutant huntingtin, with an expanded polyglutamine stretch. Despite its monogenic origin, HD has a complex cellular pathology likely due to huntingtin's many protein-protein interactions and diverse functional roles. Wild-t",
-      "journal": "Journal of Huntington's disease",
-      "pub_date": "2026 Apr",
-      "authors": "Chan LL, Leavitt BR",
-      "keywords": [
-        "ciliogenesis",
-        "huntington's disease",
-        "lopes-Maciel-Rodan Syndrome",
-        "neurodevelopment",
-        "neurogenesis",
-        "wild-type huntingtin"
-      ],
-      "hd_relevance_score": 22,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41955484/"
-    },
-    {
       "pmid": "41564629",
       "title": "Shape matters: Predicting Huntington's disease using progression modelling.",
       "abstract": "Despite evidence of group-level differences in striatal morphometry among persons with Huntington's Disease (PwHD), current models of HD progression used for participant selection and assessment of treatment outcomes in clinical trials do not leverage shape information. We first validated the capability of a discriminative deep neural network to derive descriptors of shape from all subcortical structures affected by HD, utilizing 2,932 brain scans in 615 PwHD across three longitudinal datasets (",
@@ -184,6 +173,24 @@
       ],
       "hd_relevance_score": 21,
       "url": "https://pubmed.ncbi.nlm.nih.gov/41564629/"
+    },
+    {
+      "pmid": "41287980",
+      "title": "Quantitative relationship between tominersen concentrations in cerebrospinal fluid and biomarker changes in Huntington's disease patients.",
+      "abstract": "Intrathecally administered antisense oligonucleotide tominersen aims to slow Huntington's disease progression by lowering mutant huntingtin (mHTT) protein levels. This study used non-linear mixed effects population pharmacokinetic and pharmacodynamic (PKPD) modelling to characterize the relationship between tominersen concentration in cerebrospinal fluid (CSF) and CSF mHTT reduction. Additionally, the relationship between tominersen CSF exposure and changes in other CSF biomarkers was investigat",
+      "journal": "British journal of clinical pharmacology",
+      "pub_date": "2026 Apr",
+      "authors": "Yamamoto Y, Silber Baumann HE, Bj\u00f6rnsson M",
+      "keywords": [
+        "ASO",
+        "CSF",
+        "HTT",
+        "PKPD",
+        "exposure\u2013response",
+        "tominersen"
+      ],
+      "hd_relevance_score": 21,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41287980/"
     },
     {
       "pmid": "41906693",
@@ -203,24 +210,6 @@
       ],
       "hd_relevance_score": 21,
       "url": "https://pubmed.ncbi.nlm.nih.gov/41906693/"
-    },
-    {
-      "pmid": "41287980",
-      "title": "Quantitative relationship between tominersen concentrations in cerebrospinal fluid and biomarker changes in Huntington's disease patients.",
-      "abstract": "Intrathecally administered antisense oligonucleotide tominersen aims to slow Huntington's disease progression by lowering mutant huntingtin (mHTT) protein levels. This study used non-linear mixed effects population pharmacokinetic and pharmacodynamic (PKPD) modelling to characterize the relationship between tominersen concentration in cerebrospinal fluid (CSF) and CSF mHTT reduction. Additionally, the relationship between tominersen CSF exposure and changes in other CSF biomarkers was investigat",
-      "journal": "British journal of clinical pharmacology",
-      "pub_date": "2026 Apr",
-      "authors": "Yamamoto Y, Silber Baumann HE, Bj\u00f6rnsson M",
-      "keywords": [
-        "ASO",
-        "CSF",
-        "HTT",
-        "PKPD",
-        "exposure\u2013response",
-        "tominersen"
-      ],
-      "hd_relevance_score": 21,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41287980/"
     },
     {
       "pmid": "41926793",
@@ -321,6 +310,24 @@
       "keywords": [],
       "hd_relevance_score": 17,
       "url": "https://pubmed.ncbi.nlm.nih.gov/41841355/"
+    },
+    {
+      "pmid": "41513082",
+      "title": "Daily intranasal resveratrol-conjugated gold nanoparticles administration promotes neuroprotection and improves neurological outcome in the R6/2 mouse model of Huntington's disease.",
+      "abstract": "Pan-apoptosis and involvement of the inflammatory process are the hallmarks of Huntington's disease (HD). Inflammation currently represents one of the potential therapeutic targets for slowing and fighting the pathological phenotype of HD. The immunomodulatory properties of natural compounds, such as resveratrol, have been demonstrated in various disease models and human clinical trials. In the present study, we evaluated the neuroprotective and anti-inflammatory effects of the daily intranasal ",
+      "journal": "Experimental neurology",
+      "pub_date": "2026 Apr",
+      "authors": "Paldino E, Montalesi E, Fiocchetti M",
+      "keywords": [
+        "Drug delivery",
+        "Huntington's disease",
+        "Neuroinflammation",
+        "Nutraceutical strategy",
+        "Preclinical research",
+        "Resveratrol"
+      ],
+      "hd_relevance_score": 17,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41513082/"
     }
   ],
   "trials": [
