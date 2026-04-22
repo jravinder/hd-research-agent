@@ -998,8 +998,445 @@
         "repurposing_potential": false,
         "novel_insight": "The study proposes leveraging recent advancements in statistical methodologies to enhance trial efficiency, rather than introducing new treatments."
       }
+    },
+    "41933422": {
+      "pmid": "41933422",
+      "title": "Sex-related differences in Huntington's disease: a scoping review.",
+      "abstract": "Huntington's disease (HD) is an autosomal-dominant neurodegenerative disorder and emerging evidence indicates sex-specific differences in disease manifestation and progression. To summarize current evidence on sex-related differences in HD across genetic, clinical, biomarker, and treatment domains and identify gaps in knowledge. A literature search was performed in PubMed and Google Scholar (up to 31.01.2026). Eligible studies examined sex- or gender-related differences in individuals with genet",
+      "journal": "Biology of sex differences",
+      "date": "2026 Apr",
+      "authors": "Hemicker G, Schwarzov\u00e1 K, Cerejo C, Labrecque S, Peball M et al. (10 authors)",
+      "query": "huntington disease treatment",
+      "discovered": "2026-04-09T20:17:47.911465",
+      "analysis": {
+        "category": "review",
+        "targets": [
+          "Huntington's disease (HD)"
+        ],
+        "compounds": [],
+        "finding": "The review aims to summarize current evidence regarding sex-specific differences in the manifestation and progression of Huntington's disease across genetic, clinical, biomarker, and treatment domains.",
+        "relevance": "high",
+        "repurposing_potential": false,
+        "novel_insight": "The systematic scoping review specifically focuses on identifying sex-related differences in HD, which is a key area of emerging research."
+      }
+    },
+    "40874597": {
+      "pmid": "40874597",
+      "title": "Therapeutic strategies for Huntington's disease: current approaches and future direction.",
+      "abstract": "Huntington's disease (HD) is an autosomal, progressive, dominant inherited neurological disorder characterized by motor dysfunction, cognitive decline, and psychiatric symptoms. HD is caused by abnormal expansion of trinucleotide CAG in exon1 of the ",
+      "journal": "Neurodegenerative disease management",
+      "date": "2026 Apr",
+      "authors": "Gulzar M, Kauser S, Khan S, Adnan M, Hassan MI",
+      "query": "huntington disease treatment",
+      "discovered": "2026-04-09T20:17:59.193763",
+      "analysis": {
+        "category": "review",
+        "targets": [
+          "CAG repeat expansion",
+          "Huntingtin protein (HTT)"
+        ],
+        "compounds": [],
+        "finding": "The paper reviews current and future therapeutic strategies for Huntington's disease, which is caused by an abnormal CAG trinucleotide expansion.",
+        "relevance": "high",
+        "repurposing_potential": false,
+        "novel_insight": "null"
+      }
+    },
+    "41537736": {
+      "pmid": "41537736",
+      "title": "Rab4 spatially and functionally converges with Rab7 in the degradative endolysosomal network.",
+      "abstract": "Rab GTPases are key regulators of endosomal trafficking in eukaryotes. In mammalian cells, Rab4 and Rab7 were shown to localize to distinct compartments, with Rab4 on early endosomes for fast recycling and Rab7 on late endosomes for degradation. Here, we show that in ",
+      "journal": "Molecular biology of the cell",
+      "date": "2026 Mar",
+      "authors": "Farmer SM, Xu S, Yu Y, Ye X, Yang H et al. (19 authors)",
+      "query": "huntington disease treatment",
+      "discovered": "2026-04-09T20:18:13.217791",
+      "analysis": {
+        "category": "mechanism",
+        "targets": [
+          "Rab4",
+          "Rab7"
+        ],
+        "compounds": [],
+        "finding": "The study investigates the spatial and functional convergence of Rab4 and Rab7 within the degradative endolysosomal network.",
+        "relevance": "high",
+        "repurposing_potential": false,
+        "novel_insight": "The paper suggests a functional convergence between Rab4 (typically associated with recycling) and Rab7 (associated with degradation) in the endolysosomal network."
+      }
+    },
+    "40517187": {
+      "pmid": "40517187",
+      "title": "Crossing the blood-brain barrier: nanoparticle-based strategies for neurodegenerative disease therapy.",
+      "abstract": "Neurodegenerative conditions, including Alzheimer's, Parkinson's, amyotrophic lateral sclerosis, and Huntington's disease, represent a critical medical challenge due to their increasing prevalence, severe consequences, and absence of curative treatments. Beyond the need for a deeper understanding of the fundamental mechanisms underlying neurodegeneration, the development of effective treatments is hindered by the blood-brain barrier, which poses a major obstacle to delivering therapeutic agents ",
+      "journal": "Drug delivery and translational research",
+      "date": "2026 Mar",
+      "authors": "Haro-Mart\u00ednez E, Muscolino E, Moral N, Duran J, Fornaguera C",
+      "query": "huntington disease treatment",
+      "discovered": "2026-04-09T20:18:26.072503",
+      "analysis": {
+        "category": "review",
+        "targets": [
+          "neurodegenerative diseases"
+        ],
+        "compounds": [
+          "nanoparticles"
+        ],
+        "finding": "Nanoparticle-based strategies are being reviewed as a method to overcome the blood-brain barrier for treating various neurodegenerative diseases.",
+        "relevance": "high",
+        "repurposing_potential": false,
+        "novel_insight": "The review focuses on the general application of nanoparticles to overcome the BBB rather than a specific novel mechanism or compound."
+      }
+    },
+    "40313114": {
+      "pmid": "40313114",
+      "title": "Inherent potential of mitochondria-targeted interventions for chronic neurodegenerative diseases.",
+      "abstract": "The cure rate for chronic neurodegenerative diseases remains low, creating an urgent need for improved intervention methods. Recent studies have shown that enhancing mitochondrial function can mitigate the effects of these diseases. This paper comprehensively reviews the relationship between mitochondrial dysfunction and chronic neurodegenerative diseases, aiming to uncover the potential use of targeted mitochondrial interventions as viable therapeutic options. We detail five targeted mitochondr",
+      "journal": "Neural regeneration research",
+      "date": "2026 Apr",
+      "authors": "Zhou M, Zheng M, Liang S, Li M, Ma J et al. (11 authors)",
+      "query": "huntington disease gene therapy",
+      "discovered": "2026-04-09T20:18:46.792910",
+      "analysis": {
+        "category": "review",
+        "targets": [
+          "mitochondrial function",
+          "mitophagy",
+          "mitochondrial fission",
+          "mitochondrial biogenesis"
+        ],
+        "compounds": [],
+        "finding": "Targeted mitochondrial interventions represent a promising area for treating chronic neurodegenerative diseases by addressing underlying mitochondrial dysfunction.",
+        "relevance": "high",
+        "repurposing_potential": true,
+        "novel_insight": "The paper comprehensively reviews five distinct, actionable strategies (mitophagy promotion, fission inhibition, biogenesis enhancement, antioxidant application, and mitochondrial transplantation) for intervention."
+      }
+    },
+    "40536996": {
+      "pmid": "40536996",
+      "title": "Neuroglobin: A promising candidate to treat neurological diseases.",
+      "abstract": "Neurodevelopmental and neurodegenerative illnesses constitute a global health issue and a foremost economic burden since they are a large cause of incapacity and death worldwide. Altogether, the burden of neurological disorders has increased considerably over the past 30 years because of population aging. Overall, neurological diseases significantly impair cognitive and motor functions and their incidence will increase as societies age and the world's population continues to grow. Autism spectru",
+      "journal": "Neural regeneration research",
+      "date": "2026 Apr",
+      "authors": "Ya\u00f1ez IM, Torres-Cuevas I, Corral-Debrinski M",
+      "query": "huntington disease gene therapy",
+      "discovered": "2026-04-09T20:18:59.119248",
+      "analysis": {
+        "category": "review",
+        "targets": [
+          "Neuroglobin"
+        ],
+        "compounds": [],
+        "finding": "The paper discusses the general burden of neurological disorders, listing Huntington's disease among many conditions caused by cellular homeostasis perturbations.",
+        "relevance": "medium",
+        "repurposing_potential": true,
+        "novel_insight": "null"
+      }
+    },
+    "41926793": {
+      "pmid": "41926793",
+      "title": "Extensive transcriptomic changes in cellular and animal models of Huntington's disease depending on the length of CAG repeats in the exon 1 of the HTT gene.",
+      "abstract": "Although Huntington's disease - a severe, inherited, neurodegenerative disorder - is primarily caused by a pathological variant of the HTT gene (encoding huntingtin protein) which is characterized by the extension of CAG repeats in the 1st exon exceeding 36 triplets, the biochemical mechanisms underlying the disease remain poorly understood. Mutant huntingtin forms toxic aggregates in cells; however, the clinical symptoms usually appear in adulthood. Recent reports suggested that somatic expansi",
+      "journal": "Biochemical and biophysical research communications",
+      "date": "2026 Apr",
+      "authors": "Szulc A, Walter BM, Gaffke L, Wi\u015bniewska K, \u017babi\u0144ska M et al. (12 authors)",
+      "query": "huntington somatic expansion CAG",
+      "discovered": "2026-04-09T20:19:20.491768",
+      "analysis": {
+        "category": "mechanism",
+        "targets": [
+          "HTT gene",
+          "CAG repeats"
+        ],
+        "compounds": [],
+        "finding": "The transcriptomic changes in cellular and animal models of Huntington's disease are dependent on the length of the CAG repeats in the HTT gene.",
+        "relevance": "high",
+        "repurposing_potential": false,
+        "novel_insight": "The study highlights the role of CAG repeat length in determining the transcriptomic profile, suggesting a dose-dependent mechanism for pathogenicity."
+      }
+    },
+    "41925063": {
+      "pmid": "41925063",
+      "title": "Combination Disease-Modifying Therapy for Neurodegenerative Diseases Using Repurposed Drugs.",
+      "abstract": "We review the positive effects of several existing drugs from different classes, such as chemical chaperones, glucagon-like peptide-1 receptor agonists (GLP-1 RAs), iron chelators, and cluster-Abelson tyrosine kinase inhibitors (c-Abl TKIs), in preclinical disease models and in available published human data following use of these drugs in individuals with common neurodegenerative diseases (NDs), including Parkinson's disease (PD), Alzheimer's disease (AD), amyotrophic lateral sclerosis (ALS), a",
+      "journal": "Annals of neurology",
+      "date": "2026 Apr",
+      "authors": "Shtilbans A, Lang AE",
+      "query": "huntington drug repurposing",
+      "discovered": "2026-04-09T20:19:45.582283",
+      "analysis": {
+        "category": "review",
+        "targets": [
+          "multiple pathogenic processes involved in neurodegeneration"
+        ],
+        "compounds": [
+          "chemical chaperones",
+          "glucagon-like peptide-1 receptor agonists (GLP-1 RAs)",
+          "iron chelators",
+          "cluster-Abelson tyrosine kinase inhibitors (c-Abl TKIs)"
+        ],
+        "finding": "The paper reviews the positive effects of various existing drugs from different classes for treating multiple neurodegenerative diseases, including Huntington's disease.",
+        "relevance": "high",
+        "repurposing_potential": true,
+        "novel_insight": "The paper proposes a strategy to design an ideal combination of drugs to address multiple pathogenic processes in neurodegeneration."
+      }
+    },
+    "41591821": {
+      "pmid": "41591821",
+      "title": "From Cancer to Neuroprotection: Pazopanib Modulates the RIPK1/RIPK3/MLKL and PGAM5/DRP1 Pathways in 3- Nitropropionic Acid-Induced Huntington's Disease.",
+      "abstract": "Huntington's disease (HD) is a progressive neurodegenerative disorder with a poorly understood neurobiological basis. Among the various forms of programmed cell death implicated in neurodegeneration, necroptosis has recently garnered significant attention. Notably, dysregulated necroptosis provokes immune response that drives excessive pro-inflammatory cytokine production, promoting further necroptotic cell death through TNF-\u03b1/RIPK1 signaling. Consequently, necroptosis exacerbates neuroinflammat",
+      "journal": "Drug development research",
+      "date": "2026 Apr",
+      "authors": "Eltarzy MA, Rabie MA, Sayed RH, Ahmed MAE, Ahmedy OA",
+      "query": "huntington drug repurposing",
+      "discovered": "2026-04-09T20:20:07.129212",
+      "analysis": {
+        "category": "mechanism",
+        "targets": [
+          "RIPK1",
+          "RIPK3",
+          "MLKL",
+          "PGAM5",
+          "DRP1"
+        ],
+        "compounds": [
+          "Pazopanib"
+        ],
+        "finding": "Pazopanib modulates the RIPK1/RIPK3/MLKL and PGAM5/DRP1 pathways, suggesting a role in mitigating necroptosis and mitochondrial dysfunction in HD.",
+        "relevance": "high",
+        "repurposing_potential": true,
+        "novel_insight": "The study links an anti-cancer agent (Pazopanib) to modulating specific necroptotic and mitochondrial pathways (RIPK1/RIPK3/MLKL and PGAM5/DRP1) in the context of HD pathogenesis."
+      }
+    },
+    "41951733": {
+      "pmid": "41951733",
+      "title": "Population-scale repeat expansions elucidate disease risk and brain atrophy.",
+      "abstract": "Pathogenic expansions of short tandem repeats (STRs) cause over 70 neurological diseases",
+      "journal": "Nature",
+      "date": "2026 Apr",
+      "authors": "Pounraja VK, Sul JH, Herman J, O'Keeffe S, Rajagopal V et al. (35 authors)",
+      "query": "huntington biomarker neurofilament",
+      "discovered": "2026-04-09T20:20:20.680341",
+      "analysis": {
+        "category": "review",
+        "targets": [
+          "CAG repeat expansions"
+        ],
+        "compounds": [],
+        "finding": "The study analyzes population-scale repeat expansions to elucidate disease risk and associated brain atrophy in Huntington's disease.",
+        "relevance": "high",
+        "repurposing_potential": false,
+        "novel_insight": "Focus on population-scale analysis linking repeat expansions directly to measurable brain atrophy."
+      }
+    },
+    "41944829": {
+      "pmid": "41944829",
+      "title": "Quantifying brain-age gap in people with HIV on antiretroviral therapy using plasma neurofilament light chain.",
+      "abstract": "To estimate the number of additional years above chronological age (\"brain-age gap\") at which observed plasma neurofilament light chain (NfL) levels in cognitively unimpaired people with HIV (PWH) correspond to published age-stratified standards from cognitively unimpaired individuals in the general population. Secondary analysis of the multicenter observational cohort study (ACTG HAILO) involving older, cognitively unimpaired PWH on antiretroviral therapy (ART). Plasma NfL concentrations were q",
+      "journal": "AIDS (London, England)",
+      "date": "2026 Apr",
+      "authors": "Park H, Hyle EP, Tassiopoulos KK, Gissl\u00e9n M, Rubin LH et al. (7 authors)",
+      "query": "huntington biomarker neurofilament",
+      "discovered": "2026-04-09T20:20:37.213091",
+      "analysis": {
+        "category": "biomarker",
+        "targets": [
+          "neurofilament light chain (NfL)"
+        ],
+        "compounds": [],
+        "finding": "Plasma NfL levels in cognitively unimpaired people with HIV can be used to estimate a 'brain-age gap' by comparing them to age-stratified general population standards.",
+        "relevance": "high",
+        "repurposing_potential": false,
+        "novel_insight": "The application of NfL to quantify brain-age gap specifically in the context of HIV infection and ART treatment."
+      }
+    },
+    "41930586": {
+      "pmid": "41930586",
+      "title": "AI-Driven Biomarker Discovery in Motor-Related Neurodegenerative Diseases.",
+      "abstract": "Parkinson's disease (PD), Huntington's disease (HD), amyotrophic lateral sclerosis (ALS), and spinocerebellar ataxias (SCAs) are examples of neurodegenerative disorders (NDDs) that share overlapping neuropathological processes and largely affect motor coordination. For early diagnosis, illness monitoring, and treatment targeting, it is essential to find trustworthy biomarkers that represent motor circuit dysfunction. The purpose of this study is to summarize the state of the art regarding molecu",
+      "journal": "CNS & neurological disorders drug targets",
+      "date": "2026 Mar",
+      "authors": "Pavithra N, Begum RF, Ashwini ST, Nirenjen S, Singh A et al. (8 authors)",
+      "query": "huntington biomarker neurofilament",
+      "discovered": "2026-04-09T20:20:55.203762",
+      "analysis": {
+        "category": "review",
+        "targets": [
+          "motor circuit dysfunction",
+          "molecular biomarkers",
+          "neurochemical biomarkers",
+          "imaging biomarkers"
+        ],
+        "compounds": [],
+        "finding": "The study reviews current molecular, neurochemical, and imaging biomarkers for motor impairment in NDDs and explores the application of AI/ML for their discovery and validation.",
+        "relevance": "high",
+        "repurposing_potential": false,
+        "novel_insight": "The systematic investigation of AI/ML applications across multiple motor-related NDDs (PD, HD, ALS, SCAs) for biomarker discovery."
+      }
+    },
+    "41915164": {
+      "pmid": "41915164",
+      "title": "Spontaneous speech and language measures as predictive biomarkers of clinically meaningful disease progression and neurodegeneration in Huntington's disease.",
+      "abstract": "Huntington's disease (HD) is characterized by heterogeneous rates of clinical progression, complicating patient monitoring and clinical trial design. Although speech and language alterations are increasingly recognized as part of the HD cognitive phenotype, their value as short-term prognostic biomarkers of clinically meaningful disease progression and neurodegeneration remains unestablished. In this prospective 12-month longitudinal study, we investigated whether objectively quantified spontane",
+      "journal": "Journal of neural transmission (Vienna, Austria : 1996)",
+      "date": "2026 Mar",
+      "authors": "Puig-Davi A, Franch-Marti C, Caler-Gameiro L, Perez-Perez J, Olmedo-Saura G et al. (17 authors)",
+      "query": "huntington biomarker neurofilament",
+      "discovered": "2026-04-09T20:21:11.614723",
+      "analysis": {
+        "category": "biomarker",
+        "targets": [
+          "spontaneous speech and language measures"
+        ],
+        "compounds": [],
+        "finding": "Objectively quantified spontaneous speech and language measures were investigated as potential short-term prognostic biomarkers for clinically meaningful disease progression and neurodegeneration in Huntington's disease.",
+        "relevance": "high",
+        "repurposing_potential": false,
+        "novel_insight": "The study focuses on establishing the predictive value of *spontaneous* speech and language measures, rather than just standardized testing, for tracking short-term progression."
+      }
+    },
+    "41951144": {
+      "pmid": "41951144",
+      "title": "Longitudinal and combined assessment of 24(S)-hydroxycholesterol and Neurofilament light chain in the early stages of Huntington's disease.",
+      "abstract": "Huntington's Disease (HD) is an autosomal dominant neurodegenerative disorder. Recent clinical research has focused on neurofilament light chain protein (NfL), and cholesterol metabolites as potential fluid biomarkers related to disease progression. Our aim was to explore whether the combined longitudinal assessment of NfL and cholesterol-derived metabolites would improve the characterization of early HD stages. We enrolled 96 HD individuals and 63 healthy controls. Disease stage of HD participa",
+      "journal": "Neurobiology of disease",
+      "date": "2026 Apr",
+      "authors": "Sarro L, Valenza M, Mongelli A, Passoni A, Castaldo A et al. (20 authors)",
+      "query": "huntington biomarker neurofilament",
+      "discovered": "2026-04-09T20:21:27.476017",
+      "analysis": {
+        "category": "biomarker",
+        "targets": [
+          "Neurofilament light chain (NfL)",
+          "24(S)-hydroxycholesterol"
+        ],
+        "compounds": [],
+        "finding": "The study aimed to determine if combining longitudinal assessments of NfL and cholesterol metabolites could improve the characterization of early Huntington's disease stages.",
+        "relevance": "high",
+        "repurposing_potential": false,
+        "novel_insight": "The combination of NfL and cholesterol metabolites for longitudinal assessment in early HD stages."
+      }
+    },
+    "41918200": {
+      "pmid": "41918200",
+      "title": "Neuroinflammation, Autophagy, and Neurodegeneration: Mechanisms and Therapeutic Insights.",
+      "abstract": "Neuroinflammation and autophagy dysregulation are critical in the pathogenesis of neurodegenerative diseases like Alzheimer's, Parkinson's, and Huntington's disease. Neuroinflammation occurs after a sustained immune response, which transitions into a chronic pathological state, leading to the sustained generation of pro-inflammatory cytokines and oxidative stress, causing neuronal damage. Meanwhile, defective autophagy exacerbates disease by promoting protein accumulation, e.g., amyloid-\u03b2, tau, ",
+      "journal": "CNS & neurological disorders drug targets",
+      "date": "2026 Mar",
+      "authors": "Khanal P, Balmik A",
+      "query": "huntington CRISPR",
+      "discovered": "2026-04-09T20:21:44.420835",
+      "analysis": {
+        "category": "review",
+        "targets": [
+          "mTOR",
+          "AMPK",
+          "pro-inflammatory cytokines",
+          "oxidative stress"
+        ],
+        "compounds": [],
+        "finding": "Neuroinflammation and defective autophagy create a vicious cycle that drives neuronal damage in Huntington's disease.",
+        "relevance": "high",
+        "repurposing_potential": true,
+        "novel_insight": "The paper synthesizes the interplay between mTOR/AMPK regulation, inflammation, and autophagy specifically in the context of HD pathogenesis."
+      }
+    },
+    "41919473": {
+      "pmid": "41919473",
+      "title": "Long non-coding RNAs in neurodegenerative diseases - Molecular mechanisms, liquid biopsy biomarkers, and therapeutic targets: A review.",
+      "abstract": "Neurodegenerative diseases (NDDs), such as Alzheimer's disease (AD), Parkinson's disease (PD), amyotrophic lateral sclerosis (ALS), and Huntington's disease (HD), are age-related disorders characterized by progressive neuronal loss, cognitive decline, and limited options for disease-modifying treatments. Increasing evidence suggests that long non-coding RNAs (lncRNAs) play significant roles in neurodevelopment, neuronal homeostasis, and disease progression; however, their involvement in shared p",
+      "journal": "Biomolecules & biomedicine",
+      "date": "2026 Mar",
+      "authors": "Cheng Y, Qiu M, Yu Z, Tang X, Zhang J",
+      "query": "huntington antisense oligonucleotide",
+      "discovered": "2026-04-09T20:22:05.882431",
+      "analysis": {
+        "category": "review",
+        "targets": [
+          "long non-coding RNAs (lncRNAs)",
+          "neuronal homeostasis",
+          "pathogenic pathways"
+        ],
+        "compounds": [],
+        "finding": "lncRNAs are implicated in the pathogenesis of multiple neurodegenerative diseases, including Huntington's disease, by modulating common disease mechanisms.",
+        "relevance": "high",
+        "repurposing_potential": true,
+        "novel_insight": "The review consolidates findings across multiple methodologies (experimental, transcriptomic, bioinformatic) to define the role of lncRNAs in shared pathogenic pathways of NDDs."
+      }
+    },
+    "41287980": {
+      "pmid": "41287980",
+      "title": "Quantitative relationship between tominersen concentrations in cerebrospinal fluid and biomarker changes in Huntington's disease patients.",
+      "abstract": "Intrathecally administered antisense oligonucleotide tominersen aims to slow Huntington's disease progression by lowering mutant huntingtin (mHTT) protein levels. This study used non-linear mixed effects population pharmacokinetic and pharmacodynamic (PKPD) modelling to characterize the relationship between tominersen concentration in cerebrospinal fluid (CSF) and CSF mHTT reduction. Additionally, the relationship between tominersen CSF exposure and changes in other CSF biomarkers was investigat",
+      "journal": "British journal of clinical pharmacology",
+      "date": "2026 Apr",
+      "authors": "Yamamoto Y, Silber Baumann HE, Bj\u00f6rnsson M, Grimsey P, Hawellek DJ et al. (12 authors)",
+      "query": "huntington antisense oligonucleotide",
+      "discovered": "2026-04-09T20:22:20.916513",
+      "analysis": {
+        "category": "aso",
+        "targets": [
+          "mutant huntingtin (mHTT)"
+        ],
+        "compounds": [
+          "tominersen"
+        ],
+        "finding": "The study characterized the relationship between tominersen concentration in cerebrospinal fluid and the reduction of CSF mHTT using non-linear mixed effects PKPD modeling.",
+        "relevance": "high",
+        "repurposing_potential": false,
+        "novel_insight": "Application of non-linear mixed effects PKPD modeling to precisely link CSF drug exposure to biomarker changes for dose selection in a major ongoing trial."
+      }
+    },
+    "40145977": {
+      "pmid": "40145977",
+      "title": "Potential targets of microglia in the treatment of neurodegenerative diseases: Mechanism and therapeutic implications.",
+      "abstract": "For diverse neurodegenerative disorders, microglial cells are activated. Furthermore, dysfunctional and hyperactivated microglia initiate mitochondrial autophagy, oxidative stress, and pathological protein accumulation, ending with neuroinflammation that exacerbates damage to dopaminergic neurons and contributes significantly to the pathology of neurodegenerative disorder. Microglial over-activation is closely associated with the secretion of pro-inflammatory cytokines, the phagocytosis of injur",
+      "journal": "Neural regeneration research",
+      "date": "2026 Apr",
+      "authors": "Zhao W, Liu Z, Wu J, Liu A, Yan J",
+      "query": "huntington neuroinflammation",
+      "discovered": "2026-04-09T20:22:38.374266",
+      "analysis": {
+        "category": "review",
+        "targets": [
+          "microglia",
+          "mitochondrial autophagy",
+          "oxidative stress",
+          "pro-inflammatory cytokines"
+        ],
+        "compounds": [],
+        "finding": "Microglial dysfunction, characterized by hyperactivation, contributes significantly to neurodegeneration through oxidative stress, mitochondrial autophagy, and neuroinflammation.",
+        "relevance": "high",
+        "repurposing_potential": true,
+        "novel_insight": "The review summarizes the general role of microglia across multiple neurodegenerative diseases rather than focusing on a single novel mechanism or target."
+      }
+    },
+    "41885638": {
+      "pmid": "41885638",
+      "title": "Cryptoxanthin as a multitarget neuroprotective agent: mechanistic and in silico perspectives.",
+      "abstract": "Neurodegenerative diseases such as Parkinson's disease (PD), Huntington's disease (HD), Alzheimer's disease (AD), and Amyotrophic lateral sclerosis (ALS) are complex disorders driven by multiple pathological processes, including oxidative stress, mitochondrial dysfunction, protein misfolding, and neuroinflammation. Due to this multifactorial nature, there is a growing interest in identifying natural compounds with multi-targeted neuroprotective properties. This review aims to evaluate the therap",
+      "journal": "The Journal of pharmacy and pharmacology",
+      "date": "2026 Mar",
+      "authors": "Sadhukhan A, Chauhan A, Kumar M, Singh TG, Mujwar S et al. (6 authors)",
+      "query": "huntington neuroinflammation",
+      "discovered": "2026-04-09T20:22:54.671022",
+      "analysis": {
+        "category": "review",
+        "targets": [
+          "oxidative stress",
+          "mitochondrial dysfunction",
+          "protein misfolding",
+          "neuroinflammation"
+        ],
+        "compounds": [
+          "\u03b2-cryptoxanthin"
+        ],
+        "finding": "\u03b2-cryptoxanthin shows potential as a multi-targeted neuroprotective agent for various neurodegenerative diseases.",
+        "relevance": "high",
+        "repurposing_potential": true,
+        "novel_insight": "The review focuses on evaluating the broad, multi-targeted neuroprotective potential of a natural carotenoid, \u03b2-cryptoxanthin, rather than a specific mechanism or genetic pathway."
+      }
     }
   },
-  "last_run": "2026-03-28T11:01:53.350996",
-  "total_runs": 1
+  "last_run": "2026-04-09T20:22:58.941075",
+  "total_runs": 2
 }
