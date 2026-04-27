@@ -149,4 +149,4 @@ Follow the Ng (The Batch) / Karpathy (arxiv-sanity) approach:
 - pip-audit installed, run before deploying
 - No API keys in code — Ollama is local, public APIs need no auth
 - .env files gitignored
-- Privacy policy: we collect nothing, all data from public sources
+- Privacy policy: GA4 for anonymous page analytics, no PII collected, all research data from public sources
