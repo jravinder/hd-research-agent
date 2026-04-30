@@ -1,0 +1,246 @@
+{
+  "analyzed": {
+    "40522761": {
+      "timestamp": "2026-04-30T07:17:38.648769",
+      "pmcid": null,
+      "analysis": {
+        "category": "review",
+        "main_finding": "The current understanding of neurodegenerative disease pathogenesis, while advanced, remains incomplete regarding the full explanation of onset, progression, and development. The review emphasizes that exploring common pathogenic mechanisms across multiple neurodegenerative conditions is a critical and valuable area of ongoing research.",
+        "therapeutic_approach": "General exploration of common underlying biological processes and pathogenesis mechanisms shared across various neurodegenerative diseases.",
+        "targets": [],
+        "compounds": [],
+        "novel_insights": [
+          "The pathogenesis of neurodegenerative diseases is viewed as a complex process requiring mechanisms beyond current descriptions.",
+          "The identification of common pathogenic processes across multiple diseases suggests shared molecular vulnerabilities."
+        ],
+        "drug_repurposing_signals": [],
+        "somatic_expansion_relevance": "none",
+        "clinical_readiness": "concept",
+        "relevance_score": 6,
+        "confidence": "medium"
+      }
+    },
+    "40650880": {
+      "timestamp": "2026-04-30T07:18:23.395517",
+      "pmcid": null,
+      "analysis": {
+        "category": "mechanism",
+        "main_finding": "Anti-IgLON5 disease is an autoimmune encephalitis characterized by autoantibodies targeting IgLON5. The pathology is associated with a brainstem-dominant tauopathy and progressive cerebral atrophy. The pathogenic role of these autoantibodies has been confirmed in cellular and murine models.",
+        "therapeutic_approach": "Immunomodulation and neutralization of pathogenic autoantibodies (anti-IgLON5) to halt neurodegeneration and prevent progressive atrophy.",
+        "targets": [
+          "IgLON5 autoantigen",
+          "Anti-IgLON5 autoantibodies",
+          "Tau protein (brainstem-dominant pathology)"
+        ],
+        "compounds": [],
+        "novel_insights": [
+          "The association between anti-IgLON5 autoantibodies and a brainstem-dominant tauopathy suggests a specific neurodegenerative cascade.",
+          "The disease presents a heterogeneous clinical picture (sleep, movement, bulbar) driven by a common autoimmune mechanism.",
+          "The pathogenic nature of the autoantibodies is supported by both cellular and murine model data."
+        ],
+        "drug_repurposing_signals": [],
+        "somatic_expansion_relevance": "none",
+        "clinical_readiness": "preclinical",
+        "relevance_score": 8,
+        "confidence": "high"
+      }
+    },
+    "41813136": {
+      "timestamp": "2026-04-30T07:19:09.627650",
+      "pmcid": null,
+      "analysis": {
+        "category": "mechanism",
+        "main_finding": "Despite distinct etiologies, recent evidence suggests significant molecular commonalities between Amyotrophic Lateral Sclerosis (ALS) and Huntington's Disease (HD). Specifically, the analysis highlights the shared involvement of TAR DNA-binding protein (TDP-43), which is highly associated with ALS, and huntingtin (HTT), the primary causative protein in HD.",
+        "therapeutic_approach": "The therapeutic strategy explored is identifying shared molecular pathways or proteinopathy mechanisms (e.g., aggregation, mislocalization) that are common to both ALS and HD, allowing for the development of pan-neurodegenerative treatments.",
+        "targets": [
+          "TDP-43 (TAR DNA-binding protein)",
+          "HTT (Huntingtin protein)"
+        ],
+        "compounds": [],
+        "novel_insights": [
+          "The molecular overlap between TDP-43 pathology (associated with 97% of ALS cases) and HTT pathology suggests a common mechanism of protein misfolding or aggregation in motor neuron degeneration.",
+          "The research premise shifts the focus from distinct disease etiologies to shared proteinopathy mechanisms, which is critical for developing cross-disease therapeutics."
+        ],
+        "drug_repurposing_signals": [],
+        "somatic_expansion_relevance": "indirect",
+        "clinical_readiness": "concept",
+        "relevance_score": 8,
+        "confidence": "high"
+      }
+    },
+    "40576748": {
+      "timestamp": "2026-04-30T07:19:59.265964",
+      "pmcid": null,
+      "analysis": {
+        "category": "mechanism",
+        "main_finding": "The gut-brain axis represents a critical therapeutic target for neurodegenerative disorders, including HD, AD, and PD. Postbiotics and psychobiotics, derived from gut microbiome research, are emerging as innovative strategies to modulate this axis. These metabolites aim to alleviate symptoms and slow disease progression by intervening at the gut level.",
+        "therapeutic_approach": "Modulation of the gut microbiome and metabolome via the administration of postbiotics and psychobiotics.",
+        "targets": [
+          "Gut-brain axis signaling pathways",
+          "Neurodegenerative pathology (e.g., inflammation, oxidative stress - implied)",
+          "Gut microbiota composition"
+        ],
+        "compounds": [
+          "Postbiotics (metabolites)",
+          "Psychobiotics (probiotic-derived compounds)"
+        ],
+        "novel_insights": [
+          "The gut microbiome is recognized as a primary modulatory pathway for neurodegenerative disease progression.",
+          "Postbiotics are defined as beneficial metabolites, suggesting a focus on the end-product rather than the live organism.",
+          "This approach offers a non-traditional, systemic intervention for complex, multi-systemic disorders."
+        ],
+        "drug_repurposing_signals": [
+          "None explicitly mentioned, but the use of natural metabolites suggests potential for repurposing existing microbial products."
+        ],
+        "somatic_expansion_relevance": "indirect",
+        "clinical_readiness": "preclinical",
+        "relevance_score": 8,
+        "confidence": "medium"
+      }
+    },
+    "41295902": {
+      "timestamp": "2026-04-30T07:20:52.610037",
+      "pmcid": null,
+      "analysis": {
+        "category": "review",
+        "main_finding": "The HD research landscape remains highly active, showcasing multiple therapeutic modalities in advanced clinical stages. Key updates include the progression of gene therapy (AMT-130) with positive long-term data, and the continued development of antisense oligonucleotide (ASO) and novel compounds (SKY-0515, SPK-10001) across various phases.",
+        "therapeutic_approach": "The primary strategies involve reducing the expression of the mutant Huntingtin protein (mHTT) via gene silencing (ASOs) or delivering functional genetic material (gene therapy).",
+        "targets": [
+          "Huntingtin protein (HTT)",
+          "CAG repeat expansion"
+        ],
+        "compounds": [
+          "SKY-0515",
+          "SPK-10001",
+          "AMT-130",
+          "Tominersen",
+          "Votoplam (PTC518)"
+        ],
+        "novel_insights": [
+          "The availability of 36-month follow-up data for AMT-130 provides critical long-term safety and efficacy signals for gene therapy approaches.",
+          "The simultaneous advancement of multiple modalities (ASOs, gene therapy, small molecules) suggests a highly competitive and rapidly evolving therapeutic field.",
+          "The inclusion of multiple trials (GENERATION HD2, PIVOT-HD b) indicates a concerted effort across the industry to validate different intervention mechanisms."
+        ],
+        "drug_repurposing_signals": [
+          "None explicitly mentioned."
+        ],
+        "somatic_expansion_relevance": "direct",
+        "clinical_readiness": "clinical",
+        "relevance_score": 9,
+        "confidence": "high"
+      }
+    },
+    "41841355": {
+      "timestamp": "2026-04-30T07:21:39.871248",
+      "pmcid": null,
+      "analysis": {
+        "category": "small_molecule",
+        "main_finding": "The study successfully identified a series of small-molecule modulators capable of altering HTT pre-mRNA splicing. These compounds function by promoting the inclusion of a cryptic stop codon within the HTT transcript. This mechanism effectively reduces the overall levels of the toxic mutant Huntington protein (mHTT).",
+        "therapeutic_approach": "Targeting pre-mRNA splicing machinery to induce premature termination codons (PTCs) and reduce the expression of toxic protein isoforms (mHTT).",
+        "targets": [
+          "HTT pre-mRNA",
+          "Huntington gene (HTT)"
+        ],
+        "compounds": [
+          "Thienopyrazine amide core",
+          "B"
+        ],
+        "novel_insights": [
+          "The use of splicing modulation (rather than traditional antisense oligonucleotides or gene knockdown) to achieve protein reduction.",
+          "The specific mechanism involves promoting cryptic stop codon inclusion, leading to nonsense-mediated decay (NMD) or truncated protein synthesis.",
+          "The lead compound 'B' exhibits desirable drug-like properties, including CNS penetration, selectivity, and oral bioavailability."
+        ],
+        "drug_repurposing_signals": [],
+        "somatic_expansion_relevance": "indirect",
+        "clinical_readiness": "preclinical",
+        "relevance_score": 9,
+        "confidence": "high"
+      }
+    },
+    "41318997": {
+      "timestamp": "2026-04-30T07:22:30.767404",
+      "pmcid": null,
+      "analysis": {
+        "category": "mechanism",
+        "main_finding": "The abstract highlights that while abnormal tau is suggested to contribute to Huntington's disease (HD), its precise mechanistic relevance to the overall disease phenotype remains unclear. The study aims to resolve this ambiguity by generating a novel murine model that specifically investigates the impact of tau deletion in the context of HD pathology. This suggests that tau may be a secondary or modulatory factor, rather than the primary driver, of the disease.",
+        "therapeutic_approach": "Genetic deletion/Knockout modeling to determine the necessity and sufficiency of specific proteins (tau) in the HD pathogenesis pathway.",
+        "targets": [
+          "Tau protein (abnormal forms)",
+          "Huntingtin protein (mHtt)",
+          "HD genetic locus (implied)"
+        ],
+        "compounds": [],
+        "novel_insights": [
+          "The study explicitly questions the extent of tau's contribution to the HD phenotype, suggesting a potential shift in focus from tau to mHtt as the primary pathogenic agent.",
+          "The use of a novel, complex murine model (zQ175 knockin HD mice) allows for high-resolution, in vivo mechanistic testing of gene deletion.",
+          "This research suggests that future treatments may need to address the primary mHtt aggregation pathway, while simultaneously evaluating the role of secondary pathologies like tau accumulation."
+        ],
+        "drug_repurposing_signals": [],
+        "somatic_expansion_relevance": "indirect",
+        "clinical_readiness": "preclinical",
+        "relevance_score": 7,
+        "confidence": "high"
+      }
+    },
+    "41846052": {
+      "timestamp": "2026-04-30T07:23:20.160853",
+      "pmcid": null,
+      "analysis": {
+        "category": "other",
+        "main_finding": "The abstract proposes utilizing exosomes derived from human induced pluripotent stem cells (iPSCs) as a therapeutic agent for Huntington's disease (HD). This approach aims to ameliorate HD pathology by targeting key downstream effects, including mitochondrial dysfunction, mHtt aggregation, and neuroinflammation, while circumventing the clinical limitations of whole stem cell transplantation.",
+        "therapeutic_approach": "Exosome-mediated delivery of therapeutic cargo (e.g., miRNAs, proteins) derived from iPSCs to restore neuronal homeostasis and mitigate multiple pathological hallmarks of HD.",
+        "targets": [
+          "Expanded CAG repeats (Huntingtin gene)",
+          "Mutant huntingtin (mHtt) aggregation",
+          "Mitochondrial dysfunction",
+          "Neuroinflammation"
+        ],
+        "compounds": [],
+        "novel_insights": [
+          "Exosomes derived from iPSCs are being leveraged as a superior delivery vehicle compared to whole stem cell transplantation.",
+          "The therapy is designed to address the complex, multi-faceted pathology of HD (mitochondrial, inflammatory, and aggregation) rather than solely targeting the genetic cause.",
+          "This mechanism bypasses major translational hurdles associated with stem cell therapy, specifically tumorigenicity and poor engraftment efficiency."
+        ],
+        "drug_repurposing_signals": [],
+        "somatic_expansion_relevance": "indirect",
+        "clinical_readiness": "preclinical",
+        "relevance_score": 9,
+        "confidence": "high"
+      }
+    },
+    "41238102": {
+      "timestamp": "2026-04-30T07:24:05.903140",
+      "pmcid": null,
+      "analysis": {
+        "category": "mechanism",
+        "main_finding": "The human brain possesses an exceptionally high lipid content (approximately 20% of its mass), establishing lipid metabolism as a critical determinant of neural homeostasis. Dysregulation of these metabolic pathways is implicated in the pathogenesis of multiple neurodegenerative disorders, including Huntington's disease (HD), Alzheimer's disease (AD), and Parkinson's disease (PD), often manifesting as progressive neuronal dysfunction and myelin degeneration.",
+        "therapeutic_approach": "Metabolic modulation, specifically targeting lipid pathways to restore neural homeostasis and mitigate myelin degeneration in neurodegenerative contexts.",
+        "targets": [
+          "Lipid metabolism pathways",
+          "Myelin integrity",
+          "Neuronal function maintenance"
+        ],
+        "compounds": [],
+        "novel_insights": [
+          "Quantification of the brain's high lipid content (20% of mass) underscores the metabolic vulnerability of the central nervous system.",
+          "The text establishes a broad mechanistic link between lipid dysregulation and the pathology of multiple, distinct neurodegenerative diseases (AD, PD, HD, etc.).",
+          "The focus is on the fundamental maintenance of neural function rather than a specific genetic or protein aggregation."
+        ],
+        "drug_repurposing_signals": [],
+        "somatic_expansion_relevance": "indirect",
+        "clinical_readiness": "concept",
+        "relevance_score": 8,
+        "confidence": "high"
+      }
+    },
+    "41721094": {
+      "timestamp": "2026-04-30T07:24:07.908349",
+      "pmcid": null,
+      "analysis": {
+        "error": "No text available"
+      }
+    }
+  },
+  "last_run": "2026-04-30T07:24:09.913423",
+  "total_analyzed": 10
+}

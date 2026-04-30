@@ -1,6 +1,6 @@
 # Drug Repurposing Hypotheses
 
-*Auto-compiled on 2026-04-08. None reviewed by domain experts.*
+*Auto-compiled on 2026-04-30. None reviewed by domain experts.*
 
 | Drug | Target | Score | Source |
 |------|--------|-------|--------|

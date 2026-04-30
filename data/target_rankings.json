@@ -1,0 +1,273 @@
+{
+  "generated": "2026-04-30T07:24:21.804087",
+  "papers_analyzed": 10,
+  "targets": [
+    {
+      "symbol": "HUNTINGTIN PROTEIN (HTT)",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 22,
+      "top_compounds": [
+        "SKY-0515",
+        "SPK-10001",
+        "AMT-130",
+        "Tominersen",
+        "Votoplam (PTC518)"
+      ],
+      "evidence_levels": [
+        "clinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "CAG REPEAT EXPANSION",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 22,
+      "top_compounds": [
+        "SKY-0515",
+        "SPK-10001",
+        "AMT-130",
+        "Tominersen",
+        "Votoplam (PTC518)"
+      ],
+      "evidence_levels": [
+        "clinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "GUT-BRAIN AXIS SIGNALING PATHWAYS",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 11,
+      "top_compounds": [
+        "Postbiotics (metabolites)",
+        "Psychobiotics (probiotic-derived compounds)"
+      ],
+      "evidence_levels": [
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "NEURODEGENERATIVE PATHOLOGY (E.G., INFLAMMATION, OXIDATIVE STRESS - IMPLIED)",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 11,
+      "top_compounds": [
+        "Postbiotics (metabolites)",
+        "Psychobiotics (probiotic-derived compounds)"
+      ],
+      "evidence_levels": [
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "GUT MICROBIOTA COMPOSITION",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 11,
+      "top_compounds": [
+        "Postbiotics (metabolites)",
+        "Psychobiotics (probiotic-derived compounds)"
+      ],
+      "evidence_levels": [
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "HTT PRE-MRNA",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 11,
+      "top_compounds": [
+        "Thienopyrazine amide core",
+        "B"
+      ],
+      "evidence_levels": [
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "HUNTINGTON GENE (HTT)",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 11,
+      "top_compounds": [
+        "Thienopyrazine amide core",
+        "B"
+      ],
+      "evidence_levels": [
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "IGLON5 AUTOANTIGEN",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 5,
+      "top_compounds": [],
+      "evidence_levels": [
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "ANTI-IGLON5 AUTOANTIBODIES",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 5,
+      "top_compounds": [],
+      "evidence_levels": [
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "TAU PROTEIN (BRAINSTEM-DOMINANT PATHOLOGY)",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 5,
+      "top_compounds": [],
+      "evidence_levels": [
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "TAU PROTEIN (ABNORMAL FORMS)",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 5,
+      "top_compounds": [],
+      "evidence_levels": [
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "HUNTINGTIN PROTEIN (MHTT)",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 5,
+      "top_compounds": [],
+      "evidence_levels": [
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "HD GENETIC LOCUS (IMPLIED)",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 5,
+      "top_compounds": [],
+      "evidence_levels": [
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "EXPANDED CAG REPEATS (HUNTINGTIN GENE)",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 5,
+      "top_compounds": [],
+      "evidence_levels": [
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "MUTANT HUNTINGTIN (MHTT) AGGREGATION",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 5,
+      "top_compounds": [],
+      "evidence_levels": [
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "MITOCHONDRIAL DYSFUNCTION",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 5,
+      "top_compounds": [],
+      "evidence_levels": [
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "NEUROINFLAMMATION",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 5,
+      "top_compounds": [],
+      "evidence_levels": [
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "TDP-43 (TAR DNA-BINDING PROTEIN)",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 3,
+      "top_compounds": [],
+      "evidence_levels": [
+        "concept"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "HTT (HUNTINGTIN PROTEIN)",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 3,
+      "top_compounds": [],
+      "evidence_levels": [
+        "concept"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "LIPID METABOLISM PATHWAYS",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 3,
+      "top_compounds": [],
+      "evidence_levels": [
+        "concept"
+      ],
+      "paper_count": 1
+    }
+  ]
+}
