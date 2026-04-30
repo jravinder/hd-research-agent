@@ -1,16 +1,17 @@
 # Methods + Experiment Log
 
-*Auto-compiled on 2026-04-08*
+*Auto-compiled on 2026-04-30*
 
 ## Experiment History
 
 | ID | Date | Model | Papers | Successful | Characters |
 |----|------|-------|--------|------------|------------|
 | EXP-001 | 2026-03-27 | llama3.1:8b | 22 | 0 | 0 |
-| EXP-002 | 2026-04-01 | qwen3.5:27b | 16 | 0 | 1,935,627 |
+| EXP-002 | 2026-03-30 | llama3.1:8b | 16 | 14 | 1,935,627 |
 | EXP-003_GEMMA4 | 2026-04-02 | gemma4:latest | 16 | 14 | 1,935,627 |
 | EXP-003 | 2026-04-02 | qwen3.5:27b | 16 | 0 | 1,935,627 |
 | EXP-004_SOMATIC_CAG | 2026-04-07 | gemma4:latest | 75 | 68 | 4,976,515 |
+| EXP-005_EXPANDED | 2026-04-19 | gemma4:latest | 25 | 25 | 1,913,844 |
 
 ## Reproducibility
 

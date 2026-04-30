@@ -1435,8 +1435,131 @@
         "repurposing_potential": true,
         "novel_insight": "The review focuses on evaluating the broad, multi-targeted neuroprotective potential of a natural carotenoid, \u03b2-cryptoxanthin, rather than a specific mechanism or genetic pathway."
       }
+    },
+    "42035261": {
+      "pmid": "42035261",
+      "title": "Treatment of Huntington's disease with a pan-HTT-targeting CRISPR nuclease.",
+      "abstract": "Huntington's disease (HD) is an inherited neurodegenerative disorder caused by an expansion of a CAG trinucleotide repeat in the huntingtin (HTT) gene, which leads to a mutant protein that destroys neurons in the brain. Despite intense effort, there remains no approved disease-modifying therapy for HD. Here we develop a pan-HTT-targeting CRISPR-Cas9 system that, when delivered to the striatum of R6/2 and YAC128 mice by AAV5, lowered mutant HTT mRNA and protein by 55-80% via its induction of fram",
+      "journal": "Molecular therapy : the journal of the American Society of Gene Therapy",
+      "date": "2026 Apr",
+      "authors": "Tan K, Del Bosque Siller D, Xiong AY, Wang AXA, McCallister TX et al. (16 authors)",
+      "query": "huntington disease treatment",
+      "discovered": "2026-04-30T07:14:06.508399",
+      "analysis": {
+        "category": "crispr",
+        "targets": [
+          "HTT"
+        ],
+        "compounds": [
+          "CRISPR-Cas9",
+          "AAV5"
+        ],
+        "finding": "A pan-HTT-targeting CRISPR-Cas9 system successfully reduced mutant HTT mRNA and protein levels by 55-80% and significantly improved motor and behavioral phenotypes in mouse models of HD.",
+        "relevance": "high",
+        "repurposing_potential": false,
+        "novel_insight": "The successful development of a pan-HTT-targeting CRISPR system that achieves significant molecular knockdown and functional behavioral rescue in vivo."
+      }
+    },
+    "41552385": {
+      "pmid": "41552385",
+      "title": "An acyclic nucleic acid-modified siRNA targeting CAG expansions for polyglutamine disease treatment.",
+      "abstract": "Polyglutamine (polyQ) diseases are inherited neurological disorders caused by an expansion of the cytosine-adenine-guanine (CAG) repeat in the causative genes. These include Huntington's disease, spinal and bulbar muscular atrophy (SBMA), and spinocerebellar ataxias (SCAs). Clinical trials have been conducted using nucleic acid therapeutics to silence the causative gene for these diseases, but none have been approved for use. Furthermore, while oligonucleotides targeting the CAG repeats are an a",
+      "journal": "Molecular therapy. Nucleic acids",
+      "date": "2026 Mar",
+      "authors": "Maeda K, Hirunagi T, Sahashi K, Kamiya Y, Iida M et al. (12 authors)",
+      "query": "huntington disease treatment",
+      "discovered": "2026-04-30T07:14:48.027042",
+      "analysis": {
+        "category": "aso",
+        "targets": [
+          "CAG repeat expansion",
+          "polyglutamine genes"
+        ],
+        "compounds": [
+          "acyclic serinol nucleic acid (SNA)-modified siRNA"
+        ],
+        "finding": "The study developed an acyclic serinol nucleic acid (SNA)-modified siRNA designed to specifically target pathogenic CAG repeats for polyglutamine disease treatment.",
+        "relevance": "high",
+        "repurposing_potential": false,
+        "novel_insight": "The use of SNA modification in the siRNA structure is novel, aiming to improve specificity and prevent concomitant silencing of the wild-type allele."
+      }
+    },
+    "42041587": {
+      "pmid": "42041587",
+      "title": "Gene Editing Strategies for Neurological and Mental Disorders: Advances in Delivery, Methodology, and Clinical Translation.",
+      "abstract": "Neurological and mental disorders are among the main causes of disability worldwide, affecting over three billion people and increasing the socioeconomic burden. Advances in molecular genetics and genome engineering have led to gene-targeted therapies that address root causes rather than just symptoms. This review covers current genome-editing tools, including CRISPR/Cas, base editing, and prime editing. The focus is on the benefits of gene editing in the central nervous system, where post-mitot",
+      "journal": "Cells",
+      "date": "2026 Apr",
+      "authors": "Elias A, Stern S",
+      "query": "huntington disease gene therapy",
+      "discovered": "2026-04-30T07:15:36.897978",
+      "analysis": {
+        "category": "review",
+        "targets": [
+          "neurological disorders",
+          "mental disorders",
+          "gene targets"
+        ],
+        "compounds": [
+          "CRISPR/Cas",
+          "base editing",
+          "prime editing",
+          "viral vectors",
+          "nanoparticles",
+          "exosomes"
+        ],
+        "finding": "Gene editing tools offer a lasting, root-cause therapeutic approach for CNS disorders, contingent upon effective delivery across the blood-brain barrier.",
+        "relevance": "high",
+        "repurposing_potential": false,
+        "novel_insight": "The integration of advanced editing techniques (prime/base editing) with non-viral delivery systems (nanoparticles/exosomes) to overcome the blood-brain barrier represents a major translational advance."
+      }
+    },
+    "42037491": {
+      "pmid": "42037491",
+      "title": "Iloperidone treatment mitigates the Juvenile Huntington's Disease phenotype possibly via Sigma-1 Receptor Modulation.",
+      "abstract": "Juvenile Huntington's disease (jHD) is a severe genetic disorder with combined neurodegenerative and neurodevelopmental features, characterized by early onset and markedly reduced life expectancy. Despite extensive efforts, drug development has been largely unsuccessful and no effective therapy capable of mitigating the pathological phenotype is currently available. Here, we investigated the potential of the FDA-approved drug iloperidone to ameliorate disease-related phenotypes in cortical neuro",
+      "journal": "The FEBS journal",
+      "date": "2026 Apr",
+      "authors": "Fornetti E, Galluzzi G, Frezzini M, Exertier C, Brufani V et al. (12 authors)",
+      "query": "huntington disease gene therapy",
+      "discovered": "2026-04-30T07:16:08.205330",
+      "analysis": {
+        "category": "small_molecule",
+        "targets": [
+          "Sigma-1 Receptor (S1R)"
+        ],
+        "compounds": [
+          "Iloperidone"
+        ],
+        "finding": "Iloperidone treatment showed potential to ameliorate juvenile Huntington's disease phenotypes in patient-derived cortical neurons, possibly through Sigma-1 Receptor modulation.",
+        "relevance": "high",
+        "repurposing_potential": true,
+        "novel_insight": "The investigation proposes that the therapeutic effect of the existing drug iloperidone in jHD is mediated by activating S1R-dependent proteostasis pathways."
+      }
+    },
+    "42007924": {
+      "pmid": "42007924",
+      "title": "Towards AI-driven prediction of HTT CAG size in super-expanded human spiny projection neurons from Huntington disease donors.",
+      "abstract": "Somatic instability (SI) of the CAG tract in HTT is a major driver of neurodegeneration of Spiny Projection Neurons (SPNs), the primary neuronal subtype affected in Huntington's disease (HD). SPNs can accumulate hundreds of CAG repeats during a patient's lifetime, and once the expansion exceeds \u223c150 CAGs, they acquire distinct, cell-autonomous transcriptional alterations that ultimately contribute to degeneration. Here, we developed the \"HD-Phase-Model\", a mathematical framework designed to iden",
+      "journal": "Journal of Huntington's disease",
+      "date": "2026 Apr",
+      "authors": "Maestri S, Scalzo D, Zobel M, Besusso D, Cattaneo E",
+      "query": "huntington somatic expansion CAG",
+      "discovered": "2026-04-30T07:16:48.044988",
+      "analysis": {
+        "category": "ai_ml",
+        "targets": [
+          "HTT",
+          "CAG tract"
+        ],
+        "compounds": [],
+        "finding": "A mathematical framework, the HD-Phase-Model, was developed to identify super-expanded Spiny Projection Neurons based solely on their transcriptional profile, bypassing the need for direct CAG repeat sizing.",
+        "relevance": "high",
+        "repurposing_potential": false,
+        "novel_insight": "The model successfully links the pathological state of super-expansion (a physical characteristic) to distinct transcriptional alterations using only single-nucleus transcriptomic data, which is a significant advancement over methods requiring direct repeat sizing."
+      }
     }
   },
-  "last_run": "2026-04-09T20:22:58.941075",
-  "total_runs": 2
+  "last_run": "2026-04-30T07:16:53.786766",
+  "total_runs": 3
 }
