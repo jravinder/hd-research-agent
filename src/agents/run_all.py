@@ -1,113 +1,309 @@
-"""Run All Agents — orchestrates the full agent pipeline.
+"""Autonomous Research Pipeline — the full loop.
+
+Scout → Analyze → Refine → Track → Compile → Build → Deploy
+
+Every step powered by Gemma locally. The site reflects the latest
+state of HD research without anyone touching it.
 
 Usage:
-  python run_all.py              # Run all agents
+  python run_all.py              # Full pipeline
   python run_all.py --scout      # Paper scout only
+  python run_all.py --analyze    # Paper analyzer only
   python run_all.py --refine     # Hypothesis refiner only
+  python run_all.py --track      # Target tracker only
   python run_all.py --digest     # Digest writer only
-  python run_all.py --publish    # Commit + push after running
+  python run_all.py --compile    # Wiki compiler only
+  python run_all.py --no-publish # Run everything but don't push
 
-Designed to run from cron/launchd on Mac or Jetson.
-Ollama must be available (local or Jetson).
+Designed to run from cron/launchd. Ollama must be available.
 """
 
 import argparse
+import json
 import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent.parent
+DATA_DIR = ROOT / "data"
+AGENTS_DIR = Path(__file__).parent
+RUN_LOG = DATA_DIR / "pipeline_log.json"
 
 
-def run_agent(name, script):
+def run_agent(name, script, timeout=600):
+    """Run a single agent and return success/failure."""
     print(f"\n{'='*50}")
     print(f"  Running: {name}")
     print(f"  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"{'='*50}\n")
 
+    try:
+        result = subprocess.run(
+            [sys.executable, str(script)],
+            cwd=str(ROOT),
+            capture_output=False,
+            timeout=timeout,
+        )
+        return result.returncode == 0
+    except subprocess.TimeoutExpired:
+        print(f"  {name} timed out after {timeout}s")
+        return False
+    except Exception as e:
+        print(f"  {name} failed: {e}")
+        return False
+
+
+def check_new_papers():
+    """Check if paper scout found new papers that need analysis."""
+    analysis_log = DATA_DIR / "analysis_log.json"
+    corpus_file = DATA_DIR / "corpus.json"
+
+    if not corpus_file.exists():
+        return 0
+
+    with open(corpus_file) as f:
+        corpus = json.load(f)
+
+    analyzed = set()
+    if analysis_log.exists():
+        with open(analysis_log) as f:
+            log = json.load(f)
+        analyzed = set(log.get("analyzed", {}).keys())
+
+    all_pmids = set(corpus.get("papers", {}).keys())
+    return len(all_pmids - analyzed)
+
+
+def refresh_data():
+    """Pull fresh data from PubMed, ClinicalTrials.gov, etc."""
+    print("\n  Refreshing live data...")
     result = subprocess.run(
-        [sys.executable, str(script)],
-        cwd=str(script.parent),
+        [sys.executable, str(ROOT / "src" / "data_fetcher.py")],
+        cwd=str(ROOT),
         capture_output=False,
-        timeout=600,  # 10 min max per agent
+        timeout=120,
+    )
+    return result.returncode == 0
+
+
+def build_site():
+    """Regenerate site HTML from data."""
+    build_script = ROOT / "src" / "build_site.py"
+    if not build_script.exists():
+        print("  build_site.py not found, skipping site build")
+        return True
+    print("\n  Rebuilding site...")
+    result = subprocess.run(
+        [sys.executable, str(build_script), "--no-deploy"],
+        cwd=str(ROOT),
+        capture_output=False,
+        timeout=120,
     )
     return result.returncode == 0
 
 
 def publish():
-    """Commit and push all changes."""
+    """Create a PR with all changes."""
     import os
     os.chdir(ROOT)
-    subprocess.run(["git", "add", "data/", "index.html"], check=False)
+
+    # Check if there are changes
+    result = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
+    if not result.stdout.strip():
+        print("\n  No changes to publish.")
+        return
+
+    now = datetime.now().strftime("%Y-%m-%d")
+    branch = f"auto/pipeline-{now}"
+
+    subprocess.run(["git", "checkout", "-b", branch], check=False)
+    subprocess.run(["git", "add",
+                     "data/corpus.json",
+                     "data/analysis_log.json",
+                     "data/target_rankings.json",
+                     "data/hypotheses_tracker.json",
+                     "data/data.json",
+                     "wiki/",
+                     "index.html",
+                     ], check=False)
+
     result = subprocess.run(["git", "diff", "--cached", "--quiet"])
-    if result.returncode != 0:
-        now = datetime.now().strftime("%Y-%m-%d %H:%M")
-        subprocess.run(["git", "commit", "-m", f"Agent run: {now} — new papers, refined hypotheses"], check=True)
-        subprocess.run(["git", "push"], check=True)
-        print("\nPublished to GitHub → Vercel auto-deploy triggered.")
-    else:
-        print("\nNo changes to publish.")
+    if result.returncode == 0:
+        print("\n  No staged changes to publish.")
+        subprocess.run(["git", "checkout", "main"], check=False)
+        return
+
+    # Read pipeline log for commit message
+    summary = "Autonomous pipeline run"
+    if RUN_LOG.exists():
+        with open(RUN_LOG) as f:
+            log = json.load(f)
+        new_papers = log.get("new_papers_found", 0)
+        analyzed = log.get("papers_analyzed", 0)
+        targets = log.get("targets_tracked", 0)
+        summary = f"Pipeline: +{new_papers} papers, {analyzed} analyzed, {targets} targets updated"
+
+    subprocess.run(["git", "commit", "-m", summary], check=True)
+    subprocess.run(["git", "push", "-u", "origin", branch], check=True)
+
+    # Create PR
+    subprocess.run([
+        "gh", "pr", "create",
+        "--title", f"Autonomous pipeline run {now}",
+        "--body", f"Auto-generated by the research pipeline.\n\n{summary}",
+        "--base", "main",
+    ], check=False)
+
+    # Merge
+    subprocess.run(["gh", "pr", "merge", "--merge"], check=False)
+
+    subprocess.run(["git", "checkout", "main"], check=False)
+    print(f"\n  Published: {summary}")
+
+
+def save_run_log(results, new_papers, analyzed, targets_tracked):
+    """Save pipeline run metadata."""
+    log = {
+        "timestamp": datetime.now().isoformat(),
+        "results": {k: "ok" if v else "failed" for k, v in results.items()},
+        "new_papers_found": new_papers,
+        "papers_analyzed": analyzed,
+        "targets_tracked": targets_tracked,
+    }
+
+    # Append to history
+    history = []
+    if RUN_LOG.exists():
+        try:
+            with open(RUN_LOG) as f:
+                existing = json.load(f)
+            if isinstance(existing, list):
+                history = existing
+            else:
+                history = [existing]
+        except Exception:
+            pass
+
+    history.append(log)
+    # Keep last 30 runs
+    history = history[-30:]
+
+    with open(RUN_LOG, "w") as f:
+        json.dump(history, f, indent=2, default=str)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="HD Research Agent Runner")
-    parser.add_argument("--scout", action="store_true", help="Run paper scout only")
-    parser.add_argument("--refine", action="store_true", help="Run hypothesis refiner only")
-    parser.add_argument("--social", action="store_true", help="Run social watcher only")
-    parser.add_argument("--digest", action="store_true", help="Run digest writer only")
-    parser.add_argument("--publish", action="store_true", help="Git commit + push after running")
+    parser = argparse.ArgumentParser(description="HD Research Autonomous Pipeline")
+    parser.add_argument("--scout", action="store_true", help="Paper scout only")
+    parser.add_argument("--analyze", action="store_true", help="Paper analyzer only")
+    parser.add_argument("--refine", action="store_true", help="Hypothesis refiner only")
+    parser.add_argument("--track", action="store_true", help="Target tracker only")
+    parser.add_argument("--social", action="store_true", help="Social watcher only")
+    parser.add_argument("--digest", action="store_true", help="Digest writer only")
+    parser.add_argument("--compile", action="store_true", help="Wiki compiler only")
+    parser.add_argument("--no-publish", action="store_true", help="Don't create PR")
     args = parser.parse_args()
 
-    agents_dir = Path(__file__).parent
-    run_all = not (args.scout or args.refine or args.digest or args.social)
+    single_agent = any([args.scout, args.analyze, args.refine, args.track,
+                        args.social, args.digest, args.compile])
+
+    print(f"\n{'#'*60}")
+    print(f"  HD Research Autonomous Pipeline")
+    print(f"  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    if single_agent:
+        print(f"  Mode: single agent")
+    else:
+        print(f"  Mode: full pipeline")
+    print(f"{'#'*60}\n")
 
     results = {}
 
-    if run_all or args.scout:
-        results["Paper Scout"] = run_agent("Paper Scout", agents_dir / "paper_scout.py")
+    # === PHASE 1: DISCOVER ===
+    if not single_agent or args.scout:
+        results["Paper Scout"] = run_agent("Paper Scout", AGENTS_DIR / "paper_scout.py")
 
-    if run_all or args.social:
-        results["Social Watcher"] = run_agent("Social Watcher", agents_dir / "social_watcher.py")
+    # === PHASE 2: ANALYZE ===
+    if not single_agent or args.analyze:
+        new_papers = check_new_papers()
+        if new_papers > 0 or args.analyze:
+            print(f"\n  {new_papers} unanalyzed papers found. Running analyzer...")
+            results["Paper Analyzer"] = run_agent(
+                "Paper Analyzer", AGENTS_DIR / "paper_analyzer.py",
+                timeout=1800,  # 30 min for Gemma analysis
+            )
+        else:
+            print(f"\n  No new papers to analyze.")
+            results["Paper Analyzer"] = True
 
-    if run_all or args.refine:
-        results["Hypothesis Refiner"] = run_agent("Hypothesis Refiner", agents_dir / "hypothesis_refiner.py")
-
-    if run_all or args.digest:
-        results["Digest Writer"] = run_agent("Digest Writer", agents_dir / "digest_writer.py")
-
-    # Always compile wiki after agents run (closes the loop)
-    if run_all:
-        results["Wiki Compiler"] = run_agent("Wiki Compiler", agents_dir / "wiki_compiler.py")
-
-    # Also rebuild the site with fresh data
-    if run_all:
-        print("\nRebuilding site...")
-        rebuild = subprocess.run(
-            [sys.executable, str(ROOT / "src" / "data_fetcher.py")],
-            check=False,
+    # === PHASE 3: REFINE ===
+    if not single_agent or args.refine:
+        results["Hypothesis Refiner"] = run_agent(
+            "Hypothesis Refiner", AGENTS_DIR / "hypothesis_refiner.py"
         )
-        if rebuild.returncode != 0:
-            print("\nSite data refresh failed. Skipping publish.")
-            return
 
-        rebuild = subprocess.run(
-            [sys.executable, str(ROOT / "src" / "build_site.py"), "--no-deploy"],
-            check=False,
+    # === PHASE 4: TRACK ===
+    if not single_agent or args.track:
+        results["Target Tracker"] = run_agent(
+            "Target Tracker", AGENTS_DIR / "target_tracker.py"
         )
-        if rebuild.returncode != 0:
-            print("\nSite build failed. Skipping publish.")
-            return
 
-    # Summary
-    print(f"\n{'='*50}")
-    print(f"  Agent Run Summary — {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    # === PHASE 5: SOCIAL ===
+    if not single_agent or args.social:
+        results["Social Watcher"] = run_agent(
+            "Social Watcher", AGENTS_DIR / "social_watcher.py"
+        )
+
+    # === PHASE 6: COMPILE ===
+    if not single_agent or args.compile:
+        results["Wiki Compiler"] = run_agent(
+            "Wiki Compiler", AGENTS_DIR / "wiki_compiler.py"
+        )
+
+    # === PHASE 7: DIGEST ===
+    if not single_agent or args.digest:
+        results["Digest Writer"] = run_agent(
+            "Digest Writer", AGENTS_DIR / "digest_writer.py"
+        )
+
+    # === PHASE 8: BUILD ===
+    if not single_agent:
+        data_ok = refresh_data()
+        results["Data Refresh"] = data_ok
+        if data_ok:
+            results["Site Build"] = build_site()
+
+    # === SUMMARY ===
+    new_papers = check_new_papers()
+    analysis_log = DATA_DIR / "analysis_log.json"
+    analyzed_count = 0
+    if analysis_log.exists():
+        with open(analysis_log) as f:
+            analyzed_count = len(json.load(f).get("analyzed", {}))
+
+    rankings_file = DATA_DIR / "target_rankings.json"
+    targets_count = 0
+    if rankings_file.exists():
+        with open(rankings_file) as f:
+            targets_count = len(json.load(f).get("targets", []))
+
+    print(f"\n{'#'*60}")
+    print(f"  Pipeline Summary — {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    print(f"{'#'*60}")
     for name, ok in results.items():
         status = "OK" if ok else "FAILED"
-        print(f"    {name}: {status}")
-    print(f"{'='*50}\n")
+        print(f"    {name:25s} {status}")
+    print(f"\n    Papers in corpus:       {analyzed_count + new_papers}")
+    print(f"    Papers analyzed:        {analyzed_count}")
+    print(f"    Awaiting analysis:      {new_papers}")
+    print(f"    Targets tracked:        {targets_count}")
+    print(f"{'#'*60}\n")
 
-    if args.publish or run_all:
+    # Save run log
+    save_run_log(results, new_papers, analyzed_count, targets_count)
+
+    # === PHASE 9: PUBLISH ===
+    if not single_agent and not args.no_publish:
         publish()
 
 
