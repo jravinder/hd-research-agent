@@ -114,10 +114,12 @@ def publish():
         print("\n  No changes to publish.")
         return
 
-    now = datetime.now().strftime("%Y-%m-%d")
+    now = datetime.now().strftime("%Y-%m-%d-%H%M")
     branch = f"auto/pipeline-{now}"
 
-    subprocess.run(["git", "checkout", "-b", branch], check=False)
+    # Delete existing branch if it exists, then create fresh
+    subprocess.run(["git", "branch", "-D", branch], capture_output=True)
+    subprocess.run(["git", "checkout", "-b", branch], check=True)
     subprocess.run(["git", "add",
                      "data/corpus.json",
                      "data/analysis_log.json",
@@ -134,15 +136,17 @@ def publish():
         subprocess.run(["git", "checkout", "main"], check=False)
         return
 
-    # Read pipeline log for commit message
+    # Read pipeline log for commit message (log is a list, grab last entry)
     summary = "Autonomous pipeline run"
     if RUN_LOG.exists():
         with open(RUN_LOG) as f:
             log = json.load(f)
-        new_papers = log.get("new_papers_found", 0)
-        analyzed = log.get("papers_analyzed", 0)
-        targets = log.get("targets_tracked", 0)
-        summary = f"Pipeline: +{new_papers} papers, {analyzed} analyzed, {targets} targets updated"
+        last_run = log[-1] if isinstance(log, list) and log else log
+        if isinstance(last_run, dict):
+            new_papers = last_run.get("new_papers_found", 0)
+            analyzed = last_run.get("papers_analyzed", 0)
+            targets = last_run.get("targets_tracked", 0)
+            summary = f"Pipeline: +{new_papers} papers, {analyzed} analyzed, {targets} targets updated"
 
     subprocess.run(["git", "commit", "-m", summary], check=True)
     subprocess.run(["git", "push", "-u", "origin", branch], check=True)
