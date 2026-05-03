@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-02T09:00:09.154499",
+  "last_updated": "2026-05-03T09:17:47.115384",
   "papers": [
     {
       "pmid": "42035261",
@@ -11,33 +11,6 @@
       "keywords": [],
       "hd_relevance_score": 27,
       "url": "https://pubmed.ncbi.nlm.nih.gov/42035261/"
-    },
-    {
-      "pmid": "41926221",
-      "title": "Metabolic reprogramming is critical to microglial activation in Huntington's disease.",
-      "abstract": "Huntington's disease (HD) is a fatal neurodegenerative disease caused by an expanded polyglutamine (CAG) repeat in the N-terminal of the Huntingtin protein (HTT). Microglial activation and elevated pro-inflammatory cytokines are observed in HD brains, but the mechanisms regulating neuroinflammation and microglial activation are poorly understood. Metformin-mediated neuroprotection has been demonstrated in experimental models of neurodegeneration, including HD. We found that metformin inhibits mi",
-      "journal": "JCI insight",
-      "pub_date": "2026 Apr",
-      "authors": "Jauhari A, Monek AC, Abakumova OS",
-      "keywords": [
-        "Glucose metabolism",
-        "Metabolism",
-        "Neurodegeneration",
-        "Neuroscience"
-      ],
-      "hd_relevance_score": 26,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41926221/"
-    },
-    {
-      "pmid": "41922802",
-      "title": "ATF3-dependent formation of inclusion bodies in polyQ-expressing human iPSC-derived neurons confers cellular protection.",
-      "abstract": "Huntington's disease (HD) is an incurable, neurodegenerative disorder. While the causative mutation - CAG expansions within the coding region of the Huntingtin (HTT) gene - has been identified over 30 years ago, the pathological mechanisms underlying HD are still not clear. The abnormal CAG track encodes a polyglutamine (polyQ) expanded protein, which leads to HTT protein misfolding. These polyQ aggregates can form insoluble inclusion bodies (IBs); however, whether IBs are protective or detrimen",
-      "journal": "Cell death and differentiation",
-      "pub_date": "2026 Apr",
-      "authors": "Oweis W, Nissim-Rafinia M, Dvir E",
-      "keywords": [],
-      "hd_relevance_score": 26,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41922802/"
     },
     {
       "pmid": "41946359",
@@ -251,23 +224,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41977460/"
     },
     {
-      "pmid": "41928095",
-      "title": "Modest rescue of RBFOX1 splicing function attenuates Huntington's disease features.",
-      "abstract": "RNA mis-splicing underlies a growing number of neurological disorders and, consequently, splicing correction therapies have been developed for some monogenic forms, like spinal muscular atrophy or neuronal ceroid lipofuscinosis. In Huntington\u2019s disease (HD), alternative splicing alteration emerged as a molecular mechanism in view of individually reported mis-splicing events in neurodegeneration-linked genes such as HTT itself, MAPT and TAF1. Later, more systematic genome-wide RNA-seq analyses of",
-      "journal": "Molecular medicine (Cambridge, Mass.)",
-      "pub_date": "2026 Apr",
-      "authors": "Lozano-Mu\u00f1oz D, Elorza A, Lucas-Santamar\u00eda M",
-      "keywords": [
-        "A2BP1",
-        "Huntington\u00b4s disease",
-        "RBFOX",
-        "Splicing",
-        "Transgenic mice"
-      ],
-      "hd_relevance_score": 15,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41928095/"
-    },
-    {
       "pmid": "42057687",
       "title": "Ethnic Bridging of Votoplam, a HTT Gene Splicing Modifier, Using Pharmacokinetic Comparison Between Caucasian and Japanese Subjects.",
       "abstract": "Votoplam is a novel, orally bioavailable, small molecule HTT gene splicing modifier that is being developed for the treatment of Huntington's disease. A single-dose, open-label, three-dose level (5, 10, 20\u00a0mg), parallel group ethnicity study was conducted to evaluate the pharmacokinetics and safety of votoplam in healthy Caucasian versus Japanese participants. Six participants per ethnic group were enrolled at each dose (12 participants per dose level overall). Thirty-five participants (N = 18 J",
@@ -285,22 +241,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/42057687/"
     },
     {
-      "pmid": "41928019",
-      "title": "Profiles of patients at early stages of Huntington's disease based on the routine biological markers and the disease progression.",
-      "abstract": "Huntington's disease (HD) is a neurodegenerative disorder characterized by motor, cognitive, and psychiatric symptoms. Many studies attempt, besides age and CAG, to understand the factors that impact disease progression. Biological tests measuring several metabolic and inflammatory factors are frequently performed in outpatients, but their relation with disease progression is unknown. This study aims to evaluate the association between routine biological profiles at the early manifest stage of H",
-      "journal": "Journal of neurology",
-      "pub_date": "2026 Apr",
-      "authors": "Gil-Salcedo A, Massart R, Youssov K",
-      "keywords": [
-        "Biological profiles",
-        "Desease progression",
-        "Huntinton desease",
-        "Routine Biomarkers"
-      ],
-      "hd_relevance_score": 14,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41928019/"
-    },
-    {
       "pmid": "42026825",
       "title": "'It's more than just irritability': perspectives and experiences of irritability among people affected by Huntington's disease.",
       "abstract": "Irritability has been reported as a common psychological co-occurrence with Huntington's disease (HD). Irritability associated with HD is variously attributed to neurological changes, an understandable response to increasing difficulties with cognition and communication, or a multifactorial combination of the two or more causes. To improve our understanding, we aimed to explore perspectives and lived experiences of irritability among individuals affected by HD. Individual semi-structured intervi",
@@ -316,6 +256,73 @@
       ],
       "hd_relevance_score": 13,
       "url": "https://pubmed.ncbi.nlm.nih.gov/42026825/"
+    },
+    {
+      "pmid": "42010634",
+      "title": "Connecting HTT intermediate alleles and microRNA dysregulation to enhanced tauopathy in late-onset Alzheimer's disease.",
+      "abstract": "Late-onset Alzheimer\u00b4s disease (LOAD) is a heterogeneous disorder influenced by complex genetic factors. We previously described intermediate alleles (IAs; 27\u201335 CAG repeats) in the huntingtin (HTT) gene as potential modifiers in around 6% of AD population. The caudate nucleus, the most affected region in Huntington\u2019s disease, is highly sensitive to these HTT CAG repeats. We hypothesized that HTT IAs induce gene expression deregulation, including altered microRNA (miRNA) profiles, leading to alt",
+      "journal": "Alzheimer's research & therapy",
+      "pub_date": "2026 Apr",
+      "authors": "Castilla-Silgado J, Perez-Oliveira S, Pinto-Hernandez P",
+      "keywords": [
+        "Alternative splicing",
+        "Clinical heterogeneity",
+        "Post-transcriptional regulation",
+        "Prognosis",
+        "Proteinopathies"
+      ],
+      "hd_relevance_score": 13,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42010634/"
+    },
+    {
+      "pmid": "41957667",
+      "title": "Higher educational attainment in Huntington disease families: evidence from the Enroll-HD study.",
+      "abstract": "Huntington disease (HD) is an inherited neurodegenerative disorder that impairs motor, cognitive, and psychiatric function. Offspring of individuals with HD may experience early caregiving responsibilities, potentially disrupting their educational outcomes. We evaluated the associations between parental age at HD symptom onset, genetic-expansion, sociodemographic, and regional factors with offspring educational attainment outcomes in adulthood. We estimated odds ratios using logistic regression ",
+      "journal": "Orphanet journal of rare diseases",
+      "pub_date": "2026 Apr",
+      "authors": "Vazquez JE, Lin D, Mendizabal A",
+      "keywords": [
+        "Educational attainment",
+        "Health inequities",
+        "Huntington disease (HD)",
+        "Life-course epidemiology",
+        "Rare diseases",
+        "Social determinants"
+      ],
+      "hd_relevance_score": 13,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41957667/"
+    },
+    {
+      "pmid": "42012723",
+      "title": "Longitudinal trajectories of apathy in Huntington's disease: a 6-year follow-up study.",
+      "abstract": "Apathy is a common and debilitating neuropsychiatric symptom in Huntington's disease (HD), yet its long-term trajectory remains poorly characterized. This study examined changes in apathy in HD gene expansion carriers (HDGECs) over 6\u00a0years, using a multidimensional measure, and investigated associations with cognition, motor symptoms and depression. Eighty-two HDGECs (premanifest and manifest) completed assessments at Time 0 and Time 1 with a mean follow-up interval of 6\u00a0years. Apathy was measur",
+      "journal": "Journal of neurology",
+      "pub_date": "2026 Apr",
+      "authors": "Poulsen E, Hendel RK, \u00c1sbj\u00f6rnsd\u00f3ttir B",
+      "keywords": [
+        "Apathy",
+        "Huntington\u2019s disease",
+        "Longitudinal study",
+        "Neuropsychiatric symptoms"
+      ],
+      "hd_relevance_score": 13,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42012723/"
+    },
+    {
+      "pmid": "42030987",
+      "title": "MMP9 as a shared immune-related gene in Alzheimer's and Huntington's diseases: a cross-tissue transcriptomic analysis.",
+      "abstract": "Alzheimer's disease (AD) and Huntington's disease (HD) share neuroinflammatory mechanisms, yet their specific immune microenvironments remain poorly understood. Integrating transcriptomic profiles of peripheral blood and frontal cortex tissues with 2,160 immune-related genes, we analysed their shared immunopathology. Differential analysis identified 64 peripheral and 159 central consistently dysregulated immune genes, intersecting to isolate 10 co-expressed all-immune genes. Functional enrichmen",
+      "journal": "Artificial cells, nanomedicine, and biotechnology",
+      "pub_date": "2026 Dec",
+      "authors": "Li X, Zhang C, Ni H",
+      "keywords": [
+        "Alzheimer\u2019s disease",
+        "Huntington\u2019s disease",
+        "Immunity",
+        "MMP9"
+      ],
+      "hd_relevance_score": 12,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42030987/"
     }
   ],
   "trials": [
