@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-03T09:17:47.115384",
+  "last_updated": "2026-05-04T10:08:09.876959",
   "papers": [
     {
       "pmid": "42035261",
@@ -11,6 +11,23 @@
       "keywords": [],
       "hd_relevance_score": 27,
       "url": "https://pubmed.ncbi.nlm.nih.gov/42035261/"
+    },
+    {
+      "pmid": "41967079",
+      "title": "Stem cells enhance mitochondrial function in experimental Huntington's disease.",
+      "abstract": "Huntington's Disease (HD) is a neurodegenerative disorder caused by CAG triplet expansion in the HTT gene, producing a mutant Huntingtin protein that impairs mitochondrial dynamics by reducing fusion and increasing fission. Mesenchymal stem cells (MSCs) have shown potential therapeutic effects by sharing functional mitochondria and other secretomes. In this study, quinolinic acid-lesioned neuro-2a (QA-N2a) cells and glutamatergic neurons with 50 CAG repeats (HD neurons) were co-cultured with hum",
+      "journal": "Stem cells (Dayton, Ohio)",
+      "pub_date": "2026 Apr",
+      "authors": "D'Egidio F, Putthanbut N, Starahs M",
+      "keywords": [
+        "Huntington\u2019s disease",
+        "cell-free therapy",
+        "mesenchymal stem cells",
+        "mitochondrial transfer",
+        "secretome"
+      ],
+      "hd_relevance_score": 25,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41967079/"
     },
     {
       "pmid": "41946359",
@@ -29,23 +46,6 @@
       ],
       "hd_relevance_score": 25,
       "url": "https://pubmed.ncbi.nlm.nih.gov/41946359/"
-    },
-    {
-      "pmid": "41967079",
-      "title": "Stem cells enhance mitochondrial function in experimental Huntington's disease.",
-      "abstract": "Huntington's Disease (HD) is a neurodegenerative disorder caused by CAG triplet expansion in the HTT gene, producing a mutant Huntingtin protein that impairs mitochondrial dynamics by reducing fusion and increasing fission. Mesenchymal stem cells (MSCs) have shown potential therapeutic effects by sharing functional mitochondria and other secretomes. In this study, quinolinic acid-lesioned neuro-2a (QA-N2a) cells and glutamatergic neurons with 50 CAG repeats (HD neurons) were co-cultured with hum",
-      "journal": "Stem cells (Dayton, Ohio)",
-      "pub_date": "2026 Apr",
-      "authors": "D'Egidio F, Putthanbut N, Starahs M",
-      "keywords": [
-        "Huntington\u2019s disease",
-        "cell-free therapy",
-        "mesenchymal stem cells",
-        "mitochondrial transfer",
-        "secretome"
-      ],
-      "hd_relevance_score": 25,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41967079/"
     },
     {
       "pmid": "41955484",
@@ -115,24 +115,6 @@
       ],
       "hd_relevance_score": 21,
       "url": "https://pubmed.ncbi.nlm.nih.gov/42031349/"
-    },
-    {
-      "pmid": "41979604",
-      "title": "Pharmacological evaluation of Orai-1 inhibitor in 3-nitropropionic acid-induced Huntington disease.",
-      "abstract": "Huntington's disease (HD) is a neurodegenerative condition characterized by a gradual decline in motor skills, cognitive function, and mental health. The 3-nitropropionic acid (3-NPA) model simulates HD-like pathology, which involves calcium dysregulation. To establish a structural basis for targeting Orai-1, in-silico docking was conducted prior to assessing the neuroprotective effects of the Orai-1 inhibitor Synta-66 in a 3-NPA-induced HD model. Mice were randomly divided into five groups (n\u2009=",
-      "journal": "The Journal of pharmacy and pharmacology",
-      "pub_date": "2026 Apr",
-      "authors": "Sharma V, Singh S, Singh TG",
-      "keywords": [
-        "3-nitropropionic acid",
-        "Huntington\u2019s disease",
-        "Orai-1",
-        "Synta-66",
-        "neuroinflammation",
-        "neuroprotection"
-      ],
-      "hd_relevance_score": 19,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41979604/"
     },
     {
       "pmid": "41957010",
@@ -275,6 +257,22 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/42010634/"
     },
     {
+      "pmid": "42012723",
+      "title": "Longitudinal trajectories of apathy in Huntington's disease: a 6-year follow-up study.",
+      "abstract": "Apathy is a common and debilitating neuropsychiatric symptom in Huntington's disease (HD), yet its long-term trajectory remains poorly characterized. This study examined changes in apathy in HD gene expansion carriers (HDGECs) over 6\u00a0years, using a multidimensional measure, and investigated associations with cognition, motor symptoms and depression. Eighty-two HDGECs (premanifest and manifest) completed assessments at Time 0 and Time 1 with a mean follow-up interval of 6\u00a0years. Apathy was measur",
+      "journal": "Journal of neurology",
+      "pub_date": "2026 Apr",
+      "authors": "Poulsen E, Hendel RK, \u00c1sbj\u00f6rnsd\u00f3ttir B",
+      "keywords": [
+        "Apathy",
+        "Huntington\u2019s disease",
+        "Longitudinal study",
+        "Neuropsychiatric symptoms"
+      ],
+      "hd_relevance_score": 13,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42012723/"
+    },
+    {
       "pmid": "41957667",
       "title": "Higher educational attainment in Huntington disease families: evidence from the Enroll-HD study.",
       "abstract": "Huntington disease (HD) is an inherited neurodegenerative disorder that impairs motor, cognitive, and psychiatric function. Offspring of individuals with HD may experience early caregiving responsibilities, potentially disrupting their educational outcomes. We evaluated the associations between parental age at HD symptom onset, genetic-expansion, sociodemographic, and regional factors with offspring educational attainment outcomes in adulthood. We estimated odds ratios using logistic regression ",
@@ -293,22 +291,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41957667/"
     },
     {
-      "pmid": "42012723",
-      "title": "Longitudinal trajectories of apathy in Huntington's disease: a 6-year follow-up study.",
-      "abstract": "Apathy is a common and debilitating neuropsychiatric symptom in Huntington's disease (HD), yet its long-term trajectory remains poorly characterized. This study examined changes in apathy in HD gene expansion carriers (HDGECs) over 6\u00a0years, using a multidimensional measure, and investigated associations with cognition, motor symptoms and depression. Eighty-two HDGECs (premanifest and manifest) completed assessments at Time 0 and Time 1 with a mean follow-up interval of 6\u00a0years. Apathy was measur",
-      "journal": "Journal of neurology",
-      "pub_date": "2026 Apr",
-      "authors": "Poulsen E, Hendel RK, \u00c1sbj\u00f6rnsd\u00f3ttir B",
-      "keywords": [
-        "Apathy",
-        "Huntington\u2019s disease",
-        "Longitudinal study",
-        "Neuropsychiatric symptoms"
-      ],
-      "hd_relevance_score": 13,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42012723/"
-    },
-    {
       "pmid": "42030987",
       "title": "MMP9 as a shared immune-related gene in Alzheimer's and Huntington's diseases: a cross-tissue transcriptomic analysis.",
       "abstract": "Alzheimer's disease (AD) and Huntington's disease (HD) share neuroinflammatory mechanisms, yet their specific immune microenvironments remain poorly understood. Integrating transcriptomic profiles of peripheral blood and frontal cortex tissues with 2,160 immune-related genes, we analysed their shared immunopathology. Differential analysis identified 64 peripheral and 159 central consistently dysregulated immune genes, intersecting to isolate 10 co-expressed all-immune genes. Functional enrichmen",
@@ -323,6 +305,23 @@
       ],
       "hd_relevance_score": 12,
       "url": "https://pubmed.ncbi.nlm.nih.gov/42030987/"
+    },
+    {
+      "pmid": "41997719",
+      "title": "Relapsing-remitting multiple sclerosis in a patient with Huntington's disease.",
+      "abstract": "A woman in her 50s with genetically confirmed Huntington's disease presented with right-sided arm sensory symptoms that evolved over days and persisted for at least 1\u2009month. Neurological examination revealed mild right arm hypoesthesia and mild generalised choreiform movements. Brain MRI demonstrated multiple supratentorial and infratentorial lesions suggestive of demyelination, along with a short-segment, contrast-enhancing cervical spinal cord lesion. Cerebrospinal fluid analysis revealed type",
+      "journal": "BMJ case reports",
+      "pub_date": "2026 Apr",
+      "authors": "Appiani FE, Ruiz Miyares FJ, Miraval Marquez FK",
+      "keywords": [
+        "Genetic screening / counselling",
+        "Movement disorders (other than Parkinsons)",
+        "Multiple sclerosis",
+        "Neuroimaging",
+        "Spinal cord"
+      ],
+      "hd_relevance_score": 11,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41997719/"
     }
   ],
   "trials": [
