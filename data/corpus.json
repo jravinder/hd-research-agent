@@ -1558,8 +1558,184 @@
         "repurposing_potential": false,
         "novel_insight": "The model successfully links the pathological state of super-expansion (a physical characteristic) to distinct transcriptional alterations using only single-nucleus transcriptomic data, which is a significant advancement over methods requiring direct repeat sizing."
       }
+    },
+    "41925785": {
+      "pmid": "41925785",
+      "title": "Psychosis in Huntington disease: a short update.",
+      "abstract": "",
+      "journal": "Journal of neural transmission (Vienna, Austria : 1996)",
+      "date": "2026 Apr",
+      "authors": "Jellinger KA",
+      "query": "huntington disease treatment",
+      "discovered": "2026-05-05T15:33:59.514573",
+      "analysis": null
+    },
+    "41977460": {
+      "pmid": "41977460",
+      "title": "Usefulness of C. elegans Models of Alzheimer's and Huntington's Disease to Evaluate Novel Imidazoline I2 Receptor Ligands.",
+      "abstract": "Neurodegenerative diseases such as Alzheimer's (AD) and Huntington's (HD) remain major therapeutic challenges due to limited treatment efficacy. Imidazoline I2 receptor (I2-IR) ligands have recently emerged as promising neuroprotective agents, with reported roles in modulating oxidative stress, neuroinflammation, and protein aggregation. This study evaluates the therapeutic potential of several I2-IR ligands, including Idazoxan, CR4056, and novel compounds, using Caenorhabditis elegans (C. elega",
+      "journal": "International journal of molecular sciences",
+      "date": "2026 Apr",
+      "authors": "Taboada-Jara T, Ribalta M, Romero-Becerra F, Muix\u00ed J, Bellver-Sanchis A et al. (8 authors)",
+      "query": "huntington disease treatment",
+      "discovered": "2026-05-05T15:34:01.522204",
+      "analysis": null
+    },
+    "41651710": {
+      "pmid": "41651710",
+      "title": "Safety and efficacy of VMAT2 inhibitors in Huntington Disease: A systematic review.",
+      "abstract": "Chorea affects quality of life and functional independence in most adults with Huntington disease (HD). Vesicular monoamine transporter 2 (VMAT2) inhibitors, tetrabenazine, deutetrabenazine, and valbenazine, are pharmacological agents used to manage HD-related chorea. This systematic review evaluates the safety and efficacy of these agents in individuals with HD. This review was conducted in accordance with PRISMA guidelines and registered with PROSPERO, CRD42024581306. A comprehensive literatur",
+      "journal": "Parkinsonism & related disorders",
+      "date": "2026 Apr",
+      "authors": "Baghaei A, Dehnavi AZ, Hashempour Z, Bordelon Y, Jimenez-Shahed J et al. (8 authors)",
+      "query": "huntington disease treatment",
+      "discovered": "2026-05-05T15:34:03.531550",
+      "analysis": null
+    },
+    "41967079": {
+      "pmid": "41967079",
+      "title": "Stem cells enhance mitochondrial function in experimental Huntington's disease.",
+      "abstract": "Huntington's Disease (HD) is a neurodegenerative disorder caused by CAG triplet expansion in the HTT gene, producing a mutant Huntingtin protein that impairs mitochondrial dynamics by reducing fusion and increasing fission. Mesenchymal stem cells (MSCs) have shown potential therapeutic effects by sharing functional mitochondria and other secretomes. In this study, quinolinic acid-lesioned neuro-2a (QA-N2a) cells and glutamatergic neurons with 50 CAG repeats (HD neurons) were co-cultured with hum",
+      "journal": "Stem cells (Dayton, Ohio)",
+      "date": "2026 Apr",
+      "authors": "D'Egidio F, Putthanbut N, Starahs M, Lee JY, Borlongan CV",
+      "query": "huntington disease treatment",
+      "discovered": "2026-05-05T15:34:05.539101",
+      "analysis": null
+    },
+    "42048072": {
+      "pmid": "42048072",
+      "title": "[Huntington\u00b4s disease - overview].",
+      "abstract": "Huntington's disease (HD) is a rare, autosomal dominant neurodegenerative disorder characterized by progressive movement disturbances, psychiatric symptoms, and cognitive impairment. The disease is caused by an increased number of repeats of the cytosine-adenine-guanine (CAG) base sequence in the HTT gene, leading to the production of a huntingtin protein with toxic gain-of-function properties and the accumulation of protein aggregates in neurons, resulting in neurodegeneration. The prevalence o",
+      "journal": "Laeknabladid",
+      "date": "2026 May",
+      "authors": "Briem S, Bjornsson T, Stefansdottir V, Jonsson JJ, Sveinsson OA",
+      "query": "huntington disease gene therapy",
+      "discovered": "2026-05-05T15:34:09.986744",
+      "analysis": null
+    },
+    "41977320": {
+      "pmid": "41977320",
+      "title": "Polyfunctionalized N-Arylsulfonyl Indoles: Identification of (E)-N-Hydroxy-3-{3-[(5-(3-(piperidin-1-yl)propoxy]-1H-indol-1-yl)sulfonyl]phenyl}acrylamide (MTP150) for the Epigenetic-Based Therapy of Parkinson's Disease.",
+      "abstract": "Herein, we have identified the polyfunctionalized 1-(phenylsulfonyl)-1H-indole-2-carboxylic acid derivative MTP150 for the treatment of neurodegenerative diseases owing to its efficacy in reducing protein aggregation, modulating matrix metalloproteinase activity, mitigating neuroinflammation, and enhancing DNA damage repair pathways across in vivo Caenorhabditis elegans models of Alzheimer's disease, Parkinson's disease (PD), and Huntington's disease. Further experiments in an in vivo Drosophila",
+      "journal": "International journal of molecular sciences",
+      "date": "2026 Mar",
+      "authors": "Toledano-Pinedo M, Porro-P\u00e9rez A, Sch\u00e4ker-H\u00fcbner L, Diez-Iriepa D, Iriepa I et al. (28 authors)",
+      "query": "huntington disease gene therapy",
+      "discovered": "2026-05-05T15:34:11.993428",
+      "analysis": null
+    },
+    "41906693": {
+      "pmid": "41906693",
+      "title": "Inhibition of the NLRP3 Inflammasome With MCC950 Improves Gut Health in Huntington's Disease Mice.",
+      "abstract": "Huntington's disease (HD) is an autosomal dominant neurodegenerative disorder featuring abnormal cognition, psychiatric symptoms, movement, and gastrointestinal function. It is caused by a tandem-repeat gene mutation encoding an expanded polyglutamine tract in the huntingtin protein. Our group was the first to demonstrate gut microbial disruption in both clinical HD cohorts and validated preclinical models, supporting a role for microbiota-gut-brain axis dysfunction in HD. The NLRP3 inflammasome",
+      "journal": "Journal of neurochemistry",
+      "date": "2026 Apr",
+      "authors": "Sarkar SK, Ekwudo MN, Lu D, Masson B, Kiridena P et al. (11 authors)",
+      "query": "huntington disease gene therapy",
+      "discovered": "2026-05-05T15:34:14.003939",
+      "analysis": null
+    },
+    "42061810": {
+      "pmid": "42061810",
+      "title": "UNEXPECTED MECHANISMS OF REPURPOSED DRUGS IN THE PATHOGENIC PATHWAYS OF NEURODEGENERATIVE DISEASES. DISCOVERING NEW NEUROPROTECTIVE THERAPIES IN CELLULAR MODELS.",
+      "abstract": "Advances in biomedicine have increased life expectancy, leading to a growing prevalence of age-related neurodegenerative diseases such as Alzheimer's and Parkinson's disease, alongside disorders of genetic or environmental origin including multiple sclerosis, Huntington's disease, and amyotrophic lateral sclerosis. Despite their diverse etiologies, these conditions share convergent pathogenic mechanisms-calcium overload, neuroinflammation, and oxidative stress-that drive neuronal apoptosis and p",
+      "journal": "Neuropharmacology",
+      "date": "2026 Apr",
+      "authors": "Arasmou-Idrovo MS, Mar\u00edn-Rodr\u00edguez B, Gironda-Mart\u00ednez A, Garc\u00eda AG, Le\u00f3n R et al. (7 authors)",
+      "query": "huntington drug repurposing",
+      "discovered": "2026-05-05T15:34:18.598971",
+      "analysis": null
+    },
+    "41977439": {
+      "pmid": "41977439",
+      "title": "Targeting Non-Coding RNAs as a Potential Therapeutic and Delivery Strategy Against Neurodegenerative Diseases.",
+      "abstract": "Neurodegenerative diseases (NDs), including Alzheimer's disease, Parkinson's disease, Huntington's disease, and amyotrophic lateral sclerosis (ALS), represent a growing global health challenge characterized by progressive neuronal loss and a lack of definitive disease-modifying treatments. This review explores the emerging potential of targeting non-coding RNAs (ncRNAs), such as microRNAs (miRNAs), long non-coding RNAs (lncRNAs), and exosomal RNAs, to modulate pathogenic molecular pathways and a",
+      "journal": "International journal of molecular sciences",
+      "date": "2026 Apr",
+      "authors": "Bougea A",
+      "query": "huntington CRISPR",
+      "discovered": "2026-05-05T15:34:23.259473",
+      "analysis": null
+    },
+    "42049145": {
+      "pmid": "42049145",
+      "title": "Humanized mice carrying a pathogenic GRN deletion as a pre-clinical platform for targeted gene therapies in frontotemporal dementia.",
+      "abstract": "Frontotemporal dementia (FTD) is an early onset dementia characterized by neuropathology and changes to patient behaviour. Haploinsufficiency of the gene progranulin (GRN) is a major cause of FTD, for which there are no effective therapies. Corrective gene therapies that restore GRN expression are of clinical interest, but current in vivo systems have limitations. We developed a novel strain of mice expressing a human GRN transgene bearing a four base pair deletion in exon 5 (GRNc.388_391delCAGT",
+      "journal": "Neurobiology of disease",
+      "date": "2026 Apr",
+      "authors": "Life BE, Kazemian P, Petkau TL, de Moura Gomes A, Thomson SB et al. (13 authors)",
+      "query": "huntington CRISPR",
+      "discovered": "2026-05-05T15:34:25.266928",
+      "analysis": null
+    },
+    "42009995": {
+      "pmid": "42009995",
+      "title": "Exploring the role of tocotrienol-rich fraction (TRF) in ameliorating neuroinflammation.",
+      "abstract": "Neuroinflammation is a chronic inflammatory response that contributes to synaptic dysfunction and neuronal damage, it is a common feature among various neurodegenerative diseases such as Alzheimer's Disease (AD), Parkinson's Disease (PD) and Huntington's Disease (HD). Tocotrienol-rich fraction (TRF) is a form of vitamin E that is known for its anti-inflammatory, antioxidant and neuroprotective properties. Yet, it has not been adequately investigated in both cellular and animal neuroinflammation ",
+      "journal": "Inflammopharmacology",
+      "date": "2026 Apr",
+      "authors": "Tan JY, Retinasamy T, Lee VLL, Radhakrishnan AK, Yeong KY",
+      "query": "huntington neuroinflammation",
+      "discovered": "2026-05-05T15:34:29.914057",
+      "analysis": null
+    },
+    "42031349": {
+      "pmid": "42031349",
+      "title": "Propagation of gut-injected AAV2/1-Htt171-82Q to the brain induces Huntington's disease-like pathology.",
+      "abstract": "Huntington's disease (HD) is a progressive neurodegenerative disorder that leads to thbe production of pathogenic mutant huntingtin (mHtt) protein and is characterized by motor and psychiatric symptoms. While HD has classically been studied as a brain-centered condition, emerging research indicates that the gut-brain axis may play a role in disease initiation and progression. However, direct experimental evidence demonstrating a peripheral-to-central route for mHtt propagation remains limited an",
+      "journal": "Neurobiology of disease",
+      "date": "2026 Apr",
+      "authors": "Islam J, Kc E, Chaudhary PK, Ali M, Abbas H et al. (8 authors)",
+      "query": "huntington neuroinflammation",
+      "discovered": "2026-05-05T15:34:31.924150",
+      "analysis": null
+    },
+    "41771688": {
+      "pmid": "41771688",
+      "title": "Metformin improves RAN protein pathology, alternative splicing, and behavioral phenotypes in SCA8 mice.",
+      "abstract": "Spinocerebellar ataxia type 8 (SCA8) is a member of a group of dominantly inherited, debilitating neurological diseases caused by CAG\u2022CTG expansions for which there are no effective treatments. RAN translation, which was discovered in SCA8, has previously been shown to occur across CAG and CUG expansion transcripts, making treatments for SCA8 potentially relevant to a broad group of diseases, including SCA1, SCA2, SCA3, SCA6, SCA7, SCA12, Huntington's disease, and myotonic dystrophy type 1. In a",
+      "journal": "Life science alliance",
+      "date": "2026 May",
+      "authors": "Romano LE, Tsukagoshi S, Davey-Osuch EE, Ajredini R, Manasi K et al. (13 authors)",
+      "query": "huntington neuroinflammation",
+      "discovered": "2026-05-05T15:34:33.930880",
+      "analysis": null
+    },
+    "41796789": {
+      "pmid": "41796789",
+      "title": "Effects of different exercise modalities on four major neurodegenerative diseases and their molecular mechanisms.",
+      "abstract": "Neurodegenerative diseases are marked by progressive neuronal damage and currently lack a cure. Recently, exercise has emerged as a promising non-pharmacological approach to potentially slow disease progression and enhance cognitive function. This narrative review summarizes the effects of various exercise modalities-including aerobic exercise, resistance training, and balance training-on four major neurodegenerative diseases (Alzheimer's disease, Parkinson's disease, Huntington's disease, and s",
+      "journal": "Neuroscience",
+      "date": "2026 May",
+      "authors": "Wang S, Wei Y, Li Y, Qing H, Yan Y et al. (6 authors)",
+      "query": "huntington neuroinflammation",
+      "discovered": "2026-05-05T15:34:35.939440",
+      "analysis": null
+    },
+    "42035925": {
+      "pmid": "42035925",
+      "title": "Galectins as stress-integrating regulators of neuroimmune signaling and proteinopathy in the central nervous system.",
+      "abstract": "Galectins are \u03b2-galactoside-binding lectins that play increasingly mechanistic functions in central nervous system (CNS) physiology and disease. Over the past decade, a rapidly expanding literature has identified galectins as regulators of microglial activation, misfolded protein pathology, vesicle damage sensing, autophagy, synaptic plasticity, myelination, vascular repair, and neuroimmune communication. Galectins operate across intracellular and extracellular compartments to integrate cellular",
+      "journal": "Neurobiology of disease",
+      "date": "2026 Apr",
+      "authors": "Siew JJ, Chern Y",
+      "query": "huntington neuroinflammation",
+      "discovered": "2026-05-05T15:34:37.947228",
+      "analysis": null
+    },
+    "42057546": {
+      "pmid": "42057546",
+      "title": "mTOR Signalling in Neurodegenerative Disorders: Unveiling Key Factors, Mechanistic Insights, and Possible Therapeutic Interventions.",
+      "abstract": "Neurodegenerative diseases (NDDs) are defined by the gradual degeneration of neuronal cells, wherein the accumulation of misfolded proteins can lead to memory impairments, motor dysfunctions, and other deteriorations. Despite the widespread impact, there are currently no viable pharmaceuticals to treat these disorders. The mTOR protein is a crucial regulator of cell survival, growth, autophagy, and apoptosis. Targeted modulation of mTOR signaling holds promise for mitigating neurodegeneration in",
+      "journal": "Cellular physiology and biochemistry : international journal of experimental cellular physiology, biochemistry, and pharmacology",
+      "date": "2026 Apr",
+      "authors": "Jha NK, Chauhan P, Abomughaid MM, Avinash D, Almutary AG et al. (13 authors)",
+      "query": "huntington autophagy mTOR",
+      "discovered": "2026-05-05T15:34:42.457821",
+      "analysis": null
     }
   },
-  "last_run": "2026-04-30T07:16:53.786766",
-  "total_runs": 3
+  "last_run": "2026-05-05T15:34:46.112052",
+  "total_runs": 4
 }

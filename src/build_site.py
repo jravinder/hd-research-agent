@@ -247,6 +247,11 @@ def build_page(data):
   .text-shadow-hero {{ text-shadow: 0 2px 8px rgba(0,0,0,0.3); }}
   .stat-card {{ transition: transform 0.2s, box-shadow 0.2s; }}
   .stat-card:hover {{ transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.06); }}
+  .topic-node {{ transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease; }}
+  .topic-node:hover {{ transform: translateY(-3px) scale(1.01); box-shadow: 0 16px 40px rgba(146, 64, 14, 0.10); }}
+  .topic-node.active {{ border-color: #d97706; background: linear-gradient(135deg, rgba(251, 191, 36, 0.18), rgba(255, 255, 255, 0.95)); box-shadow: 0 18px 48px rgba(217, 119, 6, 0.16); transform: translateY(-4px) scale(1.015); }}
+  .topic-panel {{ transition: transform 0.3s ease, opacity 0.3s ease; transform-origin: top center; }}
+  .topic-panel.is-swapping {{ opacity: 0.45; transform: scale(0.985); }}
   @media (max-width: 768px) {{
     .mobile-menu {{ display: none; }}
     .mobile-menu.active {{ display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: #fdf9e9; padding: 16px; border-bottom: 1px solid #d8c3ad; box-shadow: 0 4px 12px rgba(0,0,0,0.08); z-index: 100; }}
@@ -325,6 +330,84 @@ def build_page(data):
       </div>
     </div>
     <p class="text-xs text-stone-600 text-center mt-4">Updated {updated_str} — auto-refreshed daily from PubMed, ClinicalTrials.gov, HDBuzz, Open Targets</p>
+  </div>
+</section>
+
+<!-- Field Map -->
+<section id="field-map" class="py-16 px-4 md:px-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-10">
+      <div class="text-sm font-bold text-amber-700 uppercase tracking-wider mb-2">Explore The Field</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-stone-900">Pick a rabbit hole. Zoom in.</h2>
+      <p class="text-stone-700 mt-3 max-w-3xl mx-auto">This is the fun part: start with one live HD topic, get the plain-English version first, then move into trials, targets, and open questions without losing the thread.</p>
+    </div>
+    <div class="grid grid-cols-1 xl:grid-cols-[1.05fr_1.35fr] gap-6 items-start">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <button type="button" class="topic-node active text-left rounded-3xl border border-amber-200 bg-white/90 p-5" data-topic="somatic">
+          <div class="text-xs font-bold uppercase tracking-[0.2em] text-red-700 mb-3">Mechanism</div>
+          <h3 class="text-xl font-bold text-stone-900 mb-2">Somatic Expansion</h3>
+          <p class="text-sm text-stone-700">Why the CAG repeat can keep growing inside cells after birth, and why that may drive timing and severity.</p>
+        </button>
+        <button type="button" class="topic-node text-left rounded-3xl border border-amber-200 bg-white/90 p-5" data-topic="amt130">
+          <div class="text-xs font-bold uppercase tracking-[0.2em] text-purple-700 mb-3">Program</div>
+          <h3 class="text-xl font-bold text-stone-900 mb-2">AMT-130</h3>
+          <p class="text-sm text-stone-700">The gene-therapy program that gets people to ask whether HD might finally have a real disease-modifying signal.</p>
+        </button>
+        <button type="button" class="topic-node text-left rounded-3xl border border-amber-200 bg-white/90 p-5" data-topic="msh3">
+          <div class="text-xs font-bold uppercase tracking-[0.2em] text-blue-700 mb-3">Target</div>
+          <h3 class="text-xl font-bold text-stone-900 mb-2">MSH3</h3>
+          <p class="text-sm text-stone-700">A DNA repair gene that has become central to the somatic expansion story and to several therapeutic bets.</p>
+        </button>
+        <button type="button" class="topic-node text-left rounded-3xl border border-amber-200 bg-white/90 p-5" data-topic="biomarkers">
+          <div class="text-xs font-bold uppercase tracking-[0.2em] text-green-700 mb-3">Readout</div>
+          <h3 class="text-xl font-bold text-stone-900 mb-2">Biomarkers</h3>
+          <p class="text-sm text-stone-700">The measurements researchers use to tell whether a therapy is doing something real before long clinical outcomes arrive.</p>
+        </button>
+      </div>
+      <div id="topic-panel" class="topic-panel rounded-[2rem] border border-stone-200 bg-white shadow-sm p-6 md:p-8">
+        <div class="flex flex-wrap items-start justify-between gap-4 mb-5">
+          <div>
+            <div id="topic-kicker" class="text-xs font-bold uppercase tracking-[0.2em] text-amber-700 mb-2">Mechanism</div>
+            <h3 id="topic-title" class="text-2xl md:text-3xl font-bold text-stone-900">Somatic Expansion</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span id="topic-stage" class="px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-semibold">Field-defining idea</span>
+            <span id="topic-funfact" class="px-3 py-1 rounded-full bg-stone-100 text-stone-700 text-xs font-semibold">A good place to start</span>
+          </div>
+        </div>
+        <p id="topic-intro" class="text-base md:text-lg text-stone-800 leading-relaxed mb-6">Some cells in HD seem to keep adding extra CAG repeats over time. That means the mutation you inherit may not be the full story; the repeat can become more dangerous inside the tissues that matter most.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div class="rounded-2xl bg-amber-50 border border-amber-100 p-5">
+            <div class="text-xs font-bold uppercase tracking-[0.2em] text-amber-700 mb-2">What It Is</div>
+            <p id="topic-what" class="text-sm text-stone-700 leading-relaxed">A process where the HTT repeat gets longer in some cells, especially in the brain, after a person is already born.</p>
+          </div>
+          <div class="rounded-2xl bg-orange-50 border border-orange-100 p-5">
+            <div class="text-xs font-bold uppercase tracking-[0.2em] text-orange-700 mb-2">Why It Matters</div>
+            <p id="topic-why" class="text-sm text-stone-700 leading-relaxed">If this process drives damage, slowing it could change disease timing instead of only treating downstream symptoms.</p>
+          </div>
+          <div class="rounded-2xl bg-green-50 border border-green-100 p-5">
+            <div class="text-xs font-bold uppercase tracking-[0.2em] text-green-700 mb-2">What The Evidence Says</div>
+            <p id="topic-evidence" class="text-sm text-stone-700 leading-relaxed">Genetics, model systems, and new therapeutic programs all point in the same direction: somatic expansion is no longer a side story.</p>
+          </div>
+          <div class="rounded-2xl bg-stone-50 border border-stone-200 p-5">
+            <div class="text-xs font-bold uppercase tracking-[0.2em] text-stone-600 mb-2">What Is Still Unclear</div>
+            <p id="topic-open" class="text-sm text-stone-700 leading-relaxed">Researchers still need stronger proof linking a slowed repeat-expansion signal to clinical benefit in people.</p>
+          </div>
+        </div>
+        <div class="rounded-3xl bg-[#fdf9e9] border border-stone-200 p-5">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <div class="text-xs font-bold uppercase tracking-[0.2em] text-stone-600 mb-2">Try This Next</div>
+              <p id="topic-next" class="text-sm text-stone-700 leading-relaxed">Open the corpus and ask which companies are building programs around somatic expansion, then compare that to the latest papers and trials.</p>
+            </div>
+            <div class="flex flex-wrap gap-3 shrink-0">
+              <a id="topic-source" href="https://pubmed.ncbi.nlm.nih.gov/?term=huntington+somatic+expansion" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-white border border-stone-200 text-sm font-semibold text-stone-900 hover:border-amber-300 transition-colors">Read the source <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+              <a id="topic-chat" href="chat.html" class="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-amber-500 text-white text-sm font-semibold hover:bg-amber-600 transition-colors">Take it to chat <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -657,6 +740,94 @@ def build_page(data):
 </footer>
 
 <!-- Translate: clean dropdown, no popups -->
+<script>
+const HD_TOPIC_EXPLORER = {{
+  somatic: {{
+    kicker: 'Mechanism',
+    title: 'Somatic Expansion',
+    stage: 'Field-defining idea',
+    funfact: 'This is the rabbit hole',
+    intro: 'Some cells in HD seem to keep adding extra CAG repeats over time. That means the mutation you inherit may not be the full story; the repeat can become more dangerous inside the tissues that matter most.',
+    what: 'A process where the HTT repeat gets longer in some cells, especially in the brain, after a person is already born.',
+    why: 'If this process drives damage, slowing it could change disease timing instead of only treating downstream symptoms.',
+    evidence: 'Genetics, model systems, and new therapeutic programs all point in the same direction: somatic expansion is no longer a side story.',
+    open: 'Researchers still need stronger proof linking a slowed repeat-expansion signal to clinical benefit in people.',
+    next: 'Open the corpus and ask which companies are building programs around somatic expansion, then compare that to the latest papers and trials.',
+    source: 'https://pubmed.ncbi.nlm.nih.gov/?term=huntington+somatic+expansion'
+  }},
+  amt130: {{
+    kicker: 'Program',
+    title: 'AMT-130',
+    stage: 'Watch closely',
+    funfact: 'Not a cure, but important',
+    intro: 'AMT-130 is the program most likely to make newcomers ask whether HD is finally entering a genuinely disease-modifying era.',
+    what: 'A one-time AAV5 gene therapy designed to lower huntingtin expression in the striatum through direct brain delivery.',
+    why: 'It targets the root gene product rather than only downstream effects, which is why every data update gets so much attention.',
+    evidence: 'The early signal is promising enough to keep the whole field watching, but regulators still want stronger, more controlled evidence before treating it as established.',
+    open: 'How durable the effect is, how much benefit translates to patients, and what the risk-benefit profile looks like in broader use are still unresolved.',
+    next: 'Use chat to compare AMT-130 with SPK-10001, SKY-0515, and other HD programs so the tradeoffs become visible.',
+    source: 'https://clinicaltrials.gov/search?term=AMT-130%20Huntington'
+  }},
+  msh3: {{
+    kicker: 'Target',
+    title: 'MSH3',
+    stage: 'High-interest target',
+    funfact: 'DNA repair can be a therapy angle',
+    intro: 'MSH3 matters because it turns an abstract genetics story into a concrete drug target. Once that clicks, a lot of current HD strategy starts to make sense.',
+    what: 'A DNA mismatch repair gene strongly implicated in driving somatic CAG repeat expansion in Huntington\\'s disease.',
+    why: 'If lowering MSH3 activity can reduce repeat expansion, it could intervene upstream of multiple downstream disease features.',
+    evidence: 'Human genetics and mechanistic work have pushed MSH3 into the center of the conversation, especially in programs focused on modifying disease course.',
+    open: 'The hard part is finding ways to modulate the pathway precisely enough to help without introducing new problems from tampering with DNA repair.',
+    next: 'Ask the corpus how MSH3, PMS1, and FAN1 differ, then compare which ones look most druggable right now.',
+    source: 'https://pubmed.ncbi.nlm.nih.gov/?term=MSH3+Huntington+disease'
+  }},
+  biomarkers: {{
+    kicker: 'Readout',
+    title: 'Biomarkers',
+    stage: 'How researchers measure progress',
+    funfact: 'Useful does not mean causal',
+    intro: 'Biomarkers make trials legible. They help researchers see whether a therapy is touching the biology before waiting years for long clinical outcomes.',
+    what: 'Observable measures such as NfL, imaging changes, digital measures, or molecular readouts that help track disease state or treatment effect.',
+    why: 'Without biomarkers, it is much harder to tell whether a program is doing something real or whether the field is just waiting in the dark.',
+    evidence: 'Biomarkers are everywhere in HD trials now, but good researchers treat them as decision tools rather than automatic proof of patient benefit.',
+    open: 'The central question is which biomarkers are most predictive of meaningful clinical change, and which ones are merely correlated with disease activity.',
+    next: 'Start with NfL in chat, then ask where it helps, where it misleads, and which other biomarkers might matter more for disease-modifying trials.',
+    source: 'https://pubmed.ncbi.nlm.nih.gov/?term=Huntington+disease+biomarkers'
+  }}
+}};
+
+const topicPanel = document.getElementById('topic-panel');
+const topicNodes = Array.from(document.querySelectorAll('.topic-node'));
+
+function renderTopic(topicKey) {{
+  const topic = HD_TOPIC_EXPLORER[topicKey];
+  if (!topic || !topicPanel) return;
+  topicPanel.classList.add('is-swapping');
+  window.setTimeout(() => {{
+    document.getElementById('topic-kicker').textContent = topic.kicker;
+    document.getElementById('topic-title').textContent = topic.title;
+    document.getElementById('topic-stage').textContent = topic.stage;
+    document.getElementById('topic-funfact').textContent = topic.funfact;
+    document.getElementById('topic-intro').textContent = topic.intro;
+    document.getElementById('topic-what').textContent = topic.what;
+    document.getElementById('topic-why').textContent = topic.why;
+    document.getElementById('topic-evidence').textContent = topic.evidence;
+    document.getElementById('topic-open').textContent = topic.open;
+    document.getElementById('topic-next').textContent = topic.next;
+    document.getElementById('topic-source').href = topic.source;
+    topicNodes.forEach((node) => {{
+      const isActive = node.dataset.topic === topicKey;
+      node.classList.toggle('active', isActive);
+      node.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    }});
+    topicPanel.classList.remove('is-swapping');
+  }}, 110);
+}}
+
+topicNodes.forEach((node) => {{
+  node.addEventListener('click', () => renderTopic(node.dataset.topic));
+}});
+</script>
 <script>
 function googleTranslateElementInit() {{
   new google.translate.TranslateElement({{

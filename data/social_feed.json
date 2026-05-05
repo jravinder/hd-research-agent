@@ -1,0 +1,93 @@
+{
+  "scans": [
+    {
+      "timestamp": "2026-04-30T07:30:56.149943",
+      "results": [
+        {
+          "id": "hd_treatment",
+          "query": "huntingtons disease treatment",
+          "timestamp": "2026-04-30T07:25:14.733001",
+          "stats": {
+            "x_posts": 3,
+            "reddit_threads": 0,
+            "youtube_videos": 2,
+            "hn_stories": 0,
+            "highlights": [
+              "**X2** (score:94) @cyabydac1 (2026-04-29) [16likes, 3rt]",
+              "**X3** (score:82) @ParylayU33 (2026-04-28) [12likes, 1rt]",
+              "**X1** (score:64) @cyabydac1 (2026-04-29) [5likes]",
+              "**a_G7xE3nxLM** (score:26) CTV Your Morning (2025-09-25) [2,255 views, 53 likes]",
+              "**gT0xBr4eDsU** (score:24) CBS19 (2025-09-26) [1,665 views, 26 likes]"
+            ]
+          }
+        },
+        {
+          "id": "amt130",
+          "query": "AMT-130 uniQure huntingtons",
+          "timestamp": "2026-04-30T07:26:20.991887",
+          "stats": {
+            "x_posts": 2,
+            "reddit_threads": 0,
+            "youtube_videos": 7,
+            "hn_stories": 0,
+            "highlights": [
+              "**X2** (score:94) @cyabydac1 (2026-04-29) [16likes, 3rt]",
+              "**X1** (score:64) @cyabydac1 (2026-04-29) [5likes]",
+              "**YlQMaozHEh0** (score:37) VJNeurology (2026-04-24) [660 views, 11 likes]",
+              "**whGhirYnsDg** (score:32) Huntington's Disease Society of America (2024-02-14) [2,017 views, 44 likes]",
+              "**qILELaiWtcE** (score:31) uniQure (2020-04-20) [14,205 views, 106 likes]",
+              "**hF_2dcQLpN4** (score:29) Apprentice (2025-10-10) [596 views, 14 likes]",
+              "**CR3ipoAT5bw** (score:23) Huntington's Disease Society of America (2025-10-30) [1,789 views, 60 likes]",
+              "**mwEEJ91LeJY** (score:20) International Parkinson and Movement Disorder Society (2025-12-16) [725 views, 19 likes]",
+              "**fZwMc9Yna-E** (score:19) Huntington's Disease Society of America (2025-11-05) [806 views, 23 likes]"
+            ]
+          }
+        },
+        {
+          "id": "hd_ai",
+          "query": "huntingtons disease AI drug discovery",
+          "timestamp": "2026-04-30T07:27:19.149406",
+          "stats": {
+            "x_posts": 1,
+            "reddit_threads": 0,
+            "youtube_videos": 3,
+            "hn_stories": 0,
+            "highlights": [
+              "**vhd4ENh5ON4** (score:21) Bloomberg Television (2021-11-18) [7,537 views, 145 likes]",
+              "**K69FBocCN8M** (score:12) ABH \u2013 Associa\u00e7\u00e3o Brasil Huntington (2024-07-19) [211 views, 9 likes]",
+              "**rcFlo2fDMMs** (score:29) Neuroscientifically Challenged (2018-07-06) [375,527 views, 4,840 likes]"
+            ]
+          }
+        },
+        {
+          "id": "hd_gene_therapy",
+          "query": "huntingtons gene therapy CRISPR",
+          "timestamp": "2026-04-30T07:29:00.319359",
+          "stats": {
+            "x_posts": 0,
+            "reddit_threads": 0,
+            "youtube_videos": 0,
+            "hn_stories": 0,
+            "highlights": []
+          }
+        },
+        {
+          "id": "hd_community",
+          "query": "huntingtons disease family support",
+          "timestamp": "2026-04-30T07:30:51.135319",
+          "stats": {
+            "x_posts": 0,
+            "reddit_threads": 0,
+            "youtube_videos": 0,
+            "hn_stories": 0,
+            "highlights": []
+          }
+        }
+      ],
+      "alerts": []
+    }
+  ],
+  "last_run": "2026-04-30T07:30:56.149985",
+  "total_runs": 1,
+  "alerts": []
+}

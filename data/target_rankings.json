@@ -1,7 +1,26 @@
 {
-  "generated": "2026-04-30T07:24:21.804087",
-  "papers_analyzed": 10,
+  "generated": "2026-05-05T15:46:10.388856",
+  "papers_analyzed": 20,
   "targets": [
+    {
+      "symbol": "CAG REPEAT EXPANSION",
+      "full_name": "",
+      "role": "",
+      "mentions": 3,
+      "score": 28,
+      "top_compounds": [
+        "SKY-0515",
+        "SPK-10001",
+        "AMT-130",
+        "Tominersen",
+        "Votoplam (PTC518)"
+      ],
+      "evidence_levels": [
+        "concept",
+        "clinical"
+      ],
+      "paper_count": 3
+    },
     {
       "symbol": "HUNTINGTIN PROTEIN (HTT)",
       "full_name": "",
@@ -21,20 +40,50 @@
       "paper_count": 1
     },
     {
-      "symbol": "CAG REPEAT EXPANSION",
+      "symbol": "PUTAMEN (SITE OF ADMINISTRATION)",
       "full_name": "",
       "role": "",
       "mentions": 1,
-      "score": 22,
+      "score": 14,
       "top_compounds": [
-        "SKY-0515",
-        "SPK-10001",
-        "AMT-130",
-        "Tominersen",
-        "Votoplam (PTC518)"
+        "AAV2-derived capsids",
+        "AAV vectors",
+        "BRAVE library components"
       ],
       "evidence_levels": [
-        "clinical"
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "NEURONAL AXONS (MECHANISM OF TRANSPORT)",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 14,
+      "top_compounds": [
+        "AAV2-derived capsids",
+        "AAV vectors",
+        "BRAVE library components"
+      ],
+      "evidence_levels": [
+        "preclinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "CNS (GENERAL TARGET ORGAN)",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 14,
+      "top_compounds": [
+        "AAV2-derived capsids",
+        "AAV vectors",
+        "BRAVE library components"
+      ],
+      "evidence_levels": [
+        "preclinical"
       ],
       "paper_count": 1
     },
@@ -114,6 +163,74 @@
       "paper_count": 1
     },
     {
+      "symbol": "NEUROTRANSMITTER SYSTEMS (E.G., SEROTONIN, NOREPINEPHRINE, IMPLIED BY 'ANTIDEPRESSANTS')",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 10,
+      "top_compounds": [
+        "Antidepressants (general class)"
+      ],
+      "evidence_levels": [
+        "clinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "BEHAVIORAL AND COGNITIVE DEFICITS (SPECIFICALLY EXECUTIVE FUNCTION)",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 10,
+      "top_compounds": [
+        "Antidepressants (general class)"
+      ],
+      "evidence_levels": [
+        "clinical"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "GENETIC METABOLIC PATHWAYS (CYP ENZYMES, ETC.)",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 6,
+      "top_compounds": [
+        "None mentioned"
+      ],
+      "evidence_levels": [
+        "concept"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "UNDERLYING PATHOLOGY OF NEURODEGENERATION (GENERAL)",
+      "full_name": "",
+      "role": "",
+      "mentions": 1,
+      "score": 6,
+      "top_compounds": [
+        "None mentioned"
+      ],
+      "evidence_levels": [
+        "concept"
+      ],
+      "paper_count": 1
+    },
+    {
+      "symbol": "HTT GENE",
+      "full_name": "",
+      "role": "",
+      "mentions": 2,
+      "score": 6,
+      "top_compounds": [],
+      "evidence_levels": [
+        "concept"
+      ],
+      "paper_count": 2
+    },
+    {
       "symbol": "IGLON5 AUTOANTIGEN",
       "full_name": "",
       "role": "",
@@ -170,102 +287,6 @@
       "top_compounds": [],
       "evidence_levels": [
         "preclinical"
-      ],
-      "paper_count": 1
-    },
-    {
-      "symbol": "HD GENETIC LOCUS (IMPLIED)",
-      "full_name": "",
-      "role": "",
-      "mentions": 1,
-      "score": 5,
-      "top_compounds": [],
-      "evidence_levels": [
-        "preclinical"
-      ],
-      "paper_count": 1
-    },
-    {
-      "symbol": "EXPANDED CAG REPEATS (HUNTINGTIN GENE)",
-      "full_name": "",
-      "role": "",
-      "mentions": 1,
-      "score": 5,
-      "top_compounds": [],
-      "evidence_levels": [
-        "preclinical"
-      ],
-      "paper_count": 1
-    },
-    {
-      "symbol": "MUTANT HUNTINGTIN (MHTT) AGGREGATION",
-      "full_name": "",
-      "role": "",
-      "mentions": 1,
-      "score": 5,
-      "top_compounds": [],
-      "evidence_levels": [
-        "preclinical"
-      ],
-      "paper_count": 1
-    },
-    {
-      "symbol": "MITOCHONDRIAL DYSFUNCTION",
-      "full_name": "",
-      "role": "",
-      "mentions": 1,
-      "score": 5,
-      "top_compounds": [],
-      "evidence_levels": [
-        "preclinical"
-      ],
-      "paper_count": 1
-    },
-    {
-      "symbol": "NEUROINFLAMMATION",
-      "full_name": "",
-      "role": "",
-      "mentions": 1,
-      "score": 5,
-      "top_compounds": [],
-      "evidence_levels": [
-        "preclinical"
-      ],
-      "paper_count": 1
-    },
-    {
-      "symbol": "TDP-43 (TAR DNA-BINDING PROTEIN)",
-      "full_name": "",
-      "role": "",
-      "mentions": 1,
-      "score": 3,
-      "top_compounds": [],
-      "evidence_levels": [
-        "concept"
-      ],
-      "paper_count": 1
-    },
-    {
-      "symbol": "HTT (HUNTINGTIN PROTEIN)",
-      "full_name": "",
-      "role": "",
-      "mentions": 1,
-      "score": 3,
-      "top_compounds": [],
-      "evidence_levels": [
-        "concept"
-      ],
-      "paper_count": 1
-    },
-    {
-      "symbol": "LIPID METABOLISM PATHWAYS",
-      "full_name": "",
-      "role": "",
-      "mentions": 1,
-      "score": 3,
-      "top_compounds": [],
-      "evidence_levels": [
-        "concept"
       ],
       "paper_count": 1
     }

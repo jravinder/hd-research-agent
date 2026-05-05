@@ -15,5 +15,14 @@
     "new_papers_found": 60,
     "papers_analyzed": 10,
     "targets_tracked": 20
+  },
+  {
+    "timestamp": "2026-05-05T15:34:46.190188",
+    "results": {
+      "Paper Scout": "ok"
+    },
+    "new_papers_found": 76,
+    "papers_analyzed": 10,
+    "targets_tracked": 20
   }
 ]

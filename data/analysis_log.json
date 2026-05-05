@@ -239,8 +239,264 @@
       "analysis": {
         "error": "No text available"
       }
+    },
+    "41827217": {
+      "timestamp": "2026-05-05T15:36:10.633311",
+      "pmcid": null,
+      "analysis": {
+        "category": "gene_therapy",
+        "main_finding": "The field of biological treatments is undergoing rapid progress, demonstrating applicability not only to primary genetic disorders but also to complex conditions lacking obvious genetic components, such as Type 1 diabetes. This acceleration is fundamentally attributed to technological breakthroughs in advanced cell and gene engineering.",
+        "therapeutic_approach": "The strategy involves utilizing genetically modified cellular platforms (e.g., CAR-T and CAR-NK cells) and precise genomic editing tools (e.g., CRISPR/Cas systems or transgenes) to modulate immune responses or correct genetic defects.",
+        "targets": [
+          "Genome (via CRISPR/transgenes)",
+          "Specific cell surface antigens (implied by CAR-T/NK targeting)",
+          "Genetic loci (general)"
+        ],
+        "compounds": [],
+        "novel_insights": [
+          "The therapeutic scope is expanding beyond purely Mendelian genetic disorders to include complex metabolic/autoimmune conditions (e.g., Type 1 diabetes).",
+          "The progress is mechanistically linked to the maturation of cell engineering technologies, specifically the use of CAR-T and CAR-NK cells.",
+          "CRISPR and transgenes are highlighted as key enabling technologies driving this 'new wave' of therapy."
+        ],
+        "drug_repurposing_signals": [],
+        "somatic_expansion_relevance": "indirect",
+        "clinical_readiness": "concept",
+        "relevance_score": 9,
+        "confidence": "high"
+      }
+    },
+    "41783572": {
+      "timestamp": "2026-05-05T15:37:12.059868",
+      "pmcid": null,
+      "analysis": {
+        "category": "mechanism",
+        "main_finding": "The abstract establishes that neurodegenerative disorders, such as Alzheimer's and Parkinson's disease, are complex conditions exacerbated by aging and metabolic dysregulation. A critical finding is the increasing implication of copper homeostasis imbalance in the pathogenesis of these neurological conditions. This suggests that dysregulated copper metabolism may contribute to neuronal damage and cell death.",
+        "therapeutic_approach": "Restoring copper homeostasis and mitigating the associated cell death pathways, specifically cuproptosis, to prevent neurotoxicity in AD and PD.",
+        "targets": [
+          "Copper transporters and metabolic pathways",
+          "Cuproptosis pathway components",
+          "Mitochondrial function (indirectly)"
+        ],
+        "compounds": [],
+        "novel_insights": [
+          "The direct linkage between copper imbalance and the specific mechanism of cuproptosis in neurodegeneration.",
+          "The recognition of copper dyshomeostasis as a central, modifiable metabolic factor in AD and PD.",
+          "The potential for targeting copper metabolism as a preventative strategy against age-related neurodegeneration."
+        ],
+        "drug_repurposing_signals": [],
+        "somatic_expansion_relevance": "none",
+        "clinical_readiness": "concept",
+        "relevance_score": 8,
+        "confidence": "medium"
+      }
+    },
+    "40421472": {
+      "timestamp": "2026-05-05T15:38:56.183311",
+      "pmcid": null,
+      "analysis": {
+        "category": "review",
+        "main_finding": "The abstract highlights that while neuropsychiatric symptoms are common in early Huntington's Disease (HD), there is currently a significant gap in definitive evidence regarding the efficacy of psychotropic medications. The study proposes to address this gap by conducting a systematic review and meta-analysis of randomized controlled trials (RCTs) comparing antidepressants to placebo, specifically focusing on outcomes related to executive function.",
+        "therapeutic_approach": "Symptomatic management of behavioral and cognitive deficits using established psychotropic medications (antidepressants).",
+        "targets": [
+          "Neurotransmitter systems (e.g., serotonin, norepinephrine, implied by 'antidepressants')",
+          "Behavioral and cognitive deficits (specifically executive function)"
+        ],
+        "compounds": [
+          "Antidepressants (general class)"
+        ],
+        "novel_insights": [
+          "The systematic aggregation of evidence specifically targets the utility of antidepressants in the early stages of HD.",
+          "The meta-analysis focuses on quantifiable cognitive outcomes, such as executive function, which is critical for assessing treatment efficacy.",
+          "The review acknowledges the current 'dearth of evidence,' setting a high bar for interpreting future findings."
+        ],
+        "drug_repurposing_signals": [
+          "Antidepressants (existing drugs being repurposed for the management of HD-associated neuropsychiatric symptoms)"
+        ],
+        "somatic_expansion_relevance": "indirect",
+        "clinical_readiness": "clinical",
+        "relevance_score": 8,
+        "confidence": "high"
+      }
+    },
+    "41690900": {
+      "timestamp": "2026-05-05T15:40:14.464780",
+      "pmcid": null,
+      "analysis": {
+        "category": "review",
+        "main_finding": "The abstract does not present specific mechanistic data but rather argues that Huntington's disease (HD) is an ideal model for neuroscience research. Its genetic clarity, predictable progression, and established global community are highlighted as strategic advantages for advancing brain repair efforts.",
+        "therapeutic_approach": "General neuroprotection and brain repair, leveraging the predictable nature of the disease for targeted intervention development.",
+        "targets": [
+          "HD pathology (general)",
+          "Brain repair pathways"
+        ],
+        "compounds": [],
+        "novel_insights": [
+          "HD is framed as a 'strategically unique entry point' for neuroscience research, suggesting that its defined nature facilitates drug development.",
+          "The text emphasizes the utility of HD's 'genetic clarity' and 'predictable course' as key assets for research investment."
+        ],
+        "drug_repurposing_signals": [],
+        "somatic_expansion_relevance": "none",
+        "clinical_readiness": "concept",
+        "relevance_score": 6,
+        "confidence": "medium"
+      }
+    },
+    "41663779": {
+      "timestamp": "2026-05-05T15:41:18.245296",
+      "pmcid": null,
+      "analysis": {
+        "category": "other",
+        "main_finding": "Current conventional therapies for neurodegenerative disorders (e.g., AD, PD, HD, ALS) are insufficient, often resulting in adverse side effects and poor medication response. The abstract proposes that pharmacogenomics\u2014the study of how genetic variations influence drug metabolism and efficacy\u2014represents a critical, novel paradigm shift toward personalized treatment strategies.",
+        "therapeutic_approach": "Personalized medicine utilizing pharmacogenomic profiling to predict individual drug response, thereby optimizing therapeutic dosing and minimizing adverse drug reactions (ADRs) in neurodegenerative disease management.",
+        "targets": [
+          "Genetic metabolic pathways (CYP enzymes, etc.)",
+          "Underlying pathology of neurodegeneration (general)"
+        ],
+        "compounds": [
+          "None mentioned"
+        ],
+        "novel_insights": [
+          "Pharmacogenomics is positioned as a superior methodology to overcome the limitations of generalized, 'one-size-fits-all' neurodegenerative treatments.",
+          "The persistent 'treatment gap' necessitates approaches that address the complex, distinct molecular pathology of various neurodegenerative diseases.",
+          "The focus is on improving drug safety and efficacy through genetic screening rather than a specific molecular intervention."
+        ],
+        "drug_repurposing_signals": [
+          "None"
+        ],
+        "somatic_expansion_relevance": "none",
+        "clinical_readiness": "concept",
+        "relevance_score": 8,
+        "confidence": "high"
+      }
+    },
+    "41376158": {
+      "timestamp": "2026-05-05T15:42:26.069528",
+      "pmcid": null,
+      "analysis": {
+        "category": "gene_therapy",
+        "main_finding": "Adeno-associated viral vectors (AAVs) are established CNS delivery vehicles due to their safety and sustained expression profile. Specifically, AAV capsids optimized using the BRAVE approach demonstrate enhanced retrograde axonal transport properties in the rodent brain compared to parental AAV2, facilitating broader coverage of connected neural circuits.",
+        "therapeutic_approach": "Gene replacement/Gene delivery via optimized viral vectors (AAV).",
+        "targets": [
+          "Putamen (site of administration)",
+          "Neuronal axons (mechanism of transport)",
+          "CNS (general target organ)"
+        ],
+        "compounds": [
+          "AAV2-derived capsids",
+          "AAV vectors",
+          "BRAVE library components"
+        ],
+        "novel_insights": [
+          "The BRAVE methodology successfully enhances the functional property of retrograde transport in AAV capsids, suggesting a mechanism for improving vector reach beyond the injection site.",
+          "Retrograde transport is identified as a critical limiting factor for achieving comprehensive coverage of connected brain regions using current AAV vectors.",
+          "AAVs maintain a favorable safety profile for CNS gene therapy, supporting their continued use in preclinical models."
+        ],
+        "drug_repurposing_signals": [
+          "None explicitly mentioned for HD, but the vector platform itself (AAV) is highly relevant for delivering HD-modulating genes (e.g., shRNA targeting *HTT*)."
+        ],
+        "somatic_expansion_relevance": "indirect",
+        "clinical_readiness": "preclinical",
+        "relevance_score": 8,
+        "confidence": "high"
+      }
+    },
+    "41770933": {
+      "timestamp": "2026-05-05T15:43:23.633036",
+      "pmcid": null,
+      "analysis": {
+        "category": "mechanism",
+        "main_finding": "The provided text is insufficient to extract the main finding. The title suggests that a LIG1 modifier variant influences ligase fidelity, which is a potential mechanism for modulating the pathology of Huntington's disease (HD).",
+        "therapeutic_approach": "Targeting protein modification pathways (specifically ligase function) to improve fidelity and suppress pathological processes related to the expanded CAG repeat.",
+        "targets": [
+          "LIG1 (DNA ligase I)",
+          "Huntingtin gene (HTT)",
+          "CAG repeat expansion"
+        ],
+        "compounds": [],
+        "novel_insights": [
+          "The study identifies a modifier variant (LIG1) that modulates ligase fidelity, suggesting that the underlying mechanism of HD pathology may involve dysregulated DNA repair or protein modification pathways.",
+          "Intervention could focus on enhancing the intrinsic fidelity of ligases rather than solely on reducing the mutant huntingtin protein."
+        ],
+        "drug_repurposing_signals": [],
+        "somatic_expansion_relevance": "indirect",
+        "clinical_readiness": "concept",
+        "relevance_score": 6,
+        "confidence": "low"
+      }
+    },
+    "41622913": {
+      "timestamp": "2026-05-05T15:44:20.527332",
+      "pmcid": null,
+      "analysis": {
+        "category": "mechanism",
+        "main_finding": "Huntington's disease pathogenesis is initiated by a CAG repeat expansion in the HTT gene, resulting in an abnormally long polyglutamine (polyQ) tract within the huntingtin protein. Critically, these mutant CAG repeats are unstable and exhibit age-related expansion in specific neuronal populations, representing a key early pathogenic event. Furthermore, the expanded repeat facilitates the activation of cryptic polyA sites within intron 1 of the HTT pre-mRNA.",
+        "therapeutic_approach": "Understanding the molecular triggers of HTT aggregation, specifically targeting the instability of the CAG repeat expansion and the aberrant pre-mRNA processing (polyA activation) to prevent toxic protein formation.",
+        "targets": [
+          "HTT gene",
+          "CAG repeat expansion",
+          "Polyglutamine tract",
+          "Cryptic polyA sites in HTT intron 1"
+        ],
+        "compounds": [],
+        "novel_insights": [
+          "The instability and age-dependent increase of mutant CAG repeats are identified as a primary, early pathogenic event, rather than just the initial mutation.",
+          "The mechanism involves the activation of cryptic polyA sites in the HTT pre-mRNA, suggesting that transcriptional/splicing defects are upstream of aggregation.",
+          "The pathology is localized to specific neurons and brain regions, suggesting differential vulnerability."
+        ],
+        "drug_repurposing_signals": [],
+        "somatic_expansion_relevance": "direct",
+        "clinical_readiness": "concept",
+        "relevance_score": 8,
+        "confidence": "high"
+      }
+    },
+    "41755664": {
+      "timestamp": "2026-05-05T15:44:58.960680",
+      "pmcid": null,
+      "analysis": {
+        "category": "mechanism",
+        "main_finding": "The provided text is highly incomplete, only defining Huntington's disease (HD) as a neurodegenerative disorder caused by an unstable expansion of CAG repeats. No specific mechanistic findings, therapeutic strategies, or novel insights are presented in this snippet.",
+        "therapeutic_approach": "The title suggests an exploration of modulating neuroepigenetic mechanisms (e.g., DNA methylation, histone modification) to mitigate the pathology associated with HD.",
+        "targets": [
+          "CAG repeats (HTT gene)",
+          "Neuroepigenetic machinery (e.g., DNA methyltransferases, histone deacetylases)"
+        ],
+        "compounds": [],
+        "novel_insights": [
+          "The potential role of developmental and aging-related epigenetic signatures in HD pathogenesis.",
+          "The link between epigenetic dysregulation and the progression of HD."
+        ],
+        "drug_repurposing_signals": [],
+        "somatic_expansion_relevance": "direct",
+        "clinical_readiness": "concept",
+        "relevance_score": 3,
+        "confidence": "low"
+      }
+    },
+    "41841481": {
+      "timestamp": "2026-05-05T15:45:51.789375",
+      "pmcid": null,
+      "analysis": {
+        "category": "other",
+        "main_finding": "The diagnosis of Huntington's disease (HD) relies on detecting the polymorphic CAG trinucleotide repeat. However, current diagnostic methods, such as standard PCR and fragment analysis, are insufficient because they struggle to accurately identify complex sequence variations, including interrupted repeat tracts or non-canonical repeat motifs, which are critical molecular features of the disease.",
+        "therapeutic_approach": "None explored. The abstract focuses exclusively on diagnostic limitations rather than therapeutic intervention.",
+        "targets": [
+          "CAG trinucleotide repeat",
+          "HTT gene"
+        ],
+        "compounds": [],
+        "novel_insights": [
+          "Diagnostic limitations are not solely based on total repeat length, but also on complex sequence variations within the repeat tract.",
+          "Standard PCR techniques fail to distinguish interrupted repeat tracts, suggesting a need for advanced molecular diagnostic tools."
+        ],
+        "drug_repurposing_signals": [],
+        "somatic_expansion_relevance": "none",
+        "clinical_readiness": "concept",
+        "relevance_score": 3,
+        "confidence": "high"
+      }
     }
   },
-  "last_run": "2026-04-30T07:24:09.913423",
-  "total_analyzed": 10
+  "last_run": "2026-05-05T15:45:53.794827",
+  "total_analyzed": 20
 }
