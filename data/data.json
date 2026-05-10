@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-09T09:13:15.250164",
+  "last_updated": "2026-05-10T09:24:19.342630",
   "papers": [
     {
       "pmid": "42035261",
@@ -11,23 +11,6 @@
       "keywords": [],
       "hd_relevance_score": 27,
       "url": "https://pubmed.ncbi.nlm.nih.gov/42035261/"
-    },
-    {
-      "pmid": "41967079",
-      "title": "Stem cells enhance mitochondrial function in experimental Huntington's disease.",
-      "abstract": "Huntington's Disease (HD) is a neurodegenerative disorder caused by CAG triplet expansion in the HTT gene, producing a mutant Huntingtin protein that impairs mitochondrial dynamics by reducing fusion and increasing fission. Mesenchymal stem cells (MSCs) have shown potential therapeutic effects by sharing functional mitochondria and other secretomes. In this study, quinolinic acid-lesioned neuro-2a (QA-N2a) cells and glutamatergic neurons with 50 CAG repeats (HD neurons) were co-cultured with hum",
-      "journal": "Stem cells (Dayton, Ohio)",
-      "pub_date": "2026 Apr",
-      "authors": "D'Egidio F, Putthanbut N, Starahs M",
-      "keywords": [
-        "Huntington\u2019s disease",
-        "cell-free therapy",
-        "mesenchymal stem cells",
-        "mitochondrial transfer",
-        "secretome"
-      ],
-      "hd_relevance_score": 25,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41967079/"
     },
     {
       "pmid": "41946359",
@@ -46,24 +29,6 @@
       ],
       "hd_relevance_score": 25,
       "url": "https://pubmed.ncbi.nlm.nih.gov/41946359/"
-    },
-    {
-      "pmid": "41955484",
-      "title": "Wild-type huntingtin in neurodevelopment.",
-      "abstract": "Huntingtin (HTT) is an essential pleiotropic gene. Primarily known for its pathogenic role in Huntington's disease (HD), a progressive autosomal dominant neurodegenerative disorder. HD is caused by a CAG expansion located in HTT exon 1 that produces an altered protein product, mutant huntingtin, with an expanded polyglutamine stretch. Despite its monogenic origin, HD has a complex cellular pathology likely due to huntingtin's many protein-protein interactions and diverse functional roles. Wild-t",
-      "journal": "Journal of Huntington's disease",
-      "pub_date": "2026 Apr",
-      "authors": "Chan LL, Leavitt BR",
-      "keywords": [
-        "ciliogenesis",
-        "huntington's disease",
-        "lopes-Maciel-Rodan Syndrome",
-        "neurodevelopment",
-        "neurogenesis",
-        "wild-type huntingtin"
-      ],
-      "hd_relevance_score": 22,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41955484/"
     },
     {
       "pmid": "42048072",
@@ -126,17 +91,6 @@
       "keywords": [],
       "hd_relevance_score": 20,
       "url": "https://pubmed.ncbi.nlm.nih.gov/42091595/"
-    },
-    {
-      "pmid": "41957010",
-      "title": "Unraveling the genetic architecture of non-Huntington chorea: a biobank-scale study of rare variants and repeat expansions.",
-      "abstract": "Chorea can arise from genetic, metabolic, pharmacologic, and autoimmune causes. In clinical practice, however, non-genetic causes are rare. The most common genetic cause is a CAG repeat expansion in HTT, leading to Huntington's disease (HD). Beyond HD, systematic studies have been lacking and many individuals with non-HD chorea remain without a molecular diagnosis. We conducted whole-exome and genome sequencing analysis on 190 non-HD chorea cases, leveraging data from the All of Us Research Prog",
-      "journal": "NPJ genomic medicine",
-      "pub_date": "2026 Apr",
-      "authors": "Ak\u00e7imen F, Diez-Fairen M, Alvarez I",
-      "keywords": [],
-      "hd_relevance_score": 18,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41957010/"
     },
     {
       "pmid": "42079048",
@@ -260,24 +214,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/42010634/"
     },
     {
-      "pmid": "41957667",
-      "title": "Higher educational attainment in Huntington disease families: evidence from the Enroll-HD study.",
-      "abstract": "Huntington disease (HD) is an inherited neurodegenerative disorder that impairs motor, cognitive, and psychiatric function. Offspring of individuals with HD may experience early caregiving responsibilities, potentially disrupting their educational outcomes. We evaluated the associations between parental age at HD symptom onset, genetic-expansion, sociodemographic, and regional factors with offspring educational attainment outcomes in adulthood. We estimated odds ratios using logistic regression ",
-      "journal": "Orphanet journal of rare diseases",
-      "pub_date": "2026 Apr",
-      "authors": "Vazquez JE, Lin D, Mendizabal A",
-      "keywords": [
-        "Educational attainment",
-        "Health inequities",
-        "Huntington disease (HD)",
-        "Life-course epidemiology",
-        "Rare diseases",
-        "Social determinants"
-      ],
-      "hd_relevance_score": 13,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41957667/"
-    },
-    {
       "pmid": "42012723",
       "title": "Longitudinal trajectories of apathy in Huntington's disease: a 6-year follow-up study.",
       "abstract": "Apathy is a common and debilitating neuropsychiatric symptom in Huntington's disease (HD), yet its long-term trajectory remains poorly characterized. This study examined changes in apathy in HD gene expansion carriers (HDGECs) over 6\u00a0years, using a multidimensional measure, and investigated associations with cognition, motor symptoms and depression. Eighty-two HDGECs (premanifest and manifest) completed assessments at Time 0 and Time 1 with a mean follow-up interval of 6\u00a0years. Apathy was measur",
@@ -308,6 +244,50 @@
       ],
       "hd_relevance_score": 12,
       "url": "https://pubmed.ncbi.nlm.nih.gov/42030987/"
+    },
+    {
+      "pmid": "41997719",
+      "title": "Relapsing-remitting multiple sclerosis in a patient with Huntington's disease.",
+      "abstract": "A woman in her 50s with genetically confirmed Huntington's disease presented with right-sided arm sensory symptoms that evolved over days and persisted for at least 1\u2009month. Neurological examination revealed mild right arm hypoesthesia and mild generalised choreiform movements. Brain MRI demonstrated multiple supratentorial and infratentorial lesions suggestive of demyelination, along with a short-segment, contrast-enhancing cervical spinal cord lesion. Cerebrospinal fluid analysis revealed type",
+      "journal": "BMJ case reports",
+      "pub_date": "2026 Apr",
+      "authors": "Appiani FE, Ruiz Miyares FJ, Miraval Marquez FK",
+      "keywords": [
+        "Genetic screening / counselling",
+        "Movement disorders (other than Parkinsons)",
+        "Multiple sclerosis",
+        "Neuroimaging",
+        "Spinal cord"
+      ],
+      "hd_relevance_score": 11,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41997719/"
+    },
+    {
+      "pmid": "41796789",
+      "title": "Effects of different exercise modalities on four major neurodegenerative diseases and their molecular mechanisms.",
+      "abstract": "Neurodegenerative diseases are marked by progressive neuronal damage and currently lack a cure. Recently, exercise has emerged as a promising non-pharmacological approach to potentially slow disease progression and enhance cognitive function. This narrative review summarizes the effects of various exercise modalities-including aerobic exercise, resistance training, and balance training-on four major neurodegenerative diseases (Alzheimer's disease, Parkinson's disease, Huntington's disease, and s",
+      "journal": "Neuroscience",
+      "pub_date": "2026 May",
+      "authors": "Wang S, Wei Y, Li Y",
+      "keywords": [
+        "Aerobic exercise",
+        "Cognitive function",
+        "Neurodegenerative diseases",
+        "Resistance training"
+      ],
+      "hd_relevance_score": 10,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41796789/"
+    },
+    {
+      "pmid": "41988802",
+      "title": "Crowder Induced Phase Separation Modulates the Huntingtin Protein Aggregation Landscape.",
+      "abstract": "Macromolecular crowding is a defining feature of cellular environments and plays an important role in modulating protein aggregation. Here, we examine how mixed macromolecular crowders influence the aggregation of Huntingtin exon-1 protein with a pathogenic polyglutamine length (HD39Q). Using thioflavin-T (ThT) kinetics, we show that the binary mixtures of polyethylene glycol (PEG8), Dextran (40 and 70), and Ficoll 70 produce biphasic aggregation kinetics that deviate from classical single-step ",
+      "journal": "Biochemistry",
+      "pub_date": "2026 May",
+      "authors": "Mishra A, Banger S, Chowdhury PK",
+      "keywords": [],
+      "hd_relevance_score": 8,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41988802/"
     }
   ],
   "trials": [
@@ -706,7 +686,7 @@
   ],
   "targets": [],
   "stats": {
-    "papers_count": 20,
+    "papers_count": 19,
     "trials_count": 30,
     "hdbuzz_count": 10,
     "targets_count": 0,
