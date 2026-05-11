@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-10T09:24:19.342630",
+  "last_updated": "2026-05-11T10:56:00.351661",
   "papers": [
     {
       "pmid": "42035261",
@@ -11,6 +11,24 @@
       "keywords": [],
       "hd_relevance_score": 27,
       "url": "https://pubmed.ncbi.nlm.nih.gov/42035261/"
+    },
+    {
+      "pmid": "42109206",
+      "title": "Induced pluripotent stem cells from a transgenic minipig model of Huntington's disease reveal early metabolic changes.",
+      "abstract": "Huntington's disease (HD) is a neurodegenerative autosomal dominant hereditary disease caused by a CAG triplet repeat expansion mutation in the gene encoding the huntingtin (HTT) protein. The main feature of HD is the loss of striatal neurons, accompanied by metabolic and transcriptional alterations in both neural and peripheral tissues. Induced pluripotent stem cells (iPSCs) derived from a transgenic HD (TgHD) minipig model expressing a mutant HTT construct were generated to investigate early m",
+      "journal": "Disease models & mechanisms",
+      "pub_date": "2026 Jun",
+      "authors": "Rysankova I, Sekac D, Hansikova H",
+      "keywords": [
+        "DNA damage",
+        "Gene expression",
+        "Huntington's disease",
+        "Induced pluripotent stem cells",
+        "Mitochondria",
+        "Transgenic minipig model"
+      ],
+      "hd_relevance_score": 25,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42109206/"
     },
     {
       "pmid": "41946359",
@@ -119,17 +137,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/41747657/"
     },
     {
-      "pmid": "41961860",
-      "title": "Pain processing and pain assessment in Huntington's disease: Study protocol of the Huntington's disease - PAIN study.",
-      "abstract": "Huntington's disease (HD) is an autosomal dominant neurodegenerative disease that causes motor (e.g., chorea) and non-motor symptoms (e.g., neurocognitive, neuropsychiatric and autonomic disturbances). Pain is a frequently reported non-motor symptom in HD, with a prevalence of around 40% in the manifest stage. Despite its high prevalence, patients with HD seem to be at risk for undertreatment of pain, as reflected by the lower analgesic use in HD in the advanced stages. The relatively low use of",
-      "journal": "PloS one",
-      "pub_date": "2026",
-      "authors": "Sprenger GP, van Velzen M, Achterberg WP",
-      "keywords": [],
-      "hd_relevance_score": 16,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/41961860/"
-    },
-    {
       "pmid": "41805887",
       "title": "SHMT2 deficiency disrupts transcriptional regulation through homocysteine-mediated suppression of histone lactylation in Huntington's disease models.",
       "abstract": "Huntington's disease (HD) is a fatal neurodegenerative disorder characterized by progressive motor dysfunction, cognitive decline, and striatal neuron degeneration, primarily affecting medium spiny neurons (MSNs). Despite extensive research, the underlying metabolic vulnerabilities contributing to HD pathogenesis remain poorly understood. In this study, we employed RNA-seq and metabolomics analyses to identify marked dysregulation of 1-carbon metabolism in HD. We validated that SHMT2, a key mito",
@@ -144,6 +151,23 @@
       ],
       "hd_relevance_score": 15,
       "url": "https://pubmed.ncbi.nlm.nih.gov/41805887/"
+    },
+    {
+      "pmid": "41916314",
+      "title": "Pyramidal signs in Huntington's disease: An early clinical indicator associated with proximity to disease onset.",
+      "abstract": "Previous studies in Huntington's disease (HD) have primarily focused on striatal degeneration, while pyramidal signs remain insufficiently characterized. Understanding the clinical significance of pyramidal signs in HD is crucial for elucidating the disease's pathogenesis. In a cross-sectional cohort, 29 individuals with premanifest HD (pre-HD) and 196 patients with manifest HD underwent standardized neurological examination. Serum neurofilament light-chain (sNfL) levels, clinical assessments, a",
+      "journal": "Med (New York, N.Y.)",
+      "pub_date": "2026 May",
+      "authors": "Li XY, Bao YF, Hu CC",
+      "keywords": [
+        "Huntington\u2019s disease",
+        "Translation to patients",
+        "disease onset",
+        "premanifest",
+        "pyramidal signs"
+      ],
+      "hd_relevance_score": 15,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41916314/"
     },
     {
       "pmid": "42057687",
@@ -163,23 +187,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/42057687/"
     },
     {
-      "pmid": "42080424",
-      "title": "Development-related gene expression disruption in the human midcingulate cortex in Huntington's disease.",
-      "abstract": "Huntington's disease (HD) patients with anterior cingulate cortex atrophy typically exhibit mood symptomatology. However, the midcingulate cortex's (MCC) role in HD is poorly understood. mRNA sequencing was utilized to examine the MCC transcriptome in HD, and differentially expressed transcripts were validated by NanoString analysis. Transcriptomic analysis of 14 HD patients exhibiting mood, motor, or mixed symptoms revealed differential expression of 223 genes, including several homeo-domain, d",
-      "journal": "Journal of Huntington's disease",
-      "pub_date": "2026 May",
-      "authors": "Scheepers S, Ferguson MW, Palpagama TH",
-      "keywords": [
-        "Huntington's disease",
-        "RNAseq",
-        "gene expression",
-        "human brain",
-        "midcingulate cortex"
-      ],
-      "hd_relevance_score": 13,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42080424/"
-    },
-    {
       "pmid": "42026825",
       "title": "'It's more than just irritability': perspectives and experiences of irritability among people affected by Huntington's disease.",
       "abstract": "Irritability has been reported as a common psychological co-occurrence with Huntington's disease (HD). Irritability associated with HD is variously attributed to neurological changes, an understandable response to increasing difficulties with cognition and communication, or a multifactorial combination of the two or more causes. To improve our understanding, we aimed to explore perspectives and lived experiences of irritability among individuals affected by HD. Individual semi-structured intervi",
@@ -195,6 +202,23 @@
       ],
       "hd_relevance_score": 13,
       "url": "https://pubmed.ncbi.nlm.nih.gov/42026825/"
+    },
+    {
+      "pmid": "42080424",
+      "title": "Development-related gene expression disruption in the human midcingulate cortex in Huntington's disease.",
+      "abstract": "Huntington's disease (HD) patients with anterior cingulate cortex atrophy typically exhibit mood symptomatology. However, the midcingulate cortex's (MCC) role in HD is poorly understood. mRNA sequencing was utilized to examine the MCC transcriptome in HD, and differentially expressed transcripts were validated by NanoString analysis. Transcriptomic analysis of 14 HD patients exhibiting mood, motor, or mixed symptoms revealed differential expression of 223 genes, including several homeo-domain, d",
+      "journal": "Journal of Huntington's disease",
+      "pub_date": "2026 May",
+      "authors": "Scheepers S, Ferguson MW, Palpagama TH",
+      "keywords": [
+        "Huntington's disease",
+        "RNAseq",
+        "gene expression",
+        "human brain",
+        "midcingulate cortex"
+      ],
+      "hd_relevance_score": 13,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42080424/"
     },
     {
       "pmid": "42010634",
@@ -686,7 +710,7 @@
   ],
   "targets": [],
   "stats": {
-    "papers_count": 19,
+    "papers_count": 20,
     "trials_count": 30,
     "hdbuzz_count": 10,
     "targets_count": 0,
