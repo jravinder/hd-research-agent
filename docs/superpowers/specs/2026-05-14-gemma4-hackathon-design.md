@@ -28,6 +28,17 @@ There is **no Cloudflare tunnel** (that was option A, not chosen).
 1. **Ollama tool-calling bug:** Gemma 4 tool calls break over Ollama's *OpenAI-compatible* API with *streaming*. Mitigation: stay on Ollama's native `/api/chat`, non-streaming — which `llm.py` already does. Do not migrate to the OpenAI-compat path.
 2. **Gemma 4 function calling via the Gemini API** may need explicit output parsing (a tool-use protocol, not always the clean structured `functionCall` part Gemini-native returns). Use the `gemini-api-dev` skill at implementation time to get this exact.
 
+## Competitive Landscape (checked 2026-05-14)
+
+Reviewed the public code gallery (~20 visible notebooks). Findings that shaped this spec:
+
+- **HD is an open lane.** No Huntington's Disease submission exists. The only neurodegenerative entry is "yourOwn" (an Alzheimer's *companion* app). Nobody is doing a research-acceleration platform — entries are overwhelmingly end-user assistants, chatbots, and image detectors.
+- **The Kaggle notebook is the primary artifact, and it is a rich narrative.** The top entry (FarmWise AI, 33 votes, Bronze) is a notebook with 20 interactive demo cells, a table of contents, a "Why It Wins" section, "Technical Architecture", "Gemma 4 Usage Statement", "Competition Readiness Checklist", "System Evaluation", "Limitations", and "Gemma Trademark Attribution" — runs on Kaggle T4 x2, Apache 2.0 licensed. Other strong entries (CodecareGemma4, 11 votes) follow the same shape: Problem → Why Gemma 4 → Dataset → Prompt Design → Implementation → Demo Cases → Evaluation → Limitations → Future Work → Submission Readiness Check.
+- **Multimodal image-classification demos resonate.** FarmWise's "disease detection from leaf images" is structurally identical to our "extract findings from paper figures" — confirms 2a/2b are on-target.
+- **The edge/offline story is valued.** FarmWise leads with "100% Offline / On-Device Deployment." Our pipeline is genuinely edge (Jetson); the chatbot is hosted. The notebook and write-up should foreground the Jetson edge inference rather than bury it.
+- **"Not clinical" is a positioning asset.** A competing entry, "DocAgent," is a clinical decision support system. Our explicit non-clinical, research-and-education stance plus the medical-redirect guardrail is a cleaner, safer story for a "for good" hackathon — lean into it in the write-up.
+- **Fine-tuning with Unsloth** is a side theme (separate $10K Unsloth prize). We are not fine-tuning. That is fine and out of scope; noted only so it is a deliberate choice, not an oversight.
+
 ## Architecture & Inference Topology
 
 | Surface | Where Gemma 4 runs | Model |
@@ -94,13 +105,20 @@ The daily agents (`paper_analyzer`, `hypothesis_refiner`, `target_tracker`) curr
 
 ## Deliverable: Kaggle Notebook
 
-A single self-contained notebook `gemma4_hd_research.ipynb` judges run top-to-bottom on Kaggle's GPU. Satisfies "public code + reproducibility" *and* proves the two headline features work without the Jetson or the live site:
+A single self-contained notebook `gemma4_hd_research.ipynb` judges run top-to-bottom on Kaggle's GPU (target: T4 x2, under ~10 min). This is the **primary judged artifact** — the competitive landscape shows the notebook is where entries win or lose, so it is structured as a rich narrative, not a bare script. It satisfies "public code + reproducibility" *and* proves the two headline features work without the Jetson or the live site.
 
-1. **Setup** — install deps, load Gemma 4 (Kaggle `google/gemma-4` model or AI Studio key as secret)
-2. **Multimodal demo** — pull 2–3 real HD papers from PMC with figures, run `ask_vision()` live, show Gemma 4 extracting quantitative findings from a survival curve / western blot
-3. **Function calling demo** — define the 5 chatbot tools against the shipped `data/` JSON files, ask 2–3 HD research questions, show Gemma 4 selecting and calling tools and composing a cited answer
-4. **Compounding-KB point** — show a figure-derived chunk entering the knowledge base and then being retrieved by the chatbot
-5. **Honest limitations** — what Gemma 4 nailed, what it missed (especially molecular structures if 2c made the cut)
+**Structure** (mirrors the shape of the top-voted entries):
+
+1. **Title + the problem** — HD research is slow; what an AI research-acceleration platform changes. Lead with the question.
+2. **Why Gemma 4** — multimodal + native function calling are exactly what this needs; edge-deployable.
+3. **Setup** — install pinned deps, load Gemma 4 (Kaggle `google/gemma-4` model or AI Studio key as secret).
+4. **Multimodal demo** — pull 2–3 real HD papers from PMC with figures, run `ask_vision()` live, show Gemma 4 extracting quantitative findings from a survival curve / western blot.
+5. **Function calling demo** — define the 5 chatbot tools against the shipped `data/` JSON files, ask 2–3 HD research questions, show Gemma 4 selecting and calling tools and composing a cited answer.
+6. **The compounding-KB point** — show a figure-derived chunk entering the knowledge base and then being retrieved by the chatbot. This is the moat.
+7. **Edge story** — show the same `src/llm.py` running against the Jetson; foreground that the research pipeline runs on a desktop edge device.
+8. **Evaluation** — a small honest evaluation of figure-extraction and tool-selection quality on a handful of cases.
+9. **Limitations & future work** — what Gemma 4 nailed, what it missed (especially molecular structures if 2c made the cut); not clinical; open-access papers only.
+10. **Gemma 4 usage statement + trademark attribution + Apache 2.0 license** — competition housekeeping the strong entries all include.
 
 The notebook imports the *same* `src/llm.py` the live site uses — not a reimplementation — so it proves the actual production code. Ships with pinned deps and the `data/` snapshot committed so it runs identically months later.
 
@@ -116,6 +134,13 @@ Hackathon requires: working demo + public code repo + technical write-up + short
 | Technical write-up | Claude (draft) | How Gemma 4 is used, what worked, what didn't |
 | Short video | **User** | Claude writes the demo script + shot list; user records and narrates |
 | AI Studio API key | **User** | User creates it; Claude wires it in |
+
+### Positioning (for the write-up and notebook narrative)
+
+- **Open lane:** the only HD entry, and the only research-acceleration platform in a field of end-user assistants. Say so plainly.
+- **Not clinical, on purpose:** a research-and-education tool with a hard medical-redirect guardrail — contrast with clinical-decision-support entries. This is a safety strength for a "for good" hackathon.
+- **The moat:** chat with the actual full-text research corpus — now including findings Gemma 4 read out of figures — not journalist summaries. Every agent run compounds the knowledge base.
+- **Edge:** the research pipeline runs on a Jetson AGX Orin on a desk. Foreground it; do not bury it.
 
 ## 4-Day Sequence
 
