@@ -41,7 +41,8 @@ hd-research-agent/
 │   ├── trial_tracker.py      # ClinicalTrials.gov monitor
 │   ├── autoresearch.py       # Karpathy-style overnight research loop
 │   ├── run_experiment.py     # Full experiment pipeline → report
-│   └── llm.py                # Direct Ollama API (NO litellm — removed due to CVE)
+│   ├── llm.py                # Gemma 4 across Ollama + AI Studio (NO litellm)
+│   └── chat_tools.py         # 5 tools + schemas for the agentic chatbot
 └── .github/workflows/
     └── daily-update.yml      # GitHub Actions: daily data refresh at 8am UTC
 ```
@@ -76,19 +77,21 @@ python3 trial_tracker.py
 
 ## Infrastructure
 
-- **LLM:** Ollama on Jetson AGX Orin (192.168.4.124:11434) or local Mac (localhost:11434)
-- **Model:** llama3.1:8b (default), set HD_AGENT_MODEL env var to change
+- **LLM:** Google Gemma 4 across two backends
+  - **Edge (research pipeline):** Ollama on Jetson AGX Orin (192.168.4.124:11434) or local Mac (localhost:11434), model `gemma4:latest` (8B Q4_K_M, vision-capable)
+  - **Hosted (live chatbot):** Google AI Studio / Gemini API, model `gemma-4-31b-it`
+- **Backend switch:** `HD_LLM_BACKEND=ollama|aistudio` selects which one `src/llm.py` uses. Pipeline sets `ollama`; `api/chat.py` sets `aistudio`. Override the Ollama model via `HD_AGENT_MODEL`.
 - **Hosting:** Vercel (auto-deploys on git push)
 - **CI:** GitHub Actions daily at 8am UTC
-- **No litellm** — removed due to TeamPCP supply chain attack (CVE in 1.82.7/1.82.8). Uses direct requests to Ollama /api/chat
+- **No litellm** — removed due to TeamPCP supply chain attack (CVE in 1.82.7/1.82.8). Uses direct `requests` to Ollama `/api/chat` and to the Gemini API `generateContent` endpoint.
 
 ## Key Patterns (Learned from Cosmos Cookoff Hackathon)
 
 ### Cached results for demo reliability
 Like refereai-cosmos cached Cosmos Reason 2 outputs for offline playback, experiments here save raw results to data/experiment_*_results.json. The site can render from cached data even if APIs are down.
 
-### Edge-first inference
-All LLM inference runs on Jetson or Mac via Ollama. Zero cloud AI dependencies. Zero cost per run. This is what makes overnight autoresearch loops feasible.
+### Edge + hosted inference (one codebase, two backends)
+Edge inference for the research pipeline (Jetson Ollama Gemma 4); hosted Gemma 4 via Google AI Studio for the interactive chatbot (Vercel serverless cannot reach the LAN Jetson). One `src/llm.py` abstracts both backends via the `HD_LLM_BACKEND` env switch. The overnight autoresearch loops still run free on the Jetson at zero cost per run; the live chatbot uses the hosted Gemma 4 endpoint so the deployed site is self-contained.
 
 ### Vercel + static HTML
 Same pattern as refereai-cosmos: static HTML on Vercel, no framework, instant deploys. build_site.py generates the HTML, git push triggers deploy.
