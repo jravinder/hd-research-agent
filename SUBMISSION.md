@@ -15,7 +15,7 @@ Agentic Huntington's Disease research assistant powered by Google Gemma 4 — na
 | GitHub repo | https://github.com/jravinder/hd-research-agent |
 | Kaggle notebook (reproducible) | `notebooks/gemma4_hd_research.ipynb` — to be uploaded to Kaggle |
 | Technical write-up | [`docs/HACKATHON.md`](docs/HACKATHON.md) |
-| Video walkthrough | `media/demo.mp4` (placeholder, to be recorded) |
+| Video walkthrough | [`media/demo.mp4`](media/demo.mp4) — silent screen capture of the live agentic chatbot demonstrating function calling, multimodal figure upload, and the medical-advice guardrail |
 | Design spec | [`docs/superpowers/specs/2026-05-14-gemma4-hackathon-design.md`](docs/superpowers/specs/2026-05-14-gemma4-hackathon-design.md) |
 | Execution plan | [`docs/superpowers/plans/2026-05-15-gemma4-hackathon.md`](docs/superpowers/plans/2026-05-15-gemma4-hackathon.md) |
 

@@ -75,14 +75,14 @@ def main() -> None:
         # Scene 1: function-calling agentic question
         page.fill("#chat-input", "How many HD trials are currently recruiting? Cite sources.")
         page.click("#send-btn")
-        page.wait_for_selector("#typing", state="detached", timeout=60000)
+        page.wait_for_selector("#typing", state="detached", timeout=180000)
         page.wait_for_timeout(2500)
 
         # Scene 2: experiment hypotheses
         page.fill("#chat-input",
                   "What's the top drug-repurposing hypothesis from our experiments, and which HD target does it act on?")
         page.click("#send-btn")
-        page.wait_for_selector("#typing", state="detached", timeout=60000)
+        page.wait_for_selector("#typing", state="detached", timeout=180000)
         page.wait_for_timeout(2500)
 
         # Scene 3: multimodal figure upload
@@ -91,7 +91,7 @@ def main() -> None:
             page.wait_for_timeout(800)
             page.fill("#chat-input", "What does this figure show? Extract any quantitative findings.")
             page.click("#send-btn")
-            page.wait_for_selector("#typing", state="detached", timeout=60000)
+            page.wait_for_selector("#typing", state="detached", timeout=180000)
             page.wait_for_timeout(2500)
 
         # Scene 4a: guardrail on a personal medical image (if provided)
@@ -100,7 +100,7 @@ def main() -> None:
             page.wait_for_timeout(800)
             page.fill("#chat-input", "Can you read this and tell me if it's bad?")
             page.click("#send-btn")
-            page.wait_for_selector("#typing", state="detached", timeout=60000)
+            page.wait_for_selector("#typing", state="detached", timeout=180000)
             page.wait_for_timeout(2500)
 
         # Scene 4b: text medical-advice guardrail — always show this so the
