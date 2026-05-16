@@ -157,7 +157,10 @@ def _aistudio_generate(contents: list[dict], system: str = "",
     url = f"{AISTUDIO_BASE}/models/{model or AISTUDIO_MODEL}:generateContent?key={AISTUDIO_KEY}"
     payload: dict[str, Any] = {
         "contents": contents,
-        "generationConfig": {"temperature": temperature},
+        "generationConfig": {
+            "temperature": temperature,
+            "maxOutputTokens": int(os.environ.get("HD_MAX_OUTPUT_TOKENS", "768")),
+        },
     }
     if system:
         # Gemma models on AI Studio do not all support systemInstruction;

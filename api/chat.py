@@ -174,6 +174,11 @@ def strip_reasoning(text: str) -> str:
     while lines and not lines[0].strip():
         lines.pop(0)
     cleaned = "\n".join(lines).strip()
+    # Safety floor: if stripping removed almost everything, the original is
+    # probably already an OK short answer (Gemma 4 outputs short greetings
+    # without the reasoning preamble). Don't strip it down to nothing.
+    if len(cleaned) < 8 and len(s) >= 8:
+        return s
     return cleaned or s
 
 
@@ -394,7 +399,7 @@ class handler(BaseHTTPRequestHandler):
                 "has_inline_citations": bool(extract_pmids(bundle["response"])),
                 "language": response_lang,
                 "language_name": SUPPORTED_LANGS.get(response_lang, "English"),
-                "model": "gemma-4-31b-it",
+                "model": os.environ.get("HD_AISTUDIO_MODEL", "gemma-4-31b-it"),
             })
 
         except Exception as e:  # last-resort error envelope
