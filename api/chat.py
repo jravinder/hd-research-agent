@@ -147,10 +147,19 @@ def strip_reasoning(text: str) -> str:
         return text
     s = text.strip()
 
-    # 1. Tag-wrapped answer
+    # 1a. Fully tag-wrapped answer
     m = re.search(r"<answer>\s*(.*?)\s*</answer>", s, re.DOTALL | re.IGNORECASE)
     if m:
         return m.group(1).strip()
+    # 1b. Open <answer> tag without close — take everything after the tag.
+    # Gemma 4 frequently forgets the closing tag near the response length cap.
+    m = re.search(r"<answer>\s*(.*)$", s, re.DOTALL | re.IGNORECASE)
+    if m:
+        body = m.group(1).strip()
+        # Also handle a stray closing tag mid-content
+        body = re.sub(r"</answer>.*$", "", body, flags=re.DOTALL | re.IGNORECASE).strip()
+        if body:
+            return body
 
     # 2. Horizontal-rule divider — take the last segment
     parts = re.split(r"\n\s*(?:\*\*\*|---)\s*\n", s)
