@@ -136,54 +136,52 @@ _REASONING_PATTERNS = [
 _REASONING_RE = [re.compile(p, re.IGNORECASE) for p in _REASONING_PATTERNS]
 
 
-_STRIP_VERSION = "v2"  # bump to force Vercel build cache invalidation on each change
+_STRIP_VERSION = "v3-split"  # bump to force Vercel build cache invalidation
 
 
 def strip_reasoning(text: str) -> str:
-    """Strip Gemma 4's inner-monologue preamble. Strategies, in order:
+    """Strip Gemma 4's inner-monologue preamble using plain string operations
+    (no regex DOTALL — that misbehaves on Vercel's Python for some inputs).
 
-    1a. If the response contains <answer>...</answer> tags, return that content.
-    1b. If only an opening <answer> tag is present (Gemma 4 often truncates
-        before the closing tag), take everything after the opening tag.
-    2.  If it contains a '***' or '---' horizontal-rule divider, take the
-        last segment.
-    3.  Otherwise, drop leading lines that look like reasoning (bullets,
-        'I should…', 'The user is asking…').
+    Order of operations:
+    0. If '<answer>' appears anywhere, drop everything before it (inclusive)
+       and everything from a later '</answer>' onward. This handles the
+       common 'preamble. <answer>... ' shape and the truncated-close case.
+    1. If a horizontal-rule divider ('***' or '---' on its own line) is
+       present, keep only the segment after the last one.
+    2. Otherwise, drop leading bullet/'I should…'/'The user is asking…'
+       lines until we hit something that looks like an answer.
     """
     if not text:
         return text
     s = text.strip()
+    lower = s.lower()
 
-    # 1a. Fully tag-wrapped answer
-    m = re.search(r"<answer>\s*(.*?)\s*</answer>", s, re.DOTALL | re.IGNORECASE)
-    if m:
-        return m.group(1).strip()
-    # 1b. Open <answer> tag without close — take everything after the tag.
-    # Gemma 4 frequently forgets the closing tag near the response length cap.
-    m = re.search(r"<answer>\s*(.*)$", s, re.DOTALL | re.IGNORECASE)
-    if m:
-        body = m.group(1).strip()
-        # Also handle a stray closing tag mid-content
-        body = re.sub(r"</answer>.*$", "", body, flags=re.DOTALL | re.IGNORECASE).strip()
-        if body:
-            return body
+    # 0. Answer-tag stripper (case-insensitive search via lower index)
+    idx = lower.find("<answer>")
+    if idx != -1:
+        s = s[idx + len("<answer>"):].lstrip()
+        end = s.lower().find("</answer>")
+        if end != -1:
+            s = s[:end].rstrip()
+        if s:
+            return s
 
-    # 2. Horizontal-rule divider — take the last segment
-    parts = re.split(r"\n\s*(?:\*\*\*|---)\s*\n", s)
-    if len(parts) > 1:
-        s = parts[-1].strip()
+    # 1. Divider
+    for div in ("\n***\n", "\n---\n"):
+        if div in s:
+            s = s.rsplit(div, 1)[-1].strip()
+            break
 
-    # 3. Strip leading reasoning lines until we hit something that looks like answer
+    # 2. Strip leading reasoning lines
     lines = s.splitlines()
     while lines and any(p.match(lines[0]) for p in _REASONING_RE):
         lines.pop(0)
-    # Also drop blank prefix
     while lines and not lines[0].strip():
         lines.pop(0)
     cleaned = "\n".join(lines).strip()
-    # Safety floor: if stripping removed almost everything, the original is
-    # probably already an OK short answer (Gemma 4 outputs short greetings
-    # without the reasoning preamble). Don't strip it down to nothing.
+    # Safety floor: if stripping removed almost everything, the original was
+    # already a short clean answer (e.g. "Hello there"). Don't return empty.
     if len(cleaned) < 8 and len(s) >= 8:
         return s
     return cleaned or s
