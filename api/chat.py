@@ -136,7 +136,7 @@ _REASONING_PATTERNS = [
 _REASONING_RE = [re.compile(p, re.IGNORECASE) for p in _REASONING_PATTERNS]
 
 
-_STRIP_VERSION = "v3-split"  # bump to force Vercel build cache invalidation
+_STRIP_VERSION = "v4-belt-and-suspenders"  # bump to force Vercel build cache invalidation
 
 
 def strip_reasoning(text: str) -> str:
@@ -391,6 +391,17 @@ class handler(BaseHTTPRequestHandler):
                 bundle = run_agentic(query_for_model)
 
             response_text = bundle["response"]
+
+            # Belt-and-suspenders: nuke any surviving <answer> tags right before
+            # serialization, regardless of what strip_reasoning did upstream.
+            if isinstance(response_text, str) and "<answer>" in response_text.lower():
+                _lower = response_text.lower()
+                _i = _lower.find("<answer>")
+                response_text = response_text[_i + len("<answer>"):].lstrip()
+                _li = response_text.lower().find("</answer>")
+                if _li != -1:
+                    response_text = response_text[:_li].rstrip()
+
             response_lang = "en-IN"
             if user_lang != "en-IN":
                 response_text = sarvam_translate(response_text, "en-IN", user_lang)
