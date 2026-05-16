@@ -136,12 +136,19 @@ _REASONING_PATTERNS = [
 _REASONING_RE = [re.compile(p, re.IGNORECASE) for p in _REASONING_PATTERNS]
 
 
-def strip_reasoning(text: str) -> str:
-    """Strip Gemma 4's inner-monologue preamble. Three strategies, in order:
+_STRIP_VERSION = "v2"  # bump to force Vercel build cache invalidation on each change
 
-    1. If the response contains <answer>...</answer> tags, return that content.
-    2. If it contains a '***' or '---' horizontal-rule divider, take what follows.
-    3. Otherwise, drop leading lines that look like reasoning (bullets, 'I should…').
+
+def strip_reasoning(text: str) -> str:
+    """Strip Gemma 4's inner-monologue preamble. Strategies, in order:
+
+    1a. If the response contains <answer>...</answer> tags, return that content.
+    1b. If only an opening <answer> tag is present (Gemma 4 often truncates
+        before the closing tag), take everything after the opening tag.
+    2.  If it contains a '***' or '---' horizontal-rule divider, take the
+        last segment.
+    3.  Otherwise, drop leading lines that look like reasoning (bullets,
+        'I should…', 'The user is asking…').
     """
     if not text:
         return text
@@ -400,6 +407,7 @@ class handler(BaseHTTPRequestHandler):
                 "language": response_lang,
                 "language_name": SUPPORTED_LANGS.get(response_lang, "English"),
                 "model": os.environ.get("HD_AISTUDIO_MODEL", "gemma-4-31b-it"),
+                "_strip_version": _STRIP_VERSION,
             })
 
         except Exception as e:  # last-resort error envelope
