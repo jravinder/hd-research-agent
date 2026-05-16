@@ -1,10 +1,13 @@
 # HD Research Hub
 
+> **Gemma 4 Good Hackathon submission** — agentic Huntington's Disease research assistant powered by **Google Gemma 4** (native function calling + multimodal vision). The only HD entry in the field. [Live demo](https://hd-research-agent.vercel.app/chat.html) · [Technical write-up](docs/HACKATHON.md) · [Notebook](notebooks/gemma4_hd_research.ipynb)
+
 An open research infrastructure project for Huntington's Disease: part literature tracker, part trial monitor, part AI-assisted hypothesis workspace.
 
 We're exploring whether autonomous agents, LLMs, and public datasets can make early-stage HD research exploration more legible, reviewable, and useful. This is research infrastructure, not a medical product.
 
 **Live site:** [hd-research-agent.vercel.app](https://hd-research-agent.vercel.app)
+**Chatbot:** [hd-research-agent.vercel.app/chat.html](https://hd-research-agent.vercel.app/chat.html) — chat with the actual research, upload paper figures, ask Gemma 4.
 
 > **Note:** This project is for research and educational purposes. For medical information about HD, please visit [HDSA](https://hdsa.org), [HDBuzz](https://en.hdbuzz.net), or consult your healthcare provider. AI-generated hypotheses here are triage artifacts, not medical advice or validated findings.
 
@@ -55,17 +58,23 @@ src/
 ├── repurposing_scanner.py# Drug-target cross-reference + AI hypothesis generator
 ├── trial_tracker.py      # ClinicalTrials.gov HD pipeline monitor
 ├── autoresearch.py       # Autonomous overnight research loop
-└── llm.py                # Ollama API interface (no third-party AI dependencies)
+├── llm.py                # Gemma 4 across two backends (Ollama edge + AI Studio hosted)
+└── chat_tools.py         # 5 tools + schemas for the agentic chatbot
 ```
 
 ## Stack
 
 - Python 3.10+
-- Ollama (local LLM inference — works on Jetson AGX Orin or Mac)
+- **Google Gemma 4** across two backends, one codebase
+  - Edge: **Ollama** on Jetson AGX Orin (`gemma4:latest`, 8B Q4_K_M) for the daily research pipeline
+  - Hosted: **Google AI Studio / Gemini API** (`gemma-4-31b-it`) for the live serverless chatbot
+  - Selected at runtime via `HD_LLM_BACKEND=ollama|aistudio`
 - PubMed E-utilities API (free)
 - ClinicalTrials.gov API (free)
 - HDBuzz RSS (free)
 - Open Targets GraphQL (free)
+- Upstash Vector (embeddings for `search_papers`)
+- Sarvam AI (22 Indian languages)
 - Vercel (auto-deploy on push)
 - GitHub Actions (daily data refresh)
 
