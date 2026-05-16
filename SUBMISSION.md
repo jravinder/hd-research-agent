@@ -2,9 +2,20 @@
 
 Single page with every artifact a judge (or the user filing the Kaggle form) needs.
 
+## Track
+
+**Health & Sciences ($10,000)** — *"Bridge the gap between humans and data. Build tools that accelerate discovery or democratize knowledge."*
+
 ## TL;DR
 
-Agentic Huntington's Disease research assistant powered by Google Gemma 4 — native function calling over a full-text PubMed knowledge base, multimodal vision for paper figures, and a daily edge-inference pipeline on a Jetson AGX Orin. The only HD entry in the competition.
+A Huntington's Disease research-and-education platform powered by Google Gemma 4. One URL, four pillars:
+
+1. **Understand the disease and navigate it** — agentic chatbot grounded in real PubMed papers, available in 22 Indian languages plus English, with hard medical-redirect guardrails to HDSA / HDBuzz / HDYO.
+2. **Run the data and papers yourself** — reproducible Kaggle notebook + open repo, anyone re-executes the full pipeline on a Kaggle GPU.
+3. **Generate new hypotheses** — autoresearch loop on a Jetson AGX Orin proposes and scores drug-repurposing candidates; five experiments shipped.
+4. **Scout new data automatically** — daily GitHub Actions pipeline ingests PubMed, ClinicalTrials.gov, HDBuzz, Open Targets into the knowledge base.
+
+The only Huntington's Disease entry in the competition. The only research-acceleration platform in a field of end-user assistants.
 
 ## Artifacts
 
