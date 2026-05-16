@@ -43,10 +43,11 @@ from src.chat_tools import TOOLS, dispatch, classify_uploaded_image  # type: ign
 
 SYSTEM_PROMPT = """You are the HD Research Hub assistant — an AI that helps people explore Huntington's Disease RESEARCH. You are NOT a doctor, NOT a medical advisor, NOT a therapist.
 
-OUTPUT STYLE (this overrides any reasoning instinct):
-- Output ONLY the final user-facing answer. No reasoning preamble, no "The user is asking…", no "I should…", no "Let me think…", no internal monologue.
-- If you use a tool, the answer is the composed response — not your plan for using the tool.
-- Be concise. Skip restating the question.
+OUTPUT FORMAT (mandatory — Gemma 4 reasoning models like you tend to leak inner monologue, so this rule overrides that habit):
+- Wrap the user-facing answer inside <answer>...</answer> tags. EVERYTHING outside the tags is invisible to the user and will be discarded by the application.
+- Inside the tags: the final composed answer only. Use markdown freely.
+- Outside the tags: do whatever reasoning you need, but the user will not see it.
+- If you forget the tags, your reasoning preamble will be shown to the user — which is bad. Always include <answer> and </answer>.
 
 HARD RULES (never break these):
 1. NEVER give personal medical advice. If someone asks about their personal health, symptoms, diagnosis, testing, or treatment decisions, ALWAYS redirect them to HDSA (hdsa.org, 1-800-345-HDSA), their neurologist, or a genetic counselor.
@@ -125,6 +126,46 @@ IMAGE_MEDICAL_REDIRECT = (
 
 def extract_pmids(text: str) -> list[str]:
     return re.findall(r"\[(\d{4,9})\]", text or "")
+
+
+_REASONING_PATTERNS = [
+    r"^\s*\*\s+",          # bullet reasoning lines
+    r"^\s*-\s+(I |Let |Step |First |Then |Now )",  # bullet "I will..." lines
+    r"^(The user is|I need to|I should|Let me|I'll|First,|Step \d|Looking at|Looking closer|Searching|Note:|Wait,|Self-Correction|Final answer:)",
+]
+_REASONING_RE = [re.compile(p, re.IGNORECASE) for p in _REASONING_PATTERNS]
+
+
+def strip_reasoning(text: str) -> str:
+    """Strip Gemma 4's inner-monologue preamble. Three strategies, in order:
+
+    1. If the response contains <answer>...</answer> tags, return that content.
+    2. If it contains a '***' or '---' horizontal-rule divider, take what follows.
+    3. Otherwise, drop leading lines that look like reasoning (bullets, 'I should…').
+    """
+    if not text:
+        return text
+    s = text.strip()
+
+    # 1. Tag-wrapped answer
+    m = re.search(r"<answer>\s*(.*?)\s*</answer>", s, re.DOTALL | re.IGNORECASE)
+    if m:
+        return m.group(1).strip()
+
+    # 2. Horizontal-rule divider — take the last segment
+    parts = re.split(r"\n\s*(?:\*\*\*|---)\s*\n", s)
+    if len(parts) > 1:
+        s = parts[-1].strip()
+
+    # 3. Strip leading reasoning lines until we hit something that looks like answer
+    lines = s.splitlines()
+    while lines and any(p.match(lines[0]) for p in _REASONING_RE):
+        lines.pop(0)
+    # Also drop blank prefix
+    while lines and not lines[0].strip():
+        lines.pop(0)
+    cleaned = "\n".join(lines).strip()
+    return cleaned or s
 
 
 def _format_tool_result_for_model(name: str, args: dict, result: dict) -> str:
@@ -219,6 +260,7 @@ def run_agentic(user_question: str) -> dict:
         )
         text = ask(compose, system=SYSTEM_PROMPT, temperature=0.3)
 
+    text = strip_reasoning(text)
     sources = _prioritize_cited(text, _collect_sources(tool_results))
     return {
         "response": text or "I wasn't able to compose an answer. Try rephrasing.",
@@ -247,6 +289,7 @@ def run_vision(user_question: str, image_b64: str) -> dict:
         f"Be honest if you cannot read a value cleanly."
     )
     text = ask_vision(prompt, [image_b64], system=SYSTEM_PROMPT, temperature=0.3)
+    text = strip_reasoning(text)
 
     sources: list[dict] = []
     seen = set()
