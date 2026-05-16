@@ -36,11 +36,10 @@ The only Huntington's Disease entry in the competition. The only research-accele
 2. **Multimodal vision** — users upload paper figures and Gemma 4 reads the chart; a vision guardrail catches personal medical images.
 3. **Edge inference** — same `src/llm.py` runs on a Jetson AGX Orin via Ollama for the daily pipeline. Backend switched by `HD_LLM_BACKEND`.
 
-## What you do next (3 short bullets)
+## What you do next (2 short bullets — Gemini key is already configured)
 
-1. **Paste your `GEMINI_API_KEY`** into Vercel (`vercel env add GEMINI_API_KEY production`) so the live chatbot can reach Gemma 4 via AI Studio.
-2. **Upload the notebook to Kaggle** — open `notebooks/gemma4_hd_research.ipynb`, push to a new Kaggle notebook attached to the Gemma 4 Good Hackathon competition, Apache 2.0 license.
-3. **Hit Submit** on the Kaggle competition page with the live demo URL, the notebook URL, the GitHub repo URL, and the video link.
+1. **Upload the notebook to Kaggle** — open `notebooks/gemma4_hd_research.ipynb`, attach the `google/gemma-4` model under Add Input, push to a new Kaggle notebook attached to the Gemma 4 Good Hackathon competition, Apache 2.0 license.
+2. **Hit Submit** on the Kaggle competition page with the live demo URL, the notebook URL, the GitHub repo URL, and the video link.
 
 ---
 

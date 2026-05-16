@@ -32,7 +32,7 @@ The chatbot exposes those hypotheses via `get_experiment_findings`. Anyone can a
 
 ### 4. Scout new data automatically
 
-Every 24 hours, GitHub Actions runs `src/data_fetcher.py` (PubMed E-utilities, ClinicalTrials.gov REST v2, HDBuzz RSS, Open Targets GraphQL — all free public APIs) and writes fresh papers, trials, news, and target rankings into `data/`. The Jetson-side `src/agents/paper_scout.py` ingests new full-text from PubMed Central into the knowledge base. The KB grows daily. The chatbot improves daily. Nobody has to remember to refresh.
+Every 24 hours, GitHub Actions runs `src/data_fetcher.py` (PubMed E-utilities, ClinicalTrials.gov REST v2, HDBuzz RSS, Open Targets GraphQL — all free public APIs) and writes fresh papers, trials, news, and target rankings into `data/`. The Jetson-side `src/agents/paper_scout.py` ingests new full-text from PubMed Central into the knowledge base. The pipeline is live in production and has been refreshing the data daily for weeks; figure-derived KB chunks (spec 2a) are wired up but the first production pass hasn't run yet, so the current chatbot answers from full-text chunks and the live data feeds. The chatbot gets sharper as the corpus grows.
 
 ## How Gemma 4 powers each pillar
 
@@ -90,6 +90,17 @@ User question → Gemma 4 emits a tool call → we execute → results feed back
 ```
 
 One `src/llm.py` switched by `HD_LLM_BACKEND` (`ollama` for the edge pipeline, `aistudio` for the serverless chatbot). The Kaggle notebook imports the same module.
+
+## Why this wins the Health & Sciences track
+
+| Track criterion | What this submission delivers |
+|---|---|
+| **Bridges humans and data** | One URL serves four kinds of user — patient, caregiver, researcher, data scientist — against the same knowledge base. Multilingual (22 Indian languages + English). |
+| **Accelerates discovery** | Daily autonomous pipeline ingests new papers, runs Gemma 4 analyses, refines hypotheses. Five experiments shipped end-to-end, transparently rated. |
+| **Democratizes knowledge** | Open source (Apache 2.0). Free for users. Reproducible on Kaggle GPU. Cites every claim back to PubMed. Refuses clinical advice and redirects to HDSA / HDBuzz / HDYO. |
+| **Open lane** | Only Huntington's Disease entry in the competition. Only research-acceleration platform in a field of end-user assistants. |
+| **Native Gemma 4 features used** | Multimodal vision (figure interpretation + image guardrail), native function calling (5 tools), edge inference on a Jetson AGX Orin, runs on hosted AI Studio for the live serverless chatbot. |
+| **Safety stance** | Hard medical-redirect guardrail on both text and image input. Not clinical, on purpose. No "patients dying" framing. Every output disclaims. |
 
 ## The moat: chat with the actual research
 
