@@ -220,7 +220,7 @@ def _prioritize_cited(response_text: str, sources: list[dict]) -> list[dict]:
 
 # -------- Agentic loop ---------------------------------------------------- #
 
-MAX_TOOL_TURNS = 3
+MAX_TOOL_TURNS = 1  # one round of tools, then compose final answer (Vercel 60s budget)
 
 
 def run_agentic(user_question: str) -> dict:
